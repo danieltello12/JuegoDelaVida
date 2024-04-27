@@ -4,26 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/CambioDePantalla.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/Colores.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/ItemMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/VentanaPrincipal/VentanaPrincipalControler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/VentanaPrincipal/VentanaPrincipalDataModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/VentanaPrincipal/VentanaPrincipalDataProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/hello-view.fxml" afterDir="false" />
+    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="First Commit">
+      <change afterPath="$PROJECT_DIR$/Imagenes/8-bit-graphics-pixels-scene-with-village.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Imagenes/descarga.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Imagenes/imagen_2024-04-27_125603929-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Musica/musica-espera-separador-musical-.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/CargarPartidaControlador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/NuevaPartida/NuevaPartidaControlador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/NuevaPartida/NuevaPartidaDataModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/NuevaPartida/NuevaPartidaDataModelProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/cargarpartida-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/CambioDePantalla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/CambioDePantalla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/ItemMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/ItemMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/VentanaPrincipal/VentanaPrincipalControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/VentanaPrincipal/VentanaPrincipalDataModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/VentanaPrincipal/VentanaPrincipalDataProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/nuevapartida-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -44,18 +46,28 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2fcvzZzsHzduvdvTcHTTcFO1Yml" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3954023"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,6 +77,31 @@
       <option name="presentableId" value="Default" />
       <updated>1714113444418</updated>
     </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <option name="closed" value="true" />
+      <created>1714122770292</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714122770292</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="First Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
   </component>
 </project>

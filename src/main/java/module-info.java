@@ -3,8 +3,10 @@ module es.uah.trabajo.juegodelavida {
     requires javafx.fxml;
 
 
-    opens es.uah.trabajo.juegodelavida.VentanaPrincipal to javafx.fxml;
-    exports es.uah.trabajo.juegodelavida.VentanaPrincipal;
+    opens es.uah.trabajo.juegodelavida.NuevaPartida to javafx.fxml;
+    exports es.uah.trabajo.juegodelavida.NuevaPartida;
     exports es.uah.trabajo.juegodelavida.Portada;
     opens es.uah.trabajo.juegodelavida.Portada to javafx.fxml;
+    opens es.uah.trabajo.juegodelavida.CargarPartida to javafx.fxml;
+    exports es.uah.trabajo.juegodelavida.CargarPartida;
 }

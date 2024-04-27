@@ -13,53 +13,51 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+
+
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class HelloApplication extends Application {
     private Parent createContent() throws FileNotFoundException {
-        Pane root = new Pane();
-        Image imagen= new Image(new FileInputStream("C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\Imagenes\\descarga.png"));
-        ImageView imageView = new ImageView(imagen);
+        Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
+        Image imagen= new Image(new FileInputStream("C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\Imagenes\\8-bit-graphics-pixels-scene-with-village.jpg"));
+        ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
         imageView.setFitWidth(1280);
         imageView.setFitHeight(720);
 
-        SepiaTone tone = new SepiaTone(0.85);
-        imageView.setEffect(tone);
-
-        Rectangle masker = new Rectangle(1280, 720);
+        Rectangle masker = new Rectangle(1280, 720); //Creo un sub fondo inicialmente transparente que se vira cuando se haga la transición
         masker.setOpacity(0);
         masker.setMouseTransparent(true);
 
-        Menu inicio= new Menu(500,75); //Inicializo el recuadro azul
+        Menu inicio= new Menu(500,75); //Inicializo el Vbox q contiene la imagen del boton y añadire el boton
         inicio.setTranslateX(400);
-        inicio.setTranslateY(550);
+        inicio.setTranslateY(475);
 
         ItemMenu itemNew = new ItemMenu("INICIAR JUEGO", 150);
         itemNew.setTranslateX(95); //Posicion X respecto el cuadro donde se encuentra en la vbox letras
-        itemNew.setTranslateY(-15);//Posicion Y respecto el cuadro donde se encuentra en la vbox letras
-        itemNew.setOnAction(() -> {
+        itemNew.setTranslateY(0);//Posicion Y respecto el cuadro donde se encuentra en la vbox letras
+        itemNew.setOnAction(() -> { //Defino la ejecucion que se llevara acabo cuadno se pulse "Iniciar Juego"
             FadeTransition ft = new FadeTransition(Duration.seconds(1.5), masker);
             ft.setToValue(1);
 
             ft.setOnFinished(e -> {
                 try {
-                    root.getChildren().setAll(new CambioDePantalla(1280, 720, () -> {
-                        masker.setOpacity(0);
-                        root.getChildren().setAll(imageView,masker);
-                    }));
+                    root.getChildren().setAll(new CambioDePantalla(1280, 720));
                 } catch (FileNotFoundException ex) {
                     throw new RuntimeException(ex);
                 }
             });
 
             ft.play();
-
         });
-       inicio.addItem(itemNew);
-        root.getChildren().addAll(imageView,inicio, masker);
+       inicio.addItem(itemNew); //Añado el item al box
+        root.getChildren().addAll(imageView,inicio, masker); //Añado el fondo, el fondo de la transición y el box al pane
 
       /**  Menu menuBox = new Menu(250, 350);
         menuBox.setTranslateX(250);
@@ -112,10 +110,11 @@ public class HelloApplication extends Application {
         return root;
     }
 
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         Scene scene = new Scene(createContent());
-        primaryStage.setTitle("Fallout4 Menu");
+        primaryStage.setTitle("Juego de La Vida de Conway");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

@@ -35,7 +35,7 @@ public class ItemMenu extends StackPane {
         text = new Text(name);
         text.setTranslateX(5);
         text.setFont(font);
-        text.setFill(Colores.MENU_TEXT);
+        text.setFill(Color.WHITE);
         text.setStroke(Color.BLACK);
 
         shadow = new DropShadow(5, Color.BLACK);
