@@ -57,7 +57,7 @@ public class RegistrarseControlador implements Initializable {
    String contraseña= model.original.getContraseña();
    ListaUsuarios l= new ListaUsuarios();
         Usuario nuevo= new Usuario(usuario,contraseña);
-        l.usuario().add(nuevo);
+        l.añadirusuario(nuevo);
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
         Image imagen = new Image(new FileInputStream("C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\Imagenes\\Captura.PNG"));

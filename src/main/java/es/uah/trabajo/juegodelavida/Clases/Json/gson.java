@@ -1,11 +1,10 @@
-package es.uah.trabajo.juegodelavida.Json;
+package es.uah.trabajo.juegodelavida.Clases.Json;
 
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
 import com.google.gson.Gson;
-
 
 
 

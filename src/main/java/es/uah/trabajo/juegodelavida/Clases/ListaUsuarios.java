@@ -1,21 +1,19 @@
 package es.uah.trabajo.juegodelavida.Clases;
-
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLE;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaLE;
-import es.uah.trabajo.juegodelavida.Clases.Usuario;
+import es.uah.trabajo.juegodelavida.Clases.Json.gson;
 
-public class ListaUsuarios {
-   static final ListaLE<Usuario> usuarios= new ListaLE();
-   public ListaUsuarios(){
+public class ListaUsuarios extends gson{
+public ListaUsuarios(){
 
-   }
+}
    public void añadirusuario(Usuario nuevo){
-       usuarios.add(usuarios);
-   }
-   public ListaLE usuario(){
-      return usuarios;
+      ListaLE l= cargar();
+       l.add(nuevo);
+       guardar(l);
    }
    public boolean esta(String usuario, String cotraseña){
+      ListaLE usuarios= cargar();
       boolean encontrado= false;
       Usuario u= new Usuario(usuario,cotraseña);
       ElementoLE<Usuario> el2= new ElementoLE(u);
@@ -29,5 +27,15 @@ public class ListaUsuarios {
 
       }
       return encontrado;
+   }
+   public void guardar(ListaLE lista) {
+      String rutaArchivo = "usuarios.json";
+      //hola
+      guardarObjetoEnArchivo(rutaArchivo, lista);
+   }
+   public ListaLE cargar(){
+      ListaLE cargado= cargarObjetoDesdeArchivo("usuarios.json", ListaLE.class);
+      return cargado;
+
    }
 }

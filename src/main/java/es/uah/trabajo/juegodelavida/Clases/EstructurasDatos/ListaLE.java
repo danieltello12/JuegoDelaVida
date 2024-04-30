@@ -1,6 +1,7 @@
 package es.uah.trabajo.juegodelavida.Clases.EstructurasDatos;
-
-public class ListaLE<TipoDelDato> {
+import com.google.gson.Gson;
+import es.uah.trabajo.juegodelavida.Clases.Json.gson;
+public class ListaLE<TipoDelDato> extends gson {
     protected ElementoLE<TipoDelDato> primero;
 
     public boolean isVacia() {
@@ -11,6 +12,9 @@ public class ListaLE<TipoDelDato> {
         return vacio;
     }
 
+    public void guardar(ListaLE l){
+        guardarObjetoEnArchivo("usuarios.json",l);
+    }
     public void vaciar() {
         this.primero = null;
     }

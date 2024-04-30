@@ -1,5 +1,5 @@
 package es.uah.trabajo.juegodelavida.Clases.EstructurasDatos;
-
+import com.google.gson.Gson;
 public class ElementoLE <TipoDelDato>{
     protected ElementoLE siguiente;
     private TipoDelDato datos;
