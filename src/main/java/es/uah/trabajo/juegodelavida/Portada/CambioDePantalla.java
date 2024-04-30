@@ -2,18 +2,18 @@ package es.uah.trabajo.juegodelavida.Portada;
 
 
 import es.uah.trabajo.juegodelavida.CargarPartida.CargarPartidaControlador;
-import es.uah.trabajo.juegodelavida.NuevaPartida.NuevaPartidaControlador;
-import javafx.animation.FadeTransition;
-import javafx.animation.Timeline;
+import es.uah.trabajo.juegodelavida.InicioSesionCP.InicioSesionControladorCP;
+import es.uah.trabajo.juegodelavida.InicioSesionCP.InicioSesionModelCP;
+import es.uah.trabajo.juegodelavida.InicioSesionCP.InicioSesionPropertiesCP;
+import es.uah.trabajo.juegodelavida.InicioSesionNP.InicioSesionControladorNP;
+import es.uah.trabajo.juegodelavida.InicioSesionNP.InicioSesionControladorNP;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -33,17 +33,17 @@ public class CambioDePantalla extends Pane  {
         masker.setOpacity(0);
         masker.setMouseTransparent(true);
 
-        Menu inicio= new Menu(500,75); //Inicializo el Vbox q contiene la imagen del boton y añadire el boton
+        Caja_Boton inicio= new Caja_Boton(500,75); //Inicializo el Vbox q contiene la imagen del boton y añadire el boton
         inicio.setTranslateX(400);
         inicio.setTranslateY(360);
 
-        ItemMenu itemNew = new ItemMenu("Nueva Partida", 150);
+        Boton itemNew = new Boton("Nueva Partida", 150);
         itemNew.setTranslateX(95); //Posicion X respecto el cuadro donde se encuentra en la vbox letras
         itemNew.setTranslateY(0);//Posicion Y respecto el cuadro donde se encuentra en la vbox letras
         itemNew.setOnAction(() -> { //Defino la ejecucion que se llevara acabo cuadno se pulse "Iniciar Juego"
             Stage stage = new Stage();
             FXMLLoader fxmlLoader= new FXMLLoader();
-            File fichero= new File("C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\src\\main\\resources\\es\\uah\\trabajo\\juegodelavida\\nuevapartida-view.fxml");
+            File fichero= new File("C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\src\\main\\resources\\es\\uah\\trabajo\\juegodelavida\\iniciosesionNP.fxml");
             URL url= null;
             try {
                 url= fichero.toURL();
@@ -53,10 +53,10 @@ public class CambioDePantalla extends Pane  {
             fxmlLoader.setLocation(url);
 
             try {
-                Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
+                Scene scene = new Scene(fxmlLoader.load(), 450, 150);
                 stage.setTitle("Juego de La Vida de Conway");
                 stage.setScene(scene);
-                NuevaPartidaControlador p = fxmlLoader.getController(); //dame el controlador
+                InicioSesionControladorNP p = fxmlLoader.getController(); //dame el controlador
                 //p.loadUserData(this.modeloParaGUICompartido); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
                 p.setStage(stage); //doy la ventana donde se va a trabajar
                 stage.show();
@@ -66,17 +66,17 @@ public class CambioDePantalla extends Pane  {
 
         });
         inicio.addItem(itemNew);
-        Menu inicio2= new Menu(500,75); //Inicializo el Vbox q contiene la imagen del boton y añadire el boton
+        Caja_Boton inicio2= new Caja_Boton(500,75); //Inicializo el Vbox q contiene la imagen del boton y añadire el boton
         inicio2.setTranslateX(400);
         inicio2.setTranslateY(480);
 
-        ItemMenu itemCargarPartida= new ItemMenu("Cargar Partida", 150);
+        Boton itemCargarPartida= new Boton("Cargar Partida", 150);
         itemCargarPartida.setTranslateX(95); //Posicion X respecto el cuadro donde se encuentra en la vbox letras
         itemCargarPartida.setTranslateY(0);//Posicion Y respecto el cuadro donde se encuentra en la vbox letras
         itemCargarPartida.setOnAction(() -> { //Defino la ejecucion que se llevara acabo cuadno se pulse "Iniciar Juego"
             Stage stage = new Stage();
             FXMLLoader fxmlLoader= new FXMLLoader();
-            File fichero= new File("C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\src\\main\\resources\\es\\uah\\trabajo\\juegodelavida\\cargarpartida-view.fxml");
+            File fichero= new File("C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\src\\main\\resources\\es\\uah\\trabajo\\juegodelavida\\iniciosesionCP.fxml");
             URL url= null;
             try {
                 url= fichero.toURL();
@@ -86,11 +86,12 @@ public class CambioDePantalla extends Pane  {
             fxmlLoader.setLocation(url);
 
             try {
-                Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
+                Scene scene = new Scene(fxmlLoader.load(), 450, 150);
                 stage.setTitle("Juego de La Vida de Conway");
                 stage.setScene(scene);
-                CargarPartidaControlador p = fxmlLoader.getController(); //dame el controlador
-                //p.loadUserData(this.modeloParaGUICompartido); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
+                InicioSesionControladorCP p = fxmlLoader.getController(); //dame el controlador
+
+                p.loadUserData(new InicioSesionPropertiesCP(new InicioSesionModelCP())); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
                 p.setStage(stage); //doy la ventana donde se va a trabajar
                 stage.show();
             } catch (Exception e) {

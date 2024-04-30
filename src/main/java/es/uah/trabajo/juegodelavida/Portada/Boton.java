@@ -14,7 +14,7 @@ import javafx.util.Duration;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-public class ItemMenu extends StackPane {
+public class Boton extends StackPane {
     private static final Font font;
 
     static {
@@ -29,7 +29,7 @@ public class ItemMenu extends StackPane {
     private Rectangle selection;
     private DropShadow shadow;
 
-    public ItemMenu(String name, int width) {
+    public Boton(String name, int width) {
         setAlignment(Pos.CENTER);
 
         text = new Text(name);
