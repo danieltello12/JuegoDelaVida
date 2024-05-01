@@ -7,7 +7,6 @@ import java.io.IOException;
 import com.google.gson.Gson;
 
 
-
 public abstract class gson {
     public static <T> void guardarObjetoEnArchivo(String rutaArchivo, T objeto) {
      Gson gson = new Gson();

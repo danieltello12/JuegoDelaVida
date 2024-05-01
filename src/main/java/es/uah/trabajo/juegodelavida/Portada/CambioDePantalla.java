@@ -7,6 +7,8 @@ import es.uah.trabajo.juegodelavida.InicioSesionCP.InicioSesionModelCP;
 import es.uah.trabajo.juegodelavida.InicioSesionCP.InicioSesionPropertiesCP;
 import es.uah.trabajo.juegodelavida.InicioSesionNP.InicioSesionControladorNP;
 import es.uah.trabajo.juegodelavida.InicioSesionNP.InicioSesionControladorNP;
+import es.uah.trabajo.juegodelavida.InicioSesionNP.InicioSesionPropertiesNP;
+import es.uah.trabajo.juegodelavida.InicioSesionNP.IniciosesionModelNP;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -57,7 +59,7 @@ public class CambioDePantalla extends Pane  {
                 stage.setTitle("Juego de La Vida de Conway");
                 stage.setScene(scene);
                 InicioSesionControladorNP p = fxmlLoader.getController(); //dame el controlador
-                //p.loadUserData(this.modeloParaGUICompartido); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
+                p.loadUserData(new InicioSesionPropertiesNP(new IniciosesionModelNP())); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
                 p.setStage(stage); //doy la ventana donde se va a trabajar
                 stage.show();
             } catch (Exception e) {

@@ -78,10 +78,10 @@ public class InicioSesionControladorCP implements Initializable {
     @FXML
     public void onMibotonJugarClick() throws FileNotFoundException {
         ListaUsuarios l= new ListaUsuarios();
-        if(l.esta(model.original.getUsuario(),model.original.getContraseña())){
+        if(l.esta(model.original.getUsuario(),model.original.getContraseña())==2){
             Stage stage = new Stage();
             FXMLLoader fxmlLoader= new FXMLLoader();
-            File fichero= new File("C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\src\\main\\resources\\es\\uah\\trabajo\\juegodelavida\\cargarpartida-view.fxml");
+            File fichero= new File("C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\src\\main\\resources\\es\\uah\\trabajo\\juegodelavida\\nuevapartida-view.fxml");
             URL url= null;
             try {
                 url= fichero.toURL();
@@ -103,18 +103,35 @@ public class InicioSesionControladorCP implements Initializable {
             }
         }
         else{
-            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+            if (l.esta(model.original.getUsuario(),model.original.getContraseña())==1){
+                Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-            Image imagen = new Image(new FileInputStream("C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\Imagenes\\Registro.PNG"));
-            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-            imageView.setFitWidth(1280);
-            imageView.setFitHeight(720);
-            root.getChildren().addAll(imageView);
-            Scene im= new Scene(root);
-            Stage s= new Stage();
-            s.setScene(im);
-            s.setTitle("Juego de La Vida de Conway");
-            s.show();
+                Image imagen = new Image(new FileInputStream("C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\Imagenes\\Captura.PNG"));
+                ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+                imageView.setFitWidth(1280);
+                imageView.setFitHeight(720);
+                root.getChildren().addAll(imageView);
+                Scene im= new Scene(root);
+                Stage s= new Stage();
+                s.setScene(im);
+                s.setTitle("Juego de La Vida de Conway");
+                s.show();
+            } else if (l.esta(model.original.getUsuario(),model.original.getContraseña())==0) {
+
+
+                Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+
+                Image imagen = new Image(new FileInputStream("C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\Imagenes\\Registro.PNG"));
+                ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+                imageView.setFitWidth(1280);
+                imageView.setFitHeight(720);
+                root.getChildren().addAll(imageView);
+                Scene im = new Scene(root);
+                Stage s = new Stage();
+                s.setScene(im);
+                s.setTitle("Juego de La Vida de Conway");
+                s.show();
+            }
         }
     }
 

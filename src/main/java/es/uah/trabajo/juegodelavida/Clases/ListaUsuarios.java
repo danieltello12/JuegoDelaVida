@@ -12,16 +12,21 @@ public ListaUsuarios(){
        l.add(nuevo);
        guardar(l);
    }
-   public boolean esta(String usuario, String cotraseña){
+
+   public int esta(String usuario, String cotraseña){
       ListaLE usuarios= cargar();
-      boolean encontrado= false;
+      int encontrado= 0;
       Usuario u= new Usuario(usuario,cotraseña);
       ElementoLE<Usuario> el2= new ElementoLE(u);
       ElementoLE<Usuario> el =usuarios.getPrimero();
-      while (el != null && encontrado == false) {
-         if (el.getDatos().nombre == el2.getDatos().nombre&& el.getDatos().contraseña==el2.getDatos().contraseña) {
-            encontrado=false;
-         } else {
+      while (el != null && encontrado ==0) {
+         if (el.getDatos().nombre == el2.getDatos().nombre){
+            encontrado+=1;
+         }
+         if(el.getDatos().contraseña==el2.getDatos().contraseña){
+            encontrado+=1;
+
+         }else {
             el = ((ElementoLE<Usuario>) el).getSiguiente();
          }
 
