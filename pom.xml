@@ -43,6 +43,16 @@
             <artifactId>javafx-media</artifactId>
             <version>21-ea+24</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.5</version>
+        </dependency>
     </dependencies>
 
     <build>
