@@ -15,11 +15,12 @@ import javafx.util.Duration;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
+
 public class HelloApplication extends Application {
     private Parent createContent() throws FileNotFoundException {
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-        Image imagen = new Image(new FileInputStream("C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\Imagenes\\8-bit-graphics-pixels-scene-with-village.jpg"));
+        Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/8-bit-graphics-pixels-scene-with-village.jpg"));
         ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
         imageView.setFitWidth(1280);
         imageView.setFitHeight(720);
@@ -102,7 +103,6 @@ public class HelloApplication extends Application {
          root.getChildren().addAll(imageView, menuBox, menuBox2, masker);**/
         return root;
     }
-
 
     @Override
     public void start(Stage primaryStage) throws Exception {

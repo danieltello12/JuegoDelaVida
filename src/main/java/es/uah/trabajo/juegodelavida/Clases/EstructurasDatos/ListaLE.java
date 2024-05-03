@@ -1,6 +1,8 @@
 package es.uah.trabajo.juegodelavida.Clases.EstructurasDatos;
-import com.google.gson.Gson;
+
 import es.uah.trabajo.juegodelavida.Clases.Json.gson;
+import es.uah.trabajo.juegodelavida.Clases.Usuario;
+
 public class ListaLE<TipoDelDato> extends gson {
     protected ElementoLE<TipoDelDato> primero;
 
@@ -12,8 +14,12 @@ public class ListaLE<TipoDelDato> extends gson {
         return vacio;
     }
 
-    public void guardar(ListaLE l){
+    public void guardar(ListaLE<TipoDelDato> l){
         guardarObjetoEnArchivo("usuarios.json",l);
+    }
+    public ListaLE<Usuario> cargar(){
+        return cargarObjetoDesdeArchivo("usuarios.json", ListaLE.class);
+
     }
     public void vaciar() {
         this.primero = null;
@@ -34,19 +40,19 @@ public class ListaLE<TipoDelDato> extends gson {
 
     }
 
-    public void add(String st) {
+   /** public void add(String st) {
         ElementoLE<TipoDelDato> nuevoprimero = new ElementoLE(this.primero, st);
         this.add(nuevoprimero);
 
-    }
+    }**/
 
-    public void add(Object obj) {
+    public void add(Usuario obj) {
         ElementoLE<TipoDelDato> nuevoprimero = new ElementoLE(this.primero, obj);
         this.add(nuevoprimero);
 
     }
 
-    public void insert(String s, int posicion) {
+   /** public void insert(String s, int posicion) {
         ElementoLE<TipoDelDato> el = this.primero;
         if (posicion == 0) {
             this.add(s);
@@ -56,9 +62,9 @@ public class ListaLE<TipoDelDato> extends gson {
         }
 
 
-    }
+    }**/
 
-    public void insert(Object dato, int posicion) {
+    public void insert(Usuario dato, int posicion) {
         ElementoLE<TipoDelDato> el = this.primero;
         if (posicion == 0) {
             this.add(dato);

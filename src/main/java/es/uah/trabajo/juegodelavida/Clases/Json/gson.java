@@ -5,6 +5,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import com.google.gson.Gson;
+import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaLE;
+import es.uah.trabajo.juegodelavida.Clases.Usuario;
 
 
 public abstract class gson {

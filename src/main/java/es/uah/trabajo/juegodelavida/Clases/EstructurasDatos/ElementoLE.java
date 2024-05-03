@@ -1,14 +1,16 @@
 package es.uah.trabajo.juegodelavida.Clases.EstructurasDatos;
-import com.google.gson.Gson;
-public class ElementoLE <TipoDelDato>{
-    protected ElementoLE siguiente;
-    private TipoDelDato datos;
 
-    public ElementoLE( ElementoLE siguiente, TipoDelDato datos) {
+import es.uah.trabajo.juegodelavida.Clases.Usuario;
+
+public class ElementoLE <TipoDelDato>{
+     ElementoLE<TipoDelDato> siguiente;
+    Usuario datos;
+
+    public ElementoLE( ElementoLE<TipoDelDato> siguiente, Usuario datos) {
         this.siguiente = siguiente;
         this.datos = datos;
     }
-    public ElementoLE(TipoDelDato datos){
+    public ElementoLE(Usuario datos){
         this.datos=datos;
     }
 
@@ -19,12 +21,12 @@ public class ElementoLE <TipoDelDato>{
         return siguiente;
     }
 
-    public TipoDelDato getDatos() {
+    public Usuario getDatos() {
 
         return datos;
     }
 
-    public void setDatos(TipoDelDato datos) {
+    public void setDatos(Usuario datos) {
 
         this.datos = datos;
     }

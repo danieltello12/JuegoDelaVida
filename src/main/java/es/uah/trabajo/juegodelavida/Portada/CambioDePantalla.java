@@ -26,7 +26,7 @@ import java.net.URL;
 public class CambioDePantalla extends Pane  {
 
     public CambioDePantalla(int width, int height) throws FileNotFoundException {
-        ImageView bg = new ImageView(new Image(new FileInputStream("C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\Imagenes\\8-bit-graphics-pixels-scene-with-village.jpg"))
+        ImageView bg = new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/8-bit-graphics-pixels-scene-with-village.jpg"))
         );
         bg.setFitWidth(width);
         bg.setFitHeight(height);
@@ -45,7 +45,7 @@ public class CambioDePantalla extends Pane  {
         itemNew.setOnAction(() -> { //Defino la ejecucion que se llevara acabo cuadno se pulse "Iniciar Juego"
             Stage stage = new Stage();
             FXMLLoader fxmlLoader= new FXMLLoader();
-            File fichero= new File("C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\src\\main\\resources\\es\\uah\\trabajo\\juegodelavida\\iniciosesionNP.fxml");
+            File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/iniciosesionNP.fxml");
             URL url= null;
             try {
                 url= fichero.toURL();
@@ -78,7 +78,7 @@ public class CambioDePantalla extends Pane  {
         itemCargarPartida.setOnAction(() -> { //Defino la ejecucion que se llevara acabo cuadno se pulse "Iniciar Juego"
             Stage stage = new Stage();
             FXMLLoader fxmlLoader= new FXMLLoader();
-            File fichero= new File("C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\src\\main\\resources\\es\\uah\\trabajo\\juegodelavida\\iniciosesionCP.fxml");
+            File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/iniciosesionCP.fxml");
             URL url= null;
             try {
                 url= fichero.toURL();

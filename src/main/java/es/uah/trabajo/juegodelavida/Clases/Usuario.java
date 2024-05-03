@@ -1,14 +1,21 @@
 package es.uah.trabajo.juegodelavida.Clases;
 
+import com.google.gson.Gson;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaLE;
+
+import java.io.FileReader;
+import java.io.IOException;
+
 
 public class Usuario {
     String nombre;
     String contraseña;
-    private ListaLE<Partida> partidas;
+    ListaLE<Partida> partidas;
     public  Usuario(String nombre, String contraseña ){
         this.nombre=nombre;
         this.contraseña=contraseña;
+      ListaLE<Partida>  partidas=new ListaLE<Partida>();
+        this.partidas=partidas;
     }
 
     public String getNombre() {

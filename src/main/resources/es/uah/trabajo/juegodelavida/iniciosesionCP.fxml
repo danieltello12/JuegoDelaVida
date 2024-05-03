@@ -8,7 +8,7 @@
         <Label layoutX="35.0" layoutY="27.0" text="Usuario:" />
         <TextField fx:id="textfieldNombre" layoutX="90.0" layoutY="23.0" />
         <Label layoutX="27.0" layoutY="66.0" text="Contraseña:" />
-        <TextField fx:id="textfieldContraseña" layoutX="96.0" layoutY="62.0" />
+        <PasswordField fx:id="textfieldContraseña" layoutX="100.0" layoutY="63.0" />
         <Button layoutX="330.0" layoutY="118.0" mnemonicParsing="false" onAction="#onMiBotonRegistrarseClick" prefHeight="26.0" prefWidth="106.0" text="Registrarse" />
         <Button layoutX="243.0" layoutY="118.0" mnemonicParsing="false" onAction="#onMibotonJugarClick" prefHeight="26.0" prefWidth="74.0" text="Jugar" />
     </children>
