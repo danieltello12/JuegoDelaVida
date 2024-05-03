@@ -4,7 +4,7 @@ import es.uah.trabajo.juegodelavida.Clases.Json.gson;
 import es.uah.trabajo.juegodelavida.Clases.Usuario;
 
 public class ListaLE<TipoDelDato> extends gson {
-    protected ElementoLE<TipoDelDato> primero;
+    protected ElementoLEUs<TipoDelDato> primero;
 
     public boolean isVacia() {
         boolean vacio = false;
@@ -26,12 +26,12 @@ public class ListaLE<TipoDelDato> extends gson {
     }
 
 
-    private void add(ElementoLE<TipoDelDato> el) {
+    private void add(ElementoLEUs<TipoDelDato> el) {
         if (isVacia()) {
             this.primero = el;
 
         } else {
-            ElementoLE<TipoDelDato> nuevoprimero = new ElementoLE(this.primero, el.getDatos());
+            ElementoLEUs<TipoDelDato> nuevoprimero = new ElementoLEUs(this.primero, el.getDatos());
             this.primero = nuevoprimero;
 
 
@@ -47,7 +47,7 @@ public class ListaLE<TipoDelDato> extends gson {
     }**/
 
     public void add(Usuario obj) {
-        ElementoLE<TipoDelDato> nuevoprimero = new ElementoLE(this.primero, obj);
+        ElementoLEUs<TipoDelDato> nuevoprimero = new ElementoLEUs(this.primero, obj);
         this.add(nuevoprimero);
 
     }
@@ -65,17 +65,17 @@ public class ListaLE<TipoDelDato> extends gson {
     }**/
 
     public void insert(Usuario dato, int posicion) {
-        ElementoLE<TipoDelDato> el = this.primero;
+        ElementoLEUs<TipoDelDato> el = this.primero;
         if (posicion == 0) {
             this.add(dato);
         } else {
-            ElementoLE<TipoDelDato> e= new ElementoLE(this.getElemento(posicion),dato);
+            ElementoLEUs<TipoDelDato> e= new ElementoLEUs(this.getElemento(posicion),dato);
             this.getElemento(posicion-1).siguiente=e;
         }
     }
 
     public int del(int posicion) {
-        ElementoLE<TipoDelDato> el = this.primero;
+        ElementoLEUs<TipoDelDato> el = this.primero;
         if (posicion == 0) {
             this.primero = el.getSiguiente();
         } else {
@@ -87,7 +87,7 @@ public class ListaLE<TipoDelDato> extends gson {
 
 
             if (el != null && el.getSiguiente() != null) {
-                ElementoLE<TipoDelDato> el2 = el.getSiguiente();
+                ElementoLEUs<TipoDelDato> el2 = el.getSiguiente();
                 el.siguiente = el2.getSiguiente();
             }
 
@@ -99,7 +99,7 @@ public class ListaLE<TipoDelDato> extends gson {
 
     public int getNumeroElementos() {
         int contador = 0;
-        ElementoLE<TipoDelDato> el = this.primero;
+        ElementoLEUs<TipoDelDato> el = this.primero;
         while (el != null) {
             contador++;
             el=el.getSiguiente();
@@ -108,10 +108,10 @@ public class ListaLE<TipoDelDato> extends gson {
         return contador;
     }
 
-    public int getPosicion(ElementoLE<TipoDelDato> el2) {
+    public int getPosicion(ElementoLEUs<TipoDelDato> el2) {
         int contador = 0;
         boolean salir = false;
-        ElementoLE<TipoDelDato> el = this.primero;
+        ElementoLEUs<TipoDelDato> el = this.primero;
         while (el != null && salir == false) {
             if (el.getDatos() == el2.getDatos()) {
                 salir = true;
@@ -124,14 +124,14 @@ public class ListaLE<TipoDelDato> extends gson {
         return contador;
     }
 
-    public ElementoLE<TipoDelDato> getPrimero() {
+    public ElementoLEUs<TipoDelDato> getPrimero() {
         return this.primero;
 
     }
 
-    public ElementoLE<TipoDelDato> getUltimo() {
-        ElementoLE<TipoDelDato> el = this.primero;
-        ElementoLE<TipoDelDato> elanterior = null;
+    public ElementoLEUs<TipoDelDato> getUltimo() {
+        ElementoLEUs<TipoDelDato> el = this.primero;
+        ElementoLEUs<TipoDelDato> elanterior = null;
         while (el != null) {
             elanterior = el;
             el = el.getSiguiente();
@@ -140,10 +140,10 @@ public class ListaLE<TipoDelDato> extends gson {
 
     }
 
-    public ElementoLE<TipoDelDato> getSiguiente(ElementoLE<TipoDelDato> el2) {
+    public ElementoLEUs<TipoDelDato> getSiguiente(ElementoLEUs<TipoDelDato> el2) {
         int contador = 0;
         boolean salir = false;
-        ElementoLE<TipoDelDato> el = this.primero;
+        ElementoLEUs<TipoDelDato> el = this.primero;
         while (el != null && salir == false) {
             if (el.getDatos() == el2.getDatos()) {
                 salir = true;
@@ -158,8 +158,8 @@ public class ListaLE<TipoDelDato> extends gson {
 
     }
 
-    public ElementoLE<TipoDelDato> getElemento(int posicion) {
-        ElementoLE<TipoDelDato> el = this.primero;
+    public ElementoLEUs<TipoDelDato> getElemento(int posicion) {
+        ElementoLEUs<TipoDelDato> el = this.primero;
         if (posicion != 0) {
             int contador = 0;
             while (el != null && contador != posicion) {

@@ -1,6 +1,4 @@
-2024-05-03 14:31:18.240 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del método de arranque de la aplicación para mostrar un grid de forma programática
-2024-05-03 14:31:19.182 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Enviando un info
-2024-05-03 14:31:19.182 - WARN  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Enviando un aviso
-2024-05-03 14:31:19.182 - ERROR - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Enviando un error
-2024-05-03 14:31:19.183 - FATAL - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Enviando una explosión fatal
-2024-05-03 14:31:19.183 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Fin del método de arranque de la aplicación para mostrar un grid de forma programática
+
+2024-05-03 21:00:53.637 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
+2024-05-03 21:00:53.741 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
+2024-05-03 21:01:04.168 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida

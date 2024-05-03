@@ -1,14 +1,13 @@
 package es.uah.trabajo.juegodelavida.Portada;
 
 
-import es.uah.trabajo.juegodelavida.CargarPartida.CargarPartidaControlador;
 import es.uah.trabajo.juegodelavida.InicioSesionCP.InicioSesionControladorCP;
 import es.uah.trabajo.juegodelavida.InicioSesionCP.InicioSesionModelCP;
 import es.uah.trabajo.juegodelavida.InicioSesionCP.InicioSesionPropertiesCP;
 import es.uah.trabajo.juegodelavida.InicioSesionNP.InicioSesionControladorNP;
-import es.uah.trabajo.juegodelavida.InicioSesionNP.InicioSesionControladorNP;
 import es.uah.trabajo.juegodelavida.InicioSesionNP.InicioSesionPropertiesNP;
 import es.uah.trabajo.juegodelavida.InicioSesionNP.IniciosesionModelNP;
+import es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -16,6 +15,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -24,9 +25,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class CambioDePantalla extends Pane  {
-
+    private static final Logger log = LogManager.getLogger(MainGridApplication.class);
     public CambioDePantalla(int width, int height) throws FileNotFoundException {
-        ImageView bg = new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/8-bit-graphics-pixels-scene-with-village.jpg"))
+        ImageView bg = new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/FondoPortada.png"))
         );
         bg.setFitWidth(width);
         bg.setFitHeight(height);
@@ -43,6 +44,7 @@ public class CambioDePantalla extends Pane  {
         itemNew.setTranslateX(95); //Posicion X respecto el cuadro donde se encuentra en la vbox letras
         itemNew.setTranslateY(0);//Posicion Y respecto el cuadro donde se encuentra en la vbox letras
         itemNew.setOnAction(() -> { //Defino la ejecucion que se llevara acabo cuadno se pulse "Iniciar Juego"
+            log.info("Nueva Partida");
             Stage stage = new Stage();
             FXMLLoader fxmlLoader= new FXMLLoader();
             File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/iniciosesionNP.fxml");
@@ -50,6 +52,7 @@ public class CambioDePantalla extends Pane  {
             try {
                 url= fichero.toURL();
             } catch (MalformedURLException e) {
+                log.error("No se ha encontrado la pantalla de iniciosesion nueva partida");
                 throw new RuntimeException(e);
             }
             fxmlLoader.setLocation(url);
@@ -76,6 +79,7 @@ public class CambioDePantalla extends Pane  {
         itemCargarPartida.setTranslateX(95); //Posicion X respecto el cuadro donde se encuentra en la vbox letras
         itemCargarPartida.setTranslateY(0);//Posicion Y respecto el cuadro donde se encuentra en la vbox letras
         itemCargarPartida.setOnAction(() -> { //Defino la ejecucion que se llevara acabo cuadno se pulse "Iniciar Juego"
+            log.info("Cargar Partida");
             Stage stage = new Stage();
             FXMLLoader fxmlLoader= new FXMLLoader();
             File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/iniciosesionCP.fxml");
@@ -83,6 +87,7 @@ public class CambioDePantalla extends Pane  {
             try {
                 url= fichero.toURL();
             } catch (MalformedURLException e) {
+                log.error("No se ha encontrado la pantalla de iniciosesion Cargar partida");
                 throw new RuntimeException(e);
             }
             fxmlLoader.setLocation(url);

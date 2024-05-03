@@ -9,33 +9,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="inicio">
+    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="inicio 22">
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ElementoLERe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Individuos/ElementoLEIn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Individuos/Individuos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Recursos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/RecursosJuego/Recursos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/FondoPortada.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fuente/BebasNeue-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/BebasNeue-Regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imagenes/8-bit-graphics-pixels-scene-with-village.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/8-bit-graphics-pixels-scene-with-village.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imagenes/Captura.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Captura.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imagenes/Captura2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Captura2.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imagenes/Registro.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Registro.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imagenes/imagen_2024-04-27_125603929-removebg-preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/imagen_2024-04-27_125603929-removebg-preview.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/log4j-1.2-api-2.19.0-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/log4j-1.2-api-2.19.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/log4j-api-2.19.0-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/log4j-api-2.19.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ElementoLE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ElementoLE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ElementoLE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ElementoLEUs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaLE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaLE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Json/gson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Json/gson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/ListaUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/ListaUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionCP/InicioSesionControladorCP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionCP/InicioSesionControladorCP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Partida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/Boton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/Boton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/Caja_Boton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/Caja_Boton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/CambioDePantalla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/CambioDePantalla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/Colores.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Registrarse/RegistrarseControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Registrarse/RegistrarseControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/iniciosesionCP.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/iniciosesionCP.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/iniciosesionNP.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/iniciosesionNP.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/registrarse.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/registrarse.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/8-bit-graphics-pixels-scene-with-village.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios.json" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +147,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714670057455</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="inicio 22">
+      <option name="closed" value="true" />
+      <created>1714746544790</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714746544790</updated>
+    </task>
+    <task id="LOCAL-00009" summary="inicio 22">
+      <option name="closed" value="true" />
+      <created>1714746569722</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714746569722</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,7 +181,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First Commit" />
     <MESSAGE value="inicio" />
-    <option name="LAST_COMMIT_MESSAGE" value="inicio" />
+    <MESSAGE value="inicio 22" />
+    <option name="LAST_COMMIT_MESSAGE" value="inicio 22" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

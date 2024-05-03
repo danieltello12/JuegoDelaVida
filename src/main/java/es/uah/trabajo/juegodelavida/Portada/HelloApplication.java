@@ -1,5 +1,6 @@
 package es.uah.trabajo.juegodelavida.Portada;
 
+import es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication;
 import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.scene.Parent;
@@ -10,6 +11,8 @@ import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 import java.io.FileInputStream;
@@ -20,7 +23,7 @@ public class HelloApplication extends Application {
     private Parent createContent() throws FileNotFoundException {
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-        Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/8-bit-graphics-pixels-scene-with-village.jpg"));
+        Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/FondoPortada.png"));
         ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
         imageView.setFitWidth(1280);
         imageView.setFitHeight(720);
@@ -34,6 +37,7 @@ public class HelloApplication extends Application {
         inicio.setTranslateY(475);
 
         Boton itemNew = new Boton("INICIAR JUEGO", 150);
+        log.info("Inicio del juego");
         itemNew.setTranslateX(95); //Posicion X respecto el cuadro donde se encuentra en la vbox letras
         itemNew.setTranslateY(0);//Posicion Y respecto el cuadro donde se encuentra en la vbox letras
         itemNew.setOnAction(() -> { //Defino la ejecucion que se llevara acabo cuadno se pulse "Iniciar Juego"
@@ -103,6 +107,7 @@ public class HelloApplication extends Application {
          root.getChildren().addAll(imageView, menuBox, menuBox2, masker);**/
         return root;
     }
+    private static final Logger log = LogManager.getLogger(MainGridApplication.class);
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -110,6 +115,7 @@ public class HelloApplication extends Application {
         primaryStage.setTitle("Juego de La Vida de Conway");
         primaryStage.setScene(scene);
         primaryStage.show();
+        log.info("Inicio de Aplicación");
     }
 
     public static void main(String[] args) {

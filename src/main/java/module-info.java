@@ -23,4 +23,6 @@ module es.uah.trabajo.juegodelavida {
     exports es.uah.trabajo.juegodelavida.Clases;
     opens es.uah.trabajo.juegodelavida.TableroDeJuego to javafx.fxml;
     exports es.uah.trabajo.juegodelavida.TableroDeJuego;
+    exports es.uah.trabajo.juegodelavida.Clases.Individuos;
+    opens es.uah.trabajo.juegodelavida.Clases.Individuos;
 }

@@ -61,7 +61,7 @@ public class Boton extends StackPane {
         });
 
         setOnMousePressed(e -> {
-            text.setFill(Color.BLUE);
+            text.setFill(Color.FORESTGREEN);
         });
     }
 
@@ -82,7 +82,7 @@ public class Boton extends StackPane {
     public void setOnAction(Runnable action) {
         setOnMouseClicked(e -> {
             FillTransition ft = new FillTransition(Duration.seconds(0.45), selection,
-                    Color.YELLOW, Colores.MENU_BG);
+                    Color.WHITE, Color.WHITE);
             ft.setOnFinished(e2 -> action.run());
             ft.play();
         });
