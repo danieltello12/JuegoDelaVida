@@ -1,11 +1,8 @@
 package es.uah.trabajo.juegodelavida.Registrarse;
 
-import es.uah.trabajo.juegodelavida.CargarPartida.CargarPartidaControlador;
 import es.uah.trabajo.juegodelavida.Clases.ListaUsuarios;
 import es.uah.trabajo.juegodelavida.Clases.Usuario;
-import es.uah.trabajo.juegodelavida.InicioSesionCP.InicioSesionPropertiesCP;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
@@ -15,10 +12,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 

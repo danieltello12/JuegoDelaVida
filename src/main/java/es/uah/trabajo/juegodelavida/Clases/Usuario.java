@@ -1,20 +1,18 @@
 package es.uah.trabajo.juegodelavida.Clases;
 
-import com.google.gson.Gson;
+import es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar.ListaLEPA;
+import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLEUs;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaLE;
+import es.uah.trabajo.juegodelavida.Clases.Json.gson;
 
-import java.io.FileReader;
-import java.io.IOException;
-
-
-public class Usuario {
+public class Usuario extends gson {
     String nombre;
     String contraseña;
-    ListaLE<Partida> partidas;
+    ListaLEPA<Partida> partidas;
     public  Usuario(String nombre, String contraseña ){
         this.nombre=nombre;
         this.contraseña=contraseña;
-      ListaLE<Partida>  partidas=new ListaLE<Partida>();
+        ListaLEPA  partidas=new ListaLEPA();
         this.partidas=partidas;
     }
 
@@ -34,11 +32,40 @@ public class Usuario {
         this.contraseña = contraseña;
     }
 
-    public ListaLE<Partida> getPartidas() {
+    public ListaLEPA getPartidas() {
         return partidas;
     }
 
-    public void setPartidas(ListaLE<Partida> partidas) {
+    public void setPartidas(ListaLEPA partidas) {
         this.partidas = partidas;
+        añadirpartidasJSon();
+    }
+
+    public void setPartida(Partida partida) {
+        this.partidas.add(partida);
+        añadirpartidasJSon();
+    }
+
+    public void guardar() {
+partidas.guardar(this.nombre);
+    }
+    public ListaLEPA<Usuario> cargar(){
+        return partidas.cargar(this.nombre);
+
+    }
+    public void añadirpartidasJSon(){
+         ListaLE l = new ListaLE();
+        l=l.cargar();
+        ElementoLEUs e= new ElementoLEUs(this);
+
+        if(l.isVacia()){
+            l.add(this);
+        }
+        else {
+            int pos = l.getPosicion(e);
+            l.del(pos);
+            l.add(this);
+        }
+        l.guardar(l);
     }
 }

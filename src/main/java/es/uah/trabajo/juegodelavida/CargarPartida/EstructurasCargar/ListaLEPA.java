@@ -1,10 +1,10 @@
-package es.uah.trabajo.juegodelavida.Clases.EstructurasDatos;
+package es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar;
 
 import es.uah.trabajo.juegodelavida.Clases.Json.gson;
-import es.uah.trabajo.juegodelavida.Clases.Usuario;
+import es.uah.trabajo.juegodelavida.Clases.Partida;
 
-public class ListaLE<TipoDelDato> extends gson {
-    protected ElementoLEUs<TipoDelDato> primero;
+public class ListaLEPA<TipoDelDato> extends gson {
+    protected ElementoLEPA<TipoDelDato> primero;
 
     public boolean isVacia() {
         boolean vacio = false;
@@ -14,24 +14,17 @@ public class ListaLE<TipoDelDato> extends gson {
         return vacio;
     }
 
-    public void guardar(ListaLE<TipoDelDato> l){
-        guardarObjetoEnArchivo("Json/usuarios.json",l);
-    }
-    public ListaLE<Usuario> cargar(){
-        return cargarObjetoDesdeArchivo("Json/usuarios.json", ListaLE.class);
-
-    }
     public void vaciar() {
         this.primero = null;
     }
 
 
-    private void add(ElementoLEUs<TipoDelDato> el) {
+    private void add(ElementoLEPA<TipoDelDato> el) {
         if (isVacia()) {
             this.primero = el;
 
         } else {
-            ElementoLEUs<TipoDelDato> nuevoprimero = new ElementoLEUs(this.primero, el.getDatos());
+            ElementoLEPA<TipoDelDato> nuevoprimero = new ElementoLEPA(this.primero, el.getDatos());
             this.primero = nuevoprimero;
 
 
@@ -46,8 +39,8 @@ public class ListaLE<TipoDelDato> extends gson {
 
     }**/
 
-    public void add(Usuario obj) {
-        ElementoLEUs<TipoDelDato> nuevoprimero = new ElementoLEUs(this.primero, obj);
+    public void add(Partida obj) {
+        ElementoLEPA<TipoDelDato> nuevoprimero = new ElementoLEPA(this.primero, obj);
         this.add(nuevoprimero);
 
     }
@@ -64,18 +57,18 @@ public class ListaLE<TipoDelDato> extends gson {
 
     }**/
 
-    public void insert(Usuario dato, int posicion) {
-        ElementoLEUs<TipoDelDato> el = this.primero;
+    public void insert(Partida dato, int posicion) {
+        ElementoLEPA<TipoDelDato> el = this.primero;
         if (posicion == 0) {
             this.add(dato);
         } else {
-            ElementoLEUs<TipoDelDato> e= new ElementoLEUs(this.getElemento(posicion),dato);
+            ElementoLEPA<TipoDelDato> e= new ElementoLEPA(this.getElemento(posicion),dato);
             this.getElemento(posicion-1).siguiente=e;
         }
     }
 
     public int del(int posicion) {
-        ElementoLEUs<TipoDelDato> el = this.primero;
+        ElementoLEPA<TipoDelDato> el = this.primero;
         if (posicion == 0) {
             this.primero = el.getSiguiente();
         } else {
@@ -87,7 +80,7 @@ public class ListaLE<TipoDelDato> extends gson {
 
 
             if (el != null && el.getSiguiente() != null) {
-                ElementoLEUs<TipoDelDato> el2 = el.getSiguiente();
+                ElementoLEPA<TipoDelDato> el2 = el.getSiguiente();
                 el.siguiente = el2.getSiguiente();
             }
 
@@ -99,7 +92,7 @@ public class ListaLE<TipoDelDato> extends gson {
 
     public int getNumeroElementos() {
         int contador = 0;
-        ElementoLEUs<TipoDelDato> el = this.primero;
+        ElementoLEPA<TipoDelDato> el = this.primero;
         while (el != null) {
             contador++;
             el=el.getSiguiente();
@@ -108,10 +101,10 @@ public class ListaLE<TipoDelDato> extends gson {
         return contador;
     }
 
-    public int getPosicion(ElementoLEUs<TipoDelDato> el2) {
+    public int getPosicion(ElementoLEPA<TipoDelDato> el2) {
         int contador = 0;
         boolean salir = false;
-        ElementoLEUs<TipoDelDato> el = this.primero;
+        ElementoLEPA<TipoDelDato> el = this.primero;
         while (el != null && salir == false) {
             if (el.getDatos() == el2.getDatos()) {
                 salir = true;
@@ -123,15 +116,25 @@ public class ListaLE<TipoDelDato> extends gson {
         }
         return contador;
     }
+    public void guardar(String nombre) {
+        String rutaArchivo ="Json/"+nombre+".partidas.json";
+        //hola
+        guardarObjetoEnArchivo(rutaArchivo, this);
+    }
+    public ListaLEPA cargar(String nombre){
+        String ruta="Json/"+nombre+".partidas.json";
+        return cargarObjetoDesdeArchivo(ruta, ListaLEPA.class);
 
-    public ElementoLEUs<TipoDelDato> getPrimero() {
+    }
+
+    public ElementoLEPA<TipoDelDato> getPrimero() {
         return this.primero;
 
     }
 
-    public ElementoLEUs<TipoDelDato> getUltimo() {
-        ElementoLEUs<TipoDelDato> el = this.primero;
-        ElementoLEUs<TipoDelDato> elanterior = null;
+    public ElementoLEPA<TipoDelDato> getUltimo() {
+        ElementoLEPA<TipoDelDato> el = this.primero;
+        ElementoLEPA<TipoDelDato> elanterior = null;
         while (el != null) {
             elanterior = el;
             el = el.getSiguiente();
@@ -140,10 +143,10 @@ public class ListaLE<TipoDelDato> extends gson {
 
     }
 
-    public ElementoLEUs<TipoDelDato> getSiguiente(ElementoLEUs<TipoDelDato> el2) {
+    public ElementoLEPA<TipoDelDato> getSiguiente(ElementoLEPA<TipoDelDato> el2) {
         int contador = 0;
         boolean salir = false;
-        ElementoLEUs<TipoDelDato> el = this.primero;
+        ElementoLEPA<TipoDelDato> el = this.primero;
         while (el != null && salir == false) {
             if (el.getDatos() == el2.getDatos()) {
                 salir = true;
@@ -158,8 +161,8 @@ public class ListaLE<TipoDelDato> extends gson {
 
     }
 
-    public ElementoLEUs<TipoDelDato> getElemento(int posicion) {
-        ElementoLEUs<TipoDelDato> el = this.primero;
+    public ElementoLEPA<TipoDelDato> getElemento(int posicion) {
+        ElementoLEPA<TipoDelDato> el = this.primero;
         if (posicion != 0) {
             int contador = 0;
             while (el != null && contador != posicion) {

@@ -11,7 +11,7 @@ public class ListaUsuarios extends gson {
    }
 
    public void añadirusuario(Usuario nuevo) {
-      ListaLE l = new ListaLE();
+      ListaLE<Usuario> l = new ListaLE();
       l=l.cargar();
       l.add(nuevo);
       guardar(l);

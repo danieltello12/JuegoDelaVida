@@ -1,8 +1,8 @@
 package es.uah.trabajo.juegodelavida.Registrarse;
 
 public class RegistrarseModelo {
-    private String Usuario=" ";
-    private String Contraseña=" ";
+    private String Usuario="";
+    private String Contraseña="";
 
     public RegistrarseModelo( String nombre, String contra) {
         this.Contraseña=contra;

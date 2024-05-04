@@ -1,8 +1,8 @@
 package es.uah.trabajo.juegodelavida.InicioSesionNP;
 
 public class IniciosesionModelNP {
-    private String Usuario=" ";
-    private String Contraseña=" ";
+    private String Usuario="";
+    private String Contraseña="";
 
     public IniciosesionModelNP( String nombre, String contra) {
         this.Contraseña=contra;

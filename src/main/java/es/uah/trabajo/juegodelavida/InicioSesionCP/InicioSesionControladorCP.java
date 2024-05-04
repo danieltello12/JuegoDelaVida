@@ -1,7 +1,8 @@
 package es.uah.trabajo.juegodelavida.InicioSesionCP;
 
-import es.uah.trabajo.juegodelavida.CargarPartida.CargarPartidaControlador;
-import es.uah.trabajo.juegodelavida.NuevaPartida.NuevaPartidaControlador;
+import es.uah.trabajo.juegodelavida.CargarPartida.CargarPartida;
+import es.uah.trabajo.juegodelavida.Clases.ListaUsuarios;
+import es.uah.trabajo.juegodelavida.Clases.Usuario;
 import es.uah.trabajo.juegodelavida.Registrarse.RegistrarseControlador;
 import es.uah.trabajo.juegodelavida.Registrarse.RegistrarseModelo;
 import es.uah.trabajo.juegodelavida.Registrarse.RegistrarseProperties;
@@ -15,7 +16,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import es.uah.trabajo.juegodelavida.Clases.ListaUsuarios;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -82,23 +82,12 @@ public class InicioSesionControladorCP implements Initializable {
         ListaUsuarios l= new ListaUsuarios();
         if(l.esta(model.original.getUsuario(),model.original.getContraseña())==2){
             Stage stage = new Stage();
-            FXMLLoader fxmlLoader= new FXMLLoader();
-            File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/cargarpartida-view.fxml");
-            URL url= null;
             try {
-                url= fichero.toURL();
-            } catch (MalformedURLException e) {
-                throw new RuntimeException(e);
-            }
-            fxmlLoader.setLocation(url);
-
-            try {
-                Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
+                Usuario u = new Usuario(model.original.getUsuario(),model.original.getContraseña());
+                Scene scene = new Scene(new CargarPartida(u,1280, 720));
                 stage.setTitle("Juego de La Vida de Conway");
                 stage.setScene(scene);
-                CargarPartidaControlador p = fxmlLoader.getController(); //dame el controlador
                 //p.loadUserData(this.modeloParaGUICompartido); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
-                p.setStage(stage); //doy la ventana donde se va a trabajar
                 stage.show();
             } catch (Exception e) {
                 e.printStackTrace();

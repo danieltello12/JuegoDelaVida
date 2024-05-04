@@ -1,9 +1,6 @@
 package es.uah.trabajo.juegodelavida.InicioSesionNP;
 
-import es.uah.trabajo.juegodelavida.CargarPartida.CargarPartidaControlador;
 import es.uah.trabajo.juegodelavida.Clases.ListaUsuarios;
-import es.uah.trabajo.juegodelavida.InicioSesionCP.InicioSesionControladorCP;
-import es.uah.trabajo.juegodelavida.InicioSesionCP.InicioSesionPropertiesCP;
 import es.uah.trabajo.juegodelavida.NuevaPartida.NuevaPartidaControlador;
 import es.uah.trabajo.juegodelavida.Registrarse.RegistrarseControlador;
 import es.uah.trabajo.juegodelavida.Registrarse.RegistrarseModelo;

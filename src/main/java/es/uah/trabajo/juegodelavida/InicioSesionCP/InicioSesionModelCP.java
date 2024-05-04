@@ -1,8 +1,8 @@
 package es.uah.trabajo.juegodelavida.InicioSesionCP;
 
 public class InicioSesionModelCP {
-    private String Usuario=" ";
-    private String Contraseña=" ";
+    private String Usuario="";
+    private String Contraseña="";
 
     public InicioSesionModelCP( String nombre, String contra) {
         this.Contraseña=contra;
