@@ -40,9 +40,6 @@ public class RegistrarseControlador implements Initializable {
             this.updateGUIwithModel();
         }
     }
-    @FXML
-    protected void onMiBotonClick() throws FileNotFoundException {
-    }
     protected void updateGUIwithModel() {
         textfieldNombre.textProperty().bindBidirectional(model.nombreProperty());
         textfieldContraseña.textProperty().bindBidirectional(model.contraseñaProperty());
@@ -51,28 +48,46 @@ public class RegistrarseControlador implements Initializable {
     public void onMibotonGuardarClick() throws FileNotFoundException {
         model.commit();
     String usuario=    model.original.getUsuario();
-   String contraseña= model.original.getContraseña();
-   ListaUsuarios l= new ListaUsuarios();
+    String contraseña= model.original.getContraseña();
+     ListaUsuarios l= new ListaUsuarios();
         Usuario nuevo= new Usuario(usuario,contraseña);
-        l.añadirusuario(nuevo);
-        Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+        if(l.yacreado(usuario)){
+            /** El nombre de usuario que ha introducido ya esta en uso
+             *
+             */
 
-        Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Captura2.PNG"));
-        ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-        imageView.setFitWidth(1280);
-        imageView.setFitHeight(720);
-        root.getChildren().addAll(imageView);
+            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-        Scene im= new Scene(root);
-        Stage s= new Stage();
-        s.setScene(im);
-        s.setTitle("Juego de La Vida de Conway");
-        s.show();
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/YaCreado.PNG"));
+            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+            imageView.setFitWidth(1280);
+            imageView.setFitHeight(720);
+            root.getChildren().addAll(imageView);
+
+            Scene im= new Scene(root);
+            Stage s= new Stage();
+            s.setScene(im);
+            s.setTitle("Juego de La Vida de Conway");
+            s.show();
+        }
+        else {
+            l.añadirusuario(nuevo);
+            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Captura2.PNG"));
+            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+            imageView.setFitWidth(1280);
+            imageView.setFitHeight(720);
+            root.getChildren().addAll(imageView);
+
+            Scene im = new Scene(root);
+            Stage s = new Stage();
+            s.setScene(im);
+            s.setTitle("Juego de La Vida de Conway");
+            s.show();
+        }
     }
 
-    /**
-     * Este método recibe los datos del modelo y los establece
-     **/
     public void loadUserData(RegistrarseProperties parametrosData) {
         this.model = parametrosData;
         this.updateGUIwithModel();

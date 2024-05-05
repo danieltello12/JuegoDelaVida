@@ -12,7 +12,7 @@ public class Caja_Boton extends Pane {
     private VBox box;
 
     public Caja_Boton(int width, int height) throws FileNotFoundException {
-        ImageView i= new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/imagen_2024-04-27_125603929-removebg-preview.png")));
+        ImageView i= new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/imagen_2024-04-27_125603929-removebg-preview.png")));
 
         i.setFitWidth(500);
         i.setFitHeight(115);
