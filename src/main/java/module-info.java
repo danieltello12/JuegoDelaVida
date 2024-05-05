@@ -4,7 +4,8 @@ module es.uah.trabajo.juegodelavida {
     requires com.google.gson;
     requires org.apache.logging.log4j;
 
-
+    opens es.uah.trabajo.juegodelavida.ParamJuego to javafx.fxml;
+    exports es.uah.trabajo.juegodelavida.ParamJuego;
     opens es.uah.trabajo.juegodelavida.NuevaPartida to javafx.fxml;
     exports es.uah.trabajo.juegodelavida.NuevaPartida;
     exports es.uah.trabajo.juegodelavida.Portada;

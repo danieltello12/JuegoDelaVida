@@ -1,38 +1,29 @@
-package es.uah.trabajo.juegodelavida.InicioSesionNP;
+package es.uah.trabajo.juegodelavida.ParamJuego;
 
-import es.uah.trabajo.juegodelavida.Clases.ListaUsuarios;
-import es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoControlador;
-import es.uah.trabajo.juegodelavida.Registrarse.RegistrarseControlador;
-import es.uah.trabajo.juegodelavida.Registrarse.RegistrarseModelo;
-import es.uah.trabajo.juegodelavida.Registrarse.RegistrarseProperties;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class InicioSesionControladorNP implements Initializable {
+public class ParamJuegoControlador implements Initializable {
     private Stage scene;
     @FXML
-    private TextField textfieldNombre;
+    private TextField fDimension;
     @FXML
-    private PasswordField textfieldContraseña;
+    private TextField fVidas;
 
 
 
-    private InicioSesionPropertiesNP model;
+    private ParamJuegoProperties model;
     public void setStage(Stage s){
         this.scene = s;
     }
@@ -62,9 +53,9 @@ public class InicioSesionControladorNP implements Initializable {
             Scene scene = new Scene(fxmlLoader.load(), 450, 150);
             stage.setTitle("Juego de La Vida de Conway");
             stage.setScene(scene);
-            RegistrarseControlador p = fxmlLoader.getController(); //dame el controlador
+            ParamJuegoControlador p = fxmlLoader.getController(); //dame el controlador
 
-            p.loadUserData(new RegistrarseProperties(new RegistrarseModelo())); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
+            p.loadUserData(new ParamJuegoProperties(new ParamJuegoModel())); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
             p.setStage(stage); //doy la ventana donde se va a trabajar
             stage.show();
         } catch (Exception e) {
@@ -72,18 +63,21 @@ public class InicioSesionControladorNP implements Initializable {
         }
     }
     protected void updateGUIwithModel() {
-        textfieldNombre.textProperty().bindBidirectional(model.nombreProperty());
-        textfieldContraseña.textProperty().bindBidirectional(model.contraseñaProperty());
+        fDimension.textProperty().bindBidirectional(model.dimensionesProperty());
+        fVidas.textProperty().bindBidirectional(model.vidasProperty());
     }
     @FXML
+    public void onMibotonGuardarClick() throws FileNotFoundException{
+
+    }
+    /*@FXML
     public void onMibotonJugarClick() throws FileNotFoundException {
         model.commit();
         ListaUsuarios l= new ListaUsuarios();
-        //if(l.esta(model.original.getUsuario(),model.original.getContraseña())==2){
-        if(true){
+        if(l.esta(model.original.getDimension(),model.original.getVidas())==2){
             Stage stage = new Stage();
             FXMLLoader fxmlLoader= new FXMLLoader();
-            File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/ParamJuego.fxml");
+            File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/cargarpartida-view.fxml");
             URL url= null;
             try {
                 url= fichero.toURL();
@@ -96,7 +90,7 @@ public class InicioSesionControladorNP implements Initializable {
                 Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
                 stage.setTitle("Juego de La Vida de Conway");
                 stage.setScene(scene);
-                ParamJuegoControlador p = fxmlLoader.getController(); //dame el controlador
+                CargarPartidaControlador p = fxmlLoader.getController(); //dame el controlador
                 //p.loadUserData(this.modeloParaGUICompartido); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
                 p.setStage(stage); //doy la ventana donde se va a trabajar
                 stage.show();
@@ -105,10 +99,10 @@ public class InicioSesionControladorNP implements Initializable {
             }
         }
         else{
-            if (l.esta(model.original.getUsuario(),model.original.getContraseña())==0){
+            if (l.esta(model.original.getDimension(),model.original.getVidas())==1){
                 Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-                Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Registro.PNG"));
+                Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Captura.PNG"));
                 ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
                 imageView.setFitWidth(1280);
                 imageView.setFitHeight(720);
@@ -118,7 +112,7 @@ public class InicioSesionControladorNP implements Initializable {
                 s.setScene(im);
                 s.setTitle("Juego de La Vida de Conway");
                 s.show();
-            } else if (l.esta(model.original.getUsuario(),model.original.getContraseña())==1) {
+            } else if (l.esta(model.original.getDimension(),model.original.getVidas())==0) {
 
 
                 Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
@@ -135,14 +129,13 @@ public class InicioSesionControladorNP implements Initializable {
                 s.show();
             }
         }
-    }
+    }*/
 
     /**
      * Este método recibe los datos del modelo y los establece
      **/
-    public void loadUserData(InicioSesionPropertiesNP parametrosData) {
+    public void loadUserData(ParamJuegoProperties parametrosData) {
         this.model = parametrosData;
         this.updateGUIwithModel();
     }
-
 }

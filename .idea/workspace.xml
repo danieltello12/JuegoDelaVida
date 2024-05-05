@@ -10,32 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="inicio 22">
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/Botones.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/CajasBotones.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/CargarPartida.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/Estructuras/ElementoLEPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/Estructuras/ListaLEPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Avanzado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Básico.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Invidiuos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/normal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ParamJuego.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usuarios.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_02__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_18__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/CargarPartidaControlador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaLE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaLE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/ListaUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/ListaUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/RecursosJuego/Recursos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Elementos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionCP/InicioSesionControladorCP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionCP/InicioSesionControladorCP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionCP/InicioSesionModelCP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionCP/InicioSesionModelCP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/IniciosesionModelNP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/IniciosesionModelNP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Registrarse/RegistrarseControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Registrarse/RegistrarseControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Registrarse/RegistrarseModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Registrarse/RegistrarseModelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/MainGridApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/MainGridApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios.json" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,20 +43,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;danieltello12&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="afc270fa-c50b-48bd-b61e-5a0c2c6c36dd" />
-        <option name="url" value="https://github.com/danieltello12/Juego-De-La-Vida-L-D.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -81,29 +54,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3954023&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3954023",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\UAH\IdeaProjects\JuegoDeLaVida\src\main\resources\es\uah\trabajo\juegodelavida" />
       <recent name="C:\Users\UAH\IdeaProjects\JuegoDeLaVida\src\main\resources" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="es.uah.trabajo.juegodelavida.CargarPartida" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="es.uah.trabajo.juegodelavida" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -187,15 +161,7 @@
       <option name="project" value="LOCAL" />
       <updated>1714746569722</updated>
     </task>
-    <task id="LOCAL-00010" summary="inicio 22">
-      <option name="closed" value="true" />
-      <created>1714762950080</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1714762950080</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,19 +185,20 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Usuario.java</url>
-          <line>55</line>
-          <properties class="es.uah.trabajo.juegodelavida.Clases.Usuario" method="añadirpartidasJSon">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="7" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/ListaUsuarios.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/CargarPartida.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="11" />
+          <line>30</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

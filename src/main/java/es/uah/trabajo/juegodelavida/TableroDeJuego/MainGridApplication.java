@@ -1,13 +1,24 @@
 package es.uah.trabajo.juegodelavida.TableroDeJuego;
 
 import javafx.application.Application;
+import javafx.beans.property.ReadOnlyDoubleProperty;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 public class MainGridApplication extends Application {
     /**
@@ -66,22 +77,131 @@ public class MainGridApplication extends Application {
     /**
      En este ejemplo, vamos a crear programáticamente la ventan en la que trabajaremos.
      */
-    @Override
-    public void start(Stage primaryStage) {
+    public VBox addVBox() {
+        VBox vbox = new VBox();
+        vbox.setPadding(new Insets(10));
+        vbox.setSpacing(4);
+
+        Text title = new Text("Recursos");
+        title.setFont(Font.font("Arial", FontWeight.BOLD, 10));
+        vbox.getChildren().add(title);
+
+
+        Label label1 = new Label("Recurso 1");
+        label1.setFont(Font.font("Arial", 10));
+        Label label2 = new Label("Recurso 2");
+        label2.setFont(Font.font("Arial", 10));
+        Label label3 = new Label("Recurso 3");
+        label3.setFont(Font.font("Arial", 10));
+        ArrayList<Label> labels  = new ArrayList<Label> ();
+        labels.add(label1);
+        labels.add(label2);
+        labels.add(label3);
+
+        for (int i=0; i<3; i++) {
+            VBox.setMargin(labels.get(i), new Insets(0, 0, 0, 4));
+            vbox.getChildren().add(labels.get(i));
+        }
+
+        return vbox;
+    }
+    private MenuBar buildMenuBarWithMenus(final ReadOnlyDoubleProperty menuWidthProperty)
+    {
+        final MenuBar menuBar = new MenuBar();
+
+
+        // Prepare 'Examples' drop-down menu
+        final Menu paramMenu = new Menu("Parametrizar");
+        paramMenu.getItems().add(new MenuItem("Tablero"));
+        paramMenu.getItems().add(new MenuItem("Individuos"));
+        paramMenu.getItems().add(new MenuItem("Recursos"));
+        menuBar.getMenus().add(paramMenu);
+
+        // Prepare 'Help' drop-down menu
+        final Menu juegoMenu = new Menu("Juego");
+        juegoMenu.setOnAction(null);
+
+        final MenuItem searchMenuItem = new MenuItem("Jugar");
+        searchMenuItem.setDisable(true);
+        juegoMenu.getItems().add(searchMenuItem);
+
+        final MenuItem onlineManualMenuItem = new MenuItem("Detener juego");
+        onlineManualMenuItem.setVisible(true);
+        juegoMenu.getItems().add(onlineManualMenuItem);
+        juegoMenu.getItems().add(new SeparatorMenuItem());
+        final MenuItem aboutMenuItem = new MenuItem("Acerca de...");
+        juegoMenu.getItems().add(aboutMenuItem);
+        menuBar.getMenus().add(juegoMenu);
+
+        // bind width of menu bar to width of associated stage
+        menuBar.prefWidthProperty().bind(menuWidthProperty);
+
+        return menuBar;
+    }
+
+
+    public void start(Stage primaryStage) throws FileNotFoundException {
 
         log.info("Inicio del método de arranque de la aplicación para mostrar un grid de forma programática");
 
+
         GridPane mainGrid = new GridPane();
+       // mainGrid.setStyle("-fx-border-color: red;");
+        mainGrid.setHgap(0);
+        mainGrid.setVgap(0);
+        mainGrid.setGridLinesVisible(true);
+        mainGrid.setAlignment(Pos.CENTER);
+        mainGrid.setPadding(new Insets(0, 0, 0, 0));
 
-        for (int i = 0; i < 10; i++) {
+
+
+
+
+        for (int i = 0;i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                // Aquí podrías instanciar tu clase de celda, más compleja
 
-                // Ejemplo simplificado con un Label
-                Label placeholder = new Label("Celda " + i + "," + j);
-                placeholder.setMinSize(60, 60); // Tamaño mínimo para visualización
-                placeholder.setStyle("-fx-border-color: black; -fx-text-alignment: center;");
-                mainGrid.add(placeholder, i, j);
+                // Aquí podrías instanciar tu clase de celda, más compleja
+                GridPane secondaryGrid = new GridPane();
+                Label rBiblioteca=new Label();
+                rBiblioteca.setPrefSize(32,32);
+                rBiblioteca.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
+                Label rTesoro=new Label();
+                rTesoro.setPrefSize(32,32);
+                rTesoro.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
+                Label rPozo=new Label();
+                rPozo.setPrefSize(32,32);
+                rPozo.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
+                Label rAgua=new Label();
+                rAgua.setPrefSize(32,32);
+                rAgua.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
+                Label rMontana=new Label();
+                rMontana.setPrefSize(32,32);
+                rMontana.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
+                Label rComida=new Label();
+                rComida.setPrefSize(32,32);
+                rComida.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
+                Label iIndividuo=new Label("I");
+                iIndividuo.setPrefSize(32,32);
+                iIndividuo.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: right;");
+                iIndividuo.setAlignment(Pos.CENTER);
+                secondaryGrid.add(rAgua,0,0);
+                secondaryGrid.add(rMontana,0,1);
+                secondaryGrid.add(rComida,1,0);
+                secondaryGrid.add(iIndividuo,1,1);
+
+
+
+
+
+
+                //mainGrid.add(addVBox(), i, j);
+                mainGrid.add(secondaryGrid, i, j);
+                Button boton=new Button();
+                boton.setStyle("-fx-background-color: transparent;-fx-border-color: black");
+                boton.setPrefSize(64,64);
+                mainGrid.add(boton,i,j);
+
+
 
                 // OJO!: Tal como está programado, pierdo la referencia a los labels...
                 //       Si los quisiese usar después, debería guardarlos de alguna manera en algún sitio
@@ -92,19 +212,51 @@ public class MainGridApplication extends Application {
 
         //Ejemplo para poner 3 labels en la misma celda
 
-        Label antonio = new Label("Antonio");
-        Label moratilla = new Label("Moratilla");
-        Label ocaña = new Label("Ocaña");
 
-        VBox layout = new VBox(antonio,moratilla,ocaña);
-        layout.setStyle("-fx-border-color: black; -fx-text-alignment: center;");
-        mainGrid.add(layout,15,15);  // OJO: las coordenadas...: el grid responde automáticamente.
 
-        Scene scene = new Scene(mainGrid, 600, 600);
+        //mainGrid.add(layout,15,15);  // OJO: las coordenadas...: el grid responde automáticamente.
+
+       // Scene scene = new Scene(mainGrid, 600, 600);
+       // primaryStage.setTitle("Grid de 10x10 con Componentes Personalizados");
+       // primaryStage.setScene(scene);
+       // primaryStage.setMaximized(true);
+       // primaryStage.show();
+
+
+        final Group rootGroup = new Group();
+        final Scene scene = new Scene(rootGroup, 800, 400, Color.WHITE);
+        final MenuBar menuBar = buildMenuBarWithMenus(primaryStage.widthProperty());
+
+
+        BorderPane border = new BorderPane();
+
+
+        border.setTop(menuBar);
+        border.setLeft(new FlowPane());
+        border.setCenter(mainGrid);
+        border.setRight(new FlowPane());
+
+        //border.setStyle("-fx-background-image: url('file:///src/main/resources/es/uah/trabajo/juegodelavida/FondoPortada.png');" +
+        //        "-fx-background-size: cover;"); // Ajusta el tamaño de la imagen
+        Image image2 = new Image("file://src/main/resources/es/uah/trabajo/juegodelavida/FondoPortada.png");
+
+        BackgroundSize bSize = new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, false);
+
+        Background background2 = new Background(new BackgroundImage(image2,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.CENTER,
+                bSize));
+        border.setBackground(background2);
+
+
+
+        rootGroup.getChildren().add(border);
+
         primaryStage.setTitle("Grid de 10x10 con Componentes Personalizados");
         primaryStage.setScene(scene);
+        primaryStage.setMaximized(true);
         primaryStage.show();
-
 
 
         // Ejemplo de cómo usar los LOGS de sistema que se habían definido antes.
