@@ -40,10 +40,10 @@ public class CambioDePantalla extends Pane  {
         inicio.setTranslateX(400);
         inicio.setTranslateY(360);
 
-        Boton itemNew = new Boton("Nueva Partida", 150);
-        itemNew.setTranslateX(95); //Posicion X respecto el cuadro donde se encuentra en la vbox letras
-        itemNew.setTranslateY(0);//Posicion Y respecto el cuadro donde se encuentra en la vbox letras
-        itemNew.setOnAction(() -> { //Defino la ejecucion que se llevara acabo cuadno se pulse "Iniciar Juego"
+        Boton itemNueva = new Boton("Nueva Partida", 150);
+        itemNueva.setTranslateX(95); //Posicion X respecto el cuadro donde se encuentra en la vbox letras
+        itemNueva.setTranslateY(0);//Posicion Y respecto el cuadro donde se encuentra en la vbox letras
+       itemNueva.setOnAction(() -> { //Defino la ejecucion que se llevara acabo cuadno se pulse "Iniciar Juego"
             log.info("Nueva Partida");
             Stage stage = new Stage();
             FXMLLoader fxmlLoader= new FXMLLoader();
@@ -71,7 +71,7 @@ public class CambioDePantalla extends Pane  {
             }
 
         });
-        inicio.addItem(itemNew);
+        inicio.addItem(itemNueva);
         Caja_Boton inicio2= new Caja_Boton(500,75); //Inicializo el Vbox q contiene la imagen del boton y añadire el boton
         inicio2.setTranslateX(400);
         inicio2.setTranslateY(480);

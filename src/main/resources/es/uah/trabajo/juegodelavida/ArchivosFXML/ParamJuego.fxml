@@ -15,6 +15,6 @@
         <TextField fx:id="fDimension" alignment="CENTER" layoutX="160.0" layoutY="23.0" />
         <Label layoutX="20.0" layoutY="66.0" text="Numero de Vidas:" />
         <TextField fx:id="fVidas" layoutX="160.0" layoutY="63.0" />
-        <Button layoutX="330.0" layoutY="118.0" mnemonicParsing="false" onAction="#onMibotonGuardarClick" prefHeight="26.0" prefWidth="106.0" text="Iniciar Juego" />
+        <Button layoutX="330.0" layoutY="118.0" mnemonicParsing="false" onAction="#onMiBotonRegistrarseClick" prefHeight="26.0" prefWidth="106.0" text="Iniciar Juego" />
     </children>
 </AnchorPane>

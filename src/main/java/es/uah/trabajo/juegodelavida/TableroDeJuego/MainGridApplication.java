@@ -8,6 +8,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -224,7 +225,7 @@ public class MainGridApplication extends Application {
 
 
         final Group rootGroup = new Group();
-        final Scene scene = new Scene(rootGroup, 800, 400, Color.WHITE);
+        final Scene scene = new Scene(rootGroup, 1280, 400, Color.WHITE);
         final MenuBar menuBar = buildMenuBarWithMenus(primaryStage.widthProperty());
 
 
@@ -239,8 +240,12 @@ public class MainGridApplication extends Application {
         //border.setStyle("-fx-background-image: url('file:///src/main/resources/es/uah/trabajo/juegodelavida/FondoPortada.png');" +
         //        "-fx-background-size: cover;"); // Ajusta el tamaño de la imagen
         Image image2 = new Image("file://src/main/resources/es/uah/trabajo/juegodelavida/FondoPortada.png");
+        ImageView fondo= new ImageView(image2);
 
-        BackgroundSize bSize = new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, false);
+        fondo.setFitHeight(800);
+        fondo.setFitHeight(400);
+
+       /** BackgroundSize bSize = new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, false);
 
         Background background2 = new Background(new BackgroundImage(image2,
                 BackgroundRepeat.NO_REPEAT,
@@ -248,10 +253,11 @@ public class MainGridApplication extends Application {
                 BackgroundPosition.CENTER,
                 bSize));
         border.setBackground(background2);
+        **/
 
 
 
-        rootGroup.getChildren().add(border);
+        rootGroup.getChildren().addAll(border,fondo);
 
         primaryStage.setTitle("Grid de 10x10 con Componentes Personalizados");
         primaryStage.setScene(scene);
