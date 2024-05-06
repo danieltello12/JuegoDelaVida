@@ -49,6 +49,7 @@ public class CambioDePantalla extends Pane  {
             FXMLLoader fxmlLoader= new FXMLLoader();
             File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/iniciosesionCP.fxml");
             URL url= null;
+            //HJASVJKAS
             try {
                 url= fichero.toURL();
             } catch (MalformedURLException e) {
