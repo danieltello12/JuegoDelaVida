@@ -1,0 +1,188 @@
+Index: src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/MainGridApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package es.uah.trabajo.juegodelavida.TableroDeJuego;\r\n\r\nimport javafx.application.Application;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.control.Label;\r\nimport javafx.scene.layout.GridPane;\r\nimport javafx.scene.layout.VBox;\r\nimport javafx.stage.Stage;\r\nimport org.apache.logging.log4j.LogManager;\r\nimport org.apache.logging.log4j.Logger;\r\n\r\npublic class MainGridApplication extends Application {\r\n    /**\r\n     * Generamos un log de sistema para esta clase\r\n     *\r\n     * Necesitamos instalar el paquete apache.logging.log4j.core, en su versión más reciente.\r\n     * Para instalarlo, Open Module Settings -> libraries -> + en la lista -> From maven\r\n     *\r\n     * Además, se necesita configurar un fichero log4j2.xml en la carpeta resources, con la estructura e información\r\n     * del sistema de log que vamos a usar.\r\n     *\r\n     *\r\n     * Ejemplo:\r\n\r\n     <?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n     <Configuration status=\"DEBUG\">\r\n     <Appenders>\r\n     <Console name=\"LogToConsole\" target=\"SYSTEM_OUT\">\r\n     <PatternLayout pattern=\"%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n\"/>\r\n     </Console>\r\n     <RollingFile name=\"LogToRollingFile\" fileName=\"logs/app.log\"\r\n     filePattern=\"logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz\">\r\n     <PatternLayout>\r\n     <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - %-5level - %logger - %msg%n</Pattern>\r\n     </PatternLayout>\r\n     <Policies>\r\n     <TimeBasedTriggeringPolicy />\r\n     <SizeBasedTriggeringPolicy size=\"10 MB\"/>\r\n     </Policies>\r\n     </RollingFile>\r\n\r\n     </Appenders>\r\n     <Loggers>\r\n     <!-- Elimina duplicados con additivity=false -->\r\n     <Logger name=\"es.uah\" level=\"info\" additivity=\"false\">\r\n     <AppenderRef ref=\"LogToRollingFile\"/>\r\n     <AppenderRef ref=\"LogToConsole\"/>\r\n     </Logger>\r\n     <Root level=\"error\">\r\n     <AppenderRef ref=\"LogToConsole\"/>\r\n     </Root>\r\n     </Loggers>\r\n     </Configuration>\r\n\r\n     * Este fichero de configuración hace que los logs se guarden en un fichero de la carpeta 'logs' del proyecto\r\n     * que si no existe se creará.\r\n     * los ficheros van guardándose, y se pueden añadir descriptores de hora al nombre para\r\n     * que podamos seguir el rastro de cuándo se creó cada fichero de log.\r\n     * Los logs se pueden enviar a consola o a fichero, como está configurado, pero también\r\n     * se pueden enviar por correo electrónico (SMTP) y a bases de datos en otras configuraciones.\r\n     */\r\n\r\n    private static final Logger log = LogManager.getLogger(MainGridApplication.class);\r\n\r\n\r\n    /**\r\n     En este ejemplo, vamos a crear programáticamente la ventan en la que trabajaremos.\r\n     */\r\n    @Override\r\n    public void start(Stage primaryStage) {\r\n\r\n        log.info(\"Inicio del método de arranque de la aplicación para mostrar un grid de forma programática\");\r\n\r\n        GridPane mainGrid = new GridPane();\r\n\r\n        for (int i = 0; i < 10; i++) {\r\n            for (int j = 0; j < 10; j++) {\r\n                // Aquí podrías instanciar tu clase de celda, más compleja\r\n\r\n                // Ejemplo simplificado con un Label\r\n                Label placeholder = new Label(\"Celda \" + i + \",\" + j);\r\n                placeholder.setMinSize(60, 60); // Tamaño mínimo para visualización\r\n                placeholder.setStyle(\"-fx-border-color: black; -fx-text-alignment: center;\");\r\n                mainGrid.add(placeholder, i, j);\r\n\r\n                // OJO!: Tal como está programado, pierdo la referencia a los labels...\r\n                //       Si los quisiese usar después, debería guardarlos de alguna manera en algún sitio\r\n                // Pista: los quieres guardar para poder cambiar lo que aparece en pantalla :)\r\n            }\r\n        }\r\n\r\n\r\n        //Ejemplo para poner 3 labels en la misma celda\r\n\r\n        Label antonio = new Label(\"Antonio\");\r\n        Label moratilla = new Label(\"Moratilla\");\r\n        Label ocaña = new Label(\"Ocaña\");\r\n\r\n        VBox layout = new VBox(antonio,moratilla,ocaña);\r\n        layout.setStyle(\"-fx-border-color: black; -fx-text-alignment: center;\");\r\n        mainGrid.add(layout,15,15);  // OJO: las coordenadas...: el grid responde automáticamente.\r\n\r\n        Scene scene = new Scene(mainGrid, 600, 600);\r\n        primaryStage.setTitle(\"Grid de 10x10 con Componentes Personalizados\");\r\n        primaryStage.setScene(scene);\r\n        primaryStage.show();\r\n\r\n\r\n\r\n        // Ejemplo de cómo usar los LOGS de sistema que se habían definido antes.\r\n        // Los logs trabajan por niveles:\r\n        // trace, debug, info, warn, error y fatal\r\n        //\r\n        // Según la configuración del fichero de log4j2.xml, se guardarán los mensajes\r\n        // del nivel configurado y superiores, pero no inferiores.\r\n\r\n        log.trace(\"Enviando una traza de ejecución\");\r\n        log.debug(\"Enviado un debug\");\r\n        log.info(\"Enviando un info\");\r\n        log.warn(\"Enviando un aviso\");\r\n        log.error(\"Enviando un error\");\r\n        log.fatal(\"Enviando una explosión fatal\");\r\n\r\n        // Los logs sólo operan si la clase utilizada coincide con el patrón que se pone en el log4j2.xml.\r\n        // En este caso el patrón es \"es.uah\" que coincide con nuestro paquete, por eso funciona.\r\n\r\n\r\n        log.info(\"Fin del método de arranque de la aplicación para mostrar un grid de forma programática\");\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        launch(args);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/MainGridApplication.java b/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/MainGridApplication.java
+--- a/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/MainGridApplication.java	(revision adcf83849ea7f3b496922adafdbcb2de1b5d1e3b)
++++ b/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/MainGridApplication.java	(date 1714755747227)
+@@ -92,6 +92,7 @@
+ 
+         //Ejemplo para poner 3 labels en la misma celda
+ 
++
+         Label antonio = new Label("Antonio");
+         Label moratilla = new Label("Moratilla");
+         Label ocaña = new Label("Ocaña");
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ArtifactsWorkspaceSettings\">\r\n    <artifacts-to-build>\r\n      <artifact name=\"JuegoDeLaVida:jar\" />\r\n    </artifacts-to-build>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d975c334-6d3f-4aa2-9700-876b14b96e41\" name=\"Changes\" comment=\"inicio\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2fcvzZzsHzduvdvTcHTTcFO1Yml\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,\r\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,\r\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.3954023&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d975c334-6d3f-4aa2-9700-876b14b96e41\" name=\"Changes\" comment=\"\" />\r\n      <created>1714113444418</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1714113444418</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"First Commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714122770292</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714122770292</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"inicio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714230020148</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714230020148</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"inicio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714231145475</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714231145475</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"inicio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714507272445</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714507272445</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"inicio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714591693036</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714591693036</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"inicio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714591721749</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714591721749</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"First Commit\" />\r\n    <MESSAGE value=\"inicio\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"inicio\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision adcf83849ea7f3b496922adafdbcb2de1b5d1e3b)
++++ b/.idea/workspace.xml	(date 1714732048520)
+@@ -9,7 +9,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="inicio" />
++    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="commit 2">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_02__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_18__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -18,8 +22,8 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
++        <option value="Class" />
+         <option value="FxmlFile" />
+-        <option value="Class" />
+       </list>
+     </option>
+   </component>
+@@ -37,22 +41,42 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.3954023&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "ASKED_ADD_EXTERNAL_FILES": "true",
++    "Downloaded.Files.Path.Enabled": "false",
++    "Repository.Attach.Annotations": "true",
++    "Repository.Attach.JavaDocs": "true",
++    "Repository.Attach.Sources": "true",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "git-widget-placeholder": "master",
++    "project.structure.last.edited": "Libraries",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.3954023"
+   }
+-}</component>
++}]]></component>
++  <component name="RunManager">
++    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="es.uah.trabajo.juegodelavida.Portada.HelloApplication" />
++      <module name="JuegoDeLaVida" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="es.uah.trabajo.juegodelavida.Portada.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.HelloApplication" />
++      </list>
++    </recent_temporary>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -78,39 +102,23 @@
+       <option name="project" value="LOCAL" />
+       <updated>1714230020148</updated>
+     </task>
+-    <task id="LOCAL-00003" summary="inicio">
++    <task id="LOCAL-00003" summary="commit">
+       <option name="closed" value="true" />
+-      <created>1714231145475</created>
++      <created>1714586033002</created>
+       <option name="number" value="00003" />
+       <option name="presentableId" value="LOCAL-00003" />
+       <option name="project" value="LOCAL" />
+-      <updated>1714231145475</updated>
++      <updated>1714586033002</updated>
+     </task>
+-    <task id="LOCAL-00004" summary="inicio">
++    <task id="LOCAL-00004" summary="commit 2">
+       <option name="closed" value="true" />
+-      <created>1714507272445</created>
++      <created>1714586548189</created>
+       <option name="number" value="00004" />
+       <option name="presentableId" value="LOCAL-00004" />
+       <option name="project" value="LOCAL" />
+-      <updated>1714507272445</updated>
++      <updated>1714586548189</updated>
+     </task>
+-    <task id="LOCAL-00005" summary="inicio">
+-      <option name="closed" value="true" />
+-      <created>1714591693036</created>
+-      <option name="number" value="00005" />
+-      <option name="presentableId" value="LOCAL-00005" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1714591693036</updated>
+-    </task>
+-    <task id="LOCAL-00006" summary="inicio">
+-      <option name="closed" value="true" />
+-      <created>1714591721749</created>
+-      <option name="number" value="00006" />
+-      <option name="presentableId" value="LOCAL-00006" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1714591721749</updated>
+-    </task>
+-    <option name="localTasksCounter" value="7" />
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -118,7 +126,19 @@
+       <map>
+         <entry key="MAIN">
+           <value>
+-            <State />
++            <State>
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="origin/master" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
+           </value>
+         </entry>
+       </map>
+@@ -128,6 +148,8 @@
+     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+     <MESSAGE value="First Commit" />
+     <MESSAGE value="inicio" />
+-    <option name="LAST_COMMIT_MESSAGE" value="inicio" />
++    <MESSAGE value="commit" />
++    <MESSAGE value="commit 2" />
++    <option name="LAST_COMMIT_MESSAGE" value="commit 2" />
+   </component>
+ </project>
+\ No newline at end of file

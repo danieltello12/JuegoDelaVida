@@ -1,0 +1,13 @@
+Index: usuarios.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\"primero\":{\"siguiente\":{\"siguiente\":{\"datos\":{\"nombre\":\"d\",\"contraseña\":\"a\",\"partidas\":{}}},\"datos\":{\"nombre\":\"dani\",\"contraseña\":\"prueba\",\"partidas\":{}}},\"datos\":{\"nombre\":\"aparicio\",\"contraseña\":\"hola\",\"partidas\":{}}}}
+===================================================================
+diff --git a/usuarios.json b/usuarios.json
+--- a/usuarios.json	
++++ b/usuarios.json	
+@@ -1,1 +1,1 @@
+-{"primero":{"siguiente":{"siguiente":{"datos":{"nombre":"d","contraseña":"a","partidas":{}}},"datos":{"nombre":"dani","contraseña":"prueba","partidas":{}}},"datos":{"nombre":"aparicio","contraseña":"hola","partidas":{}}}}
+\ No newline at end of file
++{"primero":{"siguiente":{"datos":{"nombre":"d","contraseña":"a","partidas":{}}},"datos":{"nombre":"lucia","contraseña":"paco","partidas":{}}}}
+\ No newline at end of file
