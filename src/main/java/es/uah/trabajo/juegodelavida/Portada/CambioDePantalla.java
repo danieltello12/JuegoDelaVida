@@ -47,7 +47,7 @@ public class CambioDePantalla extends Pane  {
             log.info("Nueva Partida");
             Stage stage = new Stage();
             FXMLLoader fxmlLoader= new FXMLLoader();
-            File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/iniciosesionCP.fxml");
+            File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/iniciosesionNP.fxml");
             URL url= null;
             //HJASVJKAS
             try {
@@ -92,6 +92,7 @@ public class CambioDePantalla extends Pane  {
                 throw new RuntimeException(e);
             }
             fxmlLoader.setLocation(url);
+            //lguidasjkgpofhhAOIAFHSFH
 
             try {
                 Scene scene = new Scene(fxmlLoader.load(), 450, 150);
