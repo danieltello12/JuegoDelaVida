@@ -1,0 +1,531 @@
+Index: src/main/java/es/uah/trabajo/juegodelavida/Portada/CambioDePantalla.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package es.uah.trabajo.juegodelavida.Portada;\r\n\r\n\r\nimport es.uah.trabajo.juegodelavida.InicioSesionCP.InicioSesionControladorCP;\r\nimport es.uah.trabajo.juegodelavida.InicioSesionCP.InicioSesionModelCP;\r\nimport es.uah.trabajo.juegodelavida.InicioSesionCP.InicioSesionPropertiesCP;\r\nimport es.uah.trabajo.juegodelavida.InicioSesionNP.InicioSesionControladorNP;\r\nimport es.uah.trabajo.juegodelavida.InicioSesionNP.InicioSesionPropertiesNP;\r\nimport es.uah.trabajo.juegodelavida.InicioSesionNP.IniciosesionModelNP;\r\nimport es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.image.Image;\r\nimport javafx.scene.image.ImageView;\r\nimport javafx.scene.layout.Pane;\r\nimport javafx.scene.shape.Rectangle;\r\nimport javafx.stage.Stage;\r\nimport org.apache.logging.log4j.LogManager;\r\nimport org.apache.logging.log4j.Logger;\r\n\r\nimport java.io.File;\r\nimport java.io.FileInputStream;\r\nimport java.io.FileNotFoundException;\r\nimport java.net.MalformedURLException;\r\nimport java.net.URL;\r\n\r\npublic class CambioDePantalla extends Pane  {\r\n    private static final Logger log = LogManager.getLogger(MainGridApplication.class);\r\n    public CambioDePantalla(int width, int height) throws FileNotFoundException {\r\n        ImageView bg = new ImageView(new Image(new FileInputStream(\"src/main/resources/es/uah/trabajo/juegodelavida/FondoPortada.png\"))\r\n        );\r\n        bg.setFitWidth(width);\r\n        bg.setFitHeight(height);\r\n\r\n        Rectangle masker = new Rectangle(1280, 720); //Creo un sub fondo inicialmente transparente que se vira cuando se haga la transición\r\n        masker.setOpacity(0);\r\n        masker.setMouseTransparent(true);\r\n\r\n        Caja_Boton inicio= new Caja_Boton(500,75); //Inicializo el Vbox q contiene la imagen del boton y añadire el boton\r\n        inicio.setTranslateX(400);\r\n        inicio.setTranslateY(360);\r\n\r\n        Boton itemNew = new Boton(\"Nueva Partida\", 150);\r\n        itemNew.setTranslateX(95); //Posicion X respecto el cuadro donde se encuentra en la vbox letras\r\n        itemNew.setTranslateY(0);//Posicion Y respecto el cuadro donde se encuentra en la vbox letras\r\n        itemNew.setOnAction(() -> { //Defino la ejecucion que se llevara acabo cuadno se pulse \"Iniciar Juego\"\r\n            log.info(\"Nueva Partida\");\r\n            Stage stage = new Stage();\r\n            FXMLLoader fxmlLoader= new FXMLLoader();\r\n            File fichero= new File(\"src/main/resources/es/uah/trabajo/juegodelavida/iniciosesionNP.fxml\");\r\n            URL url= null;\r\n            try {\r\n                url= fichero.toURL();\r\n            } catch (MalformedURLException e) {\r\n                log.error(\"No se ha encontrado la pantalla de iniciosesion nueva partida\");\r\n                throw new RuntimeException(e);\r\n            }\r\n            fxmlLoader.setLocation(url);\r\n\r\n            try {\r\n                Scene scene = new Scene(fxmlLoader.load(), 450, 150);\r\n                stage.setTitle(\"Juego de La Vida de Conway\");\r\n                stage.setScene(scene);\r\n                InicioSesionControladorNP p = fxmlLoader.getController(); //dame el controlador\r\n                p.loadUserData(new InicioSesionPropertiesNP(new IniciosesionModelNP())); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso\r\n                p.setStage(stage); //doy la ventana donde se va a trabajar\r\n                stage.show();\r\n            } catch (Exception e) {\r\n                e.printStackTrace();\r\n            }\r\n\r\n        });\r\n        inicio.addItem(itemNew);\r\n        Caja_Boton inicio2= new Caja_Boton(500,75); //Inicializo el Vbox q contiene la imagen del boton y añadire el boton\r\n        inicio2.setTranslateX(400);\r\n        inicio2.setTranslateY(480);\r\n\r\n        Boton itemCargarPartida= new Boton(\"Cargar Partida\", 150);\r\n        itemCargarPartida.setTranslateX(95); //Posicion X respecto el cuadro donde se encuentra en la vbox letras\r\n        itemCargarPartida.setTranslateY(0);//Posicion Y respecto el cuadro donde se encuentra en la vbox letras\r\n        itemCargarPartida.setOnAction(() -> { //Defino la ejecucion que se llevara acabo cuadno se pulse \"Iniciar Juego\"\r\n            log.info(\"Cargar Partida\");\r\n            Stage stage = new Stage();\r\n            FXMLLoader fxmlLoader= new FXMLLoader();\r\n            File fichero= new File(\"src/main/resources/es/uah/trabajo/juegodelavida/iniciosesionCP.fxml\");\r\n            URL url= null;\r\n            try {\r\n                url= fichero.toURL();\r\n            } catch (MalformedURLException e) {\r\n                log.error(\"No se ha encontrado la pantalla de iniciosesion Cargar partida\");\r\n                throw new RuntimeException(e);\r\n            }\r\n            fxmlLoader.setLocation(url);\r\n\r\n            try {\r\n                Scene scene = new Scene(fxmlLoader.load(), 450, 150);\r\n                stage.setTitle(\"Juego de La Vida de Conway\");\r\n                stage.setScene(scene);\r\n                InicioSesionControladorCP p = fxmlLoader.getController(); //dame el controlador\r\n\r\n                p.loadUserData(new InicioSesionPropertiesCP(new InicioSesionModelCP())); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso\r\n                p.setStage(stage); //doy la ventana donde se va a trabajar\r\n                stage.show();\r\n            } catch (Exception e) {\r\n                e.printStackTrace();\r\n            }\r\n\r\n        });\r\n        inicio2.addItem(itemCargarPartida);\r\n\r\n\r\n        getChildren().addAll(bg,inicio,inicio2);\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/es/uah/trabajo/juegodelavida/Portada/CambioDePantalla.java b/src/main/java/es/uah/trabajo/juegodelavida/Portada/CambioDePantalla.java
+--- a/src/main/java/es/uah/trabajo/juegodelavida/Portada/CambioDePantalla.java	(revision a3542f407aab110314173900f9b1a0bfcaaf0b8d)
++++ b/src/main/java/es/uah/trabajo/juegodelavida/Portada/CambioDePantalla.java	(date 1714926066761)
+@@ -26,7 +26,8 @@
+ 
+ public class CambioDePantalla extends Pane  {
+     private static final Logger log = LogManager.getLogger(MainGridApplication.class);
+-    public CambioDePantalla(int width, int height) throws FileNotFoundException {
++    public CambioDePantalla(int width, int height, Stage primaryStage) throws FileNotFoundException {
++
+         ImageView bg = new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/FondoPortada.png"))
+         );
+         bg.setFitWidth(width);
+@@ -65,6 +66,7 @@
+                 p.loadUserData(new InicioSesionPropertiesNP(new IniciosesionModelNP())); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
+                 p.setStage(stage); //doy la ventana donde se va a trabajar
+                 stage.show();
++                primaryStage.hide();
+             } catch (Exception e) {
+                 e.printStackTrace();
+             }
+Index: src/main/java/es/uah/trabajo/juegodelavida/Portada/HelloApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package es.uah.trabajo.juegodelavida.Portada;\r\n\r\nimport es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication;\r\nimport javafx.animation.FadeTransition;\r\nimport javafx.application.Application;\r\nimport javafx.scene.Parent;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.image.Image;\r\nimport javafx.scene.image.ImageView;\r\nimport javafx.scene.layout.Pane;\r\nimport javafx.scene.shape.Rectangle;\r\nimport javafx.stage.Stage;\r\nimport javafx.util.Duration;\r\nimport org.apache.logging.log4j.LogManager;\r\nimport org.apache.logging.log4j.Logger;\r\n\r\n\r\nimport java.io.FileInputStream;\r\nimport java.io.FileNotFoundException;\r\n\r\n\r\npublic class HelloApplication extends Application {\r\n    private Parent createContent() throws FileNotFoundException {\r\n        Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos\r\n\r\n        Image imagen = new Image(new FileInputStream(\"src/main/resources/es/uah/trabajo/juegodelavida/FondoPortada.png\"));\r\n        ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.\r\n        imageView.setFitWidth(1280);\r\n        imageView.setFitHeight(720);\r\n\r\n        Rectangle masker = new Rectangle(1280, 720); //Creo un sub fondo inicialmente transparente que se vira cuando se haga la transición\r\n        masker.setOpacity(0);\r\n        masker.setMouseTransparent(true);\r\n\r\n        Caja_Boton inicio = new Caja_Boton(500, 75); //Inicializo el Vbox q contiene la imagen del boton y añadire el boton\r\n        inicio.setTranslateX(400);\r\n        inicio.setTranslateY(475);\r\n\r\n        Boton itemNew = new Boton(\"INICIAR JUEGO\", 150);\r\n        log.info(\"Inicio del juego\");\r\n        itemNew.setTranslateX(95); //Posicion X respecto el cuadro donde se encuentra en la vbox letras\r\n        itemNew.setTranslateY(0);//Posicion Y respecto el cuadro donde se encuentra en la vbox letras\r\n        itemNew.setOnAction(() -> { //Defino la ejecucion que se llevara acabo cuadno se pulse \"Iniciar Juego\"\r\n            FadeTransition ft = new FadeTransition(Duration.seconds(1.5), masker);\r\n            ft.setToValue(1);\r\n\r\n            ft.setOnFinished(e -> {\r\n                try {\r\n                    root.getChildren().setAll(new CambioDePantalla(1280, 720));\r\n                } catch (FileNotFoundException ex) {\r\n                    throw new RuntimeException(ex);\r\n                }\r\n            });\r\n\r\n            ft.play();\r\n        });\r\n        inicio.addItem(itemNew); //Añado el item al box\r\n        root.getChildren().addAll(imageView, inicio, masker); //Añado el fondo, el fondo de la transición y el box al pane\r\n\r\n        /**  Menu menuBox = new Menu(250, 350);\r\n         menuBox.setTranslateX(250);\r\n         menuBox.setTranslateY(230);\r\n\r\n         Menu menuBox2 = new Menu(510, 350);\r\n         menuBox2.setTranslateX(250 + 20 + 250);\r\n         menuBox2.setTranslateY(230);\r\n\r\n         menuBox.addItem(new ItemMenu(\"CONTINUE\", 250));\r\n\r\n         ItemMenu itemNew = new ItemMenu(\"NEW\", 250);\r\n         itemNew.setOnAction(() -> {\r\n         FadeTransition ft = new FadeTransition(Duration.seconds(1.5), masker);\r\n         ft.setToValue(1);\r\n\r\n         ft.setOnFinished(e -> {\r\n         try {\r\n         root.getChildren().setAll(new CambioDePantalla(1280, 720, () -> {\r\n         masker.setOpacity(0);\r\n         root.getChildren().setAll(imageView, menuBox, menuBox2, masker);\r\n         }));\r\n         } catch (FileNotFoundException ex) {\r\n         throw new RuntimeException(ex);\r\n         }\r\n         });\r\n\r\n         ft.play();\r\n         });\r\n         menuBox.addItem(itemNew);\r\n         menuBox.addItem(new ItemMenu(\"LOAD\", 250));\r\n\r\n         ItemMenu itemSettings = new ItemMenu(\"SETTINGS\", 250);\r\n         itemSettings.setOnAction(() -> {\r\n         menuBox2.addItems(\r\n         new ItemMenu(\"GAMEPLAY\", 510),\r\n         new ItemMenu(\"CONTROLS\", 510),\r\n         new ItemMenu(\"DISPLAY\", 510),\r\n         new ItemMenu(\"AUDIO\", 510));\r\n         });\r\n\r\n         menuBox.addItem(itemSettings);\r\n         menuBox.addItem(new ItemMenu(\"CREW\", 250));\r\n\r\n         ItemMenu itemExit = new ItemMenu(\"EXIT\", 250);\r\n         itemExit.setOnAction(() -> System.exit(0));\r\n         menuBox.addItem(itemExit);\r\n\r\n         root.getChildren().addAll(imageView, menuBox, menuBox2, masker);**/\r\n        return root;\r\n    }\r\n    private static final Logger log = LogManager.getLogger(MainGridApplication.class);\r\n\r\n    @Override\r\n    public void start(Stage primaryStage) throws Exception {\r\n        Scene scene = new Scene(createContent());\r\n        primaryStage.setTitle(\"Juego de La Vida de Conway\");\r\n        primaryStage.setScene(scene);\r\n        primaryStage.show();\r\n        log.info(\"Inicio de Aplicación\");\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        launch(args);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/es/uah/trabajo/juegodelavida/Portada/HelloApplication.java b/src/main/java/es/uah/trabajo/juegodelavida/Portada/HelloApplication.java
+--- a/src/main/java/es/uah/trabajo/juegodelavida/Portada/HelloApplication.java	(revision a3542f407aab110314173900f9b1a0bfcaaf0b8d)
++++ b/src/main/java/es/uah/trabajo/juegodelavida/Portada/HelloApplication.java	(date 1714923222927)
+@@ -20,7 +20,7 @@
+ 
+ 
+ public class HelloApplication extends Application {
+-    private Parent createContent() throws FileNotFoundException {
++    private Parent createContent(Stage primaryStage) throws FileNotFoundException {
+         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+ 
+         Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/FondoPortada.png"));
+@@ -46,7 +46,8 @@
+ 
+             ft.setOnFinished(e -> {
+                 try {
+-                    root.getChildren().setAll(new CambioDePantalla(1280, 720));
++                    root.getChildren().setAll(new CambioDePantalla(1280, 720,primaryStage));
++
+                 } catch (FileNotFoundException ex) {
+                     throw new RuntimeException(ex);
+                 }
+@@ -111,7 +112,7 @@
+ 
+     @Override
+     public void start(Stage primaryStage) throws Exception {
+-        Scene scene = new Scene(createContent());
++        Scene scene = new Scene(createContent(primaryStage));
+         primaryStage.setTitle("Juego de La Vida de Conway");
+         primaryStage.setScene(scene);
+         primaryStage.show();
+Index: src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package es.uah.trabajo.juegodelavida.InicioSesionNP;\r\n\r\nimport es.uah.trabajo.juegodelavida.Clases.ListaUsuarios;\r\nimport es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoControlador;\r\nimport es.uah.trabajo.juegodelavida.Registrarse.RegistrarseControlador;\r\nimport es.uah.trabajo.juegodelavida.Registrarse.RegistrarseModelo;\r\nimport es.uah.trabajo.juegodelavida.Registrarse.RegistrarseProperties;\r\nimport javafx.fxml.FXML;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.fxml.Initializable;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.control.PasswordField;\r\nimport javafx.scene.control.TextField;\r\nimport javafx.scene.image.Image;\r\nimport javafx.scene.image.ImageView;\r\nimport javafx.scene.layout.Pane;\r\nimport javafx.stage.Stage;\r\n\r\nimport java.io.File;\r\nimport java.io.FileInputStream;\r\nimport java.io.FileNotFoundException;\r\nimport java.net.MalformedURLException;\r\nimport java.net.URL;\r\nimport java.util.ResourceBundle;\r\n\r\npublic class InicioSesionControladorNP implements Initializable {\r\n    private Stage scene;\r\n    @FXML\r\n    private TextField textfieldNombre;\r\n    @FXML\r\n    private PasswordField textfieldContraseña;\r\n\r\n\r\n\r\n    private InicioSesionPropertiesNP model;\r\n    public void setStage(Stage s){\r\n        this.scene = s;\r\n    }\r\n\r\n\r\n    @Override\r\n    public void initialize(URL location, ResourceBundle resources) {\r\n\r\n        if (model != null) {\r\n            this.updateGUIwithModel();\r\n        }\r\n    }\r\n    @FXML\r\n    protected void onMiBotonRegistrarseClick() throws FileNotFoundException {\r\n        Stage stage = new Stage();\r\n        FXMLLoader fxmlLoader= new FXMLLoader();\r\n        File fichero= new File(\"src/main/resources/es/uah/trabajo/juegodelavida/registrarse.fxml\");\r\n        URL url= null;\r\n        try {\r\n            url= fichero.toURL();\r\n        } catch (MalformedURLException e) {\r\n            throw new RuntimeException(e);\r\n        }\r\n        fxmlLoader.setLocation(url);\r\n\r\n        try {\r\n            Scene scene = new Scene(fxmlLoader.load(), 450, 150);\r\n            stage.setTitle(\"Juego de La Vida de Conway\");\r\n            stage.setScene(scene);\r\n            RegistrarseControlador p = fxmlLoader.getController(); //dame el controlador\r\n\r\n            p.loadUserData(new RegistrarseProperties(new RegistrarseModelo())); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso\r\n            p.setStage(stage); //doy la ventana donde se va a trabajar\r\n            stage.show();\r\n        } catch (Exception e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n    protected void updateGUIwithModel() {\r\n        textfieldNombre.textProperty().bindBidirectional(model.nombreProperty());\r\n        textfieldContraseña.textProperty().bindBidirectional(model.contraseñaProperty());\r\n    }\r\n    @FXML\r\n    public void onMibotonJugarClick() throws FileNotFoundException {\r\n        model.commit();\r\n        ListaUsuarios l= new ListaUsuarios();\r\n        //if(l.esta(model.original.getUsuario(),model.original.getContraseña())==2){\r\n        if(true){\r\n            Stage stage = new Stage();\r\n            FXMLLoader fxmlLoader= new FXMLLoader();\r\n            File fichero= new File(\"src/main/resources/es/uah/trabajo/juegodelavida/ParamJuego.fxml\");\r\n            URL url= null;\r\n            try {\r\n                url= fichero.toURL();\r\n            } catch (MalformedURLException e) {\r\n                throw new RuntimeException(e);\r\n            }\r\n            fxmlLoader.setLocation(url);\r\n\r\n            try {\r\n                Scene scene = new Scene(fxmlLoader.load(), 1280, 720);\r\n                stage.setTitle(\"Juego de La Vida de Conway\");\r\n                stage.setScene(scene);\r\n                ParamJuegoControlador p = fxmlLoader.getController(); //dame el controlador\r\n                //p.loadUserData(this.modeloParaGUICompartido); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso\r\n                p.setStage(stage); //doy la ventana donde se va a trabajar\r\n                stage.show();\r\n            } catch (Exception e) {\r\n                e.printStackTrace();\r\n            }\r\n        }\r\n        else{\r\n            if (l.esta(model.original.getUsuario(),model.original.getContraseña())==0){\r\n                Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos\r\n\r\n                Image imagen = new Image(new FileInputStream(\"src/main/resources/es/uah/trabajo/juegodelavida/Registro.PNG\"));\r\n                ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.\r\n                imageView.setFitWidth(1280);\r\n                imageView.setFitHeight(720);\r\n                root.getChildren().addAll(imageView);\r\n                Scene im= new Scene(root);\r\n                Stage s= new Stage();\r\n                s.setScene(im);\r\n                s.setTitle(\"Juego de La Vida de Conway\");\r\n                s.show();\r\n            } else if (l.esta(model.original.getUsuario(),model.original.getContraseña())==1) {\r\n\r\n\r\n                Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos\r\n\r\n                Image imagen = new Image(new FileInputStream(\"src/main/resources/es/uah/trabajo/juegodelavida/Registro.PNG\"));\r\n                ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.\r\n                imageView.setFitWidth(1280);\r\n                imageView.setFitHeight(720);\r\n                root.getChildren().addAll(imageView);\r\n                Scene im = new Scene(root);\r\n                Stage s = new Stage();\r\n                s.setScene(im);\r\n                s.setTitle(\"Juego de La Vida de Conway\");\r\n                s.show();\r\n            }\r\n        }\r\n    }\r\n\r\n    /**\r\n     * Este método recibe los datos del modelo y los establece\r\n     **/\r\n    public void loadUserData(InicioSesionPropertiesNP parametrosData) {\r\n        this.model = parametrosData;\r\n        this.updateGUIwithModel();\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java b/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java
+--- a/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java	(revision a3542f407aab110314173900f9b1a0bfcaaf0b8d)
++++ b/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java	(date 1714925002294)
+@@ -24,7 +24,7 @@
+ import java.util.ResourceBundle;
+ 
+ public class InicioSesionControladorNP implements Initializable {
+-    private Stage scene;
++    private Stage iniStage;
+     @FXML
+     private TextField textfieldNombre;
+     @FXML
+@@ -34,7 +34,7 @@
+ 
+     private InicioSesionPropertiesNP model;
+     public void setStage(Stage s){
+-        this.scene = s;
++        this.iniStage = s;
+     }
+ 
+ 
+@@ -60,13 +60,13 @@
+ 
+         try {
+             Scene scene = new Scene(fxmlLoader.load(), 450, 150);
+-            stage.setTitle("Juego de La Vida de Conway");
+-            stage.setScene(scene);
++            iniStage.setTitle("Juego de La Vida de Conway");
++            iniStage.setScene(scene);
+             RegistrarseControlador p = fxmlLoader.getController(); //dame el controlador
+ 
+             p.loadUserData(new RegistrarseProperties(new RegistrarseModelo())); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
+             p.setStage(stage); //doy la ventana donde se va a trabajar
+-            stage.show();
++            iniStage.show();
+         } catch (Exception e) {
+             e.printStackTrace();
+         }
+@@ -81,7 +81,7 @@
+         ListaUsuarios l= new ListaUsuarios();
+         //if(l.esta(model.original.getUsuario(),model.original.getContraseña())==2){
+         if(true){
+-            Stage stage = new Stage();
++            //Stage stage = new Stage();
+             FXMLLoader fxmlLoader= new FXMLLoader();
+             File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/ParamJuego.fxml");
+             URL url= null;
+@@ -93,13 +93,14 @@
+             fxmlLoader.setLocation(url);
+ 
+             try {
+-                Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
+-                stage.setTitle("Juego de La Vida de Conway");
+-                stage.setScene(scene);
++
++                Scene scene = new Scene(fxmlLoader.load(), 450, 150);
++                iniStage.setTitle("Juego de La Vida de Conway");
++                iniStage.setScene(scene);
+                 ParamJuegoControlador p = fxmlLoader.getController(); //dame el controlador
+                 //p.loadUserData(this.modeloParaGUICompartido); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
+-                p.setStage(stage); //doy la ventana donde se va a trabajar
+-                stage.show();
++                p.setStage(iniStage); //doy la ventana donde se va a trabajar
++                iniStage.show();
+             } catch (Exception e) {
+                 e.printStackTrace();
+             }
+Index: src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/TableroDeJuegoControlador.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package es.uah.trabajo.juegodelavida.TableroDeJuego;\r\n\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.Label;\r\nimport javafx.scene.layout.GridPane;\r\nimport javafx.scene.layout.VBox;\r\n\r\npublic class TableroDeJuegoControlador {\r\n    @FXML\r\n    private Label welcomeText;\r\n\r\n    @FXML\r\n    private GridPane tableroDeJuego;\r\n\r\n    @FXML\r\n    protected void onHelloButtonClick() {\r\n        welcomeText.setText(\"Cargando el tablero de juego\");\r\n\r\n        // Mismo bucle que en el ejemplo de MainGridApplication\r\n        for (int i = 0; i < 10; i++) {\r\n            for (int j = 0; j < 10; j++) {\r\n                VBox vbox=new VBox();\r\n                vbox.getChildren().add(new Button(\"Recurso 1\"));\r\n                vbox.getChildren().add(new Button(\"Recurso 2\"));\r\n                vbox.getChildren().add(new Button(\"Recurso 3\"));\r\n                vbox.getChildren().add(new Button(\"Individuo\"));\r\n                Label placeholder = new Label(\"Celda \" + i + \",\" + j);\r\n                placeholder.setMinSize(30, 30); // Tamaño mínimo para visualización\r\n                placeholder.setStyle(\"-fx-border-color: black; -fx-text-alignment: center;\");\r\n                tableroDeJuego.add(placeholder, i, j);\r\n            }\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/TableroDeJuegoControlador.java b/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/TableroDeJuegoControlador.java
+--- a/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/TableroDeJuegoControlador.java	(revision a3542f407aab110314173900f9b1a0bfcaaf0b8d)
++++ b/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/TableroDeJuegoControlador.java	(date 1714929185113)
+@@ -3,16 +3,28 @@
+ import javafx.fxml.FXML;
+ import javafx.scene.control.Button;
+ import javafx.scene.control.Label;
+-import javafx.scene.layout.GridPane;
++import javafx.scene.input.MouseEvent;
++import javafx.scene.layout.Pane;
+ import javafx.scene.layout.VBox;
++import org.apache.logging.log4j.LogManager;
++import org.apache.logging.log4j.Logger;
+ 
+ public class TableroDeJuegoControlador {
+     @FXML
+     private Label welcomeText;
+ 
+     @FXML
+-    private GridPane tableroDeJuego;
++    private Pane tableroDeJuego;
++    private static final Logger log = LogManager.getLogger(TableroDeJuegoControlador.class);
++
++    protected static void pulsarCelda(MouseEvent e){
+ 
++        log.info("Pulsada celda: " +((Button) e.getTarget()).getId() );
++    }
++    public TableroDeJuegoControlador(Pane tableroDeJuego){
++        this.tableroDeJuego=tableroDeJuego;
++
++    }
+     @FXML
+     protected void onHelloButtonClick() {
+         welcomeText.setText("Cargando el tablero de juego");
+@@ -28,7 +40,7 @@
+                 Label placeholder = new Label("Celda " + i + "," + j);
+                 placeholder.setMinSize(30, 30); // Tamaño mínimo para visualización
+                 placeholder.setStyle("-fx-border-color: black; -fx-text-alignment: center;");
+-                tableroDeJuego.add(placeholder, i, j);
++                //tableroDeJuego.add(placeholder, i, j);
+             }
+         }
+     }
+Index: src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package es.uah.trabajo.juegodelavida.ParamJuego;\r\n\r\n\r\nimport javafx.fxml.FXML;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.fxml.Initializable;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.control.TextField;\r\nimport javafx.stage.Stage;\r\n\r\nimport java.io.File;\r\nimport java.io.FileNotFoundException;\r\nimport java.net.MalformedURLException;\r\nimport java.net.URL;\r\nimport java.util.ResourceBundle;\r\n\r\npublic class ParamJuegoControlador implements Initializable {\r\n    private Stage scene;\r\n    @FXML\r\n    private TextField fDimension;\r\n    @FXML\r\n    private TextField fVidas;\r\n\r\n\r\n\r\n    private ParamJuegoProperties model;\r\n    public void setStage(Stage s){\r\n        this.scene = s;\r\n    }\r\n\r\n\r\n    @Override\r\n    public void initialize(URL location, ResourceBundle resources) {\r\n\r\n        if (model != null) {\r\n            this.updateGUIwithModel();\r\n        }\r\n    }\r\n    @FXML\r\n    protected void onMiBotonRegistrarseClick() throws FileNotFoundException {\r\n        Stage stage = new Stage();\r\n        FXMLLoader fxmlLoader= new FXMLLoader();\r\n        File fichero= new File(\"src/main/resources/es/uah/trabajo/juegodelavida/registrarse.fxml\");\r\n        URL url= null;\r\n        try {\r\n            url= fichero.toURL();\r\n        } catch (MalformedURLException e) {\r\n            throw new RuntimeException(e);\r\n        }\r\n        fxmlLoader.setLocation(url);\r\n\r\n        try {\r\n            Scene scene = new Scene(fxmlLoader.load(), 450, 150);\r\n            stage.setTitle(\"Juego de La Vida de Conway\");\r\n            stage.setScene(scene);\r\n            ParamJuegoControlador p = fxmlLoader.getController(); //dame el controlador\r\n\r\n            p.loadUserData(new ParamJuegoProperties(new ParamJuegoModel())); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso\r\n            p.setStage(stage); //doy la ventana donde se va a trabajar\r\n            stage.show();\r\n        } catch (Exception e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n    protected void updateGUIwithModel() {\r\n        fDimension.textProperty().bindBidirectional(model.dimensionesProperty());\r\n        fVidas.textProperty().bindBidirectional(model.vidasProperty());\r\n    }\r\n    @FXML\r\n    public void onMibotonGuardarClick() throws FileNotFoundException{\r\n\r\n    }\r\n    /*@FXML\r\n    public void onMibotonJugarClick() throws FileNotFoundException {\r\n        model.commit();\r\n        ListaUsuarios l= new ListaUsuarios();\r\n        if(l.esta(model.original.getDimension(),model.original.getVidas())==2){\r\n            Stage stage = new Stage();\r\n            FXMLLoader fxmlLoader= new FXMLLoader();\r\n            File fichero= new File(\"src/main/resources/es/uah/trabajo/juegodelavida/cargarpartida-view.fxml\");\r\n            URL url= null;\r\n            try {\r\n                url= fichero.toURL();\r\n            } catch (MalformedURLException e) {\r\n                throw new RuntimeException(e);\r\n            }\r\n            fxmlLoader.setLocation(url);\r\n\r\n            try {\r\n                Scene scene = new Scene(fxmlLoader.load(), 1280, 720);\r\n                stage.setTitle(\"Juego de La Vida de Conway\");\r\n                stage.setScene(scene);\r\n                CargarPartidaControlador p = fxmlLoader.getController(); //dame el controlador\r\n                //p.loadUserData(this.modeloParaGUICompartido); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso\r\n                p.setStage(stage); //doy la ventana donde se va a trabajar\r\n                stage.show();\r\n            } catch (Exception e) {\r\n                e.printStackTrace();\r\n            }\r\n        }\r\n        else{\r\n            if (l.esta(model.original.getDimension(),model.original.getVidas())==1){\r\n                Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos\r\n\r\n                Image imagen = new Image(new FileInputStream(\"src/main/resources/es/uah/trabajo/juegodelavida/Captura.PNG\"));\r\n                ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.\r\n                imageView.setFitWidth(1280);\r\n                imageView.setFitHeight(720);\r\n                root.getChildren().addAll(imageView);\r\n                Scene im= new Scene(root);\r\n                Stage s= new Stage();\r\n                s.setScene(im);\r\n                s.setTitle(\"Juego de La Vida de Conway\");\r\n                s.show();\r\n            } else if (l.esta(model.original.getDimension(),model.original.getVidas())==0) {\r\n\r\n\r\n                Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos\r\n\r\n                Image imagen = new Image(new FileInputStream(\"src/main/resources/es/uah/trabajo/juegodelavida/Registro.PNG\"));\r\n                ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.\r\n                imageView.setFitWidth(1280);\r\n                imageView.setFitHeight(720);\r\n                root.getChildren().addAll(imageView);\r\n                Scene im = new Scene(root);\r\n                Stage s = new Stage();\r\n                s.setScene(im);\r\n                s.setTitle(\"Juego de La Vida de Conway\");\r\n                s.show();\r\n            }\r\n        }\r\n    }*/\r\n\r\n    /**\r\n     * Este método recibe los datos del modelo y los establece\r\n     **/\r\n    public void loadUserData(ParamJuegoProperties parametrosData) {\r\n        this.model = parametrosData;\r\n        this.updateGUIwithModel();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java b/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java
+--- a/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java	(revision a3542f407aab110314173900f9b1a0bfcaaf0b8d)
++++ b/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java	(date 1714927153705)
+@@ -1,6 +1,7 @@
+ package es.uah.trabajo.juegodelavida.ParamJuego;
+ 
+ 
++import es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero;
+ import javafx.fxml.FXML;
+ import javafx.fxml.FXMLLoader;
+ import javafx.fxml.Initializable;
+@@ -13,9 +14,8 @@
+ import java.net.MalformedURLException;
+ import java.net.URL;
+ import java.util.ResourceBundle;
+-
+ public class ParamJuegoControlador implements Initializable {
+-    private Stage scene;
++    private Stage primaryStage;
+     @FXML
+     private TextField fDimension;
+     @FXML
+@@ -25,7 +25,7 @@
+ 
+     private ParamJuegoProperties model;
+     public void setStage(Stage s){
+-        this.scene = s;
++        this.primaryStage = s;
+     }
+ 
+ 
+@@ -68,6 +68,12 @@
+     }
+     @FXML
+     public void onMibotonGuardarClick() throws FileNotFoundException{
++    //Cambiamos a la pantalla del tablero
++        Tablero tablero = new Tablero(primaryStage);
++        Scene tableroScene = new Scene(tablero.createContentTablero(Integer.valueOf(fDimension.getText()).intValue()));
++        primaryStage.setScene(tableroScene);
++        primaryStage.setMaximized(true);
++        primaryStage.show();
+ 
+     }
+     /*@FXML
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ArtifactsWorkspaceSettings\">\r\n    <artifacts-to-build>\r\n      <artifact name=\"JuegoDeLaVida:jar\" />\r\n    </artifacts-to-build>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d975c334-6d3f-4aa2-9700-876b14b96e41\" name=\"Changes\" comment=\"inicio 22\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoModel.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoProperties.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ParamJuego.fxml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/usuarios.json\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_02__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_02__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_18__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_18__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pom.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Registrarse/RegistrarseControlador.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Registrarse/RegistrarseControlador.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/MainGridApplication.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/MainGridApplication.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/module-info.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/module-info.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeInsightWorkspaceSettings\">\r\n    <option name=\"optimizeImportsOnTheFly\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2fcvzZzsHzduvdvTcHTTcFO1Yml\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\r\n    \"Downloaded.Files.Path.Enabled\": \"true\",\r\n    \"Repository.Attach.Annotations\": \"true\",\r\n    \"Repository.Attach.JavaDocs\": \"true\",\r\n    \"Repository.Attach.Sources\": \"false\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"project.structure.last.edited\": \"Libraries\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.3954023\",\r\n    \"settings.editor.selected.configurable\": \"preferences.pluginManager\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\src\\main\\resources\\es\\uah\\trabajo\\juegodelavida\" />\r\n      <recent name=\"C:\\Users\\UAH\\IdeaProjects\\JuegoDeLaVida\\src\\main\\resources\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"es.uah.trabajo.juegodelavida\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d975c334-6d3f-4aa2-9700-876b14b96e41\" name=\"Changes\" comment=\"\" />\r\n      <created>1714113444418</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1714113444418</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"First Commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714122770292</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714122770292</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"inicio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714230020148</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714230020148</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"inicio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714231145475</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714231145475</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"inicio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714507272445</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714507272445</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"inicio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714591693036</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714591693036</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"inicio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714591721749</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714591721749</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"inicio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714670057455</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714670057455</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"inicio 22\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714746544790</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714746544790</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"inicio 22\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714746569722</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714746569722</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"10\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"First Commit\" />\r\n    <MESSAGE value=\"inicio\" />\r\n    <MESSAGE value=\"inicio 22\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"inicio 22\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/ListaUsuarios.java</url>\r\n          <line>22</line>\r\n          <option name=\"timeStamp\" value=\"4\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/CargarPartida.java</url>\r\n          <line>30</line>\r\n          <option name=\"timeStamp\" value=\"5\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java</url>\r\n          <line>85</line>\r\n          <option name=\"timeStamp\" value=\"7\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n    <pin-to-top-manager>\r\n      <pinned-members>\r\n        <PinnedItemInfo parentTag=\"es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLE\" memberName=\"siguiente\" />\r\n        <PinnedItemInfo parentTag=\"com.google.gson.internal.LinkedTreeMap$Node\" memberName=\"key\" />\r\n        <PinnedItemInfo parentTag=\"java.lang.String\" memberName=\"hashIsZero\" />\r\n      </pinned-members>\r\n    </pin-to-top-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision a3542f407aab110314173900f9b1a0bfcaaf0b8d)
++++ b/.idea/workspace.xml	(date 1714929363212)
+@@ -9,20 +9,15 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="inicio 22">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoModel.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoProperties.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ParamJuego.fxml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/usuarios.json" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_02__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_18__Changes_.xml" afterDir="false" />
++    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="commit">
++      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Registrarse/RegistrarseControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Registrarse/RegistrarseControlador.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/MainGridApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/MainGridApplication.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/CambioDePantalla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/CambioDePantalla.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/HelloApplication.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/TableroDeJuegoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/TableroDeJuegoControlador.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ParamJuego.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ParamJuego.fxml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -54,23 +49,23 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "ASKED_ADD_EXTERNAL_FILES": "true",
+-    "Downloaded.Files.Path.Enabled": "true",
+-    "Repository.Attach.Annotations": "true",
+-    "Repository.Attach.JavaDocs": "true",
+-    "Repository.Attach.Sources": "false",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "git-widget-placeholder": "master",
+-    "project.structure.last.edited": "Libraries",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.3954023",
+-    "settings.editor.selected.configurable": "preferences.pluginManager"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
++    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
++    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
++    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
++    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.3954023&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\UAH\IdeaProjects\JuegoDeLaVida\src\main\resources\es\uah\trabajo\juegodelavida" />
+@@ -161,7 +156,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1714746569722</updated>
+     </task>
+-    <option name="localTasksCounter" value="10" />
++    <task id="LOCAL-00010" summary="commit">
++      <option name="closed" value="true" />
++      <created>1714900684829</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1714900684829</updated>
++    </task>
++    <option name="localTasksCounter" value="11" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -180,7 +183,8 @@
+     <MESSAGE value="First Commit" />
+     <MESSAGE value="inicio" />
+     <MESSAGE value="inicio 22" />
+-    <option name="LAST_COMMIT_MESSAGE" value="inicio 22" />
++    <MESSAGE value="commit" />
++    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+@@ -196,9 +200,14 @@
+           <option name="timeStamp" value="5" />
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java</url>
+-          <line>85</line>
+-          <option name="timeStamp" value="7" />
++          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
++          <line>91</line>
++          <option name="timeStamp" value="14" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/TableroDeJuegoControlador.java</url>
++          <line>21</line>
++          <option name="timeStamp" value="15" />
+         </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
+@@ -209,5 +218,10 @@
+         <PinnedItemInfo parentTag="java.lang.String" memberName="hashIsZero" />
+       </pinned-members>
+     </pin-to-top-manager>
++    <watches-manager>
++      <configuration name="Application">
++        <watch expression="((Button)e.target).currentLayoutChild" custom="javafx.scene.control.Button" />
++      </configuration>
++    </watches-manager>
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java b/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java
+new file mode 100644
+--- /dev/null	(date 1714928228204)
++++ b/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java	(date 1714928228204)
+@@ -0,0 +1,111 @@
++package es.uah.trabajo.juegodelavida.TableroDeJuego;
++
++import javafx.geometry.Insets;
++import javafx.geometry.Pos;
++import javafx.scene.Parent;
++import javafx.scene.control.Button;
++import javafx.scene.control.Label;
++import javafx.scene.layout.BorderPane;
++import javafx.scene.layout.FlowPane;
++import javafx.scene.layout.GridPane;
++import javafx.stage.Stage;
++import org.apache.logging.log4j.LogManager;
++import org.apache.logging.log4j.Logger;
++
++public class Tablero
++{
++    private Stage primaryStage;
++    private static final Logger log = LogManager.getLogger(Tablero.class);
++    public Tablero(Stage primaryStage) {
++        this.primaryStage=primaryStage;
++    }
++
++    public void setStage(Stage s){
++        this.primaryStage = s;
++    }
++
++    public Parent createContentTablero(int dimension){
++        BorderPane root = new BorderPane();
++        log.info("Inicio del método de arranque de la aplicación para mostrar un grid de forma programática");
++
++
++
++        GridPane mainGrid = new GridPane();
++        mainGrid.setHgap(0);
++        mainGrid.setVgap(0);
++        mainGrid.setGridLinesVisible(true);
++        mainGrid.setAlignment(Pos.CENTER);
++        mainGrid.setPadding(new Insets(0, 0, 0, 0));
++
++        for (int i = 0;i < dimension; i++) {
++            for (int j = 0; j < dimension; j++) {
++
++                // Aquí podrías instanciar tu clase de celda, más compleja
++                GridPane secondaryGrid = new GridPane();
++                Label rBiblioteca = new Label();
++                rBiblioteca.setPrefSize(32, 32);
++                rBiblioteca.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
++                Label rTesoro = new Label();
++                rTesoro.setPrefSize(32, 32);
++                rTesoro.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
++                Label rPozo = new Label();
++                rPozo.setPrefSize(32, 32);
++                rPozo.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
++                Label rAgua = new Label();
++                rAgua.setPrefSize(32, 32);
++                rAgua.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
++                Label rMontana = new Label();
++                rMontana.setPrefSize(32, 32);
++                rMontana.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
++                Label rComida = new Label();
++                rComida.setPrefSize(32, 32);
++                rComida.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
++                Label iIndividuo = new Label("I");
++                iIndividuo.setPrefSize(32, 32);
++                iIndividuo.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: right;");
++                iIndividuo.setAlignment(Pos.CENTER);
++
++                Label recurso1 = new Label();
++                recurso1.setPrefSize(32, 32);
++                recurso1.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
++                Label recurso2 = new Label();
++                recurso2.setPrefSize(32, 32);
++                recurso2.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
++                Label recurso3 = new Label();
++                recurso3.setPrefSize(32, 32);
++                recurso3.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
++                Label recurso4 = new Label();
++                recurso4.setPrefSize(32, 32);
++                recurso4.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
++                secondaryGrid.add(recurso1, 0, 0);
++                secondaryGrid.add(recurso2, 0, 1);
++                secondaryGrid.add(recurso3, 1, 0);
++                secondaryGrid.add(iIndividuo, 1, 1);
++
++                mainGrid.add(secondaryGrid, i, j);
++                Button boton = new Button();
++                boton.setStyle("-fx-background-color: transparent;-fx-border-color: black");
++                boton.setPrefSize(64, 64);
++                boton.setId("f"+i+"c"+j);
++                mainGrid.add(boton, i, j);
++                boton.setOnMouseClicked(e -> {
++                    TableroDeJuegoControlador.pulsarCelda(e);
++                });
++            }
++        }
++
++
++        root.setLeft(new FlowPane());
++        root.setCenter(mainGrid);
++        root.setRight(new FlowPane());
++
++        // Los logs sólo operan si la clase utilizada coincide con el patrón que se pone en el log4j2.xml.
++        // En este caso el patrón es "es.uah" que coincide con nuestro paquete, por eso funciona.
++
++
++        log.info("Fin del método de arranque de la aplicación para mostrar un grid de forma programática");
++
++        return root;
++    }
++
++}
+Index: src/main/resources/es/uah/trabajo/juegodelavida/ParamJuego.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.*?>\r\n<?import javafx.scene.layout.*?>\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.control.PasswordField?>\r\n<?import javafx.scene.control.TextField?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n\r\n\r\n<AnchorPane prefHeight=\"150.0\" prefWidth=\"450.0\" xmlns=\"http://javafx.com/javafx/17.0.2-ea\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoControlador\">\r\n    <children>\r\n        <Label layoutX=\"20.0\" layoutY=\"27.0\" text=\"Dimensión del tablero:\" />\r\n        <TextField fx:id=\"fDimension\" alignment=\"CENTER\" layoutX=\"160.0\" layoutY=\"23.0\" />\r\n        <Label layoutX=\"20.0\" layoutY=\"66.0\" text=\"Numero de Vidas:\" />\r\n        <TextField fx:id=\"fVidas\" layoutX=\"160.0\" layoutY=\"63.0\" />\r\n        <Button layoutX=\"330.0\" layoutY=\"118.0\" mnemonicParsing=\"false\" onAction=\"#onMibotonGuardarClick\" prefHeight=\"26.0\" prefWidth=\"106.0\" text=\"Iniciar Juego\" />\r\n    </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/es/uah/trabajo/juegodelavida/ParamJuego.fxml b/src/main/resources/es/uah/trabajo/juegodelavida/ParamJuego.fxml
+--- a/src/main/resources/es/uah/trabajo/juegodelavida/ParamJuego.fxml	(revision a3542f407aab110314173900f9b1a0bfcaaf0b8d)
++++ b/src/main/resources/es/uah/trabajo/juegodelavida/ParamJuego.fxml	(date 1714924911691)
+@@ -2,19 +2,14 @@
+ 
+ <?import javafx.scene.control.*?>
+ <?import javafx.scene.layout.*?>
+-<?import javafx.scene.control.Button?>
+-<?import javafx.scene.control.Label?>
+-<?import javafx.scene.control.PasswordField?>
+-<?import javafx.scene.control.TextField?>
+-<?import javafx.scene.layout.AnchorPane?>
+-
+ 
+ <AnchorPane prefHeight="150.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoControlador">
+     <children>
+         <Label layoutX="20.0" layoutY="27.0" text="Dimensión del tablero:" />
+-        <TextField fx:id="fDimension" alignment="CENTER" layoutX="160.0" layoutY="23.0" />
++        <TextField fx:id="fDimension" layoutX="160.0" layoutY="23.0" maxHeight="24.0" maxWidth="32.0" minHeight="24.0" minWidth="32.0" prefHeight="24.0" prefWidth="32.0" />
+         <Label layoutX="20.0" layoutY="66.0" text="Numero de Vidas:" />
+-        <TextField fx:id="fVidas" layoutX="160.0" layoutY="63.0" />
+-        <Button layoutX="330.0" layoutY="118.0" mnemonicParsing="false" onAction="#onMibotonGuardarClick" prefHeight="26.0" prefWidth="106.0" text="Iniciar Juego" />
++        <TextField fx:id="fVidas" layoutX="160.0" layoutY="63.0" maxHeight="24.0" maxWidth="32.0" minHeight="24.0" minWidth="32.0" prefHeight="24.0" prefWidth="32.0" />
++        <Button layoutX="175.0" layoutY="118.0" mnemonicParsing="false" onAction="#onMibotonGuardarClick" prefHeight="26.0" prefWidth="106.0" text="Iniciar Juego" />
+     </children>
+ </AnchorPane>
++
