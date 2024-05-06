@@ -21,14 +21,12 @@ public class ListaUsuarios extends gson {
       ListaLE<Usuario> usuarios = new ListaLE<Usuario>();
       usuarios = usuarios.cargar();
       int encontrado = 0;
-      Usuario u = new Usuario(usuario, cotraseña);
-      ElementoLEUs<Usuario> el2 = new ElementoLEUs(u);
       ElementoLEUs<Usuario> el = usuarios.getPrimero();
       while (el != null && encontrado == 0) {
-         if (Objects.equals((el.getDatos()).nombre, (el2.getDatos()).nombre)) {
+         if (Objects.equals((el.getDatos()).nombre, (usuario))) {
             encontrado += 1;
          }
-         if (Objects.equals(el.getDatos().contraseña, el2.getDatos().contraseña)) {
+         if (Objects.equals(el.getDatos().contraseña,  cotraseña)) {
             encontrado += 1;
 
          } else {
@@ -38,9 +36,24 @@ public class ListaUsuarios extends gson {
       }
       return encontrado;
    }
+   public boolean yacreado(String usuario) {
+      ListaLE<Usuario> usuarios = new ListaLE<Usuario>();
+      usuarios = usuarios.cargar();
+      boolean encontrado = false;
+      ElementoLEUs<Usuario> el = usuarios.getPrimero();
+      while (el != null && encontrado == false) {
+         if (Objects.equals((el.getDatos()).nombre, (usuario))) {
+            encontrado = true;
+         }
+         else {
+            el = ((ElementoLEUs<Usuario>) el).getSiguiente();
+         }
+      }
+      return encontrado;
+   }
 
    public void guardar(ListaLE lista) {
-      String rutaArchivo = "usuarios.json";
+      String rutaArchivo = "Json/usuarios.json";
       //hola
       guardarObjetoEnArchivo(rutaArchivo, lista);
    }

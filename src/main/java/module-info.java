@@ -1,8 +1,8 @@
 module es.uah.trabajo.juegodelavida {
     requires javafx.controls;
     requires javafx.fxml;
-    requires com.google.gson;
     requires org.apache.logging.log4j;
+    requires com.google.gson;
 
     opens es.uah.trabajo.juegodelavida.ParamJuego to javafx.fxml;
     exports es.uah.trabajo.juegodelavida.ParamJuego;

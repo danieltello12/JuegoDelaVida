@@ -33,29 +33,12 @@ public class ListaLEPA<TipoDelDato> extends gson {
 
     }
 
-   /** public void add(String st) {
-        ElementoLE<TipoDelDato> nuevoprimero = new ElementoLE(this.primero, st);
-        this.add(nuevoprimero);
-
-    }**/
-
     public void add(Partida obj) {
         ElementoLEPA<TipoDelDato> nuevoprimero = new ElementoLEPA(this.primero, obj);
         this.add(nuevoprimero);
 
     }
 
-   /** public void insert(String s, int posicion) {
-        ElementoLE<TipoDelDato> el = this.primero;
-        if (posicion == 0) {
-            this.add(s);
-        } else {
-            ElementoLE<TipoDelDato> e = new ElementoLE(this.getElemento(posicion), s);
-            this.getElemento(posicion - 1).siguiente = e;
-        }
-
-
-    }**/
 
     public void insert(Partida dato, int posicion) {
         ElementoLEPA<TipoDelDato> el = this.primero;
@@ -117,12 +100,12 @@ public class ListaLEPA<TipoDelDato> extends gson {
         return contador;
     }
     public void guardar(String nombre) {
-        String rutaArchivo ="Json/"+nombre+".partidas.json";
+        String rutaArchivo ="Json/"+nombre+"/"+nombre+".partidas.json";
         //hola
         guardarObjetoEnArchivo(rutaArchivo, this);
     }
     public ListaLEPA cargar(String nombre){
-        String ruta="Json/"+nombre+".partidas.json";
+        String ruta="Json/"+nombre+"/"+nombre+".partidas.json";
         return cargarObjetoDesdeArchivo(ruta, ListaLEPA.class);
 
     }

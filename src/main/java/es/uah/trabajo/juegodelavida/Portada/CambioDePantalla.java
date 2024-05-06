@@ -27,7 +27,7 @@ import java.net.URL;
 public class CambioDePantalla extends Pane  {
     private static final Logger log = LogManager.getLogger(MainGridApplication.class);
     public CambioDePantalla(int width, int height) throws FileNotFoundException {
-        ImageView bg = new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/FondoPortada.png"))
+        ImageView bg = new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/FondoPortada.png"))
         );
         bg.setFitWidth(width);
         bg.setFitHeight(height);
@@ -47,7 +47,7 @@ public class CambioDePantalla extends Pane  {
             log.info("Nueva Partida");
             Stage stage = new Stage();
             FXMLLoader fxmlLoader= new FXMLLoader();
-            File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/iniciosesionNP.fxml");
+            File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/iniciosesionCP.fxml");
             URL url= null;
             try {
                 url= fichero.toURL();
@@ -82,7 +82,7 @@ public class CambioDePantalla extends Pane  {
             log.info("Cargar Partida");
             Stage stage = new Stage();
             FXMLLoader fxmlLoader= new FXMLLoader();
-            File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/iniciosesionCP.fxml");
+            File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/iniciosesionCP.fxml");
             URL url= null;
             try {
                 url= fichero.toURL();

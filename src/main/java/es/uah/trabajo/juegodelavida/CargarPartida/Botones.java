@@ -19,7 +19,7 @@ public class Botones extends StackPane {
 
     static {
         try {
-            font = Font.loadFont(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/BebasNeue-Regular.ttf"), 50);
+            font = Font.loadFont(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Fuentes/BebasNeue-Regular.ttf"), 50);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }

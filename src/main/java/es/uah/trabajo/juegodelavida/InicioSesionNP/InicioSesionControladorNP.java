@@ -49,7 +49,7 @@ public class InicioSesionControladorNP implements Initializable {
     protected void onMiBotonRegistrarseClick() throws FileNotFoundException {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader= new FXMLLoader();
-        File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/registrarse.fxml");
+        File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/registrarse.fxml");
         URL url= null;
         try {
             url= fichero.toURL();
@@ -79,14 +79,18 @@ public class InicioSesionControladorNP implements Initializable {
     public void onMibotonJugarClick() throws FileNotFoundException {
         model.commit();
         ListaUsuarios l= new ListaUsuarios();
-        //if(l.esta(model.original.getUsuario(),model.original.getContraseña())==2){
-        if(true){
+        if(l.esta(model.original.getUsuario(),model.original.getContraseña())==2) {
+
+            /** El usuario Ha iniciado sesion de forma correcta y se procede a mostrarle la pantalla de Parametros
+             *
+             */
+
             Stage stage = new Stage();
-            FXMLLoader fxmlLoader= new FXMLLoader();
-            File fichero= new File("src/main/resources/es/uah/trabajo/juegodelavida/ParamJuego.fxml");
-            URL url= null;
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            File fichero = new File("src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/ParamJuego.fxml");
+            URL url = null;
             try {
-                url= fichero.toURL();
+                url = fichero.toURL();
             } catch (MalformedURLException e) {
                 throw new RuntimeException(e);
             }
@@ -104,14 +108,19 @@ public class InicioSesionControladorNP implements Initializable {
                 e.printStackTrace();
             }
         }
-        else{
-            if (l.esta(model.original.getUsuario(),model.original.getContraseña())==0){
-                Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-                Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Registro.PNG"));
+            else if (l.esta(model.original.getUsuario(),model.original.getContraseña())==0){
+            /** El usuario Debe registrarse
+             *
+             */
+
+            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+
+                Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Registro.PNG"));
                 ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
                 imageView.setFitWidth(1280);
                 imageView.setFitHeight(720);
+
                 root.getChildren().addAll(imageView);
                 Scene im= new Scene(root);
                 Stage s= new Stage();
@@ -120,13 +129,17 @@ public class InicioSesionControladorNP implements Initializable {
                 s.show();
             } else if (l.esta(model.original.getUsuario(),model.original.getContraseña())==1) {
 
+            /**El usuario o la contraseña que ha escrito es erronea, ya que alguna de las dos existe
+             *
+             */
 
-                Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-                Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Registro.PNG"));
+                Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Captura.PNG"));
                 ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
                 imageView.setFitWidth(1280);
                 imageView.setFitHeight(720);
+
                 root.getChildren().addAll(imageView);
                 Scene im = new Scene(root);
                 Stage s = new Stage();
@@ -135,7 +148,7 @@ public class InicioSesionControladorNP implements Initializable {
                 s.show();
             }
         }
-    }
+
 
     /**
      * Este método recibe los datos del modelo y los establece

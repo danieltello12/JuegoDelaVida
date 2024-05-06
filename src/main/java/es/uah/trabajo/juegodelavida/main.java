@@ -15,6 +15,7 @@ public class main{
         u.guardar();
         u.setPartidas(l);
         u.getPartidas().guardar(u.getNombre());
+        //hAKJGFAEIJFHWEKALF
 
     }
 }
