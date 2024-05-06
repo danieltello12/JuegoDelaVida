@@ -91,6 +91,7 @@ public class CambioDePantalla extends Pane  {
                 throw new RuntimeException(e);
             }
             fxmlLoader.setLocation(url);
+            //lguidasjkg
 
             try {
                 Scene scene = new Scene(fxmlLoader.load(), 450, 150);
