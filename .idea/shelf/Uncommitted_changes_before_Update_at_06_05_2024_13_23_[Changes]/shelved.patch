@@ -1,0 +1,13 @@
+Index: logs/app.log
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/logs/app.log b/logs/app.log
+--- a/logs/app.log	(revision 32386e7f52c0e59ae990dce2ab87333a8b86cfbd)
++++ b/logs/app.log	(date 1714994190370)
+@@ -1,0 +1,4 @@
++2024-05-06 13:16:19.222 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
++2024-05-06 13:16:19.483 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
++2024-05-06 13:16:25.540 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
++2024-05-06 13:16:30.370 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
