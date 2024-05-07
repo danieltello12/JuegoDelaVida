@@ -19,6 +19,17 @@ public class ParamJuegoControlador implements Initializable {
     private TextField fDimension;
     @FXML
     private TextField fVidas;
+    @FXML
+    private TextField numeroIndividuosBasicos;
+    @FXML
+    private TextField numeroIndividuosAvanzados;
+    @FXML
+    private TextField numeroIndividuosNormales;
+    @FXML
+    private TextField probabilidadReproduccion;
+    @FXML
+    private TextField probabilidadClonacion;
+
 
 
 
@@ -38,9 +49,11 @@ public class ParamJuegoControlador implements Initializable {
     @FXML
     protected void onMiBotonRegistrarseClick() throws FileNotFoundException {
         Stage stage = new Stage();
+        int filas = Integer.parseInt(fDimension.getText());
+        int columnas = Integer.parseInt(fDimension.getText());
 
         try {
-            Scene scene = new Scene(setTablero(6,6), 1400, 800);
+            Scene scene = new Scene(setTablero(filas,columnas), 1400, 800);
             stage.setTitle("Juego de La Vida de Conway");
             stage.setScene(scene);
             stage.show();
@@ -51,6 +64,11 @@ public class ParamJuegoControlador implements Initializable {
     protected void updateGUIwithModel() {
         fDimension.textProperty().bindBidirectional(model.dimensionesProperty());
         fVidas.textProperty().bindBidirectional(model.vidasProperty());
+        numeroIndividuosNormales.textProperty().bindBidirectional(model.numeroIndividuosNormalesProperty());
+        numeroIndividuosAvanzados.textProperty().bindBidirectional(model.numeroIndividuosAvanzadosProperty());
+        numeroIndividuosBasicos.textProperty().bindBidirectional(model.numeroIndividuosBasicosProperty());
+        probabilidadClonacion.textProperty().bindBidirectional(model.probabilidadClonacionProperty());
+        probabilidadReproduccion.textProperty().bindBidirectional(model.probabilidadReproduccionProperty());
     }
     /**
      * Este método recibe los datos del modelo y los establece
