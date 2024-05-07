@@ -24,11 +24,11 @@ import java.io.FileNotFoundException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Tablero {
+public class Tablero  {
     public static Parent setTablero(int filas,int columnas) throws FileNotFoundException {
-        Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+        Pane root = new Pane();; //Creo un pane para ir añadiendo los distintos elementos
 
-        Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/FondoPortada.png"));
+        Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/fondojuego.jpg"));
         ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
         imageView.setFitWidth(1450);
         imageView.setFitHeight(800);
@@ -43,13 +43,14 @@ public class Tablero {
         mainGrid.setPadding(new Insets(0, 0, 0, 0));
 
 
+
         Box caja_info= new Box(300,640,null);
         caja_info.setTranslateX(960);
         caja_info.setTranslateY(100);
 
         Rectangle r= new Rectangle(300,640);
         r.setOpacity(5);
-        r.setFill(Color.FORESTGREEN);
+        r.setFill(Color.WHITE);
         r.setVisible(false);
 
         Boton botonsalir= new Boton("Cerrar",50);
@@ -58,7 +59,7 @@ public class Tablero {
             caja_info.getChildren().removeAll(botonsalir);
         });
 
-        for (int i = 0;i < filas; i++) {
+        for (int i = 0;i <filas; i++) {
             for (int j = 0; j < columnas; j++) {
 
                 // Aquí podrías instanciar tu clase de celda, más compleja
@@ -106,11 +107,14 @@ public class Tablero {
 
             }
         }
+        mainGrid.setTranslateX(0);
+        mainGrid.setTranslateY(0);
+
         caja_info.getChildren().add(r);
 
         Box b= new Box(100,80,"src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Boton_Parar.png");
-        b.setTranslateY(10);
-        b.setTranslateX(250);
+        b.setTranslateY(50);
+        b.setTranslateX(625);
 
         Botones bot= new Botones(70);
         bot.setTranslateY(-20);
@@ -145,8 +149,8 @@ public class Tablero {
 
 
         Box b2= new Box(100,80,"src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Boton_Config.png");
-        b2.setTranslateY(10);
-        b2.setTranslateX(150);
+        b2.setTranslateY(50);
+        b2.setTranslateX(525);
 
         Botones bot1= new Botones(70);
         bot1.setTranslateY(-20);
@@ -180,8 +184,8 @@ public class Tablero {
         b2.addItem(bot1);
 
         Box b3= new Box(100,80,"src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Botón_Play.png");
-        b3.setTranslateY(10);
-        b3.setTranslateX(350);
+        b3.setTranslateY(50);
+        b3.setTranslateX(725);
 
         Botones bot3= new Botones(70);
         bot3.setTranslateY(-20);
@@ -223,6 +227,9 @@ public class Tablero {
         FlowPane f= new FlowPane();
         f.getChildren().addAll(mainGrid);
         f.setBackground(Background.fill(Color.WHITE));
+        f.setAlignment(Pos.CENTER);
+        f.setTranslateX(250);
+        f.setTranslateY(50);
 
 
         caja.getChildren().add(f);

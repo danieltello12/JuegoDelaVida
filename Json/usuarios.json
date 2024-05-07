@@ -1,9 +1,1 @@
-{
-  "primero": {
-    "datos": {
-      "nombre": "dani",
-      "contraseña": "hola",
-      "partidas": {}
-    }
-  }
-}
+{"primero":{"siguiente":{"datos":{"nombre":"dani","contraseña":"hola","partidas":{}}},"datos":{"nombre":"dani","contraseña":"hola","partidas":{"primero":{"siguiente":{"datos":{"nombre":"1"}},"datos":{"nombre":"2"}}}}}}
