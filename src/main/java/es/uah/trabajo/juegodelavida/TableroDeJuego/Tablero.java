@@ -24,7 +24,7 @@ import java.io.FileNotFoundException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Tablero extends ParamJuegoControlador {
+public class Tablero  {
     public static Parent setTablero(int filas,int columnas) throws FileNotFoundException {
         Pane root = new Pane();; //Creo un pane para ir añadiendo los distintos elementos
 

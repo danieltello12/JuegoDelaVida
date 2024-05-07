@@ -14,6 +14,13 @@ public class ParamJuegoProperties {
     private StringProperty probabilidadclonacion = new SimpleStringProperty();
     private StringProperty probabilidadreproduccion = new SimpleStringProperty();
 
+    private StringProperty numeroRecursosAgua=new SimpleStringProperty();
+    private StringProperty numeroRecursosMontana=new SimpleStringProperty();
+    private StringProperty numeroRecursosComida=new SimpleStringProperty();
+    private StringProperty numeroRecursosTesoro=new SimpleStringProperty();
+    private StringProperty numeroRecursosBiblioteca=new SimpleStringProperty();
+    private StringProperty numeroRecursosPozo=new SimpleStringProperty();
+
     public ParamJuegoProperties(ParamJuegoModel original) {
         setOriginal(original);
     }
@@ -26,6 +33,13 @@ public class ParamJuegoProperties {
         original.setNumeroIndividuosBasicos(numeroIBasicos.get());
         original.setPclonacion(probabilidadclonacion.get());
         original.setProbabilidadreproduccion(probabilidadreproduccion.get());
+        original.setNumeroRecursosAgua(numeroRecursosAgua.get());
+        original.setNumeroRecursosTesoro(numeroRecursosTesoro.get());
+        original.setNumeroRecursosComida(numeroRecursosComida.get());
+        original.setNumeroRecursosBiblioteca(numeroRecursosBiblioteca.get());
+        original.setNumeroRecursosPozo(numeroRecursosPozo.get());
+        original.setNumeroRecursosMontana(numeroRecursosMontana.get());
+
     }
 
 
@@ -37,6 +51,12 @@ public class ParamJuegoProperties {
         numeroIBasicos.set((original.getNumeroIndividuosBasicos()));
         probabilidadclonacion.set((original.getPclonacion()));
         probabilidadreproduccion.set((original.getProbabilidadreproduccion()));
+        numeroRecursosBiblioteca.set((original.getNumeroRecursosBiblioteca()));
+        numeroRecursosAgua.set((original.getNumeroRecursosAgua()));
+        numeroRecursosComida.set((original.getNumeroRecursosComida()));
+        numeroRecursosPozo.set((original.getNumeroRecursosPozo()));
+        numeroRecursosTesoro.set((original.getNumeroRecursosTesoro()));
+        numeroRecursosMontana.set((original.getNumeroRecursosMontana()));
     }
 
     public void setOriginal(ParamJuegoModel original) {
@@ -73,5 +93,23 @@ public class ParamJuegoProperties {
 
     {
         return probabilidadclonacion;
+    }
+    public Property<String> numeroRecursosAguaProperty() {
+        return numeroRecursosAgua;
+    }
+    public Property<String> numeroRecursosPozoProperty() {
+        return numeroRecursosPozo;
+    }
+    public Property<String> numeroRecursosMontanaProperty() {
+        return numeroRecursosMontana;
+    }
+    public Property<String> numeroRecursosTesoroProperty() {
+        return numeroRecursosTesoro;
+    }
+    public Property<String> numeroRecursosComidaProperty() {
+        return numeroRecursosComida;
+    }
+    public Property<String> numeroRecursosBibliotecaProperty() {
+        return numeroRecursosBiblioteca;
     }
 }

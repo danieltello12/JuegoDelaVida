@@ -30,6 +30,19 @@ public class ParamJuegoControlador implements Initializable {
     @FXML
     private TextField probabilidadClonacion;
 
+    @FXML
+    private TextField numeroRecursosAgua;
+    private TextField numeroRecursosComida;
+    @FXML
+    private TextField numeroRecursosMontana;
+    @FXML
+    private TextField numeroRecursosTesoro;
+    @FXML
+    private TextField numeroRecursosPozo;
+    @FXML
+    private TextField numeroRecursosBiblioteca;
+
+
 
 
 
@@ -69,6 +82,15 @@ public class ParamJuegoControlador implements Initializable {
         numeroIndividuosBasicos.textProperty().bindBidirectional(model.numeroIndividuosBasicosProperty());
         probabilidadClonacion.textProperty().bindBidirectional(model.probabilidadClonacionProperty());
         probabilidadReproduccion.textProperty().bindBidirectional(model.probabilidadReproduccionProperty());
+        probabilidadReproduccion.textProperty().bindBidirectional(model.probabilidadReproduccionProperty());
+        numeroRecursosAgua.textProperty().bindBidirectional(model.numeroRecursosAguaProperty());
+        numeroRecursosMontana.textProperty().bindBidirectional(model.numeroRecursosMontanaProperty());
+        numeroRecursosTesoro.textProperty().bindBidirectional(model.numeroRecursosTesoroProperty());
+        numeroRecursosPozo.textProperty().bindBidirectional(model.numeroRecursosPozoProperty());
+        numeroRecursosComida.textProperty().bindBidirectional(model.numeroRecursosComidaProperty());
+        numeroRecursosBiblioteca.textProperty().bindBidirectional(model.numeroRecursosBibliotecaProperty());
+
+
     }
     /**
      * Este método recibe los datos del modelo y los establece

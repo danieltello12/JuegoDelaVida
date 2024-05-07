@@ -1,0 +1,67 @@
+@startuml
+folder Portada {
+    class HelloApplication{
+    +createContent():Parent
+    +start(primaryStage:Stage)
+    +main(args:String[])
+    }
+    HelloApplication-|> Application
+    abstract class Application{
+    //Clase abstracta de Java
+    }
+    class StackPane{
+        //Clase de Java
+        }
+    class CambioDePantalla extends Pane{
+    -log: Logger
+    +CambioDePantalla(weidth:int,length:int)
+    }
+    class Pane{
+    //Clase de Java
+    }
+
+    class Caja_Boton extends Pane{
+        -box:VBox
+        +Caja_Boton(width:int,length:int)
+        +addItem:(item:Boton)
+        }
+    class Boton extends StackPane {
+        -font:Font
+            + Boton(name:String,int:width)
+            +onSelected()
+            +onDeselected()
+            +setOnAction(action:Runnable)
+        }
+    }
+    folder TableroDeJuego{
+    class Tablero{
+    +setTablero(filas:int,columnas:int):Parent
+    }
+    class Pane{
+    //Clase Java
+    }
+    class StackPane{
+    //Clase de Java
+    }
+    class Botones extends StackPane{
+    -font:Font
+    +Botones(width:int)
+    +setOnAction(action:Runnable)
+    }
+    class Box extends Pane{
+    -box:VBox
+    +Box(width:int,length:int,fondo: String}
+
+
+
+
+
+}
+
+
+@enduml
+
+
+
+
+
