@@ -32,6 +32,7 @@ public class ParamJuegoControlador implements Initializable {
 
     @FXML
     private TextField numeroRecursosAgua;
+    @FXML
     private TextField numeroRecursosComida;
     @FXML
     private TextField numeroRecursosMontana;
