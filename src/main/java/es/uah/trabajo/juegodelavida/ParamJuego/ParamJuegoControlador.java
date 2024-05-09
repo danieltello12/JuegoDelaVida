@@ -73,7 +73,7 @@ public class ParamJuegoControlador implements Initializable {
         if (model != null) {
             this.updateGUIwithModel();
         }
-    }
+    }//jhgjh
     public void añadirpartida(ListaRecursos rec, ListaELementos ind){
         model.commit();
         ListaUsuarios l = new ListaUsuarios();
