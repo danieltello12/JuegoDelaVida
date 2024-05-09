@@ -60,3 +60,23 @@
 2024-05-09 16:32:26.853 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
 2024-05-09 16:32:27.032 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
 2024-05-09 16:32:33.277 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
+2024-05-09 18:09:10.037 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
+2024-05-09 18:09:10.287 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
+2024-05-09 18:09:22.833 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del método de arranque de la aplicación para mostrar un grid de forma programática
+2024-05-09 18:09:24.848 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Enviando un info
+2024-05-09 18:09:24.848 - WARN  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Enviando un aviso
+2024-05-09 18:09:24.849 - ERROR - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Enviando un error
+2024-05-09 18:09:24.849 - FATAL - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Enviando una explosión fatal
+2024-05-09 18:09:24.849 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Fin del método de arranque de la aplicación para mostrar un grid de forma programática
+2024-05-09 19:38:47.155 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del método de arranque de la aplicación para mostrar un grid de forma programática
+2024-05-09 19:38:49.321 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Enviando un info
+2024-05-09 19:38:49.321 - WARN  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Enviando un aviso
+2024-05-09 19:38:49.322 - ERROR - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Enviando un error
+2024-05-09 19:38:49.322 - FATAL - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Enviando una explosión fatal
+2024-05-09 19:38:49.322 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Fin del método de arranque de la aplicación para mostrar un grid de forma programática
+2024-05-09 19:39:10.555 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
+2024-05-09 19:39:10.767 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
+2024-05-09 19:39:16.434 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
+2024-05-09 19:41:01.184 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
+2024-05-09 19:41:01.372 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
+2024-05-09 19:41:08.551 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
