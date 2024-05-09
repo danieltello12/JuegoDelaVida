@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.trabajo.juegodelavida.ParamJuego.TipoDeRecursoControler">
+   <children>
+      <Button layoutX="66.0" layoutY="108.0" mnemonicParsing="false" onAction="#onMiBotonMontañaClick" text="Montaña" />
+      <Button layoutX="286.0" layoutY="121.0" mnemonicParsing="false" onAction="#onMiBotonComidaClick" text="Comida" />
+      <Button layoutX="407.0" layoutY="121.0" mnemonicParsing="false" onAction="#onMiBotonAguaClick" text="Agua" />
+      <Button layoutX="171.0" layoutY="108.0" mnemonicParsing="false" onAction="#onMiBotonTesoroClick" text="Tesoro" />
+      <Button layoutX="155.0" layoutY="187.0" mnemonicParsing="false" onAction="#onMiBotonPozoClick" text="Pozo" />
+      <Button layoutX="328.0" layoutY="213.0" mnemonicParsing="false" onAction="#onMiBotonBibliotecaClick" text="Biblioteca" />
+   </children>
+</AnchorPane>

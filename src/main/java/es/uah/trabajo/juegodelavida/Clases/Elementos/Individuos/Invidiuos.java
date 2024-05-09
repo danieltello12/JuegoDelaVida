@@ -2,20 +2,22 @@ package es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos;
 
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Elementos;
 
-public abstract class Invidiuos extends Elementos {
+public class Invidiuos extends Elementos {
     int id;
-    int generacionind;
     int turnosvida;
     int probrep;
     int probclon;
+    String tipo;
 
-    public Invidiuos(int x, int y, int id, int generacionind, int turnosvida, int probrep, int probclon) {
+    public Invidiuos(int x, int y, int id, int turnosvida, int probrep, int probclon) {
         super(x, y);
         this.id = id;
-        this.generacionind = generacionind;
         this.turnosvida = turnosvida;
         this.probrep = probrep;
         this.probclon = probclon;
+    }
+    public void setTipo(String tipo){
+        this.tipo=tipo;
     }
 
     public int getId() {
@@ -26,13 +28,6 @@ public abstract class Invidiuos extends Elementos {
         this.id = id;
     }
 
-    public int getGeneracionind() {
-        return generacionind;
-    }
-
-    public void setGeneracionind(int generacionind) {
-        this.generacionind = generacionind;
-    }
 
     public int getTurnosvida() {
         return turnosvida;

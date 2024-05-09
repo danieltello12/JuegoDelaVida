@@ -1,41 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="515.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoControlador">
+<AnchorPane prefHeight="518.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoControlador">
     <children>
-        <TextField fx:id="fDimension" alignment="CENTER" layoutX="160.0" layoutY="23.0" />
-        <Label layoutX="13.0" layoutY="27.0" text="Dimensión del tablero:" />
-        <Button alignment="BOTTOM_CENTER" layoutX="885.0" layoutY="474.0" mnemonicParsing="false" onAction="#onMiBotonRegistrarseClick" prefHeight="26.0" prefWidth="106.0" text="Iniciar Juego" />
+      <ImageView fitHeight="518.0" fitWidth="1006.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/fondojuego.jpg" />
+         </image>
+      </ImageView>
+        <TextField fx:id="columnas" alignment="CENTER" layoutX="160.0" layoutY="23.0" />
+        <Label layoutX="13.0" layoutY="27.0" text="Columnas Tablero:" />
+      <Label layoutX="14.0" layoutY="63.0" prefHeight="18.0" prefWidth="94.0" text="Filas Tablero:" />
+        <Button alignment="BOTTOM_CENTER" layoutX="885.0" layoutY="470.0" mnemonicParsing="false" onAction="#onMiBotonIniciarJuegoClick" prefHeight="30.0" prefWidth="106.0" text="Iniciar Juego" />
       <Label layoutX="27.0" layoutY="289.0" text="Probabilidad de clonado:" />
       <ToolBar layoutX="-51.0" layoutY="-73.0" prefHeight="40.0" prefWidth="200.0" />
-      <SplitPane dividerPositions="0.11448598130841123" layoutX="13.0" layoutY="68.0" orientation="VERTICAL" prefHeight="344.0" prefWidth="402.0">
+      <SplitPane dividerPositions="0.11448598130841123" layoutX="14.0" layoutY="100.0" orientation="VERTICAL" prefHeight="344.0" prefWidth="433.0">
         <items>
           <AnchorPane minHeight="10.0" minWidth="0.0" prefHeight="38.0" prefWidth="400.0">
                <children>
                     <Label layoutX="166.0" layoutY="13.0" text="INDIVIDUOS" />
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="300.0" minWidth="400.0" prefHeight="342.0" prefWidth="400.0">
+          <AnchorPane minHeight="257.0" minWidth="400.0" prefHeight="300.0" prefWidth="441.0">
                <children>
-                  <Label layoutX="14.0" layoutY="58.0" text="NºIndividuos Normales:" />
-                  <TextField fx:id="numeroIndividuosAvanzados" layoutX="180.0" layoutY="99.0" />
-                  <Label layoutX="14.0" layoutY="17.0" text="NºIndividuos Básicos" />
-                    <TextField fx:id="fVidas" layoutX="179.0" layoutY="145.0" prefHeight="26.0" prefWidth="150.0" />
-                  <Label layoutX="15.0" layoutY="103.0" text="Nº Individuos Avanzados:" />
-                  <Label layoutX="15.0" layoutY="149.0" text="Número de Vidas" />
-                  <TextField fx:id="probabilidadReproduccion" layoutX="180.0" layoutY="188.0" />
-                  <TextField fx:id="numeroIndividuosBasicos" layoutX="179.0" layoutY="13.0" prefHeight="26.0" prefWidth="150.0" />
-                  <TextField fx:id="numeroIndividuosNormales" layoutX="180.0" layoutY="54.0" />
-                  <TextField fx:id="probabilidadClonacion" layoutX="180.0" layoutY="236.0" />
-                  <Label layoutX="15.0" layoutY="192.0" text="Probabilidad de Reproducción:" />
-                  <Label layoutX="15.0" layoutY="240.0" text="Probabilidad de Clonación:" />
+                  <Label layoutX="46.0" layoutY="53.0" text="Turnos de vida:" />
+                  <Label layoutX="52.0" layoutY="17.0" text="Identificador:" />
+                  <TextField fx:id="Identificador" layoutX="205.0" layoutY="4.0" prefHeight="26.0" prefWidth="140.0" />
+                  <TextField fx:id="TurnosDeVida" layoutX="200.0" layoutY="40.0" prefHeight="26.0" prefWidth="140.0" />
+                  <Label layoutX="5.0" layoutY="168.0" prefHeight="44.0" prefWidth="186.0" text="Probabilidad de Reproducción:" />
+                  <Label layoutX="12.0" layoutY="222.0" text="Probabilidad de Clonación:" />
+                  <Slider fx:id="probabilidadReproduccion" blockIncrement="0.0" layoutX="191.0" layoutY="168.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="44.0" prefWidth="234.0" showTickLabels="true" />
+                  <Slider fx:id="probabilidadClonacion" blockIncrement="0.0" layoutX="191.0" layoutY="218.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="44.0" prefWidth="233.0" showTickLabels="true" />
+                  <Button layoutX="308.0" layoutY="262.0" mnemonicParsing="false" onAction="#onMibotonCrearIndividuoClick" text="Crear Individuo" />
+                  <Label layoutX="61.0" layoutY="97.0" text="Fila" />
+                  <Label layoutX="45.0" layoutY="132.0" text="Columna" />
+                  <TextField fx:id="filaIndv" layoutX="200.0" layoutY="84.0" prefHeight="26.0" prefWidth="140.0" />
+                  <TextField fx:id="columnaIvd" layoutX="201.0" layoutY="119.0" prefHeight="26.0" prefWidth="140.0" />
                </children>
             </AnchorPane>
         </items>
       </SplitPane>
-      <SplitPane dividerPositions="0.2" layoutX="511.0" layoutY="68.0" orientation="VERTICAL" prefHeight="344.0" prefWidth="402.0">
+      <SplitPane dividerPositions="0.2" layoutX="513.0" layoutY="100.0" orientation="VERTICAL" prefHeight="344.0" prefWidth="402.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2.0" prefWidth="400.0">
                <children>
@@ -44,20 +58,20 @@
             </AnchorPane>
           <AnchorPane minHeight="300.0" minWidth="400.0" prefHeight="326.0" prefWidth="400.0">
                <children>
-                  <TextField fx:id="numeroRecursosAgua" layoutX="200.0" layoutY="10.0" />
-                  <Label layoutX="12.0" layoutY="14.0" text="Número de Recursos Agua:" />
-                  <Label layoutX="10.0" layoutY="57.0" text="Número de Recursos Montaña:" />
-                  <Label layoutX="13.0" layoutY="102.0" text="Número de Recursos Pozo:" />
-                  <Label layoutX="14.0" layoutY="142.0" text="Número de Recursos Biblioteca:" />
-                  <Label layoutX="13.0" layoutY="186.0" text="Número de Recursos Comida:" />
-                  <Label layoutX="15.0" layoutY="226.0" text="Número de Recursos Tesoro:" />
-                  <TextField fx:id="numeroRecursosMontana" layoutX="201.0" layoutY="53.0" />
-                  <TextField fx:id="numeroRecursosPozo" layoutX="201.0" layoutY="98.0" />
-                  <TextField fx:id="numeroRecursosBiblioteca" layoutX="201.0" layoutY="138.0" />
-                  <TextField fx:id="numeroRecursosComida" layoutX="201.0" layoutY="182.0" />
-                  <TextField fx:id="numeroRecursosTesoro" layoutX="201.0" layoutY="222.0" />
+                  <Label layoutX="52.0" layoutY="34.0" text="Fila" />
+                  <Label layoutX="36.0" layoutY="88.0" text="Columna" />
+                  <Label layoutX="20.0" layoutY="150.0" text="Probabilidad Z" />
+                  <Label layoutX="19.0" layoutY="223.0" text="Probabilidad V" />
+                  <TextField fx:id="filaRec" layoutX="201.0" layoutY="31.0" />
+                  <TextField fx:id="columnaRec" layoutX="201.0" layoutY="85.0" />
+                  <Slider fx:id="probZ" blockIncrement="0.2" layoutX="132.0" layoutY="148.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="44.0" prefWidth="262.0" showTickLabels="true" />
+                  <Slider fx:id="probV" layoutX="132.0" layoutY="210.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="44.0" prefWidth="262.0" showTickLabels="true" />
+                  <Button layoutX="263.0" layoutY="263.0" mnemonicParsing="false" onAction="#onMiBotonCrearRecursoClick" prefHeight="30.0" prefWidth="112.0" text="Crear Recurso" />
                </children></AnchorPane>
         </items>
       </SplitPane>
+      <TextField fx:id="nombrePartida" layoutX="841.0" layoutY="23.0" />
+      <Label layoutX="694.0" layoutY="36.0" prefHeight="18.0" prefWidth="122.0" text="Nombre Partida:" />
+      <TextField fx:id="filas" layoutX="160.0" layoutY="59.0" />
     </children>
 </AnchorPane>

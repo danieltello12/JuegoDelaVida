@@ -1,7 +1,11 @@
 package es.uah.trabajo.juegodelavida.InicioSesionNP;
 
+import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
+import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
 import es.uah.trabajo.juegodelavida.Clases.ListaUsuarios;
 import es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoControlador;
+import es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoModel;
+import es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoProperties;
 import es.uah.trabajo.juegodelavida.Registrarse.RegistrarseControlador;
 import es.uah.trabajo.juegodelavida.Registrarse.RegistrarseModelo;
 import es.uah.trabajo.juegodelavida.Registrarse.RegistrarseProperties;
@@ -84,6 +88,15 @@ public class InicioSesionControladorNP implements Initializable {
             /** El usuario Ha iniciado sesion de forma correcta y se procede a mostrarle la pantalla de Parametros
              *
              */
+            ListaELementos l2= new ListaELementos();
+            l2=l2.cargar();
+            l2.vaciar();
+            l2.guardar(l2);
+
+            ListaRecursos l3= new ListaRecursos();
+            l3=l3.cargar();
+            l3.vaciar();
+            l3.guardar(l3);
 
             Stage stage = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader();
@@ -97,11 +110,12 @@ public class InicioSesionControladorNP implements Initializable {
             fxmlLoader.setLocation(url);
 
             try {
-                Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
+                Scene scene = new Scene(fxmlLoader.load(), 1006, 518);
                 stage.setTitle("Juego de La Vida de Conway");
                 stage.setScene(scene);
                 ParamJuegoControlador p = fxmlLoader.getController(); //dame el controlador
-                //p.loadUserData(this.modeloParaGUICompartido); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
+                p.setUsuario(model.original.getUsuario());
+                p.loadUserData(new ParamJuegoProperties(new ParamJuegoModel())); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
                 p.setStage(stage); //doy la ventana donde se va a trabajar
                 stage.show();
             } catch (Exception e) {

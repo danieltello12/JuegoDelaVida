@@ -51,6 +51,21 @@ public class ListaUsuarios extends gson {
       }
       return encontrado;
    }
+   public Usuario getusuario(String nombre){
+      ListaLE<Usuario> usuarios = new ListaLE<Usuario>();
+      usuarios = usuarios.cargar();
+      boolean encontrado = false;
+      ElementoLEUs<Usuario> el = usuarios.getPrimero();
+      while (el != null && encontrado == false) {
+         if (Objects.equals((el.getDatos()).nombre,nombre)) {
+            encontrado = true;
+         }
+         else {
+            el = ((ElementoLEUs<Usuario>) el).getSiguiente();
+         }
+      }
+      return el.getDatos();
+   }
 
    public void guardar(ListaLE lista) {
       String rutaArchivo = "Json/usuarios.json";

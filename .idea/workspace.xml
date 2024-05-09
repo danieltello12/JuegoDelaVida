@@ -9,14 +9,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/UMTrabajoFinal.puml" afterDir="false" />
+    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="inicio 22">
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Recursos/Recursos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ElementoLE.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ElementoRe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaELementos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaRecursos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/TipoDeInviduoControlador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/TipoDeRecursoControler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/elegirIndividuo.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/elegirRecurso.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Añadido.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_18_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_18__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_05_2024_11_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_05_2024_11_43__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Json/usuarios.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/usuarios.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Musica/musica-espera-separador-musical-.mp3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Avanzado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Avanzado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Básico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Básico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Invidiuos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Invidiuos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/normal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/normal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/ListaUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/ListaUsuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Partida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Recursos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/NuevaPartida/NuevaPartidaControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/NuevaPartida/NuevaPartidaDataModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/NuevaPartida/NuevaPartidaDataModelProperties.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoProperties.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/ParamJuego.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/ParamJuego.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,9 +59,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="UML Class" />
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="UML Class" />
       </list>
     </option>
   </component>
@@ -267,6 +296,7 @@
       <pinned-members>
         <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLE" memberName="siguiente" />
         <PinnedItemInfo parentTag="com.google.gson.internal.LinkedTreeMap$Node" memberName="key" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos" memberName="primero" />
         <PinnedItemInfo parentTag="java.lang.String" memberName="hashIsZero" />
       </pinned-members>
     </pin-to-top-manager>

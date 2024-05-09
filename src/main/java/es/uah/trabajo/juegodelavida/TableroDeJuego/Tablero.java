@@ -1,5 +1,7 @@
 package es.uah.trabajo.juegodelavida.TableroDeJuego;
 
+import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
+import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
 import es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoControlador;
 import es.uah.trabajo.juegodelavida.Portada.Boton;
 import javafx.fxml.FXMLLoader;
@@ -25,7 +27,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Tablero  {
-    public static Parent setTablero(int filas,int columnas) throws FileNotFoundException {
+    public static Parent setTablero(int filas, int columnas, ListaELementos individuos, ListaRecursos recursos) throws FileNotFoundException {
         Pane root = new Pane();; //Creo un pane para ir añadiendo los distintos elementos
 
         Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/fondojuego.jpg"));
@@ -58,58 +60,51 @@ public class Tablero  {
             r.setVisible(false);
             caja_info.getChildren().removeAll(botonsalir);
         });
-
         for (int i = 0;i <filas; i++) {
             for (int j = 0; j < columnas; j++) {
 
                 // Aquí podrías instanciar tu clase de celda, más compleja
                 GridPane secondaryGrid = new GridPane();
-                Label rBiblioteca=new Label();
-                rBiblioteca.setPrefSize(32,32);
+                Label rBiblioteca = new Label();
+                rBiblioteca.setPrefSize(32, 32);
                 rBiblioteca.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
-                Label rTesoro=new Label();
-                rTesoro.setPrefSize(32,32);
+                Label rTesoro = new Label();
+                rTesoro.setPrefSize(32, 32);
                 rTesoro.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
-                Label rPozo=new Label();
-                rPozo.setPrefSize(32,32);
+                Label rPozo = new Label();
+                rPozo.setPrefSize(32, 32);
                 rPozo.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
-                Label rAgua=new Label();
-                rAgua.setPrefSize(32,32);
+                Label rAgua = new Label();
+                rAgua.setPrefSize(32, 32);
                 rAgua.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
-                Label rMontana=new Label();
-                rMontana.setPrefSize(32,32);
+                Label rMontana = new Label();
+                rMontana.setPrefSize(32, 32);
                 rMontana.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
-                Label rComida=new Label();
-                rComida.setPrefSize(32,32);
+                Label rComida = new Label();
+                rComida.setPrefSize(32, 32);
                 rComida.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
-                Label iIndividuo=new Label("I");
-                iIndividuo.setPrefSize(32,32);
+                Label iIndividuo = new Label("I");
+                iIndividuo.setPrefSize(32, 32);
                 iIndividuo.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: right;");
                 iIndividuo.setAlignment(Pos.CENTER);
-                secondaryGrid.add(rAgua,0,0);
-                secondaryGrid.add(rMontana,0,1);
-                secondaryGrid.add(rComida,1,0);
-                secondaryGrid.add(iIndividuo,1,1);
+                secondaryGrid.add(rAgua, 0, 0);
+                secondaryGrid.add(rMontana, 0, 1);
+                secondaryGrid.add(rComida, 1, 0);
+                secondaryGrid.add(iIndividuo, 1, 1);
 
                 //mainGrid.add(addVBox(), i, j);
                 mainGrid.add(secondaryGrid, i, j);
-                Botones boton=new Botones(64);
+                Botones boton = new Botones(64);
                 boton.setStyle("-fx-background-color: transparent;-fx-border-color: black");
-                boton.setOnAction(()->{
+                boton.setOnAction(() -> {
                     r.setVisible(true);
                     caja_info.getChildren().add(botonsalir);
                 });
 
-                mainGrid.add(boton,i,j);
-
-
-
+                mainGrid.add(boton, i, j);
 
             }
         }
-        mainGrid.setTranslateX(0);
-        mainGrid.setTranslateY(0);
-
         caja_info.getChildren().add(r);
 
         Box b= new Box(100,80,"src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Boton_Parar.png");
@@ -133,7 +128,7 @@ public class Tablero  {
             fxmlLoader.setLocation(url);
 
             try {
-                Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
+                Scene scene = new Scene(fxmlLoader.load(), 1006, 518);
                 stage.setTitle("Juego de La Vida de Conway");
                 stage.setScene(scene);
                 ParamJuegoControlador p = fxmlLoader.getController(); //dame el controlador
@@ -169,7 +164,7 @@ public class Tablero  {
             fxmlLoader.setLocation(url);
 
             try {
-                Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
+                Scene scene = new Scene(fxmlLoader.load(), 1006, 518);
                 stage.setTitle("Juego de La Vida de Conway");
                 stage.setScene(scene);
                 ParamJuegoControlador p = fxmlLoader.getController(); //dame el controlador
@@ -204,7 +199,7 @@ public class Tablero  {
             fxmlLoader.setLocation(url);
 
             try {
-                Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
+                Scene scene = new Scene(fxmlLoader.load(), 1006, 518);
                 stage.setTitle("Juego de La Vida de Conway");
                 stage.setScene(scene);
                 ParamJuegoControlador p = fxmlLoader.getController(); //dame el controlador

@@ -6,8 +6,6 @@ module es.uah.trabajo.juegodelavida {
 
     opens es.uah.trabajo.juegodelavida.ParamJuego to javafx.fxml;
     exports es.uah.trabajo.juegodelavida.ParamJuego;
-    opens es.uah.trabajo.juegodelavida.NuevaPartida to javafx.fxml;
-    exports es.uah.trabajo.juegodelavida.NuevaPartida;
     exports es.uah.trabajo.juegodelavida.Portada;
     opens es.uah.trabajo.juegodelavida.Portada to javafx.fxml;
     opens es.uah.trabajo.juegodelavida.CargarPartida to javafx.fxml;
@@ -26,5 +24,11 @@ module es.uah.trabajo.juegodelavida {
     exports es.uah.trabajo.juegodelavida.TableroDeJuego;
     exports es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar;
     opens es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar to com.google.gson;
+    exports es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos;
+    opens es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos to com.google.gson;
+    exports es.uah.trabajo.juegodelavida.Clases.Elementos;
+    opens es.uah.trabajo.juegodelavida.Clases.Elementos to  com.google.gson;
+    opens es.uah.trabajo.juegodelavida.Clases.Elementos.Recursos to com.google.gson;
+    exports es.uah.trabajo.juegodelavida.Clases.Elementos.Recursos;
 
 }

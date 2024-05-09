@@ -1,62 +1,58 @@
 package es.uah.trabajo.juegodelavida.ParamJuego;
 
-import javafx.beans.property.Property;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 
 public class ParamJuegoProperties {
     protected ParamJuegoModel original;
-    private StringProperty dimensiones = new SimpleStringProperty();
-    private StringProperty vidas = new SimpleStringProperty();
-    private StringProperty numeroIBasicos = new SimpleStringProperty();
-    private StringProperty numeroIAvanzados = new SimpleStringProperty();
-    private StringProperty numeroIndividuosNormales = new SimpleStringProperty();
-    private StringProperty probabilidadclonacion = new SimpleStringProperty();
-    private StringProperty probabilidadreproduccion = new SimpleStringProperty();
-
-    private StringProperty numeroRecursosAgua=new SimpleStringProperty();
-    private StringProperty numeroRecursosMontana=new SimpleStringProperty();
-    private StringProperty numeroRecursosComida=new SimpleStringProperty();
-    private StringProperty numeroRecursosTesoro=new SimpleStringProperty();
-    private StringProperty numeroRecursosBiblioteca=new SimpleStringProperty();
-    private StringProperty numeroRecursosPozo=new SimpleStringProperty();
-
+    private StringProperty filaIndv= new SimpleStringProperty();
+    private StringProperty columnaIvd= new SimpleStringProperty();
+    private StringProperty nombre= new SimpleStringProperty();
+    private StringProperty columnas = new SimpleStringProperty();
+    private StringProperty filas= new SimpleStringProperty();
+    private StringProperty TurnosDeVida = new SimpleStringProperty();
+    private StringProperty Identificador = new SimpleStringProperty();
+    private IntegerProperty probabilidadclonacion = new SimpleIntegerProperty();
+   private IntegerProperty probabilidadreproduccion= new SimpleIntegerProperty();
+    private StringProperty filasrec= new SimpleStringProperty();
+    private StringProperty columnasrec= new SimpleStringProperty();
+    private IntegerProperty pv= new SimpleIntegerProperty();
+    private IntegerProperty pz= new SimpleIntegerProperty();
     public ParamJuegoProperties(ParamJuegoModel original) {
         setOriginal(original);
     }
 
     public void commit() {
-        original.setDimension(dimensiones.get());
-        original.setVidas(vidas.get());
-        original.setNumeroIndividuosAvanzados(numeroIAvanzados.get());
-        original.setNumeroIndividuosNormales(numeroIndividuosNormales.get());
-        original.setNumeroIndividuosBasicos(numeroIBasicos.get());
+        original.setDimension(columnas.get());
+        original.setNumeroIndividuosAvanzados(TurnosDeVida.get());
+        original.setNumeroIndividuosNormales(Identificador.get());
         original.setPclonacion(probabilidadclonacion.get());
         original.setProbabilidadreproduccion(probabilidadreproduccion.get());
-        original.setNumeroRecursosAgua(numeroRecursosAgua.get());
-        original.setNumeroRecursosTesoro(numeroRecursosTesoro.get());
-        original.setNumeroRecursosComida(numeroRecursosComida.get());
-        original.setNumeroRecursosBiblioteca(numeroRecursosBiblioteca.get());
-        original.setNumeroRecursosPozo(numeroRecursosPozo.get());
-        original.setNumeroRecursosMontana(numeroRecursosMontana.get());
+        original.setFilas(filas.get());
+        original.setNombre(nombre.get());
+        original.setFilaIndv(filaIndv.get());
+        original.setColumnaIvd(columnaIvd.get());
+        original.setColumnarec(columnasrec.get());
+        original.setFilarec(filasrec.get());
+        original.setPz(pz.get());
+        original.setPv(pv.get());
 
     }
 
 
     public void rollback() {
-        dimensiones.set((original.getDimension()));
-        vidas.set((original.getVidas()));
-        numeroIAvanzados.set((original.getNumeroIndividuosAvanzados()));
-        numeroIndividuosNormales.set((original.getNumeroIndividuosNormales()));
-        numeroIBasicos.set((original.getNumeroIndividuosBasicos()));
+        columnas.set((original.getDimension()));
+        TurnosDeVida.set((original.getNumeroIndividuosAvanzados()));
+        Identificador.set((original.getNumeroIndividuosNormales()));
         probabilidadclonacion.set((original.getPclonacion()));
         probabilidadreproduccion.set((original.getProbabilidadreproduccion()));
-        numeroRecursosBiblioteca.set((original.getNumeroRecursosBiblioteca()));
-        numeroRecursosAgua.set((original.getNumeroRecursosAgua()));
-        numeroRecursosComida.set((original.getNumeroRecursosComida()));
-        numeroRecursosPozo.set((original.getNumeroRecursosPozo()));
-        numeroRecursosTesoro.set((original.getNumeroRecursosTesoro()));
-        numeroRecursosMontana.set((original.getNumeroRecursosMontana()));
+        filas.set(original.getFilas());
+        nombre.set(original.getNombre());
+        filaIndv.set(original.getFilaIndv());
+        columnaIvd.set(original.getColumnaIvd());
+        filasrec.set(original.getFilarec());
+        columnasrec.set(original.getColumnarec());
+        pv.set(original.getPv());
+        pz.set(original.getPz());
     }
 
     public void setOriginal(ParamJuegoModel original) {
@@ -65,51 +61,49 @@ public class ParamJuegoProperties {
     }
 
     public Property<String> dimensionesProperty() {
-        return dimensiones;
+        return columnas;
     }
 
-    public Property<String> vidasProperty() {
-        return vidas;
-    }
+
 
     public Property<String> numeroIndividuosNormalesProperty() {
-        return numeroIndividuosNormales;
+        return Identificador;
     }
 
     public Property<String> numeroIndividuosAvanzadosProperty() {
-        return numeroIAvanzados;
+        return TurnosDeVida;
     }
 
-    public Property<String> numeroIndividuosBasicosProperty() {
-        return numeroIBasicos;
+    public StringProperty filaIndvproperty(){
+        return filaIndv;
     }
-
-    public StringProperty probabilidadReproduccionProperty() {
+    public IntegerProperty probabilidadReproduccionProperty() {
         return probabilidadreproduccion;
     }
-
-
-    public StringProperty probabilidadClonacionProperty()
+public StringProperty getColumnaIvdproperty(){
+        return columnaIvd;
+}
+public StringProperty  filasProperty(){
+        return filas;
+}
+    public IntegerProperty probabilidadClonacionProperty()
 
     {
         return probabilidadclonacion;
     }
-    public Property<String> numeroRecursosAguaProperty() {
-        return numeroRecursosAgua;
+    public StringProperty nombre(){
+        return nombre;
     }
-    public Property<String> numeroRecursosPozoProperty() {
-        return numeroRecursosPozo;
+    public StringProperty filasrecProperty(){
+        return filasrec;
     }
-    public Property<String> numeroRecursosMontanaProperty() {
-        return numeroRecursosMontana;
+    public StringProperty ColumnasrecProperty(){
+        return columnasrec;
     }
-    public Property<String> numeroRecursosTesoroProperty() {
-        return numeroRecursosTesoro;
+    public IntegerProperty pvProperty(){
+        return pv;
     }
-    public Property<String> numeroRecursosComidaProperty() {
-        return numeroRecursosComida;
-    }
-    public Property<String> numeroRecursosBibliotecaProperty() {
-        return numeroRecursosBiblioteca;
+    public IntegerProperty pzProperty(){
+        return pz;
     }
 }
