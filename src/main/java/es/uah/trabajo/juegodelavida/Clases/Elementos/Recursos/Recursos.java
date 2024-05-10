@@ -47,4 +47,8 @@ public void setTipo(String tipo){
     public void setProbabilida_V(int probabilida_V) {
         Probabilida_V = probabilida_V;
     }
+
+    public String getTipo() {
+        return tipo;
+    }
 }

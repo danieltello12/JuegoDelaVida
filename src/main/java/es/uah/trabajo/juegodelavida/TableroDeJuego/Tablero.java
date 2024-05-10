@@ -4,9 +4,11 @@ import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
 import es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoControlador;
 import es.uah.trabajo.juegodelavida.Portada.Boton;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -34,6 +36,8 @@ public class Tablero  {
         ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
         imageView.setFitWidth(1450);
         imageView.setFitHeight(800);
+
+
 
 
         GridPane mainGrid = new GridPane();
@@ -65,6 +69,11 @@ public class Tablero  {
 
                 // Aquí podrías instanciar tu clase de celda, más compleja
                 GridPane secondaryGrid = new GridPane();
+                secondaryGrid.setId("recursos");
+                Label rRecursoVacio = new Label();
+                rRecursoVacio.setPrefSize(32, 32);
+                rRecursoVacio.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
+
                 Label rBiblioteca = new Label();
                 rBiblioteca.setPrefSize(32, 32);
                 rBiblioteca.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
@@ -88,8 +97,8 @@ public class Tablero  {
                 iIndividuo.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: right;");
                 iIndividuo.setAlignment(Pos.CENTER);
                 secondaryGrid.add(rAgua, 0, 0);
-                secondaryGrid.add(rMontana, 0, 1);
-                secondaryGrid.add(rComida, 1, 0);
+                secondaryGrid.add(rComida, 0, 1);
+                secondaryGrid.add(rPozo, 1, 0);
                 secondaryGrid.add(iIndividuo, 1, 1);
 
                 //mainGrid.add(addVBox(), i, j);
@@ -105,6 +114,67 @@ public class Tablero  {
 
             }
         }
+        int pos=0;
+        while(pos<recursos.getNumeroElementos()){
+            int x=recursos.getElemento(pos).getDatos().getX();
+            int y=recursos.getElemento(pos).getDatos().getY();
+            Label recurso=new Label();
+            recurso.setAlignment(Pos.CENTER);
+            recurso.setText(recursos.getElemento(pos).getDatos().getTipo());
+            ObservableList<Node> children = mainGrid.getChildren();
+            GridPane nodo=null;
+            for (Node child : children) {
+                if (GridPane.getRowIndex(child) != null && GridPane.getRowIndex(child) == x
+                        && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == y
+                && child != null && child.getId()!= null && child.getId().equals("recursos")) {
+                    nodo = (GridPane)child;
+                    break;
+                }
+
+            }
+            if (nodo!=null){
+                boolean insertado=false;
+                ObservableList<Node> children2  = nodo.getChildren();
+                Node hijoABorrar = null;
+                int filaABorrar=-1;
+                int colABorrar=-1;
+                for (Node child : children2) {
+                    for(int fila=0;fila<=1 && !insertado;fila++){
+                        for(int columna=0;columna<=1;columna++){
+                            if(GridPane.getColumnIndex(child)!=null && GridPane.getRowIndex(child) == fila
+                                    && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == columna){
+                                Label miRecurso = (Label) child;
+                                if ( miRecurso.getText() == "") {
+                                    // remover el nodo del GridPane
+                                    hijoABorrar=child;
+                                    filaABorrar=fila;
+                                    colABorrar=columna;
+                                    insertado=true;
+                                    break;
+                                }
+                                break;
+                            }
+                        }
+                    }
+
+
+                }
+                if (hijoABorrar != null ) {
+                    nodo.getChildren().remove(hijoABorrar);
+
+                    // volver a agregar el nodo actualizado al GridPane
+                    GridPane.setRowIndex(recurso, filaABorrar);
+                    GridPane.setColumnIndex(recurso, colABorrar);
+                    nodo.getChildren().add(recurso);
+                }
+
+            }
+            pos++;
+
+
+
+        }
+
         caja_info.getChildren().add(r);
 
         Box b= new Box(100,80,"src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Boton_Parar.png");

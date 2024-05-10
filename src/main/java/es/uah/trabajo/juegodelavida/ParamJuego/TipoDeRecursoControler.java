@@ -29,7 +29,7 @@ public class TipoDeRecursoControler implements Initializable {
         int pv=this.DatosIndv.getProbabilida_V();
         int pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
-        b.setTipo("Montaña");
+        b.setTipo("M");
         l.añadirindividuo(b);
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
@@ -54,7 +54,7 @@ public class TipoDeRecursoControler implements Initializable {
         int pv=this.DatosIndv.getProbabilida_V();
         int pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
-        b.setTipo("Agua");
+        b.setTipo("A");
         l.añadirindividuo(b);
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
@@ -79,7 +79,7 @@ public class TipoDeRecursoControler implements Initializable {
         int pv=this.DatosIndv.getProbabilida_V();
         int pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
-        b.setTipo("Comida");
+        b.setTipo("C");
         l.añadirindividuo(b);
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
@@ -104,7 +104,7 @@ public class TipoDeRecursoControler implements Initializable {
         int pv=this.DatosIndv.getProbabilida_V();
         int pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
-        b.setTipo("Tesoro");
+        b.setTipo("T");
         l.añadirindividuo(b);
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
@@ -130,7 +130,7 @@ public class TipoDeRecursoControler implements Initializable {
         int pv=this.DatosIndv.getProbabilida_V();
         int pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
-        b.setTipo("Biblioteca");
+        b.setTipo("B");
         l.añadirindividuo(b);
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
@@ -155,7 +155,7 @@ public class TipoDeRecursoControler implements Initializable {
         int pv=this.DatosIndv.getProbabilida_V();
         int pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
-        b.setTipo("Pozo");
+        b.setTipo("P");
         l.añadirindividuo(b);
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos

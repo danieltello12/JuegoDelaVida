@@ -1,5 +1,5 @@
 @startuml
-folder Portada {
+    folder Portada {
     class HelloApplication{
     +createContent():Parent
     +start(primaryStage:Stage)
@@ -33,6 +33,124 @@ folder Portada {
             +setOnAction(action:Runnable)
         }
     }
+
+    folder InicioSesionNP{
+        interface Initializable{
+        //Interfaz de Java
+        }
+        class InicioSesionControladorCP() implements Initializable{
+        -textFieldNombre:TextField
+        -textFielContraseña:PassWordField
+        - model:InicioSesionPropertiesNP
+        +onMiBotonRegistrarseClick()
+        +setStage(s:Stage)
+        +onMiBotonJugarClick()
+        +updateGUIwithModel()
+        +initialize(location:URL, resources:ResourceBundle)
+        +loadUserData(parametrosData:InicioSesionPropertiesNP)
+        }
+        class InicioSesionModelNP{
+        -usuario=" ":String
+        -contrasena=" ":String
+        +IniciosesionModelNP(nombre:String,contrasena:String)
+        +IniciosesionModelNP()
+        +getUsuario():String
+        +setUsuario(usuario:String)
+        +getContraseña():String
+        +setContraseña(contrasena:String)
+        }
+
+        class InicioSesionPropertiesNP{
+        -original:InicioSesionModelCP
+        -nombre:StringProperty
+        -contraseña:StringProperty
+
+        +InicioSesionPropertiesNP(original:InicioSesionModelNP) {
+        +commit()
+        +rollback()
+        +setOriginal(original:InicioSesionModelNP )
+        +nombreProperty():Property<String>
+        +contrasenaProperty():Property<String>
+        }
+        }
+    folder InicioSesionCP{
+    interface Initializable{
+            //Interfaz de Java
+            }
+    class InicioSesionControladorCP implements Initializable{
+    -textFieldNombre:TextField
+    -textFielContraseña:PassWordField
+    - model:InicioSesionPropertiesCP
+    +onMiBotonRegistrarseClick()
+    +setStage(s:Stage)
+    +onMiBotonJugarClick()
+    +updateGUIwithModel()
+    +initialize(location:URL, resources:ResourceBundle)
+    +loadUserData(parametrosData:InicioSesionPropertiesCP)
+    }
+    class InicioSesionModelCP{
+    -usuario=" ":String
+    -contrasena=" ":String
+    +IniciosesionModelNP(nombre:String,contrasena:String)
+    +IniciosesionModelCP()
+    +getUsuario():String
+    +setUsuario(usuario:String)
+    +getContraseña():String
+    +setContraseña(contrasena:String)}
+
+    }
+    class InicioSesionPropertiesCP{
+    -original:InicioSesionModelCP
+    -nombre:StringProperty
+    -contraseña:StringProperty
+    +InicioSesionPropertiesCP(original:InicioSesionModelCP) {
+    +commit()
+    +rollback()
+    +setOriginal(original:InicioSesionModelCP )
+    +nombreProperty():Property<String>
+    +contrasenaProperty():Property<String>
+
+
+
+    }
+    }
+    folder Registrarse{
+    interface Initializable{
+                //Interfaz de Java
+                }
+    class RegistrarseControlador implements Initializable{
+    -textFieldNombre:TextField
+    -textFielContraseña:PassWordField
+    +initialize(location:URL, resources:ResourceBundle)
+    +loadUserData(parametrosData:InicioSesionPropertiesCP)
+    +onMiBotonGuardarClick()
+    +updateGUIwithModel()
+    +setStage(s:Stage)
+    }
+    class RegistrarseModelo{
+    -usuario=" ":String
+    -contrasena=" ":String
+    +RegistrarseModelo(nombre:String,contrasena:String)
+    +RegistrarseModelo()
+    +getUsuario():String
+    +setUsuario(usuario:String)
+    +getContraseña():String
+    +setContraseña(contrasena:String)
+    }
+    class RegistrarseProperties{
+    -original:InicioSesionModelCP
+    -nombre:StringProperty
+    -contraseña:StringProperty
+    +InicioSesionPropertiesCP(original:InicioSesionModelCP) {
+    +commit()
+    +rollback()
+    +setOriginal(original:InicioSesionModelCP )
+    +nombreProperty():Property<String>
+    +contrasenaProperty():Property<String>
+    }
+
+
+    }
     folder TableroDeJuego{
     class Tablero{
     +setTablero(filas:int,columnas:int):Parent
@@ -51,6 +169,8 @@ folder Portada {
     class Box extends Pane{
     -box:VBox
     +Box(width:int,length:int,fondo: String}
+
+
 
 
 

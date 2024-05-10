@@ -5,6 +5,7 @@
 
 <AnchorPane prefHeight="150.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.trabajo.juegodelavida.Registrarse.RegistrarseControlador">
     <children>
+
         <Label layoutX="35.0" layoutY="27.0" text="Usuario:" />
         <TextField fx:id="textfieldNombre" layoutX="90.0" layoutY="23.0" />
         <Label layoutX="27.0" layoutY="66.0" text="Contraseña:" />
