@@ -20,7 +20,7 @@ public class main{
         es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.Básico b = new Básico(5,6,7,8,5,4);
 
         l.add(b);
-        l.guardar(l);
+        l.guardar(l,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
 
     }
 }

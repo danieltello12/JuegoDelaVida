@@ -3,22 +3,41 @@ package es.uah.trabajo.juegodelavida.Clases.EstructurasDatos;
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Recursos.Recursos;
 import es.uah.trabajo.juegodelavida.Clases.Json.gson;
 
+import java.util.Objects;
+
 public class ListaRecursos extends gson {
     protected ElementoRe primero;
-    public void añadirindividuo(Recursos nuevo) {
+    public void añadirindividuo(Recursos nuevo,String ruta) {
         ListaRecursos l= new ListaRecursos();
-        l=l.cargar();
+        l=l.cargar(ruta);
         l.add(nuevo);
-        guardar(l);
+        guardar(l,ruta);
     }
-    public void guardar(ListaRecursos l){
-        guardarObjetoEnArchivo("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json",l);
+    public void guardar(ListaRecursos l,String ruta){
+        guardarObjetoEnArchivo(ruta,l);
     }
-    public ListaRecursos cargar(){
-        return cargarObjetoDesdeArchivo("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json", ListaRecursos.class);
+    public ListaRecursos cargar(String ruta){
+        return cargarObjetoDesdeArchivo(ruta, ListaRecursos.class);
 
     }
+    public int elementoscelda(int x,int y,String ruta){
+        ListaRecursos rec= new ListaRecursos();
+        rec = rec.cargar(ruta);
+        int num = 0;
+        ElementoRe el = rec.primero;
+        while (el != null) {
+            if (Objects.equals((el.getDatos().getX()),x)&&Objects.equals((el.getDatos().getY()),y)) {
+                num +=1;
+            }
 
+
+            else {
+                el =  el.getSiguiente();
+            }
+
+        }
+        return num;
+    }
 
     public boolean isVacia() {
         boolean vacio = false;

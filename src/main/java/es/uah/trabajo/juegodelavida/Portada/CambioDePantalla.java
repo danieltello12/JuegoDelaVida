@@ -59,7 +59,7 @@ public class CambioDePantalla extends Pane  {
             fxmlLoader.setLocation(url);
 
             try {
-                Scene scene = new Scene(fxmlLoader.load(), 450, 150);
+                Scene scene = new Scene(fxmlLoader.load(), 450, 171);
                 stage.setTitle("Juego de La Vida de Conway");
                 stage.setScene(scene);
                 InicioSesionControladorNP p = fxmlLoader.getController(); //dame el controlador
@@ -95,7 +95,7 @@ public class CambioDePantalla extends Pane  {
             //lguidasjkgpofhhAOIAFHSFH
 
             try {
-                Scene scene = new Scene(fxmlLoader.load(), 450, 150);
+                Scene scene = new Scene(fxmlLoader.load(), 450, 171);
                 stage.setTitle("Juego de La Vida de Conway");
                 stage.setScene(scene);
                 InicioSesionControladorCP p = fxmlLoader.getController(); //dame el controlador

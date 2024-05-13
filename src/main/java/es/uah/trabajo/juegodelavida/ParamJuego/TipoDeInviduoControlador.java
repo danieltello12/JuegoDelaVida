@@ -22,9 +22,10 @@ public class TipoDeInviduoControlador implements Initializable {
     private Stage scene;
 
     private Invidiuos DatosIndv;
+    boolean conf;
 
     @FXML
-    public void onMiBotonBásicoClick() throws FileNotFoundException {
+    public void onMiBotonBásicoClick() throws FileNotFoundException, InterruptedException {
         ListaELementos l= new ListaELementos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
@@ -34,21 +35,26 @@ public class TipoDeInviduoControlador implements Initializable {
         int turnos= this.DatosIndv.getTurnosvida();
         es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.Básico b = new Básico(x,y,id,turnos,rep,clon);
         b.setTipo("Básico");
-        l.añadirindividuo(b);
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
 
-        Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json");
 
-        Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Añadido.PNG"));
-        ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-        imageView.setFitWidth(1280);
-        imageView.setFitHeight(720);
+            this.scene.close();
 
-        root.getChildren().addAll(imageView);
-        Scene im = new Scene(root);
-        Stage s = new Stage();
-        s.setScene(im);
-        s.setTitle("Juego de La Vida de Conway");
-        s.show();
+            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Añadido.PNG"));
+            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+            imageView.setFitWidth(1280);
+            imageView.setFitHeight(720);
+
+            root.getChildren().addAll(imageView);
+            Scene im = new Scene(root);
+            Stage s = new Stage();
+            s.setScene(im);
+            s.setTitle("Juego de La Vida de Conway");
+            s.show();
+        this.scene.close();
     }
     @FXML
     public void onMiBotonAvanzadoClick() throws FileNotFoundException {
@@ -61,22 +67,29 @@ public class TipoDeInviduoControlador implements Initializable {
         int turnos= this.DatosIndv.getTurnosvida();
         es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.Avanzado b = new Avanzado(x,y,id,turnos,rep,clon);
         b.setTipo("Avanzado");
-        l.añadirindividuo(b);
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json");
 
-        Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-        Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Añadido.PNG"));
-        ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-        imageView.setFitWidth(1280);
-        imageView.setFitHeight(720);
+            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-        root.getChildren().addAll(imageView);
-        Scene im = new Scene(root);
-        Stage s = new Stage();
-        s.setScene(im);
-        s.setTitle("Juego de La Vida de Conway");
-        s.show();
-    }
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Añadido.PNG"));
+            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+            imageView.setFitWidth(1280);
+            imageView.setFitHeight(720);
+
+
+            root.getChildren().addAll(imageView);
+            Scene im = new Scene(root);
+            Stage s = new Stage();
+            s.setScene(im);
+            s.setTitle("Juego de La Vida de Conway");
+            s.show();
+        this.scene.close();
+
+        }
+
+
     @FXML
     public void onMiBotonNormalClick() throws FileNotFoundException {
         ListaELementos l= new ListaELementos();
@@ -89,30 +102,38 @@ public class TipoDeInviduoControlador implements Initializable {
         es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.normal b = new normal(x,y,id,turnos,rep,clon);
         b.setTipo("Normal");
 
-        l.añadirindividuo(b);
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
 
-        Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json");
 
-        Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Añadido.PNG"));
-        ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-        imageView.setFitWidth(1280);
-        imageView.setFitHeight(720);
 
-        root.getChildren().addAll(imageView);
-        Scene im = new Scene(root);
-        Stage s = new Stage();
-        s.setScene(im);
-        s.setTitle("Juego de La Vida de Conway");
-        s.show();
+
+            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Añadido.PNG"));
+            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+            imageView.setFitWidth(1280);
+            imageView.setFitHeight(720);
+
+
+            root.getChildren().addAll(imageView);
+            Scene im = new Scene(root);
+            Stage s = new Stage();
+            s.setScene(im);
+            s.setTitle("Juego de La Vida de Conway");
+            s.show();
+
+
+        this.scene.close();
     }
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
     }
 
-    public void loadDataIndividuo(Invidiuos datos){
+    public void loadDataIndividuo(Invidiuos datos,boolean conf){
+        this.conf=conf;
         this.DatosIndv=datos;
     }
 

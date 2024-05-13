@@ -89,14 +89,14 @@ public class InicioSesionControladorNP implements Initializable {
              *
              */
             ListaELementos l2= new ListaELementos();
-            l2=l2.cargar();
+            l2=l2.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
             l2.vaciar();
-            l2.guardar(l2);
+            l2.guardar(l2,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
 
             ListaRecursos l3= new ListaRecursos();
-            l3=l3.cargar();
+            l3=l3.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
             l3.vaciar();
-            l3.guardar(l3);
+            l3.guardar(l3,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
 
             Stage stage = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader();
@@ -108,6 +108,7 @@ public class InicioSesionControladorNP implements Initializable {
                 throw new RuntimeException(e);
             }
             fxmlLoader.setLocation(url);
+            this.scene.close();
 
             try {
                 Scene scene = new Scene(fxmlLoader.load(), 1006, 518);

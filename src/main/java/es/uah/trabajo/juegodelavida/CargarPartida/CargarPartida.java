@@ -1,13 +1,18 @@
 package es.uah.trabajo.juegodelavida.CargarPartida;
 
 import es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar.ListaLEPA;
+import es.uah.trabajo.juegodelavida.Clases.Partida;
 import es.uah.trabajo.juegodelavida.Clases.Usuario;
+import es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero;
+import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+
 
 public class CargarPartida extends Pane {
     static final int max_partidas = 5;
@@ -38,6 +43,19 @@ public class CargarPartida extends Pane {
                 Botones itemNew = new Botones(u.getPartidas().getElemento(i).getDatos().getNombre(), 150);
                 itemNew.setTranslateX(95); //Posicion X respecto el cuadro donde se encuentra en la vbox letras
                 itemNew.setTranslateY(0);//Posicion Y respecto el cuadro donde se encuentra en la vbox letras
+                int finalI = i;
+                itemNew.setOnAction(()->{
+                    Stage stage = new Stage();
+                    Partida p= u.getPartidas().getElemento(finalI).getDatos();
+                    try {
+                        Scene scene = new Scene(new Tablero().Tablero(p.getFilas(),p.getColumnas(),p.getIndividuos(),p.getRecursos()), 1400, 800);
+                        stage.setTitle("Juego de La Vida de Conway");
+                        stage.setScene(scene);
+                        stage.show();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
 
                 inicio.addItem(itemNew);
                 getChildren().addAll(inicio);

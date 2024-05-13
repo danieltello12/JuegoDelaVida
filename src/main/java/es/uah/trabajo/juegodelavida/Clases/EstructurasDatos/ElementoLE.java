@@ -1,6 +1,5 @@
 package es.uah.trabajo.juegodelavida.Clases.EstructurasDatos;
 
-import es.uah.trabajo.juegodelavida.Clases.Elementos.Elementos;
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.Invidiuos;
 
 public class ElementoLE<TipoDelDato> {
@@ -22,7 +21,7 @@ public class ElementoLE<TipoDelDato> {
         return siguiente;
     }
 
-    public Elementos getDatos() {
+    public Invidiuos getDatos() {
 
         return datos;
     }

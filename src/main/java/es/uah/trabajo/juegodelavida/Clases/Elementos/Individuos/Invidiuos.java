@@ -3,6 +3,7 @@ package es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos;
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Elementos;
 
 public class Invidiuos extends Elementos {
+
     int id;
     int turnosvida;
     int probrep;
@@ -10,7 +11,7 @@ public class Invidiuos extends Elementos {
     String tipo;
 
     public Invidiuos(int x, int y, int id, int turnosvida, int probrep, int probclon) {
-        super(x, y);
+       super(x,y);
         this.id = id;
         this.turnosvida = turnosvida;
         this.probrep = probrep;

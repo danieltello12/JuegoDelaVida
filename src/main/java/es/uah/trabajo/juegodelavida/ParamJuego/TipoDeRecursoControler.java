@@ -20,6 +20,7 @@ public class TipoDeRecursoControler implements Initializable {
     private Stage scene;
 
     private Recursos DatosIndv;
+ boolean conf;
 
     @FXML
     public void onMiBotonMontañaClick() throws FileNotFoundException {
@@ -30,7 +31,12 @@ public class TipoDeRecursoControler implements Initializable {
         int pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
         b.setTipo("M");
-        l.añadirindividuo(b);
+
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+
+
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
@@ -45,6 +51,8 @@ public class TipoDeRecursoControler implements Initializable {
         s.setScene(im);
         s.setTitle("Juego de La Vida de Conway");
         s.show();
+
+        this.scene.close();
     }
     @FXML
     public void onMiBotonAguaClick() throws FileNotFoundException {
@@ -55,7 +63,10 @@ public class TipoDeRecursoControler implements Initializable {
         int pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
         b.setTipo("A");
-        l.añadirindividuo(b);
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+
+
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
@@ -70,6 +81,7 @@ public class TipoDeRecursoControler implements Initializable {
         s.setScene(im);
         s.setTitle("Juego de La Vida de Conway");
         s.show();
+        this.scene.close();
     }
     @FXML
     public void onMiBotonComidaClick() throws FileNotFoundException {
@@ -80,7 +92,11 @@ public class TipoDeRecursoControler implements Initializable {
         int pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
         b.setTipo("C");
-        l.añadirindividuo(b);
+
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
@@ -95,6 +111,7 @@ public class TipoDeRecursoControler implements Initializable {
         s.setScene(im);
         s.setTitle("Juego de La Vida de Conway");
         s.show();
+        this.scene.close();
     }
     @FXML
     public void onMiBotonTesoroClick() throws FileNotFoundException {
@@ -105,7 +122,10 @@ public class TipoDeRecursoControler implements Initializable {
         int pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
         b.setTipo("T");
-        l.añadirindividuo(b);
+
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
@@ -120,6 +140,7 @@ public class TipoDeRecursoControler implements Initializable {
         s.setScene(im);
         s.setTitle("Juego de La Vida de Conway");
         s.show();
+        this.scene.close();
     }
 
     @FXML
@@ -131,7 +152,11 @@ public class TipoDeRecursoControler implements Initializable {
         int pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
         b.setTipo("B");
-        l.añadirindividuo(b);
+
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
@@ -146,6 +171,7 @@ public class TipoDeRecursoControler implements Initializable {
         s.setScene(im);
         s.setTitle("Juego de La Vida de Conway");
         s.show();
+        this.scene.close();
     }
     @FXML
     public void onMiBotonPozoClick() throws FileNotFoundException {
@@ -156,7 +182,11 @@ public class TipoDeRecursoControler implements Initializable {
         int pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
         b.setTipo("P");
-        l.añadirindividuo(b);
+
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
@@ -171,6 +201,7 @@ public class TipoDeRecursoControler implements Initializable {
         s.setScene(im);
         s.setTitle("Juego de La Vida de Conway");
         s.show();
+        this.scene.close();
     }
 
 
@@ -180,7 +211,8 @@ public class TipoDeRecursoControler implements Initializable {
 
     }
 
-    public void loadDataIndividuo(Recursos datos){
+    public void loadDataIndividuo(Recursos datos, boolean conf){
+        this.conf=conf;
         this.DatosIndv=datos;
     }
 

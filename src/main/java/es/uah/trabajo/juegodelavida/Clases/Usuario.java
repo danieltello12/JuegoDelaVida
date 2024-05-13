@@ -42,7 +42,10 @@ public class Usuario extends gson {
     }
 
     public void setPartida(Partida partida) {
-        this.partidas.add(partida);
+        ListaLEPA l2= new ListaLEPA();
+        l2=l2.cargar(this.nombre);
+        l2.add(partida);
+        l2.guardar(this.nombre);
         añadirpartidasJSon();
     }
 
@@ -63,7 +66,7 @@ partidas.guardar(this.nombre);
         }
         else {
             int pos = l.getPosicion(e);
-            l.del(pos);
+            l.del(pos-1);
             l.add(this);
         }
         l.guardar(l);

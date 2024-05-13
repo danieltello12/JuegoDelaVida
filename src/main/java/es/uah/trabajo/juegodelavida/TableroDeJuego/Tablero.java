@@ -4,6 +4,9 @@ import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
 import es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoControlador;
 import es.uah.trabajo.juegodelavida.Portada.Boton;
+import es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion.ConfiguracionController;
+import es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion.ConfiguracionModel;
+import es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion.ConfiguracionProperties;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -28,17 +31,21 @@ import java.io.FileNotFoundException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Tablero  {
-    public static Parent setTablero(int filas, int columnas, ListaELementos individuos, ListaRecursos recursos) throws FileNotFoundException {
-        Pane root = new Pane();; //Creo un pane para ir añadiendo los distintos elementos
+public class Tablero extends Pane {
+static GridPane tab;
+    Pane root= new Pane();
+public Tablero(){
+
+}
+    public Parent Tablero(int filas, int columnas, ListaELementos individuos, ListaRecursos recursos) throws FileNotFoundException {
+
 
         Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/fondojuego.jpg"));
         ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
         imageView.setFitWidth(1450);
         imageView.setFitHeight(800);
 
-
-
+        //Añadir Contador de turnos
 
         GridPane mainGrid = new GridPane();
         // mainGrid.setStyle("-fx-border-color: red;");
@@ -58,6 +65,7 @@ public class Tablero  {
         r.setOpacity(5);
         r.setFill(Color.WHITE);
         r.setVisible(false);
+
 
         Boton botonsalir= new Boton("Cerrar",50);
         botonsalir.setOnAction(()->{
@@ -92,7 +100,7 @@ public class Tablero  {
                 Label rComida = new Label();
                 rComida.setPrefSize(32, 32);
                 rComida.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
-                Label iIndividuo = new Label("I");
+                Label iIndividuo = new Label("");
                 iIndividuo.setPrefSize(32, 32);
                 iIndividuo.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: right;");
                 iIndividuo.setAlignment(Pos.CENTER);
@@ -116,8 +124,8 @@ public class Tablero  {
         }
         int pos=0;
         while(pos<recursos.getNumeroElementos()){
-            int x=recursos.getElemento(pos).getDatos().getX();
-            int y=recursos.getElemento(pos).getDatos().getY();
+            int x=recursos.getElemento(pos).getDatos().getX()-1;
+            int y=recursos.getElemento(pos).getDatos().getY()-1;
             Label recurso=new Label();
             recurso.setAlignment(Pos.CENTER);
             recurso.setText(recursos.getElemento(pos).getDatos().getTipo());
@@ -174,8 +182,84 @@ public class Tablero  {
 
 
         }
+        while(pos<individuos.getNumeroElementos()){
+            int x=individuos.getElemento(pos).getDatos().getX()-1;
+            int y=individuos.getElemento(pos).getDatos().getY()-1;
+            Label individuo=new Label();
+            individuo.setAlignment(Pos.CENTER);
+            individuo.setText("I");
+            ObservableList<Node> children = mainGrid.getChildren();
+            GridPane nodo=null;
+            for (Node child : children) {
+                if (GridPane.getRowIndex(child) != null && GridPane.getRowIndex(child) == x
+                        && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == y
+                        && child != null && child.getId()!= null && child.getId().equals("individuos")) {
+                    nodo = (GridPane)child;
+                    break;
+                }
+
+            }
+            if (nodo!=null){
+                boolean insertado=false;
+                ObservableList<Node> children2  = nodo.getChildren();
+                Node hijoABorrar = null;
+                int filaABorrar=-1;
+                int colABorrar=-1;
+                for (Node child : children2) {
+                    for(int fila=0;fila<=1 && !insertado;fila++){
+                        for(int columna=0;columna<=1;columna++){
+                            if(GridPane.getColumnIndex(child)!=null && GridPane.getRowIndex(child) == fila
+                                    && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == columna){
+                                Label miRecurso = (Label) child;
+                                if ( miRecurso.getText() == "") {
+                                    // remover el nodo del GridPane
+                                    hijoABorrar=child;
+                                    filaABorrar=fila;
+                                    colABorrar=columna;
+                                    insertado=true;
+                                    break;
+                                }
+                                break;
+                            }
+                        }
+                    }
+
+
+                }
+                if (hijoABorrar != null ) {
+                    nodo.getChildren().remove(hijoABorrar);
+
+                    // volver a agregar el nodo actualizado al GridPane
+                    GridPane.setRowIndex(individuo, filaABorrar);
+                    GridPane.setColumnIndex(individuo, colABorrar);
+                    nodo.getChildren().add(individuo);
+                }
+
+            }
+            pos++;
+
+
+
+        }
 
         caja_info.getChildren().add(r);
+        this.tab=mainGrid;
+
+        FlowPane f= new FlowPane();
+        f.getChildren().addAll(mainGrid);
+        f.setBackground(Background.fill(Color.WHITE));
+        f.setAlignment(Pos.CENTER);
+        f.setTranslateX(250);
+        f.setTranslateY(50);
+
+        Box caja= new Box(640,640,null);
+        caja.setTranslateX(230);
+        caja.setTranslateY(100);
+
+
+
+
+        caja.getChildren().add(f);
 
         Box b= new Box(100,80,"src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Boton_Parar.png");
         b.setTranslateY(50);
@@ -221,10 +305,21 @@ public class Tablero  {
         bot1.setTranslateY(-20);
         bot1.setTranslateX(-10);
         bot1.setOnAction(()-> {
+        root.getChildren().removeAll(caja);
+
+        ListaELementos l2= new ListaELementos();
+        l2=l2.cargar("src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json");
+        l2.vaciar();
+        l2.guardar(l2,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json");
+
+        ListaRecursos l3= new ListaRecursos();
+        l3=l3.cargar("src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+        l3.vaciar();
+        l3.guardar(l3,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
 
             Stage stage = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader();
-            File fichero = new File("src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/ParamJuego.fxml");
+            File fichero = new File("src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/Configuración.fxml");
             URL url = null;
             try {
                 url = fichero.toURL();
@@ -233,12 +328,13 @@ public class Tablero  {
             }
             fxmlLoader.setLocation(url);
 
+
             try {
                 Scene scene = new Scene(fxmlLoader.load(), 1006, 518);
                 stage.setTitle("Juego de La Vida de Conway");
                 stage.setScene(scene);
-                ParamJuegoControlador p = fxmlLoader.getController(); //dame el controlador
-                //p.loadUserData(this.modeloParaGUICompartido); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
+                ConfiguracionController p = fxmlLoader.getController(); //dame el controlador
+                p.loadUserData(new ConfiguracionProperties(new ConfiguracionModel()),filas,columnas,root); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
                 p.setStage(stage); //doy la ventana donde se va a trabajar
                 stage.show();
             } catch (Exception e) {
@@ -284,25 +380,147 @@ public class Tablero  {
         b3.addItem(bot3);
 
 
+        root.getChildren().addAll(imageView,b,b2,b3,caja,caja_info);
+        return root;
+
+    }
+    public Box añadirelementos(int filas, int columnas, ListaRecursos recursos, ListaELementos individuos) throws FileNotFoundException {
+
+
+        int pos = 0;
+        while (pos < recursos.getNumeroElementos()) {
+            int x = recursos.getElemento(pos).getDatos().getX() - 1;
+            int y = recursos.getElemento(pos).getDatos().getY() - 1;
+            Label recurso = new Label();
+            recurso.setAlignment(Pos.CENTER);
+            recurso.setText(recursos.getElemento(pos).getDatos().getTipo());
+            ObservableList<Node> children = tab.getChildren();
+            GridPane nodo = null;
+            for (Node child : children) {
+                if (GridPane.getRowIndex(child) != null && GridPane.getRowIndex(child) == x
+                        && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == y
+                        && child != null && child.getId() != null && child.getId().equals("recursos")) {
+                    nodo = (GridPane) child;
+                    break;
+                }
+
+            }
+            if (nodo != null) {
+                boolean insertado = false;
+                ObservableList<Node> children2 = nodo.getChildren();
+                Node hijoABorrar = null;
+                int filaABorrar = -1;
+                int colABorrar = -1;
+                for (Node child : children2) {
+                    for (int fila = 0; fila <= 1 && !insertado; fila++) {
+                        for (int columna = 0; columna <= 1; columna++) {
+                            if (GridPane.getColumnIndex(child) != null && GridPane.getRowIndex(child) == fila
+                                    && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == columna) {
+                                Label miRecurso = (Label) child;
+                                if (miRecurso.getText() == "") {
+                                    // remover el nodo del GridPane
+                                    hijoABorrar = child;
+                                    filaABorrar = fila;
+                                    colABorrar = columna;
+                                    insertado = true;
+                                    break;
+                                }
+                                break;
+                            }
+                        }
+                    }
+
+
+                }
+                if (hijoABorrar != null) {
+                    nodo.getChildren().remove(hijoABorrar);
+
+                    // volver a agregar el nodo actualizado al GridPane
+                    GridPane.setRowIndex(recurso, filaABorrar);
+                    GridPane.setColumnIndex(recurso, colABorrar);
+                    nodo.getChildren().add(recurso);
+                }
+
+            }
+            pos++;
+
+
+        }
+        while (pos < individuos.getNumeroElementos()) {
+            int x = individuos.getElemento(pos).getDatos().getX() - 1;
+            int y = individuos.getElemento(pos).getDatos().getY() - 1;
+            Label individuo = new Label();
+            individuo.setAlignment(Pos.CENTER);
+            individuo.setText("I");
+            ObservableList<Node> children = tab.getChildren();
+            GridPane nodo = null;
+            for (Node child : children) {
+                if (GridPane.getRowIndex(child) != null && GridPane.getRowIndex(child) == x
+                        && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == y
+                        && child != null && child.getId() != null && child.getId().equals("individuos")) {
+                    nodo = (GridPane) child;
+                    break;
+                }
+
+            }
+            if (nodo != null) {
+                boolean insertado = false;
+                ObservableList<Node> children2 = nodo.getChildren();
+                Node hijoABorrar = null;
+                int filaABorrar = -1;
+                int colABorrar = -1;
+                for (Node child : children2) {
+                    for (int fila = 0; fila <= 1 && !insertado; fila++) {
+                        for (int columna = 0; columna <= 1; columna++) {
+                            if (GridPane.getColumnIndex(child) != null && GridPane.getRowIndex(child) == fila
+                                    && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == columna) {
+                                Label miRecurso = (Label) child;
+                                if (miRecurso.getText() == "") {
+                                    // remover el nodo del GridPane
+                                    hijoABorrar = child;
+                                    filaABorrar = fila;
+                                    colABorrar = columna;
+                                    insertado = true;
+                                    break;
+                                }
+                                break;
+                            }
+                        }
+                    }
+
+
+                }
+                if (hijoABorrar != null) {
+                    nodo.getChildren().remove(hijoABorrar);
+
+                    // volver a agregar el nodo actualizado al GridPane
+                    GridPane.setRowIndex(individuo, filaABorrar);
+                    GridPane.setColumnIndex(individuo, colABorrar);
+                    nodo.getChildren().add(individuo);
+                }
+
+            }
+            pos++;
+
+
+        }
+        FlowPane f2 = new FlowPane();
+        f2.getChildren().addAll(tab);
+        f2.setBackground(Background.fill(Color.WHITE));
+        f2.setAlignment(Pos.CENTER);
+        f2.setTranslateX(250);
+        f2.setTranslateY(50);
+
         Box caja= new Box(640,640,null);
         caja.setTranslateX(230);
         caja.setTranslateY(100);
 
 
-        FlowPane f= new FlowPane();
-        f.getChildren().addAll(mainGrid);
-        f.setBackground(Background.fill(Color.WHITE));
-        f.setAlignment(Pos.CENTER);
-        f.setTranslateX(250);
-        f.setTranslateY(50);
 
 
-        caja.getChildren().add(f);
-        root.getChildren().addAll(imageView,b,b2,b3,caja,caja_info);
-        return root;
+        caja.getChildren().add(f2);
 
+        return caja;
     }
 
-
-
-}
+    }

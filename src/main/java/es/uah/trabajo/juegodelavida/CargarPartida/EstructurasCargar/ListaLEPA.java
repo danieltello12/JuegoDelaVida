@@ -3,6 +3,8 @@ package es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar;
 import es.uah.trabajo.juegodelavida.Clases.Json.gson;
 import es.uah.trabajo.juegodelavida.Clases.Partida;
 
+import java.util.Objects;
+
 public class ListaLEPA<TipoDelDato> extends gson {
     protected ElementoLEPA<TipoDelDato> primero;
 
@@ -14,9 +16,44 @@ public class ListaLEPA<TipoDelDato> extends gson {
         return vacio;
     }
 
+    public boolean esta(String usuario, String partida) {
+        ListaLEPA partidas= new ListaLEPA();
+        partidas = partidas.cargar(usuario);
+        boolean encontrado = false;
+        ElementoLEPA el = partidas.getPrimero();
+        while (el != null && encontrado == false) {
+            if (Objects.equals((el.getDatos().getNombre()),partida)) {
+                encontrado =true;
+            }
+
+
+            else {
+                el =  el.getSiguiente();
+            }
+
+        }
+        return encontrado;
+    }
+    /**
+    public Usuario getusuario(String nombre){
+        ListaLE<Usuario> usuarios = new ListaLE<Usuario>();
+        usuarios = usuarios.cargar();
+        boolean encontrado = false;
+        ElementoLEUs<Usuario> el = usuarios.getPrimero();
+        while (el != null && encontrado == false) {
+            if (Objects.equals((el.getDatos()).nombre,nombre)) {
+                encontrado = true;
+            }
+            else {
+                el = ((ElementoLEUs<Usuario>) el).getSiguiente();
+            }
+        }
+        return el.getDatos();
+    }
     public void vaciar() {
         this.primero = null;
     }
+     **/
 
 
     private void add(ElementoLEPA<TipoDelDato> el) {
@@ -100,12 +137,12 @@ public class ListaLEPA<TipoDelDato> extends gson {
         return contador;
     }
     public void guardar(String nombre) {
-        String rutaArchivo ="Json/"+nombre+"/"+nombre+".partidas.json";
+        String rutaArchivo =nombre+".partidas.json";
         //hola
         guardarObjetoEnArchivo(rutaArchivo, this);
     }
     public ListaLEPA cargar(String nombre){
-        String ruta="Json/"+nombre+"/"+nombre+".partidas.json";
+        String ruta=nombre+".partidas.json";
         return cargarObjetoDesdeArchivo(ruta, ListaLEPA.class);
 
     }

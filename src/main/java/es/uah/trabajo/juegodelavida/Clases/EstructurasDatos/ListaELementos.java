@@ -3,20 +3,58 @@ package es.uah.trabajo.juegodelavida.Clases.EstructurasDatos;
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.Invidiuos;
 import es.uah.trabajo.juegodelavida.Clases.Json.gson;
 
+import java.util.Objects;
+
 public class ListaELementos <TipoDelDato>extends gson {
     protected ElementoLE primero;
-    public void añadirindividuo(Invidiuos nuevo) {
+    public void añadirindividuo(Invidiuos nuevo,String ruta) {
         ListaELementos l = new ListaELementos();
-        l=l.cargar();
+        l=l.cargar(ruta);
         l.add(nuevo);
-        guardar(l);
+        guardar(l,ruta);
     }
-    public void guardar(ListaELementos l){
-        guardarObjetoEnArchivo("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json",l);
+    public void guardar(ListaELementos l,String ruta){
+        guardarObjetoEnArchivo(ruta,l);
     }
-    public ListaELementos cargar(){
-        return cargarObjetoDesdeArchivo("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json", ListaELementos.class);
+    public ListaELementos cargar(String ruta){
+        return cargarObjetoDesdeArchivo(ruta, ListaELementos.class);
 
+    }
+    public int elementoscelda(int x,int y){
+        ListaELementos ind= new ListaELementos();
+        ind = ind.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+       int num = 0;
+        ElementoLE el = ind.primero;
+        while (el != null) {
+            if (Objects.equals((el.getDatos().getX()),x)&&Objects.equals((el.getDatos().getY()),y)) {
+                num +=1;
+            }
+
+
+            else {
+                el =  el.getSiguiente();
+            }
+
+        }
+        return num;
+    }
+    public boolean esta(int id,String ruta){
+        ListaELementos ind= new ListaELementos();
+        ind = ind.cargar(ruta);
+        boolean esta=false;
+        ElementoLE el = ind.primero;
+        while (el != null &&esta==false) {
+            if (Objects.equals(el.getDatos().getId(),id)) {
+               esta=true;
+            }
+
+
+            else {
+                el =  el.getSiguiente();
+            }
+
+        }
+        return esta;
     }
 
 
@@ -38,7 +76,7 @@ public class ListaELementos <TipoDelDato>extends gson {
             this.primero = el;
 
         } else {
-            ElementoLE nuevoprimero = new ElementoLE(this.primero, (Invidiuos) el.getDatos());
+            ElementoLE nuevoprimero = new ElementoLE(this.primero, el.getDatos());
             this.primero = nuevoprimero;
 
 
@@ -46,6 +84,7 @@ public class ListaELementos <TipoDelDato>extends gson {
 
 
     }
+
 
 
     public void add(Invidiuos obj) {

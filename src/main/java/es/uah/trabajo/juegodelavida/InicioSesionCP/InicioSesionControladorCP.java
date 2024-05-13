@@ -58,6 +58,7 @@ public class InicioSesionControladorCP implements Initializable {
             throw new RuntimeException(e);
         }
         fxmlLoader.setLocation(url);
+        this.scene.close();
 
         try {
             Scene scene = new Scene(fxmlLoader.load(), 450, 150);
