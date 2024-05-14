@@ -27,8 +27,8 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        int pv=this.DatosIndv.getProbabilida_V();
-        int pz= this.DatosIndv.getProbabilidad_Z();
+        float pv=this.DatosIndv.getProbabilida_V();
+        float pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
         b.setTipo("M");
 
@@ -59,8 +59,8 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        int pv=this.DatosIndv.getProbabilida_V();
-        int pz= this.DatosIndv.getProbabilidad_Z();
+        float pv=this.DatosIndv.getProbabilida_V();
+        float pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
         b.setTipo("A");
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
@@ -88,8 +88,8 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        int pv=this.DatosIndv.getProbabilida_V();
-        int pz= this.DatosIndv.getProbabilidad_Z();
+        float pv=this.DatosIndv.getProbabilida_V();
+        float pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
         b.setTipo("C");
 
@@ -118,8 +118,8 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        int pv=this.DatosIndv.getProbabilida_V();
-        int pz= this.DatosIndv.getProbabilidad_Z();
+        float pv=this.DatosIndv.getProbabilida_V();
+        float pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
         b.setTipo("T");
 
@@ -148,8 +148,8 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        int pv=this.DatosIndv.getProbabilida_V();
-        int pz= this.DatosIndv.getProbabilidad_Z();
+        float pv=this.DatosIndv.getProbabilida_V();
+        float pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
         b.setTipo("B");
 
@@ -178,8 +178,8 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        int pv=this.DatosIndv.getProbabilida_V();
-        int pz= this.DatosIndv.getProbabilidad_Z();
+        float pv=this.DatosIndv.getProbabilida_V();
+        float pz= this.DatosIndv.getProbabilidad_Z();
         Recursos b = new Recursos(x,y,pz,pv);
         b.setTipo("P");
 

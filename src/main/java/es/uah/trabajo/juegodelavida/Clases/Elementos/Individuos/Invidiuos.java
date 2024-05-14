@@ -6,11 +6,11 @@ public class Invidiuos extends Elementos {
 
     int id;
     int turnosvida;
-    int probrep;
-    int probclon;
+    float probrep;
+    float probclon;
     String tipo;
 
-    public Invidiuos(int x, int y, int id, int turnosvida, int probrep, int probclon) {
+    public Invidiuos(int x, int y, int id, int turnosvida, float probrep, float probclon) {
        super(x,y);
         this.id = id;
         this.turnosvida = turnosvida;
@@ -38,19 +38,19 @@ public class Invidiuos extends Elementos {
         this.turnosvida = turnosvida;
     }
 
-    public int getProbrep() {
+    public float getProbrep() {
         return probrep;
     }
 
-    public void setProbrep(int probrep) {
+    public void setProbrep(float probrep) {
         this.probrep = probrep;
     }
 
-    public int getProbclon() {
+    public float getProbclon() {
         return probclon;
     }
 
-    public void setProbclon(int probclon) {
+    public void setProbclon(float probclon) {
         this.probclon = probclon;
     }
 }

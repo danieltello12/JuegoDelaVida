@@ -10,12 +10,12 @@ public class ParamJuegoModel {
 
     private String TurnosDeVida ="";
     private String Identificador ="";
-    private int pclonacion =0;
-    private int preproduccion =0;
+    private float pclonacion =0;
+    private float preproduccion =0;
     private String filarec="";
     private String columnarec="";
-    private int pv=0;
-    private int pz=0;
+    private float pv=0;
+    private float pz=0;
 
     public String getFilarec() {
         return filarec;
@@ -33,19 +33,19 @@ public class ParamJuegoModel {
         this.columnarec = columnarec;
     }
 
-    public int getPv() {
+    public float getPv() {
         return pv;
     }
 
-    public void setPv(int pv) {
+    public void setPv(float pv) {
         this.pv = pv;
     }
 
-    public int getPz() {
+    public float getPz() {
         return pz;
     }
 
-    public void setPz(int pz) {
+    public void setPz(float pz) {
         this.pz = pz;
     }
 
@@ -77,11 +77,11 @@ public class ParamJuegoModel {
         Identificador = identificador;
     }
 
-    public int getPreproduccion() {
+    public float getPreproduccion() {
         return preproduccion;
     }
 
-    public void setPreproduccion(int preproduccion) {
+    public void setPreproduccion(float preproduccion) {
         this.preproduccion = preproduccion;
     }
 
@@ -133,11 +133,11 @@ public class ParamJuegoModel {
         return Identificador;
     }
 
-    public int getPclonacion() {
+    public float getPclonacion() {
         return pclonacion;
     }
 
-    public int getProbabilidadreproduccion() {
+    public float getProbabilidadreproduccion() {
         return preproduccion;
     }
 
@@ -150,11 +150,11 @@ public class ParamJuegoModel {
         this.Identificador = numeroIndividuosNormales;
     }
 
-    public void setPclonacion(int pclonacion) {
+    public void setPclonacion(float pclonacion) {
         this.pclonacion = pclonacion;
     }
 
-    public void setProbabilidadreproduccion(int probabilidadreproduccion) {
+    public void setProbabilidadreproduccion(float probabilidadreproduccion) {
         this.preproduccion = probabilidadreproduccion;
     }
 

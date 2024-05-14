@@ -83,6 +83,7 @@ public class InicioSesionControladorCP implements Initializable {
         ListaUsuarios l= new ListaUsuarios();
         if(l.esta(model.original.getUsuario(),model.original.getContraseña())==2){
             Stage stage = new Stage();
+            this.scene.close();
             try {
                 Usuario u = new Usuario(model.original.getUsuario(),model.original.getContraseña());
                 Scene scene = new Scene(new CargarPartida(u,1280, 720));

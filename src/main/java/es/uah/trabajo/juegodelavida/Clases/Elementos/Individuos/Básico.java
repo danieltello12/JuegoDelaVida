@@ -2,7 +2,7 @@ package es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos;
 
 public class Básico extends Invidiuos {
 
-    public Básico(int x, int y, int id, int turnosvida, int probrep, int probclon) {
+    public Básico(int x, int y, int id, int turnosvida, float probrep, float probclon) {
         super(x, y, id, turnosvida, probrep, probclon);
     }
 

@@ -217,8 +217,8 @@ public class ParamJuegoControlador implements Initializable {
             int x = Integer.parseInt(model.original.getColumnaIvd());
             int y = Integer.parseInt(model.original.getFilaIndv());
             int id = Integer.parseInt(model.original.getIdentificador());
-            int clon = model.original.getPclonacion();
-            int rep = model.original.getPreproduccion();
+            float clon = model.original.getPclonacion();
+            float rep = model.original.getPreproduccion();
             int turnos = Integer.parseInt(model.original.getTurnosDeVida());
             Invidiuos i = new Invidiuos(x, y, id, turnos, rep, clon);
             restablecerind();
@@ -312,8 +312,8 @@ public class ParamJuegoControlador implements Initializable {
         else {
             int x = Integer.parseInt(model.original.getFilarec());
             int y = Integer.parseInt(model.original.getColumnarec());
-            int pv = model.original.getPv();
-            int pz = model.original.getPz();
+            float pv = model.original.getPv();
+            float pz = model.original.getPz();
             Recursos i = new Recursos(x, y, pv, pz);
             restablecerrec();
             model.rollback();

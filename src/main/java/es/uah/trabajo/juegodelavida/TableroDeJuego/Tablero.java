@@ -513,6 +513,61 @@ public class Tablero extends Pane {
 
 
             }
+            pos=0;
+            while (pos < individuos.getNumeroElementos()) {
+                int x = individuos.getElemento(pos).getDatos().getX() - 1;
+                int y = individuos.getElemento(pos).getDatos().getY() - 1;
+                Label individuo = new Label();
+                individuo.setAlignment(Pos.CENTER);
+                individuo.setText("I");
+                individuo.setPrefSize(32, 32);
+                individuo.setStyle("-fx-border-color: grey; -fx-text-alignment: center;");
+
+                ObservableList<Node> children = tab.getChildren();
+                GridPane nodo = null;
+                for (Node child : children) {
+                    if (GridPane.getRowIndex(child) != null && GridPane.getRowIndex(child) == x
+                            && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == y
+                            && child != null && child.getId() != null && child.getId().equals("rejilla")) {
+                        nodo = (GridPane) child;
+                        break;
+                    }
+
+                }
+                if (nodo != null) {
+                    boolean insertado = false;
+                    ObservableList<Node> children2 = nodo.getChildren();
+                    Node hijoABorrar = null;
+                    int filaABorrar = -1;
+                    int colABorrar = -1;
+                    for (Node child : children2) {
+                        if (GridPane.getColumnIndex(child) != null && GridPane.getRowIndex(child) == 1
+                                && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == 1) {
+                            Label miCelda = (Label) child;
+                            if (miCelda.getText() == "") {
+                                // remover el nodo del GridPane
+                                hijoABorrar = child;
+                                filaABorrar = 1;
+                                colABorrar = 1;
+                                insertado = true;
+                                break;
+                            }
+                            break;
+                        }
+                    }
+                    if (hijoABorrar != null) {
+                        nodo.getChildren().remove(hijoABorrar);
+
+                        // volver a agregar el nodo actualizado al GridPane
+                        GridPane.setRowIndex(individuo, filaABorrar);
+                        GridPane.setColumnIndex(individuo, colABorrar);
+                        nodo.getChildren().add(individuo);
+                    }
+
+                }
+                log.info("Individuo añadido");
+                pos++;
+            }
             FlowPane f2 = new FlowPane();
             f2.getChildren().addAll(tab);
             f2.setBackground(Background.fill(Color.WHITE));

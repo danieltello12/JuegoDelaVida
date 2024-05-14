@@ -9,30 +9,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="commit2">
-      <change afterPath="$PROJECT_DIR$/dani.partidas.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/2024-05/app-05-13-2024-1.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/fondonegro.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/goku.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/goku2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/goku3.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_05_2024_17_16__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_05_2024_17_16__Changes_.xml" afterDir="false" />
+    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="inicio 22">
+      <change afterPath="$PROJECT_DIR$/logs/2024-05/app-05-13-2024-2.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_05_2024_19_36__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_05_2024_19_36__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Json/usuarios.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/usuarios.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UMTrabajoFinal.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UMTrabajoFinal.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dani.partidas.json" beforeDir="false" afterPath="$PROJECT_DIR$/dani.partidas.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/EstructurasCargar/ListaLEPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/EstructurasCargar/ListaLEPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaRecursos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaRecursos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Avanzado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Avanzado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Básico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Básico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Invidiuos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Invidiuos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/normal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/normal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Recursos/Recursos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Recursos/Recursos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/TipoDeInviduoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/TipoDeInviduoControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/TipoDeRecursoControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/TipoDeRecursoControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/MainGridApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/MainGridApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/SubNode.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/Configuración.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/Configuración.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/ParamJuego.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/ParamJuego.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/elegirIndividuo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/elegirIndividuo.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="UML Class" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -86,14 +83,15 @@
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3954023&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.3954023&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -127,7 +125,7 @@
       <module name="JuegoDeLaVida" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="es.uah.trabajo.juegodelavida.TableroDeJuego.*" />
+          <option name="PATTERN" value="es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -255,7 +253,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715084522741</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="inicio 22">
+      <option name="closed" value="true" />
+      <created>1715265323271</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1715265323271</updated>
+    </task>
+    <task id="LOCAL-00015" summary="inicio 22">
+      <option name="closed" value="true" />
+      <created>1715265356027</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1715265356027</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -273,34 +287,22 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First Commit" />
     <MESSAGE value="inicio" />
-    <MESSAGE value="inicio 22" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="inicio 22" />
+    <option name="LAST_COMMIT_MESSAGE" value="inicio 22" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
-          <line>130</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLE" memberName="siguiente" />
         <PinnedItemInfo parentTag="com.google.gson.internal.LinkedTreeMap$Node" memberName="key" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos" memberName="primero" />
         <PinnedItemInfo parentTag="java.lang.String" memberName="hashIsZero" />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="GridPane.getColumnIndex(child)" language="JAVA" />
-        <watch expression="GridPane.getRowIndex(child)" language="JAVA" />
-        <watch expression="child" language="JAVA" />
-        <watch expression="chid.getId()" language="JAVA" />
-        <watch expression="recursos.getElemento(pos).getDatos()" language="JAVA" />
+        <watch expression="l2" />
       </configuration>
     </watches-manager>
   </component>

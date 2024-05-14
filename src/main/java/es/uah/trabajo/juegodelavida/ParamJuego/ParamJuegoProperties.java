@@ -11,12 +11,12 @@ public class ParamJuegoProperties {
     private StringProperty filas= new SimpleStringProperty();
     private StringProperty TurnosDeVida = new SimpleStringProperty();
     private StringProperty Identificador = new SimpleStringProperty();
-    private IntegerProperty probabilidadclonacion = new SimpleIntegerProperty();
-   private IntegerProperty probabilidadreproduccion= new SimpleIntegerProperty();
+    private FloatProperty probabilidadclonacion = new SimpleFloatProperty();
+   private FloatProperty probabilidadreproduccion= new SimpleFloatProperty();
     private StringProperty filasrec= new SimpleStringProperty();
     private StringProperty columnasrec= new SimpleStringProperty();
-    private IntegerProperty pv= new SimpleIntegerProperty();
-    private IntegerProperty pz= new SimpleIntegerProperty();
+    private FloatProperty pv= new  SimpleFloatProperty();
+    private FloatProperty pz= new SimpleFloatProperty();
     public ParamJuegoProperties(ParamJuegoModel original) {
         setOriginal(original);
     }
@@ -77,7 +77,7 @@ public class ParamJuegoProperties {
     public StringProperty filaIndvproperty(){
         return filaIndv;
     }
-    public IntegerProperty probabilidadReproduccionProperty() {
+    public FloatProperty probabilidadReproduccionProperty() {
         return probabilidadreproduccion;
     }
 public StringProperty getColumnaIvdproperty(){
@@ -86,7 +86,7 @@ public StringProperty getColumnaIvdproperty(){
 public StringProperty  filasProperty(){
         return filas;
 }
-    public IntegerProperty probabilidadClonacionProperty()
+    public FloatProperty probabilidadClonacionProperty()
 
     {
         return probabilidadclonacion;
@@ -100,10 +100,10 @@ public StringProperty  filasProperty(){
     public StringProperty ColumnasrecProperty(){
         return columnasrec;
     }
-    public IntegerProperty pvProperty(){
+    public FloatProperty pvProperty(){
         return pv;
     }
-    public IntegerProperty pzProperty(){
+    public FloatProperty pzProperty(){
         return pz;
     }
 }

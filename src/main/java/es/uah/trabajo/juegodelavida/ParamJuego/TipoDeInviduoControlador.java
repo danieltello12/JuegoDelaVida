@@ -30,8 +30,8 @@ public class TipoDeInviduoControlador implements Initializable {
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
         int id= this.DatosIndv.getId();
-        int clon=this.DatosIndv.getProbclon();
-        int rep= this.DatosIndv.getProbrep();
+        float clon=this.DatosIndv.getProbclon();
+       float rep= this.DatosIndv.getProbrep();
         int turnos= this.DatosIndv.getTurnosvida();
         es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.Básico b = new Básico(x,y,id,turnos,rep,clon);
         b.setTipo("Básico");
@@ -62,8 +62,8 @@ public class TipoDeInviduoControlador implements Initializable {
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
         int id= this.DatosIndv.getId();
-        int clon=this.DatosIndv.getProbclon();
-        int rep= this.DatosIndv.getProbrep();
+        float clon=this.DatosIndv.getProbclon();
+        float rep= this.DatosIndv.getProbrep();
         int turnos= this.DatosIndv.getTurnosvida();
         es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.Avanzado b = new Avanzado(x,y,id,turnos,rep,clon);
         b.setTipo("Avanzado");
@@ -96,8 +96,8 @@ public class TipoDeInviduoControlador implements Initializable {
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
         int id= this.DatosIndv.getId();
-        int clon=this.DatosIndv.getProbclon();
-        int rep= this.DatosIndv.getProbrep();
+        float clon=this.DatosIndv.getProbclon();
+        float rep= this.DatosIndv.getProbrep();
         int turnos= this.DatosIndv.getTurnosvida();
         es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.normal b = new normal(x,y,id,turnos,rep,clon);
         b.setTipo("Normal");

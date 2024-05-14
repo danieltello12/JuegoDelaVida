@@ -3,10 +3,10 @@ package es.uah.trabajo.juegodelavida.Clases.Elementos.Recursos;
 public class Recursos {
     int x;
     int y;
-    int Probabilidad_Z;
-    int Probabilida_V;
+    float Probabilidad_Z;
+    float Probabilida_V;
     String tipo;
-    public Recursos(int x, int y,int probz,int probv){
+    public Recursos(int x, int y, float probz, float probv){
         this.x=x;
         this.y=y;
         this.Probabilidad_Z=probz;
@@ -32,19 +32,19 @@ public void setTipo(String tipo){
         this.y = y;
     }
 
-    public int getProbabilidad_Z() {
+    public float getProbabilidad_Z() {
         return Probabilidad_Z;
     }
 
-    public void setProbabilidad_Z(int probabilidad_Z) {
+    public void setProbabilidad_Z(float probabilidad_Z) {
         Probabilidad_Z = probabilidad_Z;
     }
 
-    public int getProbabilida_V() {
+    public float getProbabilida_V() {
         return Probabilida_V;
     }
 
-    public void setProbabilida_V(int probabilida_V) {
+    public void setProbabilida_V(float probabilida_V) {
         Probabilida_V = probabilida_V;
     }
 
