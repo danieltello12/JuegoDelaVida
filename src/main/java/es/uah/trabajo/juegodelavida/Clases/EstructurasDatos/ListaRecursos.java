@@ -28,6 +28,7 @@ public class ListaRecursos extends gson {
         while (el != null) {
             if (Objects.equals((el.getDatos().getX()),x)&&Objects.equals((el.getDatos().getY()),y)) {
                 num +=1;
+                el=el.getSiguiente();
             }
 
 

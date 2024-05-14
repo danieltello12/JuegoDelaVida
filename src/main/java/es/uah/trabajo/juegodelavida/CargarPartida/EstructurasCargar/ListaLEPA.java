@@ -20,18 +20,21 @@ public class ListaLEPA<TipoDelDato> extends gson {
         ListaLEPA partidas= new ListaLEPA();
         partidas = partidas.cargar(usuario);
         boolean encontrado = false;
-        ElementoLEPA el = partidas.getPrimero();
-        while (el != null && encontrado == false) {
-            if (Objects.equals((el.getDatos().getNombre()),partida)) {
-                encontrado =true;
+        if (partidas!=null){
+            ElementoLEPA el = partidas.getPrimero();
+            while (el != null && encontrado == false) {
+                if (Objects.equals((el.getDatos().getNombre()),partida)) {
+                    encontrado =true;
+                }
+
+
+                else {
+                    el =  el.getSiguiente();
+                }
+
             }
-
-
-            else {
-                el =  el.getSiguiente();
-            }
-
         }
+
         return encontrado;
     }
     /**

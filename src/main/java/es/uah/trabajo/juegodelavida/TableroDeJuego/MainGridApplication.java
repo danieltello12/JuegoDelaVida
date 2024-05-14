@@ -143,6 +143,7 @@ public class MainGridApplication extends Application {
 
     public void start(Stage primaryStage) throws FileNotFoundException {
 
+
         log.info("Inicio del método de arranque de la aplicación para mostrar un grid de forma programática");
 
 

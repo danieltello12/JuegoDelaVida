@@ -44,8 +44,10 @@ public class Usuario extends gson {
     public void setPartida(Partida partida) {
         ListaLEPA l2= new ListaLEPA();
         l2=l2.cargar(this.nombre);
-        l2.add(partida);
-        l2.guardar(this.nombre);
+        if ( l2 != null) {
+            l2.add(partida);
+            l2.guardar(this.nombre);
+        }
         añadirpartidasJSon();
     }
 

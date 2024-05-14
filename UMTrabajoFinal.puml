@@ -151,6 +151,75 @@
 
 
     }
+   package "Clases" {
+       package "Elementos" {
+       abstract class Elementos{
+                      -x:int
+                      -y:int
+                      Elementos(x:int,y:int)
+                      +getX():int
+                      +getY():int
+                      +setX(x:int)
+                      +setY(y:int)
+                      }
+           package "Individuos" {
+
+
+               class Individuos extends Elementos{
+               -id:int
+               -turnosdevida:int
+               -probrep:int
+               -probclon:int
+               -tipo:String
+               +Individuos(x:int, y:int, id:int, turnosvida:int, probrep:int,probclon:int) {
+               +setTipo(tipo:String){
+               +getId():int
+               +setId(id:id)
+               +getTurnosvida():int
+               +setTurnosDeVida(turnosdevida:int)
+               +getProbrep:int
+               +setProbrep(probrep:int)
+               +getProbclon:int
+               +setProbclon(probclon:int)
+               }
+                class Avanzado extends Individuos {
+                                  +Avanzado(x:int, y:int, id:int, turnosvida:int, probrep:int,probclon:int)
+                }
+                 class Normal extends Individuos {
+                   +Normal(x:int, y:int, id:int, turnosvida:int, probrep:int,probclon:int)
+                                }
+                class Basico extends Individuos {
+                   +Basico(x:int, y:int, id:int, turnosvida:int, probrep:int,probclon:int)
+                               }
+           }
+           package "Recursos"{
+           class Recursos{
+           -x:int
+           -y:int
+           -tipo:String
+           -Probabilidad_Z:int
+           -Probabilidad_V:int
+           +Recursos(x:int, y:int Probabilidad_Z:int, Probabilidad_V:int)
+           +setTipo(tipo:String)
+           +getX():int
+           +setX(x:int)
+           +getY():int
+           +setY(y:int)
+           +getProbabilidad_Z():int
+           +getProbabilidad_V():int
+           +setProbabilida_V(Probabilida_V:int)
+           +setProbabilidad_Z(Probabilidad_Z:int)
+           +getTipo():String
+           +setTipo(tipo:String)
+           }
+           }
+
+
+
+
+
+       }
+   }
     folder TableroDeJuego{
     class Tablero{
     +setTablero(filas:int,columnas:int):Parent

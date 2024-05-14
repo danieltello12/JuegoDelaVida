@@ -71,7 +71,6 @@ public class ParamJuegoControlador implements Initializable {
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         if (model != null) {
             this.updateGUIwithModel();
         }
@@ -359,6 +358,14 @@ public class ParamJuegoControlador implements Initializable {
         probV.valueProperty().bindBidirectional(model.pvProperty());
         probZ.valueProperty().bindBidirectional(model.pzProperty());
 
+    }
+    @FXML
+    private void onMiSliderModificarC() {
+        probabilidadClonacion.setDisable(true);
+    }
+    @FXML
+    private void onMiSliderModificarR() {
+        probabilidadReproduccion.setDisable(true);
     }
     /**
      * Este método recibe los datos del modelo y los establece
