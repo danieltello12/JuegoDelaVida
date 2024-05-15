@@ -113,7 +113,7 @@ public class ListaLE<TipoDelDato> extends gson {
         boolean salir = false;
         ElementoLEUs<TipoDelDato> el = this.primero;
         while (el != null && salir == false) {
-            if (el.getDatos() == el2.getDatos()) {
+            if (el.getDatos().getNombre() == el2.getDatos().getNombre()) {
                 salir = true;
             } else {
                 el = el.getSiguiente();

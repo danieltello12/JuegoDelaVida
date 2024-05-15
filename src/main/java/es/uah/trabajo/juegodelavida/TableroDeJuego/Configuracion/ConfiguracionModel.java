@@ -7,12 +7,17 @@ public class ConfiguracionModel {
 
     private String TurnosDeVida ="";
     private String Identificador ="";
-    private int pclonacion =0;
-    private int preproduccion =0;
+    private float pclonacion =0;
+    private float preproduccion =0;
     private String filarec="";
     private String columnarec="";
-    private int pv=0;
-    private int pz=0;
+    private float pvA=0;
+    private float pVC=0;
+    private float pvM=0;
+    private float pvT=0;
+    private float pvB=0;
+    private float pvP=0;
+    private float pz=0;
 
     public String getFilarec() {
         return filarec;
@@ -30,19 +35,59 @@ public class ConfiguracionModel {
         this.columnarec = columnarec;
     }
 
-    public int getPv() {
-        return pv;
+    public float getPvA() {
+        return pvA;
     }
 
-    public void setPv(int pv) {
-        this.pv = pv;
+    public void setPvA(float pvA) {
+        this.pvA = pvA;
     }
 
-    public int getPz() {
+    public float getpVC() {
+        return pVC;
+    }
+
+    public void setpVC(float pVC) {
+        this.pVC = pVC;
+    }
+
+    public float getPvM() {
+        return pvM;
+    }
+
+    public void setPvM(float pvM) {
+        this.pvM = pvM;
+    }
+
+    public float getPvT() {
+        return pvT;
+    }
+
+    public void setPvT(float pvT) {
+        this.pvT = pvT;
+    }
+
+    public float getPvB() {
+        return pvB;
+    }
+
+    public void setPvB(float pvB) {
+        this.pvB = pvB;
+    }
+
+    public float getPvP() {
+        return pvP;
+    }
+
+    public void setPvP(float pvP) {
+        this.pvP = pvP;
+    }
+
+    public float getPz() {
         return pz;
     }
 
-    public void setPz(int pz) {
+    public void setPz(float pz) {
         this.pz = pz;
     }
 
@@ -67,11 +112,11 @@ public class ConfiguracionModel {
         Identificador = identificador;
     }
 
-    public int getPreproduccion() {
+    public float getPreproduccion() {
         return preproduccion;
     }
 
-    public void setPreproduccion(int preproduccion) {
+    public void setPreproduccion(float preproduccion) {
         this.preproduccion = preproduccion;
     }
 
@@ -101,11 +146,11 @@ public class ConfiguracionModel {
         return Identificador;
     }
 
-    public int getPclonacion() {
+    public float getPclonacion() {
         return pclonacion;
     }
 
-    public int getProbabilidadreproduccion() {
+    public float getProbabilidadreproduccion() {
         return preproduccion;
     }
 
@@ -118,7 +163,7 @@ public class ConfiguracionModel {
         this.Identificador = numeroIndividuosNormales;
     }
 
-    public void setPclonacion(int pclonacion) {
+    public void setPclonacion(float pclonacion) {
         this.pclonacion = pclonacion;
     }
 
@@ -127,4 +172,6 @@ public class ConfiguracionModel {
     }
 
 
+    public void setProbabilidadreproduccion(float v) {
+    }
 }

@@ -1,10 +1,16 @@
 package es.uah.trabajo.juegodelavida.ParamJuego;
 
+import es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar.ElementoLEPA;
+import es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar.ListaLEPA;
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.Avanzado;
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.Básico;
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.Invidiuos;
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.normal;
+import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLEUs;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
+import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaLE;
+import es.uah.trabajo.juegodelavida.Clases.Partida;
+import es.uah.trabajo.juegodelavida.Clases.Usuario;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
@@ -23,6 +29,8 @@ public class TipoDeInviduoControlador implements Initializable {
 
     private Invidiuos DatosIndv;
     boolean conf;
+    String nombreus;
+    String nombrepar;
 
     @FXML
     public void onMiBotonBásicoClick() throws FileNotFoundException, InterruptedException {
@@ -35,11 +43,33 @@ public class TipoDeInviduoControlador implements Initializable {
         int turnos= this.DatosIndv.getTurnosvida();
         es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.Básico b = new Básico(x,y,id,turnos,rep,clon);
         b.setTipo("Básico");
-            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
 
+            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json");
 
-            this.scene.close();
+        ListaLE lista= new ListaLE().cargar();
+        Usuario u= new Usuario(nombreus,"");
+        ElementoLEUs e= new ElementoLEUs<>(u);
+        Partida p= new Partida(nombrepar);
+        ElementoLEPA e2= new ElementoLEPA(p);
+         int posus=lista.getPosicion(e)-1;
+        if(lista.getElemento(posus).getDatos().getPartidas().esta(nombreus,p.getNombre())) {
+            int pospar = lista.getElemento(posus).getDatos().getPartidas().getPosicion(e2);
+            lista.getElemento(posus).getDatos().getPartidas().getElemento(pospar).getDatos().setIndividuos(l);
+            lista.guardar(lista);
+            ListaLEPA l2= new ListaLEPA().cargar(nombreus);
+            int pos=l2.getPosicion(e2);
+            l2.getElemento(pos).getDatos().setIndividuos(l);
+            l2.guardar(nombreus);
+        }
+        else{
+            lista.getElemento(posus).getDatos().setPartida(p);
+            lista.guardar(lista);
+
+            ListaLEPA l2= new ListaLEPA().cargar(nombreus);
+            l2.add(p);
+            l2.guardar(nombreus);
+        }
 
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
@@ -70,6 +100,29 @@ public class TipoDeInviduoControlador implements Initializable {
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json");
 
+        ListaLE lista= new ListaLE().cargar();
+        Usuario u= new Usuario(nombreus,"");
+        ElementoLEUs e= new ElementoLEUs<>(u);
+        Partida p= new Partida(nombrepar);
+        ElementoLEPA e2= new ElementoLEPA(p);
+        int posus=lista.getPosicion(e)-1;
+        if(lista.getElemento(posus).getDatos().getPartidas().esta(nombreus,p.getNombre())) {
+            int pospar = lista.getElemento(posus).getDatos().getPartidas().getPosicion(e2);
+            lista.getElemento(posus).getDatos().getPartidas().getElemento(pospar).getDatos().setIndividuos(l);
+            lista.guardar(lista);
+            ListaLEPA l2= new ListaLEPA().cargar(nombreus);
+            int pos=l2.getPosicion(e2);
+            l2.getElemento(pos).getDatos().setIndividuos(l);
+            l2.guardar(nombreus);
+        }
+        else{
+            lista.getElemento(posus).getDatos().setPartida(p);
+            lista.guardar(lista);
+
+            ListaLEPA l2= new ListaLEPA().cargar(nombreus);
+            l2.add(p);
+            l2.guardar(nombreus);
+        }
 
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
@@ -101,12 +154,32 @@ public class TipoDeInviduoControlador implements Initializable {
         int turnos= this.DatosIndv.getTurnosvida();
         es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.normal b = new normal(x,y,id,turnos,rep,clon);
         b.setTipo("Normal");
+        l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
+        l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json");
 
-            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
+        ListaLE lista= new ListaLE().cargar();
+        Usuario u= new Usuario(nombreus,"");
+        ElementoLEUs e= new ElementoLEUs<>(u);
+        Partida p= new Partida(nombrepar);
+        ElementoLEPA e2= new ElementoLEPA(p);
+        int posus=lista.getPosicion(e)-1;
+        if(lista.getElemento(posus).getDatos().getPartidas().esta(nombreus,p.getNombre())) {
+            int pospar = lista.getElemento(posus).getDatos().getPartidas().getPosicion(e2);
+            lista.getElemento(posus).getDatos().getPartidas().getElemento(pospar).getDatos().setIndividuos(l);
+            lista.guardar(lista);
+            ListaLEPA l2= new ListaLEPA().cargar(nombreus);
+            int pos=l2.getPosicion(e2);
+            l2.getElemento(pos).getDatos().setIndividuos(l);
+            l2.guardar(nombreus);
+        }
+        else{
+            lista.getElemento(posus).getDatos().setPartida(p);
+            lista.guardar(lista);
 
-            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json");
-
-
+            ListaLEPA l2= new ListaLEPA().cargar(nombreus);
+            l2.add(p);
+            l2.guardar(nombreus);
+        }
 
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
@@ -132,9 +205,11 @@ public class TipoDeInviduoControlador implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
     }
 
-    public void loadDataIndividuo(Invidiuos datos,boolean conf){
+    public void loadDataIndividuo(Invidiuos datos,boolean conf,String nombreusuario,String nombrepartida){
         this.conf=conf;
         this.DatosIndv=datos;
+        this.nombrepar=nombrepartida;
+        this.nombreus=nombreusuario;
     }
 
     public void setStage(Stage stage) {

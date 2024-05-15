@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion.CambiarProbabilidadesControler"
+            prefHeight="402.0" prefWidth="762.0">
+    <ImageView fitHeight="402.0" fitWidth="762.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../Imagenes/fondojuego.jpg" />
+        </image>
+    </ImageView>
+    <AnchorPane layoutX="23.0" layoutY="43.0" minHeight="0.0" minWidth="0.0" prefHeight="259.0" prefWidth="727.0">
+        <children>
+            <Slider fx:id="probZ" blockIncrement="0.1" layoutX="101.0" layoutY="8.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="49.0" prefWidth="218.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <Label layoutX="8.0" layoutY="14.0" text="Probabilidad Z" />
+            <Label layoutX="325.0" layoutY="14.0" text="Prob V Agua" />
+            <Slider fx:id="probVA" blockIncrement="0.1" layoutX="408.0" layoutY="8.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="49.0" prefWidth="218.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <Label layoutX="325.0" layoutY="207.0" prefHeight="18.0" prefWidth="333.0" textFill="#ff0505" />
+            <Label layoutX="8.0" layoutY="81.0" text="Prob V Comida" />
+            <Slider fx:id="probC" blockIncrement="0.1" layoutX="101.0" layoutY="81.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="49.0" prefWidth="218.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <Label layoutX="319.0" layoutY="81.0" text="Prob V Montaña" />
+            <Slider fx:id="probVM" blockIncrement="0.1" layoutX="423.0" layoutY="81.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="49.0" prefWidth="218.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <Slider fx:id="probVT" blockIncrement="0.1" layoutX="101.0" layoutY="140.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="49.0" prefWidth="218.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <Slider fx:id="probVB" blockIncrement="0.1" layoutX="423.0" layoutY="140.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="49.0" prefWidth="218.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <Label layoutX="8.0" layoutY="147.0" text="Prob V Tesoro" />
+            <Label layoutX="322.0" layoutY="147.0" text="Prob V Biblioteca" />
+            <Label layoutX="199.0" layoutY="198.0" text="Prob V Pozo" />
+            <Slider fx:id="probVP" blockIncrement="0.1" layoutX="283.0" layoutY="191.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="49.0" prefWidth="218.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+        </children>
+    </AnchorPane>
+    <Button layoutX="640.0" layoutY="353.0" mnemonicParsing="false" onAction="#onMybotonGuardar" text="Guardar" />
+</AnchorPane>

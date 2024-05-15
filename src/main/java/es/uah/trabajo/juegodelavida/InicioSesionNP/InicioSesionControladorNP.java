@@ -1,11 +1,7 @@
 package es.uah.trabajo.juegodelavida.InicioSesionNP;
 
-import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
-import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
 import es.uah.trabajo.juegodelavida.Clases.ListaUsuarios;
-import es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoControlador;
-import es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoModel;
-import es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoProperties;
+import es.uah.trabajo.juegodelavida.ParamJuego.PrimerosparamCotroller;
 import es.uah.trabajo.juegodelavida.Registrarse.RegistrarseControlador;
 import es.uah.trabajo.juegodelavida.Registrarse.RegistrarseModelo;
 import es.uah.trabajo.juegodelavida.Registrarse.RegistrarseProperties;
@@ -88,19 +84,9 @@ public class InicioSesionControladorNP implements Initializable {
             /** El usuario Ha iniciado sesion de forma correcta y se procede a mostrarle la pantalla de Parametros
              *
              */
-            ListaELementos l2= new ListaELementos();
-            l2=l2.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
-            l2.vaciar();
-            l2.guardar(l2,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
-
-            ListaRecursos l3= new ListaRecursos();
-            l3=l3.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
-            l3.vaciar();
-            l3.guardar(l3,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
-
             Stage stage = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader();
-            File fichero = new File("src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/ParamJuego.fxml");
+            File fichero = new File("src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/primerosParam.fxml");
             URL url = null;
             try {
                 url = fichero.toURL();
@@ -111,12 +97,12 @@ public class InicioSesionControladorNP implements Initializable {
             this.scene.close();
 
             try {
-                Scene scene = new Scene(fxmlLoader.load(), 1006, 518);
+                Scene scene = new Scene(fxmlLoader.load(), 762, 402);
                 stage.setTitle("Juego de La Vida de Conway");
                 stage.setScene(scene);
-                ParamJuegoControlador p = fxmlLoader.getController(); //dame el controlador
-                p.setUsuario(model.original.getUsuario());
-                p.loadUserData(new ParamJuegoProperties(new ParamJuegoModel())); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
+                PrimerosparamCotroller p = fxmlLoader.getController(); //dame el controlador
+
+                p.loaddata(model.original.getUsuario()); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
                 p.setStage(stage); //doy la ventana donde se va a trabajar
                 stage.show();
             } catch (Exception e) {

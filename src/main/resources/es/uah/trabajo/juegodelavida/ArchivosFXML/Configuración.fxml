@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 
-<AnchorPane prefHeight="518.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion.ConfiguracionController">
+<AnchorPane prefHeight="518.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion.ConfiguracionController">
     <children>
-        <ImageView fitHeight="518.0" fitWidth="1006.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="518.0" fitWidth="1006.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../Imagenes/fondojuego.jpg" />
             </image>
         </ImageView>
-        <Button alignment="BOTTOM_CENTER" layoutX="885.0" layoutY="470.0" mnemonicParsing="false" onAction="#onMiBotonIniciarJuegoClick" prefHeight="30.0" prefWidth="106.0" text="Iniciar Juego" />
+        <Button alignment="BOTTOM_CENTER" layoutX="879.0" layoutY="450.0" mnemonicParsing="false" onAction="#onMiBotonIniciarJuegoClick" prefHeight="30.0" prefWidth="106.0" text="Reiniciar Juego" />
         <Label layoutX="27.0" layoutY="289.0" text="Probabilidad de clonado:" />
         <ToolBar layoutX="-51.0" layoutY="-73.0" prefHeight="40.0" prefWidth="200.0" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
         <SplitPane dividerPositions="0.11448598130841123" layoutX="14.0" layoutY="100.0" orientation="VERTICAL" prefHeight="344.0" prefWidth="433.0">
             <items>
                 <AnchorPane minHeight="10.0" minWidth="0.0" prefHeight="38.0" prefWidth="400.0">
@@ -29,8 +37,8 @@
                         <TextField fx:id="TurnosDeVida" layoutX="200.0" layoutY="40.0" prefHeight="26.0" prefWidth="140.0" />
                         <Label layoutX="5.0" layoutY="168.0" prefHeight="44.0" prefWidth="186.0" text="Probabilidad de Reproducción:" />
                         <Label layoutX="12.0" layoutY="222.0" text="Probabilidad de Clonación:" />
-                        <Slider fx:id="probabilidadReproduccion" blockIncrement="0.0" layoutX="191.0" layoutY="168.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="44.0" prefWidth="234.0" showTickLabels="true" />
-                        <Slider fx:id="probabilidadClonacion" blockIncrement="0.0" layoutX="191.0" layoutY="218.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="44.0" prefWidth="233.0" showTickLabels="true" />
+                        <Slider fx:id="probabilidadReproduccion" blockIncrement="0.1" layoutX="191.0" layoutY="168.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="44.0" prefWidth="234.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                        <Slider fx:id="probabilidadClonacion" blockIncrement="0.1" layoutX="191.0" layoutY="218.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="44.0" prefWidth="233.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
                         <Button layoutX="308.0" layoutY="262.0" mnemonicParsing="false" onAction="#onMibotonCrearIndividuoClick" text="Crear Individuo" />
                         <Label layoutX="61.0" layoutY="97.0" text="Fila" />
                         <Label layoutX="45.0" layoutY="132.0" text="Columna" />
@@ -40,26 +48,25 @@
                 </AnchorPane>
             </items>
         </SplitPane>
-        <SplitPane dividerPositions="0.2" layoutX="513.0" layoutY="100.0" orientation="VERTICAL" prefHeight="344.0" prefWidth="402.0">
+        <SplitPane dividerPositions="0.2" layoutX="533.0" layoutY="158.0" orientation="VERTICAL" prefHeight="228.0" prefWidth="390.0">
             <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2.0" prefWidth="400.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="35.0" prefWidth="400.0">
                     <children>
                         <Label layoutX="171.0" layoutY="9.0" text="RECURSOS" />
                     </children>
                 </AnchorPane>
-                <AnchorPane minHeight="300.0" minWidth="400.0" prefHeight="326.0" prefWidth="400.0">
+                <AnchorPane minHeight="182.0" minWidth="372.0" prefHeight="233.0" prefWidth="380.0">
                     <children>
                         <Label layoutX="52.0" layoutY="34.0" text="Fila" />
                         <Label layoutX="36.0" layoutY="88.0" text="Columna" />
-                        <Label layoutX="20.0" layoutY="150.0" text="Probabilidad Z" />
-                        <Label layoutX="19.0" layoutY="223.0" text="Probabilidad V" />
                         <TextField fx:id="filaRec" layoutX="201.0" layoutY="31.0" />
                         <TextField fx:id="columnaRec" layoutX="201.0" layoutY="85.0" />
-                        <Slider fx:id="probZ" blockIncrement="0.2" layoutX="132.0" layoutY="148.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="44.0" prefWidth="262.0" showTickLabels="true" />
-                        <Slider fx:id="probV" layoutX="132.0" layoutY="210.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="44.0" prefWidth="262.0" showTickLabels="true" />
-                        <Button layoutX="263.0" layoutY="263.0" mnemonicParsing="false" onAction="#onMiBotonCrearRecursoClick" prefHeight="30.0" prefWidth="112.0" text="Crear Recurso" />
+                        <Button layoutX="266.0" layoutY="136.0" mnemonicParsing="false" onAction="#onMiBotonCrearRecursoClick" prefHeight="30.0" prefWidth="112.0" text="Crear Recurso" />
                     </children></AnchorPane>
             </items>
         </SplitPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0" />
+      <Button layoutX="790.0" layoutY="33.0" mnemonicParsing="false" onAction="#cambiarProbabilidadesclick" text="Cambiar Probabilidades" />
+      <Label layoutX="407.0" layoutY="37.0" text="Si desea cambiar las probabilidades de los recursos pulse este boton" />
     </children>
 </AnchorPane>

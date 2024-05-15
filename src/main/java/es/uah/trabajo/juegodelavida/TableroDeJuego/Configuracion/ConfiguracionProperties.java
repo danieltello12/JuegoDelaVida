@@ -8,12 +8,17 @@ public class ConfiguracionProperties {
     private StringProperty columnaIvd= new SimpleStringProperty();
     private StringProperty TurnosDeVida = new SimpleStringProperty();
     private StringProperty Identificador = new SimpleStringProperty();
-    private IntegerProperty probabilidadclonacion = new SimpleIntegerProperty();
-    private IntegerProperty probabilidadreproduccion= new SimpleIntegerProperty();
+    private FloatProperty probabilidadclonacion = new SimpleFloatProperty();
+    private FloatProperty probabilidadreproduccion= new SimpleFloatProperty();
     private StringProperty filasrec= new SimpleStringProperty();
     private StringProperty columnasrec= new SimpleStringProperty();
-    private IntegerProperty pv= new SimpleIntegerProperty();
-    private IntegerProperty pz= new SimpleIntegerProperty();
+    private FloatProperty pvA= new  SimpleFloatProperty();
+    private FloatProperty pvC= new  SimpleFloatProperty();
+    private FloatProperty pvM= new  SimpleFloatProperty();
+    private FloatProperty pvT= new  SimpleFloatProperty();
+    private FloatProperty pvB= new  SimpleFloatProperty();
+    private FloatProperty pvP= new  SimpleFloatProperty();
+    private FloatProperty pz= new SimpleFloatProperty();
     public ConfiguracionProperties(ConfiguracionModel original) {
         setOriginal(original);
     }
@@ -28,7 +33,12 @@ public class ConfiguracionProperties {
         original.setColumnarec(columnasrec.get());
         original.setFilarec(filasrec.get());
         original.setPz(pz.get());
-        original.setPv(pv.get());
+        original.setPvA(pvA.get());
+        original.setpVC(pvC.get());
+        original.setPvM(pvM.get());
+        original.setPvT(pvT.get());
+        original.setPvB(pvB.get());
+        original.setPvP(pvP.get());
 
     }
 
@@ -42,8 +52,13 @@ public class ConfiguracionProperties {
         columnaIvd.set(original.getColumnaIvd());
         filasrec.set(original.getFilarec());
         columnasrec.set(original.getColumnarec());
-        pv.set(original.getPv());
         pz.set(original.getPz());
+        pvA.set(original.getPvA());
+        pvC.set(original.getpVC());
+        pvM.set(original.getPvM());
+        pvT.set(original.getPvT());
+        pvB.set(original.getPvB());
+        pvP.set(original.getPvP());
     }
 
     public void setOriginal(ConfiguracionModel original) {
@@ -65,14 +80,14 @@ public class ConfiguracionProperties {
     public StringProperty filaIndvproperty(){
         return filaIndv;
     }
-    public IntegerProperty probabilidadReproduccionProperty() {
+    public FloatProperty probabilidadReproduccionProperty() {
         return probabilidadreproduccion;
     }
     public StringProperty getColumnaIvdproperty(){
         return columnaIvd;
     }
 
-    public IntegerProperty probabilidadClonacionProperty()
+    public FloatProperty probabilidadClonacionProperty()
 
     {
         return probabilidadclonacion;
@@ -84,10 +99,26 @@ public class ConfiguracionProperties {
     public StringProperty ColumnasrecProperty(){
         return columnasrec;
     }
-    public IntegerProperty pvProperty(){
-        return pv;
-    }
-    public IntegerProperty pzProperty(){
+
+    public FloatProperty pzProperty(){
         return pz;
+    }
+    public FloatProperty PvAProperty(){
+        return pvA;
+    }
+    public FloatProperty PvCProperty(){
+        return pvC;
+    }
+    public FloatProperty PvMProperty(){
+        return pvM;
+    }
+    public FloatProperty PvTProperty(){
+        return pvT;
+    }
+    public FloatProperty PvBProperty(){
+        return pvB;
+    }
+    public FloatProperty PvPProperty(){
+        return pvP;
     }
 }

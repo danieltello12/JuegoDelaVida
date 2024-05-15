@@ -1,9 +1,6 @@
 package es.uah.trabajo.juegodelavida.ParamJuego;
 
 public class ParamJuegoModel {
-    private String nombre="";
-    private String columnas ="";
-    private String filas="";
     private String filaIndv="";
     private String columnaIvd="";
 
@@ -14,8 +11,6 @@ public class ParamJuegoModel {
     private float preproduccion =0;
     private String filarec="";
     private String columnarec="";
-    private float pv=0;
-    private float pz=0;
 
     public String getFilarec() {
         return filarec;
@@ -33,33 +28,11 @@ public class ParamJuegoModel {
         this.columnarec = columnarec;
     }
 
-    public float getPv() {
-        return pv;
-    }
-
-    public void setPv(float pv) {
-        this.pv = pv;
-    }
-
-    public float getPz() {
-        return pz;
-    }
-
-    public void setPz(float pz) {
-        this.pz = pz;
-    }
-
     public String getColumnaIvd() {
         return columnaIvd;
     }
 
-    public String getColumnas() {
-        return columnas;
-    }
 
-    public void setColumnas(String columnas) {
-        this.columnas = columnas;
-    }
 
     public String getTurnosDeVida() {
         return TurnosDeVida;
@@ -97,29 +70,8 @@ public class ParamJuegoModel {
         this.filaIndv = filaIndv;
     }
 
-    public ParamJuegoModel(String vidas, String dimension, String filas) {
-        this.TurnosDeVida =vidas;
-        this.columnas =dimension;
-        this.filas= filas;
-    }
     public ParamJuegoModel(){
 
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getDimension() {
-        return columnas;
-    }
-
-    public void setDimension(String dimension) {
-        this.columnas = dimension;
     }
 
 
@@ -159,11 +111,4 @@ public class ParamJuegoModel {
     }
 
 
-    public String getFilas() {
-        return filas;
-    }
-
-    public void setFilas(String filas) {
-        this.filas = filas;
-    }
 }

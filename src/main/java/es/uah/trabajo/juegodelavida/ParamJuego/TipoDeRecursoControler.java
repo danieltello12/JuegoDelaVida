@@ -2,6 +2,7 @@ package es.uah.trabajo.juegodelavida.ParamJuego;
 
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Recursos.Recursos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
+import es.uah.trabajo.juegodelavida.Clases.Partida;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
@@ -21,22 +22,24 @@ public class TipoDeRecursoControler implements Initializable {
 
     private Recursos DatosIndv;
  boolean conf;
+    String nombreus;
+  Partida p;
+
 
     @FXML
     public void onMiBotonMontañaClick() throws FileNotFoundException {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        float pv=this.DatosIndv.getProbabilida_V();
         float pz= this.DatosIndv.getProbabilidad_Z();
-        Recursos b = new Recursos(x,y,pz,pv);
+        Recursos b = new Recursos(x,y,pz,p.getPvM());
         b.setTipo("M");
 
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
 
-            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
-
-
+        if(conf==true) {
+            l.añadirindividuo(b, "src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+        }
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
@@ -59,14 +62,12 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        float pv=this.DatosIndv.getProbabilida_V();
-        float pz= this.DatosIndv.getProbabilidad_Z();
-        Recursos b = new Recursos(x,y,pz,pv);
+        Recursos b = new Recursos(x,y,p.getPz(),p.getPvA());
         b.setTipo("A");
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
-            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
-
-
+            if(conf==true) {
+                l.añadirindividuo(b, "src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+            }
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
@@ -88,15 +89,14 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        float pv=this.DatosIndv.getProbabilida_V();
-        float pz= this.DatosIndv.getProbabilidad_Z();
-        Recursos b = new Recursos(x,y,pz,pv);
+        Recursos b = new Recursos(x,y,p.getPz(),p.getPvC());
         b.setTipo("C");
 
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
 
-            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
-
+        if(conf==true) {
+            l.añadirindividuo(b, "src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+        }
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
@@ -112,20 +112,20 @@ public class TipoDeRecursoControler implements Initializable {
         s.setTitle("Juego de La Vida de Conway");
         s.show();
         this.scene.close();
+
     }
     @FXML
     public void onMiBotonTesoroClick() throws FileNotFoundException {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        float pv=this.DatosIndv.getProbabilida_V();
-        float pz= this.DatosIndv.getProbabilidad_Z();
-        Recursos b = new Recursos(x,y,pz,pv);
+        Recursos b = new Recursos(x,y,p.getPz(),p.getPvT());
         b.setTipo("T");
 
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
-
-            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+        if(conf==true) {
+            l.añadirindividuo(b, "src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+        }
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
@@ -148,14 +148,17 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        float pv=this.DatosIndv.getProbabilida_V();
-        float pz= this.DatosIndv.getProbabilidad_Z();
-        Recursos b = new Recursos(x,y,pz,pv);
+
+        Recursos b = new Recursos(x,y,p.getPz(),p.getPvB());
         b.setTipo("B");
 
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
 
-            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+        if(conf==true) {
+            l.añadirindividuo(b, "src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+        }
+
+
 
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
@@ -178,14 +181,14 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        float pv=this.DatosIndv.getProbabilida_V();
-        float pz= this.DatosIndv.getProbabilidad_Z();
-        Recursos b = new Recursos(x,y,pz,pv);
+        Recursos b = new Recursos(x,y,p.getPz(),p.getPvP());
         b.setTipo("P");
 
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
 
-            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+        if(conf==true) {
+            l.añadirindividuo(b, "src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+        }
 
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
@@ -206,14 +209,17 @@ public class TipoDeRecursoControler implements Initializable {
 
 
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
 
-    public void loadDataIndividuo(Recursos datos, boolean conf){
+    public void loadDataIndividuo(Recursos datos, boolean conf, String nombreusuario, Partida partida){
         this.conf=conf;
         this.DatosIndv=datos;
+        this.p= partida;
+        this.nombreus=nombreusuario;
     }
 
     public void setStage(Stage stage) {

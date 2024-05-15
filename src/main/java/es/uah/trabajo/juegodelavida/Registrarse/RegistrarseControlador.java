@@ -79,6 +79,9 @@ public class RegistrarseControlador implements Initializable {
             l.añadirusuario(nuevo);
             ListaLEPA l2= new ListaLEPA();
             l2.guardar(usuario);
+
+            this.scene.close();
+
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
             Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Captura2.PNG"));

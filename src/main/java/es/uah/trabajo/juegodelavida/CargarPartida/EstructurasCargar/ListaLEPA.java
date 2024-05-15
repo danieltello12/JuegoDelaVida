@@ -15,6 +15,9 @@ public class ListaLEPA<TipoDelDato> extends gson {
         }
         return vacio;
     }
+    public void vaciar(){
+        this.primero=null;
+    }
 
     public boolean esta(String usuario, String partida) {
         ListaLEPA partidas= new ListaLEPA();
@@ -129,7 +132,7 @@ public class ListaLEPA<TipoDelDato> extends gson {
         boolean salir = false;
         ElementoLEPA<TipoDelDato> el = this.primero;
         while (el != null && salir == false) {
-            if (el.getDatos() == el2.getDatos()) {
+            if (Objects.equals(el.getDatos().getNombre(), el2.getDatos().getNombre())) {
                 salir = true;
             } else {
                 el = el.getSiguiente();

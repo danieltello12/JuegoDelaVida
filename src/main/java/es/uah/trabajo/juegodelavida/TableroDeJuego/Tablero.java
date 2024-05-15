@@ -2,6 +2,7 @@ package es.uah.trabajo.juegodelavida.TableroDeJuego;
 
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
+import es.uah.trabajo.juegodelavida.Clases.Partida;
 import es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoControlador;
 import es.uah.trabajo.juegodelavida.Portada.Boton;
 import es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion.ConfiguracionController;
@@ -41,7 +42,7 @@ public class Tablero extends Pane {
         final Logger log = LogManager.getLogger(Tablero.class);
 
 
-        public Parent Tablero ( int filas, int columnas, ListaELementos individuos, ListaRecursos recursos) throws
+        public Parent Tablero ( Partida p,  String usuario) throws
         FileNotFoundException {
 
 
@@ -77,8 +78,8 @@ public class Tablero extends Pane {
                 r.setVisible(false);
                 caja_info.getChildren().removeAll(botonsalir);
             });
-            for (int i = 0; i < filas; i++) {
-                for (int j = 0; j < columnas; j++) {
+            for (int i = 0; i < p.getFilas(); i++) {
+                for (int j = 0; j < p.getColumnas(); j++) {
 
                     // Aquí podrías instanciar tu clase de celda, más compleja
                     GridPane secondaryGrid = new GridPane();
@@ -128,14 +129,14 @@ public class Tablero extends Pane {
                 }
             }
             int pos = 0;
-            while (pos < recursos.getNumeroElementos()) {
-                int x = recursos.getElemento(pos).getDatos().getX() - 1;
-                int y = recursos.getElemento(pos).getDatos().getY() - 1;
+            while (pos < p.getRecursos().getNumeroElementos()) {
+                int x = p.getRecursos().getElemento(pos).getDatos().getX() - 1;
+                int y = p.getRecursos().getElemento(pos).getDatos().getY() - 1;
                 Label recurso = new Label();
                 recurso.setAlignment(Pos.CENTER);
                 recurso.setPrefSize(32, 32);
                 recurso.setStyle("-fx-border-color: lightgrey; -fx-text-alignment: center;");
-                recurso.setText(recursos.getElemento(pos).getDatos().getTipo());
+                recurso.setText(p.getRecursos().getElemento(pos).getDatos().getTipo());
                 ObservableList<Node> children = mainGrid.getChildren();
                 GridPane nodo = null;
                 for (Node child : children) {
@@ -195,9 +196,9 @@ public class Tablero extends Pane {
 
             }
             pos=0;
-            while (pos < individuos.getNumeroElementos()) {
-                int x = individuos.getElemento(pos).getDatos().getX() - 1;
-                int y = individuos.getElemento(pos).getDatos().getY() - 1;
+            while (pos < p.getIndividuos().getNumeroElementos()) {
+                int x = p.getIndividuos().getElemento(pos).getDatos().getX() - 1;
+                int y = p.getIndividuos().getElemento(pos).getDatos().getY() - 1;
                 Label individuo = new Label();
                 individuo.setAlignment(Pos.CENTER);
                 individuo.setText("I");
@@ -293,9 +294,9 @@ public class Tablero extends Pane {
                     Scene scene = new Scene(fxmlLoader.load(), 1006, 518);
                     stage.setTitle("Juego de La Vida de Conway");
                     stage.setScene(scene);
-                    ParamJuegoControlador p = fxmlLoader.getController(); //dame el controlador
+                    ParamJuegoControlador controlador = fxmlLoader.getController(); //dame el controlador
                     //p.loadUserData(this.modeloParaGUICompartido); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
-                    p.setStage(stage); //doy la ventana donde se va a trabajar
+                    controlador.setStage(stage); //doy la ventana donde se va a trabajar
                     stage.show();
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -341,9 +342,9 @@ public class Tablero extends Pane {
                     Scene scene = new Scene(fxmlLoader.load(), 1006, 518);
                     stage.setTitle("Juego de La Vida de Conway");
                     stage.setScene(scene);
-                    ConfiguracionController p = fxmlLoader.getController(); //dame el controlador
-                    p.loadUserData(new ConfiguracionProperties(new ConfiguracionModel()), filas, columnas, root); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
-                    p.setStage(stage); //doy la ventana donde se va a trabajar
+                    ConfiguracionController controlador2 = fxmlLoader.getController(); //dame el controlador
+                    controlador2.loadUserData(new ConfiguracionProperties(new ConfiguracionModel()),p, root,usuario); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
+                    controlador2.setStage(stage); //doy la ventana donde se va a trabajar
                     stage.show();
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -376,9 +377,9 @@ public class Tablero extends Pane {
                     Scene scene = new Scene(fxmlLoader.load(), 1006, 518);
                     stage.setTitle("Juego de La Vida de Conway");
                     stage.setScene(scene);
-                    ParamJuegoControlador p = fxmlLoader.getController(); //dame el controlador
+                    ParamJuegoControlador controlador3 = fxmlLoader.getController(); //dame el controlador
                     //p.loadUserData(this.modeloParaGUICompartido); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
-                    p.setStage(stage); //doy la ventana donde se va a trabajar
+                    controlador3.setStage(stage); //doy la ventana donde se va a trabajar
                     stage.show();
                 } catch (Exception e) {
                     e.printStackTrace();

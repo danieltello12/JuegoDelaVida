@@ -17,8 +17,8 @@ public class CajasBotones extends Pane {
     public CajasBotones(int width, int height) throws FileNotFoundException {
         ImageView i= new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Boton.png")));
 
-        i.setFitWidth(500);
-        i.setFitHeight(115);
+        i.setFitWidth(width);
+        i.setFitHeight(height);
 
 
 

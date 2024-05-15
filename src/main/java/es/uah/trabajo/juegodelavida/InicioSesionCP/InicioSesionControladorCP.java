@@ -58,7 +58,6 @@ public class InicioSesionControladorCP implements Initializable {
             throw new RuntimeException(e);
         }
         fxmlLoader.setLocation(url);
-        this.scene.close();
 
         try {
             Scene scene = new Scene(fxmlLoader.load(), 450, 150);
@@ -82,11 +81,12 @@ public class InicioSesionControladorCP implements Initializable {
         model.commit();
         ListaUsuarios l= new ListaUsuarios();
         if(l.esta(model.original.getUsuario(),model.original.getContraseña())==2){
+
             Stage stage = new Stage();
             this.scene.close();
             try {
                 Usuario u = new Usuario(model.original.getUsuario(),model.original.getContraseña());
-                Scene scene = new Scene(new CargarPartida(u,1280, 720));
+                Scene scene = new Scene(new CargarPartida(u,1280, 720,stage));
                 stage.setTitle("Juego de La Vida de Conway");
                 stage.setScene(scene);
                 //p.loadUserData(this.modeloParaGUICompartido); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
