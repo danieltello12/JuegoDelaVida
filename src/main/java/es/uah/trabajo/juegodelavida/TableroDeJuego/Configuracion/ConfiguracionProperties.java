@@ -6,7 +6,7 @@ public class ConfiguracionProperties {
     protected ConfiguracionModel original;
     private StringProperty filaIndv= new SimpleStringProperty();
     private StringProperty columnaIvd= new SimpleStringProperty();
-    private StringProperty TurnosDeVida = new SimpleStringProperty();
+    //private StringProperty TurnosDeVida = new SimpleStringProperty();
     private StringProperty Identificador = new SimpleStringProperty();
     private FloatProperty probabilidadclonacion = new SimpleFloatProperty();
     private FloatProperty probabilidadreproduccion= new SimpleFloatProperty();
@@ -24,7 +24,7 @@ public class ConfiguracionProperties {
     }
 
     public void commit() {
-        original.setNumeroIndividuosAvanzados(TurnosDeVida.get());
+        //original.setNumeroIndividuosAvanzados(TurnosDeVida.get());
         original.setNumeroIndividuosNormales(Identificador.get());
         original.setPclonacion(probabilidadclonacion.get());
         original.setProbabilidadreproduccion(probabilidadreproduccion.get());
@@ -44,7 +44,7 @@ public class ConfiguracionProperties {
 
 
     public void rollback() {
-        TurnosDeVida.set((original.getNumeroIndividuosAvanzados()));
+        //TurnosDeVida.set((original.getNumeroIndividuosAvanzados()));
         Identificador.set((original.getNumeroIndividuosNormales()));
         probabilidadclonacion.set((original.getPclonacion()));
         probabilidadreproduccion.set((original.getProbabilidadreproduccion()));
@@ -74,7 +74,7 @@ public class ConfiguracionProperties {
     }
 
     public Property<String> numeroIndividuosAvanzadosProperty() {
-        return TurnosDeVida;
+        return Identificador;
     }
 
     public StringProperty filaIndvproperty(){

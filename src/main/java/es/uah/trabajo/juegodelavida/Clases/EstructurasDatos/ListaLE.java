@@ -40,11 +40,11 @@ public class ListaLE<TipoDelDato> extends gson {
 
     }
 
-   /** public void add(String st) {
-        ElementoLE<TipoDelDato> nuevoprimero = new ElementoLE(this.primero, st);
-        this.add(nuevoprimero);
+    /** public void add(String st) {
+     ElementoLE<TipoDelDato> nuevoprimero = new ElementoLE(this.primero, st);
+     this.add(nuevoprimero);
 
-    }**/
+     }**/
 
     public void add(Usuario obj) {
         ElementoLEUs<TipoDelDato> nuevoprimero = new ElementoLEUs(this.primero, obj);
@@ -52,17 +52,17 @@ public class ListaLE<TipoDelDato> extends gson {
 
     }
 
-   /** public void insert(String s, int posicion) {
-        ElementoLE<TipoDelDato> el = this.primero;
-        if (posicion == 0) {
-            this.add(s);
-        } else {
-            ElementoLE<TipoDelDato> e = new ElementoLE(this.getElemento(posicion), s);
-            this.getElemento(posicion - 1).siguiente = e;
-        }
+    /** public void insert(String s, int posicion) {
+     ElementoLE<TipoDelDato> el = this.primero;
+     if (posicion == 0) {
+     this.add(s);
+     } else {
+     ElementoLE<TipoDelDato> e = new ElementoLE(this.getElemento(posicion), s);
+     this.getElemento(posicion - 1).siguiente = e;
+     }
 
 
-    }**/
+     }**/
 
     public void insert(Usuario dato, int posicion) {
         ElementoLEUs<TipoDelDato> el = this.primero;
@@ -172,3 +172,4 @@ public class ListaLE<TipoDelDato> extends gson {
     }
 
 }
+

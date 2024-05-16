@@ -33,7 +33,7 @@
                   <Label layoutX="46.0" layoutY="53.0" text="Turnos de vida:" />
                   <Label layoutX="52.0" layoutY="17.0" text="Identificador:" />
                   <TextField fx:id="Identificador" alignment="CENTER" layoutX="205.0" layoutY="4.0" prefHeight="26.0" prefWidth="140.0" />
-                  <TextField fx:id="TurnosDeVida" alignment="CENTER" layoutX="200.0" layoutY="40.0" prefHeight="26.0" prefWidth="140.0" />
+                  <!--<TextField fx:id="TurnosDeVida" alignment="CENTER" layoutX="200.0" layoutY="40.0" prefHeight="26.0" prefWidth="140.0" />-->
                   <Label layoutX="5.0" layoutY="168.0" prefHeight="44.0" prefWidth="186.0" text="Probabilidad de Reproducción :" />
                   <Label layoutX="12.0" layoutY="222.0" text="Probabilidad de Clonación:" />
                   <Slider fx:id="probabilidadReproduccion" blockIncrement="0.1" layoutX="191.0" layoutY="168.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" prefHeight="44.0" prefWidth="234.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />

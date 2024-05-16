@@ -5,7 +5,7 @@ public class ConfiguracionModel {
     private String columnaIvd="";
 
 
-    private String TurnosDeVida ="";
+    //private String TurnosDeVida ="";
     private String Identificador ="";
     private float pclonacion =0;
     private float preproduccion =0;
@@ -96,13 +96,13 @@ public class ConfiguracionModel {
     }
 
 
-    public String getTurnosDeVida() {
+    /*public String getTurnosDeVida() {
         return TurnosDeVida;
     }
 
     public void setTurnosDeVida(String turnosDeVida) {
         TurnosDeVida = turnosDeVida;
-    }
+    }*/
 
     public String getIdentificador() {
         return Identificador;
@@ -139,7 +139,7 @@ public class ConfiguracionModel {
 
 
     public String getNumeroIndividuosAvanzados() {
-        return TurnosDeVida;
+        return "0";
     }
 
     public String getNumeroIndividuosNormales() {
@@ -156,7 +156,7 @@ public class ConfiguracionModel {
 
 
     public void setNumeroIndividuosAvanzados(String numeroIndividuosAvanzados) {
-        this.TurnosDeVida = numeroIndividuosAvanzados;
+        //this.TurnosDeVida = numeroIndividuosAvanzados;
     }
 
     public void setNumeroIndividuosNormales(String numeroIndividuosNormales) {

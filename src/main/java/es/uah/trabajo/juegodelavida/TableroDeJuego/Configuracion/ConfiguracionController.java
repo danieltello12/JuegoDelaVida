@@ -42,8 +42,8 @@ public class ConfiguracionController implements Initializable {
     private TextField columnaIvd;
     @FXML
     private TextField Identificador;
-    @FXML
-    private TextField TurnosDeVida;
+ //   @FXML
+//    private TextField TurnosDeVida;
     @FXML
     private Slider probabilidadReproduccion;
     @FXML
@@ -152,7 +152,7 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
             int id = Integer.parseInt(model.original.getIdentificador());
             float clon = model.original.getPclonacion();
             float rep = model.original.getPreproduccion();
-            int turnos = Integer.parseInt(model.original.getTurnosDeVida());
+            int turnos = partida.getTurnosvida();
             Invidiuos i = new Invidiuos(x, y, id, turnos, rep, clon);
             restablecerind();
             model.rollback();
@@ -186,7 +186,7 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
         model.original.setIdentificador("");
         model.original.setPreproduccion(0);
         model.original.setPclonacion(0);
-        model.original.setTurnosDeVida("");
+        //model.original.setTurnosDeVida("");
     }
     public void restablecerrec(){
         model.original.setFilarec("");
@@ -273,7 +273,7 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
             int x = Integer.parseInt(model.original.getFilarec());
             int y = Integer.parseInt(model.original.getColumnarec());
             float pz = model.original.getPz();
-            Recursos i = new Recursos(x, y,pz,0);
+            Recursos i = new Recursos(x, y,pz,0,partida.getTiemposvida());
             restablecerrec();
             model.rollback();
             Stage stage = new Stage();
@@ -302,7 +302,7 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
     }
     protected void updateGUIwithModel() {
         Identificador.textProperty().bindBidirectional(model.numeroIndividuosNormalesProperty());
-        TurnosDeVida.textProperty().bindBidirectional(model.numeroIndividuosAvanzadosProperty());
+        //TurnosDeVida.textProperty().bindBidirectional(model.numeroIndividuosAvanzadosProperty());
         probabilidadClonacion.valueProperty().bindBidirectional(model.probabilidadClonacionProperty());
         probabilidadReproduccion.valueProperty().bindBidirectional(model.probabilidadReproduccionProperty());
         probabilidadReproduccion.valueProperty().bindBidirectional(model.probabilidadReproduccionProperty());

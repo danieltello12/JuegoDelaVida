@@ -8,6 +8,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -45,12 +47,47 @@ public class PrimerosparamCotroller implements Initializable {
     private Slider  probVB;
     @FXML
     private Slider  probVP;
+    @FXML
+    private TextField  turnos;
+    @FXML
+    private TextField  tiempos;
+
+    public String getCbAgua() {
+        return (String)cbAgua.getValue();
+    }
+
+    public void setCbAgua(String cbAgua) {
+        this.cbAgua.setValue(cbAgua);
+    }
+
+    @FXML
+    private ComboBox cbAgua;
+
+    public boolean getCkAgua() {
+        return ckAgua.isSelected();
+    }
+
+    public void setCkAgua(boolean ckAgua) {
+        this.ckAgua.setSelected(ckAgua);
+    }
+
+    @FXML
+    private CheckBox ckAgua;
+
+    @FXML
+    private TextField modAgua;
 
     @FXML
     protected  void añadirelementosclick() throws FileNotFoundException {
         ListaLEPA l = new ListaLEPA();
         l.cargar(usuario);
-        if (probVA.getValue() == 0 && probZ.getValue() == 0 && probC.getValue() == 0 && probVM.getValue() == 0 && probVT.getValue() == 0 && probVB.getValue() == 0 && probVP.getValue() == 0) {
+        if (probVA.getValue() == 0 &&
+                probZ.getValue() == 0 &&
+                probC.getValue() == 0 &&
+                probVM.getValue() == 0 &&
+                probVT.getValue() == 0 &&
+                probVB.getValue() == 0 &&
+                probVP.getValue() == 0) {
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
             Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/pzypv.PNG"));
@@ -121,6 +158,12 @@ public class PrimerosparamCotroller implements Initializable {
             p.setPvM((float) probVM.getValue());
             p.setPvT((float) probVT.getValue());
             p.setPvP((float) probVP.getValue());
+            p.setTurnosvida(Integer.parseInt(turnos.getText()));
+            p.setTiemposvida(Integer.parseInt(tiempos.getText()));
+            p.setCbAgua((String)cbAgua.getValue());
+            p.setModAgua(Integer.parseInt(modAgua.getText()));
+            p.setCkAgua(ckAgua.isSelected());
+
             ListaELementos l2= new ListaELementos();
             l2=l2.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
             l2.vaciar();

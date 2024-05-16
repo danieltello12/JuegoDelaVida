@@ -1,6 +1,8 @@
 package es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos;
 
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Elementos;
+import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaLEMov;
+import es.uah.trabajo.juegodelavida.Clases.Movimiento;
 
 public class Invidiuos extends Elementos {
 
@@ -9,6 +11,7 @@ public class Invidiuos extends Elementos {
     float probrep;
     float probclon;
     String tipo;
+    ListaLEMov<Movimiento> movimientos;
 
     public Invidiuos(int x, int y, int id, int turnosvida, float probrep, float probclon) {
        super(x,y);
@@ -16,11 +19,15 @@ public class Invidiuos extends Elementos {
         this.turnosvida = turnosvida;
         this.probrep = probrep;
         this.probclon = probclon;
+        movimientos= new ListaLEMov<>();
+        movimientos.add(new Movimiento(x,y,id));
     }
     public void setTipo(String tipo){
         this.tipo=tipo;
     }
-
+    public String getTipo() {
+        return tipo;
+    }
     public int getId() {
         return id;
     }
@@ -52,5 +59,15 @@ public class Invidiuos extends Elementos {
 
     public void setProbclon(float probclon) {
         this.probclon = probclon;
+    }
+    public void añadirmovimientosJSon(){
+
+        if(!movimientos.isVacia()){
+            movimientos.guardar(movimientos);
+        }
+
+    }
+    public void addMovimiento(Movimiento mov){
+        movimientos.add(new Movimiento(mov.getX(),mov.getY(),id));
     }
 }

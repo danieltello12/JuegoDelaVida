@@ -32,7 +32,7 @@ public class TipoDeRecursoControler implements Initializable {
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
         float pz= this.DatosIndv.getProbabilidad_Z();
-        Recursos b = new Recursos(x,y,pz,p.getPvM());
+        Recursos b = new Recursos(x,y,pz,p.getPvM(),this.DatosIndv.getTiemposvida());
         b.setTipo("M");
 
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
@@ -62,7 +62,7 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        Recursos b = new Recursos(x,y,p.getPz(),p.getPvA());
+        Recursos b = new Recursos(x,y,p.getPz(),p.getPvA(),this.DatosIndv.getTiemposvida());
         b.setTipo("A");
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
             if(conf==true) {
@@ -89,7 +89,7 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        Recursos b = new Recursos(x,y,p.getPz(),p.getPvC());
+        Recursos b = new Recursos(x,y,p.getPz(),p.getPvC(),this.DatosIndv.getTiemposvida());
         b.setTipo("C");
 
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
@@ -119,7 +119,7 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        Recursos b = new Recursos(x,y,p.getPz(),p.getPvT());
+        Recursos b = new Recursos(x,y,p.getPz(),p.getPvT(),this.DatosIndv.getTiemposvida());
         b.setTipo("T");
 
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
@@ -149,7 +149,7 @@ public class TipoDeRecursoControler implements Initializable {
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
 
-        Recursos b = new Recursos(x,y,p.getPz(),p.getPvB());
+        Recursos b = new Recursos(x,y,p.getPz(),p.getPvB(),this.DatosIndv.getTiemposvida());
         b.setTipo("B");
 
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
@@ -181,7 +181,7 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        Recursos b = new Recursos(x,y,p.getPz(),p.getPvP());
+        Recursos b = new Recursos(x,y,p.getPz(),p.getPvP(),p.getTiemposvida());
         b.setTipo("P");
 
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");

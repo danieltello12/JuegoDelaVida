@@ -1,5 +1,6 @@
 package es.uah.trabajo.juegodelavida.TableroDeJuego;
 
+import es.uah.trabajo.juegodelavida.BucleControl.Bucle;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
 import es.uah.trabajo.juegodelavida.Clases.Partida;
@@ -44,7 +45,13 @@ public class Tablero extends Pane {
 
         public Parent Tablero ( Partida p,  String usuario) throws
         FileNotFoundException {
-
+            return actualizaTablero(p, usuario);
+        }
+        public Parent actualizaTablero( Partida p, String usuario) throws
+                FileNotFoundException{
+            //Limpiamos todo el tablero por si venimos de actualizarlo tras un movimiento
+            if (root.getChildren() != null)
+                root.getChildren().removeAll();
 
             Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/fondojuego.jpg"));
             ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
@@ -361,7 +368,19 @@ public class Tablero extends Pane {
             bot3.setTranslateY(-20);
             bot3.setTranslateX(-10);
             bot3.setOnAction(() -> {
-
+                //Cuando se pulsa el play, se lanza un ciclo del bucle de control
+                Bucle bucleC= new Bucle(p);
+                bucleC.ejecutarMovimiento();
+                try {
+                    actualizaTablero(p, usuario);
+                }catch(FileNotFoundException e){
+                    try {
+                        throw e;
+                    } catch (FileNotFoundException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }
+                /**
                 Stage stage = new Stage();
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 File fichero = new File("src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/ParamJuego.fxml");
@@ -384,12 +403,14 @@ public class Tablero extends Pane {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-
+                **/
             });
             b3.addItem(bot3);
 
 
             root.getChildren().addAll(imageView, b, b2, b3, caja, caja_info);
+            //Se inicializa en el gestor del bucle la info de la partida
+
             return root;
 
         }

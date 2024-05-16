@@ -36,8 +36,8 @@ public class ParamJuegoControlador implements Initializable {
     private TextField columnaIvd;
     @FXML
     private TextField Identificador;
-    @FXML
-    private TextField TurnosDeVida;
+    //@FXML
+    //private TextField TurnosDeVida;
     @FXML
     private Slider probabilidadReproduccion;
     @FXML
@@ -187,12 +187,12 @@ public class ParamJuegoControlador implements Initializable {
             s.setTitle("Juego de La Vida de Conway");
             s.show();
         } else {
-            int x = Integer.parseInt(model.original.getColumnaIvd());
-            int y = Integer.parseInt(model.original.getFilaIndv());
+            int x = Integer.parseInt(model.original.getFilaIndv());
+            int y = Integer.parseInt(model.original.getColumnaIvd());
             int id = Integer.parseInt(model.original.getIdentificador());
             float clon = model.original.getPclonacion();
             float rep = model.original.getPreproduccion();
-            int turnos = Integer.parseInt(model.original.getTurnosDeVida());
+            int turnos = partida.getTurnosvida();
             Invidiuos i = new Invidiuos(x, y, id, turnos, rep, clon);
             restablecerind();
             model.rollback();
@@ -226,7 +226,7 @@ public class ParamJuegoControlador implements Initializable {
         model.original.setIdentificador("");
         model.original.setPreproduccion(0);
         model.original.setPclonacion(0);
-        model.original.setTurnosDeVida("");
+        //model.original.setTurnosDeVida("");
     }
     public void restablecerrec(){
         model.original.setFilarec("");
@@ -287,7 +287,7 @@ public class ParamJuegoControlador implements Initializable {
             else {
                 int x = Integer.parseInt(model.original.getFilarec());
                 int y = Integer.parseInt(model.original.getColumnarec());
-                Recursos i = new Recursos(x, y, partida.getPz(),0);
+                Recursos i = new Recursos(x, y, partida.getPz(),0,partida.getTiemposvida());
                 restablecerrec();
                 model.rollback();
                 Stage stage = new Stage();
@@ -316,7 +316,7 @@ public class ParamJuegoControlador implements Initializable {
         }
     protected void updateGUIwithModel() {
         Identificador.textProperty().bindBidirectional(model.numeroIndividuosNormalesProperty());
-        TurnosDeVida.textProperty().bindBidirectional(model.numeroIndividuosAvanzadosProperty());
+        //TurnosDeVida.textProperty().bindBidirectional(model.numeroIndividuosAvanzadosProperty());
         probabilidadClonacion.valueProperty().bindBidirectional(model.probabilidadClonacionProperty());
         probabilidadReproduccion.valueProperty().bindBidirectional(model.probabilidadReproduccionProperty());
         probabilidadReproduccion.valueProperty().bindBidirectional(model.probabilidadReproduccionProperty());

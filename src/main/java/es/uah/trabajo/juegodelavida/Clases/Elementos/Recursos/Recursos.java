@@ -1,16 +1,20 @@
 package es.uah.trabajo.juegodelavida.Clases.Elementos.Recursos;
 
 public class Recursos {
+
+
+    int tiemposvida;
     int x;
     int y;
     float Probabilidad_Z;
     float Probabilida_V;
     String tipo;
-    public Recursos(int x, int y, float probz, float probv){
+    public Recursos(int x, int y, float probz, float probv, int tiemposvida){
         this.x=x;
         this.y=y;
         this.Probabilidad_Z=probz;
         this.Probabilida_V=probv;
+        this.tiemposvida = tiemposvida;
     }
 public void setTipo(String tipo){
         this.tipo=tipo;
@@ -50,5 +54,12 @@ public void setTipo(String tipo){
 
     public String getTipo() {
         return tipo;
+    }
+    public int getTiemposvida() {
+        return tiemposvida;
+    }
+
+    public void setTiemposvida(int tiemposvida) {
+        this.tiemposvida = tiemposvida;
     }
 }

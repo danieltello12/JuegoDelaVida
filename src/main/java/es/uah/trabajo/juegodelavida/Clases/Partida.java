@@ -14,6 +14,39 @@ public class Partida {
     float pvB;
     float pvP;
     float pz;
+    int tiemposvida;
+
+    public String getCbAgua() {
+        return cbAgua;
+    }
+
+    public void setCbAgua(String cbAgua) {
+        this.cbAgua = cbAgua;
+    }
+
+    public int getModAgua() {
+        return modAgua;
+    }
+
+    public void setModAgua(int modAgua) {
+        this.modAgua = modAgua;
+    }
+
+    public boolean isCkAgua() {
+        return ckAgua;
+    }
+
+    public void setCkAgua(boolean ckAgua) {
+        this.ckAgua = ckAgua;
+    }
+
+    String cbAgua;
+
+    int modAgua;
+
+    boolean ckAgua;
+
+    int turnosvida;
     ListaELementos individuos;
 
     ListaRecursos recursos;
@@ -89,6 +122,22 @@ public class Partida {
         this.pz = pz;
     }
 
+
+    public int getTiemposvida() {
+        return tiemposvida;
+    }
+
+    public void setTiemposvida(int tiemposVida) {
+        this.tiemposvida = tiemposVida;
+    }
+
+    public int getTurnosvida() {
+        return turnosvida;
+    }
+
+    public void setTurnosvida(int turnosvida) {
+        this.turnosvida = turnosvida;
+    }
     public String getNombre() {
         return nombre;
     }
