@@ -160,18 +160,18 @@
                <Font name="System Bold" size="12.0" />
             </font>
          </Label>
-         <CheckBox fx:id="ckAgua" layoutX="572.0" layoutY="75.0" mnemonicParsing="false" text="Aumenta Tipo Indiv" />
-         <TextField fx:id="modAgua" layoutX="530.0" layoutY="72.0" prefHeight="26.0" prefWidth="38.0" />
-         <CheckBox fx:id="ckComida" layoutX="573.0" layoutY="106.0" mnemonicParsing="false" text="Aumenta Tipo Indiv" />
-         <TextField fx:id="modComida" layoutX="531.0" layoutY="103.0" prefHeight="26.0" prefWidth="38.0" />
-         <CheckBox fx:id="ckMontana" layoutX="574.0" layoutY="136.0" mnemonicParsing="false" text="Aumenta Tipo Indiv" />
-         <TextField fx:id="modMontana" layoutX="532.0" layoutY="133.0" prefHeight="26.0" prefWidth="38.0" />
-         <CheckBox fx:id="ckTesoro" layoutX="574.0" layoutY="168.0" mnemonicParsing="false" text="Aumenta Tipo Indiv" />
-         <TextField fx:id="modTesoro" layoutX="532.0" layoutY="165.0" prefHeight="26.0" prefWidth="38.0" />
-         <CheckBox fx:id="ckBiblio" layoutX="574.0" layoutY="197.0" mnemonicParsing="false" text="Aumenta Tipo Indiv" />
-         <TextField fx:id="modBiblio" layoutX="532.0" layoutY="194.0" prefHeight="26.0" prefWidth="38.0" />
-         <CheckBox fx:id="ckPozo" layoutX="574.0" layoutY="227.0" mnemonicParsing="false" text="Aumenta Tipo Indiv" />
-         <TextField fx:id="modPozo" layoutX="532.0" layoutY="224.0" prefHeight="26.0" prefWidth="38.0" />
+         <CheckBox fx:id="ckAgua" layoutX="572.0" layoutY="75.0" mnemonicParsing="false" text="Aumenta Tipo Individuo" />
+         <TextField fx:id="modAgua" layoutX="530.0" layoutY="72.0" prefHeight="26.0" prefWidth="38.0" text="0" />
+         <CheckBox fx:id="ckComida" layoutX="573.0" layoutY="106.0" mnemonicParsing="false" text="Aumenta Tipo Individuo" />
+         <TextField fx:id="modComida" layoutX="531.0" layoutY="103.0" prefHeight="26.0" prefWidth="38.0" text="0" />
+         <CheckBox fx:id="ckMontana" layoutX="574.0" layoutY="136.0" mnemonicParsing="false" text="Aumenta Tipo Individuo" />
+         <TextField fx:id="modMontana" layoutX="532.0" layoutY="133.0" prefHeight="26.0" prefWidth="38.0" text="0" />
+         <CheckBox fx:id="ckTesoro" layoutX="574.0" layoutY="168.0" mnemonicParsing="false" text="Aumenta Tipo Individuo" />
+         <TextField fx:id="modTesoro" layoutX="532.0" layoutY="165.0" prefHeight="26.0" prefWidth="38.0" text="0" />
+         <CheckBox fx:id="ckBiblio" layoutX="574.0" layoutY="197.0" mnemonicParsing="false" text="Aumenta Tipo Individuo" />
+         <TextField fx:id="modBiblio" layoutX="532.0" layoutY="194.0" prefHeight="26.0" prefWidth="38.0" text="0" />
+         <CheckBox fx:id="ckPozo" layoutX="574.0" layoutY="227.0" mnemonicParsing="false" text="Aumenta Tipo Individuo" />
+         <TextField fx:id="modPozo" layoutX="532.0" layoutY="224.0" prefHeight="26.0" prefWidth="38.0" text="0" />
           </children>
       </AnchorPane>
    <Button layoutX="640.0" layoutY="353.0" mnemonicParsing="false" onAction="#añadirelementosclick" text="Añadir Elementos" />

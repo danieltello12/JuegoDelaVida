@@ -16,6 +16,42 @@ public class Partida {
     float pz;
     int tiemposvida;
 
+    int turnosvida;
+    ListaELementos individuos;
+
+    ListaRecursos recursos;
+    String cbAgua;
+
+    int modAgua;
+
+    boolean ckAgua;
+    String cbComida;
+
+    int modComida;
+
+    boolean ckComida;
+    String cbMontana;
+
+    int modMontana;
+
+    boolean ckMontana;
+    String cbBiblio;
+
+    int modBiblio;
+
+    boolean ckBiblio;
+    String cbTesoro;
+
+    int modTesoro;
+
+    boolean ckTesoro;
+
+    String cbPozo;
+
+    int modPozo;
+
+    boolean ckPozo;
+
     public String getCbAgua() {
         return cbAgua;
     }
@@ -40,16 +76,128 @@ public class Partida {
         this.ckAgua = ckAgua;
     }
 
-    String cbAgua;
+    public String getCbComida() {
+        return cbComida;
+    }
 
-    int modAgua;
+    public void setCbComida(String cbComida) {
+        this.cbComida = cbComida;
+    }
 
-    boolean ckAgua;
+    public int getModComida() {
+        return modComida;
+    }
 
-    int turnosvida;
-    ListaELementos individuos;
+    public void setModComida(int modComida) {
+        this.modComida = modComida;
+    }
 
-    ListaRecursos recursos;
+    public boolean isCkComida() {
+        return ckComida;
+    }
+
+    public void setCkComida(boolean ckComida) {
+        this.ckComida = ckComida;
+    }
+
+    public String getCbMontana() {
+        return cbMontana;
+    }
+
+    public void setCbMontana(String cbMontana) {
+        this.cbMontana = cbMontana;
+    }
+
+    public int getModMontana() {
+        return modMontana;
+    }
+
+    public void setModMontana(int modMontana) {
+        this.modMontana = modMontana;
+    }
+
+    public boolean isCkMontana() {
+        return ckMontana;
+    }
+
+    public void setCkMontana(boolean ckMontana) {
+        this.ckAgua = ckMontana;
+    }
+
+    public String getCbTesoro() {
+        return cbTesoro;
+    }
+
+    public void setCbTesoro(String cbTesoro) {
+        this.cbTesoro = cbTesoro;
+    }
+
+    public int getModTesoro() {
+        return modTesoro;
+    }
+
+    public void setModTesoro(int modTesoro) {
+        this.modTesoro = modTesoro;
+    }
+
+    public boolean isCkTesoro() {
+        return ckTesoro;
+    }
+
+    public void setCkTesoro(boolean ckTesoro) {
+        this.ckTesoro = ckTesoro;
+    }
+
+    public String getCbBiblio() {
+        return cbBiblio;
+    }
+
+    public void setCbBiblio(String cbBiblio) {
+        this.cbBiblio = cbBiblio;
+    }
+
+    public int getModBiblio() {
+        return modBiblio;
+    }
+
+    public void setModBiblio(int modBiblio) {
+        this.modBiblio = modBiblio;
+    }
+
+    public boolean isCkBiblio() {
+        return ckBiblio;
+    }
+
+    public void setCkBiblio(boolean ckBiblio) {
+        this.ckBiblio = ckBiblio;
+    }
+
+    public String getCbPozo() {
+        return cbPozo;
+    }
+
+    public void setCbPozo(String cbPozo) {
+        this.cbPozo = cbPozo;
+    }
+
+    public int getModPozo() {
+        return modPozo;
+    }
+
+    public void setModPozo(int modPozo) {
+        this.modPozo = modPozo;
+    }
+
+    public boolean isCkPozo() {
+        return ckPozo;
+    }
+
+    public void setCkPozo(boolean ckPozo) {
+        this.ckAgua = ckPozo;
+    }
+
+
+
 
     public  Partida(String  nombre){
         this.nombre=nombre;

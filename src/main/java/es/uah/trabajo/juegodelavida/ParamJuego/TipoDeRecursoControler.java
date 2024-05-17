@@ -32,7 +32,13 @@ public class TipoDeRecursoControler implements Initializable {
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
         float pz= this.DatosIndv.getProbabilidad_Z();
-        Recursos b = new Recursos(x,y,pz,p.getPvM(),this.DatosIndv.getTiemposvida());
+        Recursos b = new Recursos(x,y,pz,p.getPvM(),this.DatosIndv.getTiemposvida()
+                ,this.DatosIndv.getCbAgua(),this.DatosIndv.getModAgua(),this.DatosIndv.isCkAgua()
+                ,this.DatosIndv.getCbComida(),this.DatosIndv.getModComida(),this.DatosIndv.isCkComida()
+                ,this.DatosIndv.getCbMontana(),this.DatosIndv.getModMontana(),this.DatosIndv.isCkMontana()
+                ,this.DatosIndv.getCbTesoro(),this.DatosIndv.getModTesoro(),this.DatosIndv.isCkTesoro()
+                ,this.DatosIndv.getCbBiblio(),this.DatosIndv.getModBiblio(),this.DatosIndv.isCkBiblio()
+                ,this.DatosIndv.getCbPozo(),this.DatosIndv.getModPozo(),this.DatosIndv.isCkPozo());
         b.setTipo("M");
 
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
@@ -62,7 +68,13 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        Recursos b = new Recursos(x,y,p.getPz(),p.getPvA(),this.DatosIndv.getTiemposvida());
+        Recursos b = new Recursos(x,y,p.getPz(),p.getPvA(),this.DatosIndv.getTiemposvida()
+                ,this.DatosIndv.getCbAgua(),this.DatosIndv.getModAgua(),this.DatosIndv.isCkAgua()
+                ,this.DatosIndv.getCbComida(),this.DatosIndv.getModComida(),this.DatosIndv.isCkComida()
+                ,this.DatosIndv.getCbMontana(),this.DatosIndv.getModMontana(),this.DatosIndv.isCkMontana()
+                ,this.DatosIndv.getCbTesoro(),this.DatosIndv.getModTesoro(),this.DatosIndv.isCkTesoro()
+                ,this.DatosIndv.getCbBiblio(),this.DatosIndv.getModBiblio(),this.DatosIndv.isCkBiblio()
+                ,this.DatosIndv.getCbPozo(),this.DatosIndv.getModPozo(),this.DatosIndv.isCkPozo());
         b.setTipo("A");
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
             if(conf==true) {
@@ -89,7 +101,13 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        Recursos b = new Recursos(x,y,p.getPz(),p.getPvC(),this.DatosIndv.getTiemposvida());
+        Recursos b = new Recursos(x,y,p.getPz(),p.getPvC(),this.DatosIndv.getTiemposvida()
+                ,this.DatosIndv.getCbAgua(),this.DatosIndv.getModAgua(),this.DatosIndv.isCkAgua()
+                ,this.DatosIndv.getCbComida(),this.DatosIndv.getModComida(),this.DatosIndv.isCkComida()
+                ,this.DatosIndv.getCbMontana(),this.DatosIndv.getModMontana(),this.DatosIndv.isCkMontana()
+                ,this.DatosIndv.getCbTesoro(),this.DatosIndv.getModTesoro(),this.DatosIndv.isCkTesoro()
+                ,this.DatosIndv.getCbBiblio(),this.DatosIndv.getModBiblio(),this.DatosIndv.isCkBiblio()
+                ,this.DatosIndv.getCbPozo(),this.DatosIndv.getModPozo(),this.DatosIndv.isCkPozo());
         b.setTipo("C");
 
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
@@ -119,7 +137,13 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        Recursos b = new Recursos(x,y,p.getPz(),p.getPvT(),this.DatosIndv.getTiemposvida());
+        Recursos b = new Recursos(x,y,p.getPz(),p.getPvT(),this.DatosIndv.getTiemposvida()
+                ,this.DatosIndv.getCbAgua(),this.DatosIndv.getModAgua(),this.DatosIndv.isCkAgua()
+                ,this.DatosIndv.getCbComida(),this.DatosIndv.getModComida(),this.DatosIndv.isCkComida()
+                ,this.DatosIndv.getCbMontana(),this.DatosIndv.getModMontana(),this.DatosIndv.isCkMontana()
+                ,this.DatosIndv.getCbTesoro(),this.DatosIndv.getModTesoro(),this.DatosIndv.isCkTesoro()
+                ,this.DatosIndv.getCbBiblio(),this.DatosIndv.getModBiblio(),this.DatosIndv.isCkBiblio()
+                ,this.DatosIndv.getCbPozo(),this.DatosIndv.getModPozo(),this.DatosIndv.isCkPozo());
         b.setTipo("T");
 
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
@@ -149,7 +173,13 @@ public class TipoDeRecursoControler implements Initializable {
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
 
-        Recursos b = new Recursos(x,y,p.getPz(),p.getPvB(),this.DatosIndv.getTiemposvida());
+        Recursos b = new Recursos(x,y,p.getPz(),p.getPvB(),this.DatosIndv.getTiemposvida()
+                ,this.DatosIndv.getCbAgua(),this.DatosIndv.getModAgua(),this.DatosIndv.isCkAgua()
+                ,this.DatosIndv.getCbComida(),this.DatosIndv.getModComida(),this.DatosIndv.isCkComida()
+                ,this.DatosIndv.getCbMontana(),this.DatosIndv.getModMontana(),this.DatosIndv.isCkMontana()
+                ,this.DatosIndv.getCbTesoro(),this.DatosIndv.getModTesoro(),this.DatosIndv.isCkTesoro()
+                ,this.DatosIndv.getCbBiblio(),this.DatosIndv.getModBiblio(),this.DatosIndv.isCkBiblio()
+                ,this.DatosIndv.getCbPozo(),this.DatosIndv.getModPozo(),this.DatosIndv.isCkPozo());
         b.setTipo("B");
 
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
@@ -181,7 +211,13 @@ public class TipoDeRecursoControler implements Initializable {
         ListaRecursos l= new ListaRecursos();
         int x= this.DatosIndv.getX();
         int y= this.DatosIndv.getY();
-        Recursos b = new Recursos(x,y,p.getPz(),p.getPvP(),p.getTiemposvida());
+        Recursos b = new Recursos(x,y,p.getPz(),p.getPvP(),p.getTiemposvida()
+                ,p.getCbAgua(),p.getModAgua(),p.isCkAgua()
+                ,p.getCbComida(),p.getModComida(),p.isCkComida()
+                ,p.getCbMontana(),p.getModMontana(),p.isCkMontana()
+                ,p.getCbTesoro(),p.getModTesoro(),p.isCkTesoro()
+                ,p.getCbBiblio(),p.getModBiblio(),p.isCkBiblio()
+                ,p.getCbPozo(),p.getModPozo(),p.isCkPozo());
         b.setTipo("P");
 
             l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");

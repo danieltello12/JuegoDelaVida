@@ -287,7 +287,13 @@ public class ParamJuegoControlador implements Initializable {
             else {
                 int x = Integer.parseInt(model.original.getFilarec());
                 int y = Integer.parseInt(model.original.getColumnarec());
-                Recursos i = new Recursos(x, y, partida.getPz(),0,partida.getTiemposvida());
+                Recursos i = new Recursos(x, y, partida.getPz(),0,partida.getTiemposvida()
+                                          ,partida.getCbAgua(),partida.getModAgua(),partida.isCkAgua()
+                        ,partida.getCbComida(),partida.getModComida(),partida.isCkComida()
+                        ,partida.getCbMontana(),partida.getModMontana(),partida.isCkMontana()
+                        ,partida.getCbTesoro(),partida.getModTesoro(),partida.isCkTesoro()
+                        ,partida.getCbBiblio(),partida.getModBiblio(),partida.isCkBiblio()
+                        ,partida.getCbPozo(),partida.getModPozo(),partida.isCkPozo() );
                 restablecerrec();
                 model.rollback();
                 Stage stage = new Stage();

@@ -11,10 +11,31 @@ import java.util.Random;
 
 public class Bucle {
     Partida partida;
+    ListaRecursos listaRecursos;
+    ListaELementos listaIndividuos;
+
+
     public  Bucle (Partida partida){
 
         this.partida = partida;
+        listaRecursos = duplicaRecursos(partida.getRecursos());
+        listaIndividuos= duplicaIndividuos(partida.getIndividuos());
     }
+    public ListaRecursos duplicaRecursos(ListaRecursos lista){
+        ListaRecursos newLista = new ListaRecursos();
+        for(int i=0; i < lista.getNumeroElementos();i++){
+            newLista.add(lista.getElemento(i).getDatos());
+        }
+        return newLista;
+    }
+    public ListaELementos duplicaIndividuos(ListaELementos lista){
+        ListaELementos newLista = new ListaELementos();
+        for(int i=0; i < lista.getNumeroElementos();i++){
+            newLista.add(lista.getElemento(i).getDatos());
+        }
+        return newLista;
+    }
+
     public void ejecutarMovimiento(){
         /*
         1. Para cada individuo, se actualiza su tiempo de vida, y en su caso se elimina si ha muerto.
@@ -60,8 +81,237 @@ public class Bucle {
     }
 
     private void evaluarMejorasIR(ListaELementos individuos, ListaRecursos recursos) {
-    }
+        /*Posibles mejoras según recurso
+                          <String fx:value="+Turnos vida" />
+                          <String fx:value="-Turnos vida" />
+                          <String fx:value="+Probab Clon " />
+                          <String fx:value="+Probab Repro" />
+                          <String fx:value="Muerte Inst" />
+                          ck->Subida de tipo de individuo
 
+         */
+
+        for (int i=0; i< partida.getIndividuos().getNumeroElementos();i++) {
+            if (partida.getIndividuos().getElemento(i) != null) {
+                Invidiuos individuoGen = (partida.getIndividuos().getElemento(i).getDatos());
+                ListaRecursos listarec = partida.getRecursos();
+                ListaRecursos listarecLR = new ListaRecursos();
+                for (int j=0; j< listarec.getNumeroElementos();j++) {
+                    if (listarec.getElemento(j) != null )
+
+                        if ( listarec.getElemento(j).getDatos().getY() == individuoGen.getY() &&
+                                listarec.getElemento(j).getDatos().getX() == individuoGen.getX()) {
+
+                            listarecLR.add(listarec.getElemento(j).getDatos());
+                        }
+                }
+                boolean eliminado=false;
+                for (int j=0; j< listarecLR.getNumeroElementos() && !eliminado;j++) {
+                    Recursos recurso = listarecLR.getElemento(j).getDatos();
+                    if (recurso.getTipo().equals("A")) {
+                        if (recurso.getCbAgua().equals("+Turnos vida")) {
+                            individuoGen.setTurnosvida(individuoGen.getTurnosvida() + recurso.getModAgua());
+                        }
+                        if (recurso.getCbAgua().equals("-Turnos vida")) {
+                            individuoGen.setTurnosvida(individuoGen.getTurnosvida() - recurso.getModAgua());
+                            if (individuoGen.getTurnosvida() <= 0) {
+                                eliminado = true;
+                                individuos.del(i);
+                                i--;
+
+
+                            }
+                        }
+                        if (recurso.getCbAgua().equals("+Probab Clon")) {
+                            individuoGen.setProbclon(individuoGen.getProbclon() + (recurso.getModAgua() / 100));
+                        }
+                        if (recurso.getCbAgua().equals("+Probab Repro")) {
+                            individuoGen.setProbrep(individuoGen.getProbrep() + (recurso.getModAgua() / 100));
+                        }
+                        if (recurso.isCkAgua()) {
+                            String nuevoTipo = "Avanzado";
+                            if (individuoGen.getTipo().equals("Básico"))
+                                nuevoTipo = "Normal";
+                            if (individuoGen.getTipo().equals("Normal"))
+                                nuevoTipo = "Avanzado";
+                            individuoGen.setTipo(nuevoTipo);
+                        }
+                        if (recurso.getCbAgua().equals("Muerte Inst")) {
+                            eliminado=true;
+                            individuos.del(i);
+                            i--;
+                        }
+                    }else if(recurso.getTipo().equals("C") ){
+
+
+                        if (recurso.getCbComida().equals("+Turnos vida")) {
+                            individuoGen.setTurnosvida(individuoGen.getTurnosvida() + recurso.getModComida());
+                        }
+                        if (recurso.getCbComida().equals("-Turnos vida")) {
+                            individuoGen.setTurnosvida(individuoGen.getTurnosvida() - recurso.getModComida());
+                            if (individuoGen.getTurnosvida() <= 0) {
+                                eliminado = true;
+                                individuos.del(i);
+                                i--;
+
+                            }
+                        }
+                        if (recurso.getCbComida().equals("+Probab Clon")) {
+                            individuoGen.setProbclon(individuoGen.getProbclon() + (recurso.getModComida() / 100));
+                        }
+                        if (recurso.getCbComida().equals("+Probab Repro")) {
+                            individuoGen.setProbrep(individuoGen.getProbrep() + (recurso.getModComida() / 100));
+                        }
+                        if (recurso.isCkComida()) {
+                            String nuevoTipo = "Avanzado";
+                            if (individuoGen.getTipo().equals("Básico"))
+                                nuevoTipo = "Normal";
+                            if (individuoGen.getTipo().equals("Normal"))
+                                nuevoTipo = "Avanzado";
+                            individuoGen.setTipo(nuevoTipo);
+                        }
+                        if (recurso.getCbComida().equals("Muerte Inst")) {
+                            eliminado=true;
+                            individuos.del(i);
+                            i--;
+                        }
+                    }else if(recurso.getTipo().equals("M")) {
+                        if (recurso.getCbMontana().equals("+Turnos vida")) {
+                            individuoGen.setTurnosvida(individuoGen.getTurnosvida() + recurso.getModMontana());
+                        }
+                        if (recurso.getCbMontana().equals("-Turnos vida")) {
+                            individuoGen.setTurnosvida(individuoGen.getTurnosvida() - recurso.getModMontana());
+                            if (individuoGen.getTurnosvida() <= 0) {
+                                eliminado = true;
+                                individuos.del(i);
+                                i--;
+
+                            }
+                        }
+                        if (recurso.getCbMontana().equals("+Probab Clon")) {
+                            individuoGen.setProbclon(individuoGen.getProbclon() + (recurso.getModMontana() / 100));
+                        }
+                        if (recurso.getCbMontana().equals("+Probab Repro")) {
+                            individuoGen.setProbrep(individuoGen.getProbrep() + (recurso.getModMontana() / 100));
+                        }
+                        if (recurso.isCkMontana()) {
+                            String nuevoTipo = "Avanzado";
+                            if (individuoGen.getTipo().equals("Básico"))
+                                nuevoTipo = "Normal";
+                            if (individuoGen.getTipo().equals("Normal"))
+                                nuevoTipo = "Avanzado";
+                            individuoGen.setTipo(nuevoTipo);
+                        }
+                        if (recurso.getCbMontana().equals("Muerte Inst")) {
+
+                            eliminado=true;
+                            individuos.del(i);
+                            i--;
+                        }
+                    }else if(recurso.getTipo().equals("T")) {
+                        if (recurso.getCbTesoro().equals("+Turnos vida")) {
+                            individuoGen.setTurnosvida(individuoGen.getTurnosvida() + recurso.getModTesoro());
+                        }
+                        if (recurso.getCbTesoro().equals("-Turnos vida")) {
+                            individuoGen.setTurnosvida(individuoGen.getTurnosvida() - recurso.getModTesoro());
+                            if (individuoGen.getTurnosvida() <= 0) {
+                                eliminado = true;
+                                individuos.del(i);
+                                i--;
+
+                            }
+                        }
+                        if (recurso.getCbTesoro().equals("+Probab Clon")) {
+                            individuoGen.setProbclon(individuoGen.getProbclon() + (recurso.getModTesoro() / 100));
+                        }
+                        if (recurso.getCbTesoro().equals("+Probab Repro")) {
+                            individuoGen.setProbrep(individuoGen.getProbrep() + (recurso.getModTesoro() / 100));
+                        }
+                        if (recurso.isCkTesoro()) {
+                            String nuevoTipo = "Avanzado";
+                            if (individuoGen.getTipo().equals("Básico"))
+                                nuevoTipo = "Normal";
+                            if (individuoGen.getTipo().equals("Normal"))
+                                nuevoTipo = "Avanzado";
+                            individuoGen.setTipo(nuevoTipo);
+                        }
+                        if (recurso.getCbTesoro().equals("Muerte Inst")) {
+                            eliminado=true;
+
+                            individuos.del(i);
+                            i--;
+                        }
+                    }else if(recurso.getTipo().equals("B")) {
+
+                        if (recurso.getCbBiblio().equals("+Turnos vida")) {
+                            individuoGen.setTurnosvida(individuoGen.getTurnosvida() + recurso.getModBiblio());
+                        }
+                        if (recurso.getCbBiblio().equals("-Turnos vida")) {
+                            individuoGen.setTurnosvida(individuoGen.getTurnosvida() - recurso.getModBiblio());
+                            if (individuoGen.getTurnosvida() <= 0) {
+                                eliminado = true;
+                                individuos.del(i);
+                                i--;
+
+                            }
+                        }
+                        if (recurso.getCbBiblio().equals("+Probab Clon")) {
+                            individuoGen.setProbclon(individuoGen.getProbclon() + (recurso.getModBiblio() / 100));
+                        }
+                        if (recurso.getCbBiblio().equals("+Probab Repro")) {
+                            individuoGen.setProbrep(individuoGen.getProbrep() + (recurso.getModBiblio() / 100));
+                        }
+                        if (recurso.isCkBiblio()) {
+                            String nuevoTipo = "Avanzado";
+                            if (individuoGen.getTipo().equals("Básico"))
+                                nuevoTipo = "Normal";
+                            if (individuoGen.getTipo().equals("Normal"))
+                                nuevoTipo = "Avanzado";
+                            individuoGen.setTipo(nuevoTipo);
+                        }
+                        if (recurso.getCbBiblio().equals("Muerte Inst")) {
+                            eliminado=true;
+                            individuos.del(i);
+                            i--;
+                        }
+                    }else if(recurso.getTipo().equals("P")) {
+                        if (recurso.getCbPozo().equals("+Turnos vida")) {
+                            individuoGen.setTurnosvida(individuoGen.getTurnosvida() + recurso.getModPozo());
+                        }
+                        if (recurso.getCbPozo().equals("-Turnos vida")) {
+                            individuoGen.setTurnosvida(individuoGen.getTurnosvida() - recurso.getModPozo());
+                            if (individuoGen.getTurnosvida() <= 0) {
+                                eliminado = true;
+                                individuos.del(i);
+                                i--;
+                            }
+                        }
+                        if (recurso.getCbPozo().equals("+Probab Clon")) {
+                            individuoGen.setProbclon(individuoGen.getProbclon() + (recurso.getModPozo() / 100));
+                        }
+                        if (recurso.getCbPozo().equals("+Probab Repro")) {
+                            individuoGen.setProbrep(individuoGen.getProbrep() + (recurso.getModPozo() / 100));
+                        }
+                        if (recurso.isCkPozo()) {
+                            String nuevoTipo = "Avanzado";
+                            if (individuoGen.getTipo().equals("Básico"))
+                                nuevoTipo = "Normal";
+                            if (individuoGen.getTipo().equals("Normal"))
+                                nuevoTipo = "Avanzado";
+                            individuoGen.setTipo(nuevoTipo);
+                        }
+                        if (recurso.getCbPozo().equals("Muerte Inst")&&!eliminado) {
+                            eliminado=true;
+                            individuos.del(i);
+                            i--;
+                        }
+                    }
+
+
+            }
+        }
+    }
+}
     private void ejecutarMovimientoI(Partida partida) {
         for (int i=0; i< partida.getIndividuos().getNumeroElementos();i++) {
             if (partida.getIndividuos().getElemento(i) != null ) {
@@ -145,6 +395,7 @@ public class Bucle {
                     recursos.getElemento(i).getDatos().setTiemposvida(recursos.getElemento(i).getDatos().getTiemposvida() - 1);
                 } else{
                     recursos.del(i);
+                    i--;
                 }
         }
     }
@@ -154,9 +405,12 @@ public class Bucle {
             if (individuos.getElemento(i) != null ) {
                 if ( individuos.getElemento(i).getDatos().getTurnosvida()>0)
                     individuos.getElemento(i).getDatos().setTurnosvida(individuos.getElemento(i).getDatos().getTurnosvida() - 1);
-                else
+                else {
                     individuos.del(i);
+                    i--;
+                }
             }
         }
     }
+
 }

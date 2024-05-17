@@ -167,7 +167,7 @@ public class Tablero extends Pane {
                                 if (GridPane.getColumnIndex(child) != null && GridPane.getRowIndex(child) == fila
                                         && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == columna) {
                                     Label miRecurso = (Label) child;
-                                    if (miRecurso.getText() == "") {
+                                    if (miRecurso.getText().equals("")) {
                                         // remover el nodo del GridPane
                                         hijoABorrar = child;
                                         filaABorrar = fila;
@@ -233,7 +233,7 @@ public class Tablero extends Pane {
                                   if (GridPane.getColumnIndex(child) != null && GridPane.getRowIndex(child) == 1
                                         && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == 1) {
                                     Label miCelda = (Label) child;
-                                    if (miCelda.getText() == "") {
+                                    if (miCelda.getText().equals("") || Integer.parseInt(miCelda.getText())<3) {
                                         // remover el nodo del GridPane
                                         hijoABorrar = child;
                                         filaABorrar = 1;
@@ -245,8 +245,11 @@ public class Tablero extends Pane {
                                 }
                                            }
                     if (hijoABorrar != null) {
+                        int totalIndividuosCelda=1;
+                        if (!((Label)hijoABorrar).getText().equals("") )
+                            totalIndividuosCelda+=Integer.parseInt(((Label)hijoABorrar).getText());
                         nodo.getChildren().remove(hijoABorrar);
-
+                        individuo.setText(String.valueOf(totalIndividuosCelda));
                         // volver a agregar el nodo actualizado al GridPane
                         GridPane.setRowIndex(individuo, filaABorrar);
                         GridPane.setColumnIndex(individuo, colABorrar);
@@ -448,7 +451,7 @@ public class Tablero extends Pane {
                                 if (GridPane.getColumnIndex(child) != null && GridPane.getRowIndex(child) == fila
                                         && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == columna) {
                                     Label miRecurso = (Label) child;
-                                    if (miRecurso.getText() == "") {
+                                    if (miRecurso.getText().equals("")) {
                                         // remover el nodo del GridPane
                                         hijoABorrar = child;
                                         filaABorrar = fila;
@@ -482,7 +485,8 @@ public class Tablero extends Pane {
                 int y = individuos.getElemento(pos).getDatos().getY() - 1;
                 Label individuo = new Label();
                 individuo.setAlignment(Pos.CENTER);
-                individuo.setText("I");
+
+                individuo.setText("1");
                 ObservableList<Node> children = tab.getChildren();
                 GridPane nodo = null;
                 for (Node child : children) {
@@ -506,7 +510,7 @@ public class Tablero extends Pane {
                                 if (GridPane.getColumnIndex(child) != null && GridPane.getRowIndex(child) == fila
                                         && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == columna) {
                                     Label miRecurso = (Label) child;
-                                    if (miRecurso.getText() == "") {
+                                    if (miRecurso.getText().equals("")) {
                                         // remover el nodo del GridPane
                                         hijoABorrar = child;
                                         filaABorrar = fila;
@@ -522,6 +526,7 @@ public class Tablero extends Pane {
 
                     }
                     if (hijoABorrar != null) {
+
                         nodo.getChildren().remove(hijoABorrar);
 
                         // volver a agregar el nodo actualizado al GridPane
@@ -566,7 +571,7 @@ public class Tablero extends Pane {
                         if (GridPane.getColumnIndex(child) != null && GridPane.getRowIndex(child) == 1
                                 && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == 1) {
                             Label miCelda = (Label) child;
-                            if (miCelda.getText() == "") {
+                            if (miCelda.getText().equals("") || Integer.parseInt(miCelda.getText())<3) {
                                 // remover el nodo del GridPane
                                 hijoABorrar = child;
                                 filaABorrar = 1;
@@ -578,7 +583,12 @@ public class Tablero extends Pane {
                         }
                     }
                     if (hijoABorrar != null) {
+                        int totalIndividuosCelda=1;
+                        if (!((Label)hijoABorrar).getText().equals("") )
+                            totalIndividuosCelda+=Integer.parseInt(((Label)hijoABorrar).getText());
                         nodo.getChildren().remove(hijoABorrar);
+                        individuo.setText(String.valueOf(totalIndividuosCelda));
+
 
                         // volver a agregar el nodo actualizado al GridPane
                         GridPane.setRowIndex(individuo, filaABorrar);

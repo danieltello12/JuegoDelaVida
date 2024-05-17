@@ -77,6 +77,133 @@ public class PrimerosparamCotroller implements Initializable {
     @FXML
     private TextField modAgua;
 
+
+    public String getCbComida() {
+        return (String)cbComida.getValue();
+    }
+
+    public void setCbComida(String cbComida) {
+        this.cbComida.setValue(cbComida);
+    }
+
+    @FXML
+    private ComboBox cbComida;
+
+    public boolean getCkComida() {
+        return ckComida.isSelected();
+    }
+
+    public void setCkComida(boolean ckComida) {
+        this.ckComida.setSelected(ckComida);
+    }
+
+    @FXML
+    private CheckBox ckComida;
+
+    @FXML
+    private TextField modComida;
+
+    public String getCbMontana() {
+        return (String)cbMontana.getValue();
+    }
+
+    public void setCbMontana(String cbMontana) {
+        this.cbMontana.setValue(cbMontana);
+    }
+
+    @FXML
+    private ComboBox cbMontana;
+
+    public boolean getCkMontana() {
+        return ckMontana.isSelected();
+    }
+
+    public void setCkMontana(boolean ckMontana) {
+        this.ckMontana.setSelected(ckMontana);
+    }
+
+    @FXML
+    private CheckBox ckMontana;
+
+    @FXML
+    private TextField modMontana;
+
+    public String getCbTesoro() {
+        return (String)cbTesoro.getValue();
+    }
+
+    public void setCbTesoro(String cbTesoro) {
+        this.cbTesoro.setValue(cbTesoro);
+    }
+
+    @FXML
+    private ComboBox cbTesoro;
+
+    public boolean getCkTesoro() {
+        return ckTesoro.isSelected();
+    }
+
+    public void setCkTesoro(boolean ckTesoro) {
+        this.ckTesoro.setSelected(ckTesoro);
+    }
+
+    @FXML
+    private CheckBox ckTesoro;
+
+    @FXML
+    private TextField modTesoro;
+
+    public String getCbBiblio() {
+        return (String)cbBiblio.getValue();
+    }
+
+    public void setCbBiblio(String cbBiblio) {
+        this.cbBiblio.setValue(cbAgua);
+    }
+
+    @FXML
+    private ComboBox cbBiblio;
+
+    public boolean getCkBiblio() {
+        return ckBiblio.isSelected();
+    }
+
+    public void setCkBiblio(boolean ckBiblio) {
+        this.ckBiblio.setSelected(ckBiblio);
+    }
+
+    @FXML
+    private CheckBox ckBiblio;
+
+    @FXML
+    private TextField modBiblio;
+
+    public String getCbPozo() {
+        return (String)cbPozo.getValue();
+    }
+
+    public void setCbPozo(String cbPozo) {
+        this.cbPozo.setValue(cbPozo);
+    }
+
+    @FXML
+    private ComboBox cbPozo;
+
+    public boolean getCkPozo() {
+        return ckPozo.isSelected();
+    }
+
+    public void setCkPozo(boolean ckPozo) {
+        this.ckPozo.setSelected(ckPozo);
+    }
+
+    @FXML
+    private CheckBox ckPozo;
+
+    @FXML
+    private TextField modPozo;
+
+
     @FXML
     protected  void añadirelementosclick() throws FileNotFoundException {
         ListaLEPA l = new ListaLEPA();
@@ -163,6 +290,26 @@ public class PrimerosparamCotroller implements Initializable {
             p.setCbAgua((String)cbAgua.getValue());
             p.setModAgua(Integer.parseInt(modAgua.getText()));
             p.setCkAgua(ckAgua.isSelected());
+
+            p.setCbComida((String)cbComida.getValue());
+            p.setModComida(Integer.parseInt(modComida.getText()));
+            p.setCkComida(ckComida.isSelected());
+
+            p.setCbMontana((String)cbMontana.getValue());
+            p.setModMontana(Integer.parseInt(modMontana.getText()));
+            p.setCkMontana(ckMontana.isSelected());
+
+            p.setCbTesoro((String)cbTesoro.getValue());
+            p.setModTesoro(Integer.parseInt(modTesoro.getText()));
+            p.setCkTesoro(ckTesoro.isSelected());
+
+            p.setCbBiblio((String)cbBiblio.getValue());
+            p.setModBiblio(Integer.parseInt(modBiblio.getText()));
+            p.setCkBiblio(ckBiblio.isSelected());
+
+            p.setCbPozo((String)cbPozo.getValue());
+            p.setModPozo(Integer.parseInt(modPozo.getText()));
+            p.setCkPozo(ckPozo.isSelected());
 
             ListaELementos l2= new ListaELementos();
             l2=l2.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");

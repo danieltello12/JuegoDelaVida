@@ -1,0 +1,607 @@
+@startuml
+    folder Portada {
+    class HelloApplication{
+    +createContent():Parent
+    +start(primaryStage:Stage)
+    +main(args:String[])
+    }
+    HelloApplication-|> Application
+    abstract class Application{
+    //Clase abstracta de Java
+    }
+    class StackPane{
+        //Clase de Java
+        }
+    class CambioDePantalla extends Pane{
+    -log: Logger
+    +CambioDePantalla(weidth:int,length:int)
+    }
+    class Pane{
+    //Clase de Java
+    }
+
+    class Caja_Boton extends Pane{
+        -box:VBox
+        +Caja_Boton(width:int,length:int)
+        +addItem:(item:Boton)
+        }
+    class Boton extends StackPane {
+        -font:Font
+            + Boton(name:String,int:width)
+            +onSelected()
+            +onDeselected()
+            +setOnAction(action:Runnable)
+        }
+    }
+
+    folder InicioSesionNP{
+        interface Initializable{
+        //Interfaz de Java
+        }
+        class InicioSesionControladorCP() implements Initializable{
+        -textFieldNombre:TextField
+        -textFielContraseña:PassWordField
+        - model:InicioSesionPropertiesNP
+        +onMiBotonRegistrarseClick()
+        +setStage(s:Stage)
+        +onMiBotonJugarClick()
+        +updateGUIwithModel()
+        +initialize(location:URL, resources:ResourceBundle)
+        +loadUserData(parametrosData:InicioSesionPropertiesNP)
+        }
+        class InicioSesionModelNP{
+        -usuario=" ":String
+        -contrasena=" ":String
+        +IniciosesionModelNP(nombre:String,contrasena:String)
+        +IniciosesionModelNP()
+        +getUsuario():String
+        +setUsuario(usuario:String)
+        +getContraseña():String
+        +setContraseña(contrasena:String)
+        }
+
+        class InicioSesionPropertiesNP{
+        -original:InicioSesionModelCP
+        -nombre:StringProperty
+        -contraseña:StringProperty
+
+        +InicioSesionPropertiesNP(original:InicioSesionModelNP) {
+        +commit()
+        +rollback()
+        +setOriginal(original:InicioSesionModelNP )
+        +nombreProperty():Property<String>
+        +contrasenaProperty():Property<String>
+        }
+        }
+    folder InicioSesionCP{
+    interface Initializable{
+            //Interfaz de Java
+            }
+    class InicioSesionControladorCP implements Initializable{
+    -textFieldNombre:TextField
+    -textFielContraseña:PassWordField
+    - model:InicioSesionPropertiesCP
+    +onMiBotonRegistrarseClick()
+    +setStage(s:Stage)
+    +onMiBotonJugarClick()
+    +updateGUIwithModel()
+    +initialize(location:URL, resources:ResourceBundle)
+    +loadUserData(parametrosData:InicioSesionPropertiesCP)
+    }
+    class InicioSesionModelCP{
+    -usuario=" ":String
+    -contrasena=" ":String
+    +IniciosesionModelNP(nombre:String,contrasena:String)
+    +IniciosesionModelCP()
+    +getUsuario():String
+    +setUsuario(usuario:String)
+    +getContraseña():String
+    +setContraseña(contrasena:String)}
+
+    }
+    class InicioSesionPropertiesCP{
+    -original:InicioSesionModelCP
+    -nombre:StringProperty
+    -contraseña:StringProperty
+    +InicioSesionPropertiesCP(original:InicioSesionModelCP) {
+    +commit()
+    +rollback()
+    +setOriginal(original:InicioSesionModelCP )
+    +nombreProperty():Property<String>
+    +contrasenaProperty():Property<String>
+
+
+
+    }
+    }
+    folder Registrarse{
+    interface Initializable{
+                //Interfaz de Java
+                }
+    class RegistrarseControlador implements Initializable{
+    -textFieldNombre:TextField
+    -textFielContraseña:PassWordField
+    +initialize(location:URL, resources:ResourceBundle)
+    +loadUserData(parametrosData:InicioSesionPropertiesCP)
+    +onMiBotonGuardarClick()
+    +updateGUIwithModel()
+    +setStage(s:Stage)
+    }
+    class RegistrarseModelo{
+    -usuario=" ":String
+    -contrasena=" ":String
+    +RegistrarseModelo(nombre:String,contrasena:String)
+    +RegistrarseModelo()
+    +getUsuario():String
+    +setUsuario(usuario:String)
+    +getContraseña():String
+    +setContraseña(contrasena:String)
+    }
+    class RegistrarseProperties{
+    -original:InicioSesionModelCP
+    -nombre:StringProperty
+    -contraseña:StringProperty
+    +InicioSesionPropertiesCP(original:InicioSesionModelCP) {
+    +commit()
+    +rollback()
+    +setOriginal(original:InicioSesionModelCP )
+    +nombreProperty():Property<String>
+    +contrasenaProperty():Property<String>
+    }
+
+
+    }
+   package "Clases" {
+       package "Elementos" {
+       abstract class Elementos{
+                      -x:int
+                      -y:int
+                      Elementos(x:int,y:int)
+                      +getX():int
+                      +getY():int
+                      +setX(x:int)
+                      +setY(y:int)
+                      }
+           package "Individuos" {
+
+
+               class Individuos extends Elementos{
+               -id:int
+               -turnosdevida:int
+               -probrep:int
+               -probclon:int
+               -tipo:String
+               +Individuos(x:int, y:int, id:int, turnosvida:int, probrep:int,probclon:int) {
+               +setTipo(tipo:String){
+               +getId():int
+               +setId(id:id)
+               +getTurnosvida():int
+               +setTurnosDeVida(turnosdevida:int)
+               +getProbrep:int
+               +setProbrep(probrep:int)
+               +getProbclon:int
+               +setProbclon(probclon:int)
+               }
+                class Avanzado extends Individuos {
+                                  +Avanzado(x:int, y:int, id:int, turnosvida:int, probrep:int,probclon:int)
+                }
+                 class Normal extends Individuos {
+                   +Normal(x:int, y:int, id:int, turnosvida:int, probrep:int,probclon:int)
+                                }
+                class Basico extends Individuos {
+                   +Basico(x:int, y:int, id:int, turnosvida:int, probrep:int,probclon:int)
+                               }
+           }
+           package "Recursos"{
+           class Recursos{
+           -x:int
+           -y:int
+           -tipo:String
+           -Probabilidad_Z:int
+           -Probabilidad_V:int
+           +Recursos(x:int, y:int Probabilidad_Z:int, Probabilidad_V:int)
+           +setTipo(tipo:String)
+           +getX():int
+           +setX(x:int)
+           +getY():int
+           +setY(y:int)
+           +getProbabilidad_Z():int
+           +getProbabilidad_V():int
+           +setProbabilida_V(Probabilida_V:int)
+           +setProbabilidad_Z(Probabilidad_Z:int)
+           +getTipo():String
+           +setTipo(tipo:String)
+           }
+           }
+
+
+
+
+
+       }
+       package "EstructurasDatos"{
+       abstract class gson{
+       //API Java
+       }
+       class Cola{
+       -cabecera:ElementoLDE
+       -cola:ElementoLDE
+       -longitud:int
+       +Cola()
+       +encolar(el:ElementoLDE)
+       +esVacia():boolean
+       +desencolar():ElementoLDE
+       +getCola():ElementoLDE
+       +getCabecera():ElementoLDE
+       +getElemento(posicion:int):ElementoLDE
+       }
+       class ElementoLDE {
+           -anterior:ElementoLDE
+           -siguiente:ElementoLDE
+           -data:Object
+           -insertarmeEn(el:ElementoLDE)
+           -getSiguiente():ElementoLDE
+           -getAnterior():ElementoLDE
+           +getData():Object
+           +setData(o:Object):Object
+       }
+       ElementoLDE --> ElementoLDE:siguiente
+       ElementoLDE --> ElementoLDE:anterior
+
+       class ElementoLEUs<TipoDelDato>  {
+       -siguiente:ElementoLEUs
+       -Usuario:datos
+       -ElementoLEUs(siguiente:ElementoLEUs,datos:Usuario)
+       -insertarmeEn(el:ElementoLEUs)
+       -getSiguiente():ElementoLEUs
+       +getData():Usuario
+       +setData(datos:Usuario)
+       }
+       class ElementoMov<TipoDelDato>  {
+              -siguiente:ElementoLEUs
+              -Movimiento:datos
+              -ElementoLEUs(siguiente:ElementoLEUs,datos:Movimiento)
+              -insertarmeEn(el:ElementoLEMov)
+              -getSiguiente():ElementoLEMov
+              +getData():Movimiento
+              +setData(datos:Movimiento)
+              }
+       class ListaLE<TipoDelDato> extends gson{
+       -primero:ElementoLEUs
+       +isVacia():boolean
+       +vaciar()
+       -add(el:ElementoLEUs):int
+       +guardar(l:ListaLE<TipoDelDato>)
+       +cargar():ListaLE<Usuario>
+       +add(s:String)
+       +add(o:Object)
+       +insert(s:String,posicion:int)
+       +insert(o:Usuario,posicion:int)
+       +del(posicion:int):int
+       +getNumeroElementos():int
+       +getPosicion(el:ElementoLEUs):int
+       +getPrimero():ElementoLEUs
+       +getUltimo():ElementoLEUs
+       +getSiguiente(el:ElementoLEUs):ElementoLEUs
+       +getElemento(posicion:int):ElementoLEUs
+
+       }
+
+       ListaLE --> ElementoLEUs:primero
+       ElementoLEUs --> ElementoLEUs:siguiente
+       class ListaLEMov<TipoDelDato> extends gson{
+              -primero:ElementoMov
+              +isVacia():boolean
+              +vaciar()
+              -add(el:ElementoMov):int
+              +guardar(l:ListaLE<TipoDelDato>)
+              +cargar():ListaLE<Usuario>
+              +add(s:String)
+              +add(o:Object)
+              +insert(s:String,posicion:int)
+              +insert(o:Usuario,posicion:int)
+              +del(posicion:int):int
+              +getNumeroElementos():int
+              +getPosicion(el:ElementoMov):int
+              +getPrimero():ElementoMov
+              +getUltimo():ElementoMov
+              +getSiguiente(el:ElementoMov):ElementoMov
+              +getElemento(posicion:int):ElementoMov
+
+              }
+
+              ListaLEMov --> ElementoMov:primero
+              ElementoMov --> ElementoMov:siguiente
+
+       class ListaElementos<TipoDelDato> extends gson{
+                      -primero:ElementoLE
+                      +isVacia():boolean
+                      +vaciar()
+                      -add(el:ElementoMov):int
+                      +anadirIndividiuo(individuo: Individuo,ruta:String)
+                      +elementosCelda(x:int,y:int):int
+                      +esta(id:int,ruta:String):boolean
+                      +guardar(l:ListaLE<TipoDelDato>)
+                      +cargar():ListaLE<Usuario>
+                      +add(s:String)
+                      +add(o:Object)
+                      +insert(s:String,posicion:int)
+                      +insert(o:Usuario,posicion:int)
+                      +del(posicion:int):int
+                      +getNumeroElementos():int
+                      +getPosicion(el:ElementoLE):int
+                      +getPrimero():ElementoLE
+                      +getUltimo():ElementoLE
+                      +getSiguiente(el:ElementoLE):ElementoLE
+                      +getElemento(posicion:int):ElementoLE
+                      }
+                      ListaElementos --> ElementoLE:primero
+                      ElementoLE --> ElementoLE:siguiente
+                      class ElementoLE {
+                      -siguiente:ElementoLE
+                      -data:Object
+                      -insertarmeEn(el:ElementoLE)
+                      -getSiguiente():ElementoLE
+                      +getData():Object
+                      +setData():Object
+                      }
+                       class ListaRecursos<TipoDelDato> extends gson{
+                                            -primero:ElementoRe
+                                            +isVacia():boolean
+                                            +vaciar()
+                                            -add(el:ElementoMov):int
+                                            +anadirIndividiuo(individuo: Individuo,ruta:String)
+                                            +elementosCelda(x:int,y:int):int
+                                            +esta(id:int,ruta:String):boolean
+                                            +guardar(l:ListaLE<TipoDelDato>)
+                                            +cargar():ListaLE<Usuario>
+                                            +add(s:String)
+                                            +add(o:Object)
+                                            +insert(s:String,posicion:int)
+                                            +insert(o:Usuario,posicion:int)
+                                            +del(posicion:int):int
+                                            +getNumeroElementos():int
+                                            +getPosicion(el:ElementoMov):int
+                                            +getPrimero():ElementoMov
+                                            +getUltimo():ElementoMov
+                                            +getSiguiente(el:ElementoMov):ElementoLEUs
+                                            +getElemento(posicion:int):ElementoLEUs
+                                            }
+                                            ListaRecursos --> ElementoRe:primero
+                                            ElementoRe --> ElementoRe:siguiente
+
+
+                       class ElementoRe{
+                        -siguiente:ElementoRe
+                        -data:Recursos
+                        -insertarmeEn(el:ElementoLE)
+                        -getSiguiente():ElementoLE
+                        +getData():Recursos
+                        +setData(datos:Recursos)
+                         }
+
+        }
+   folder Json{
+   abstract class Gson{
+   +guardarObjetoEnArchivo(Ruta:String,objeto:T)
+   +cargarObjetoDesdeArchivo(rutaArchivo:String,clase:Clase)
+   }
+   }
+   class ListaUsuarios{
+   +añadirUsuario(Usuario:nuevo)
+   +eliminar(usuario:String)
+   +esta(usuario:String,contrasena:String):int
+   +yaCreado(usuario:String):boolean
+   +getUsuario(nombre:String):Usuario
+   +guardar(lista:ListaLE)
+   }
+   abstract class gson{
+          //API Java
+   }
+   class Movimiento extends gson{
+   -int idIndividuo
+   -int idMovimiento
+   -int x
+   -int y
+   +Movimiento(x:int,y:int,idIndividuo:int)
+   +getIdMovimiento():int
+   +getIdIndividuo():int
+   +setIdIndividuo(idIndividuo:int)
+   +setIdMovimiento(idMovimiento:int)
+   +setX(x:int)
+   +setY(y:int)
+   +getX():int
+   +getY():int
+   }
+   class Partida{
+   //A RELLENAR
+   nombre:String
+   filas:int
+   columnas:int
+   pvA:float
+   pvT:float
+   pvB:float
+   pvP:float
+   pvC:float
+   pvM:float
+   pz:float
+   tiemposDeVida:int
+   turnosDeVida:int
+   ckAgua:boolean
+   modAgua:int
+   cbAgua:String
+   individuos:ListaElementos
+   recursos:ListaRecursos
+
+   +Partida(nombre:String)
+   +Partida(nombre:String,filas:int,columnas:int,individuos:ListaElementos,recursos:ListaRecursos)
+   +setNombre(nombre:String)
+   +setCbAgua(cbAgua:String)
+   +getCkAgua():boolean
+   +setCkAgua(ckAgua:Boolean)
+   +getCbAgua():String
+   +getModAgua():int
+   +setModAgua(modAgua:int)
+   +getPvA():float
+   +getPvB():float
+   +getPvP():float
+   +getPvC():float
+   +getPvM():float
+   +getPvT():float
+   +setPvA(pvA:int)
+   +setPvB(pvB:int)
+   +setPvC(pvC:int)
+   +setPvT(pvT:int)
+   +setPvP(pvP:int)
+   +setPvM(pvM:int)
+   +setTiemposDeVida(tiempovida:int)
+   +getTiemposDeVida():int
+   +setTurnosDeVida(turnosdevida:int)
+   +getTurnosDeVida():int
+   +getFilas():int
+   +getColumnas():int
+   +getIndividuos():ListaElementos
+   +getRecursos():ListaRecursos
+   +setIndividuos(individuos:ListaElementos)
+   +setRecursos(recursos:ListaRecursos)
+   +setFilas(filas:int)
+   +setColumnas(columnas:int)
+
+
+
+
+
+   }
+   class Usuario{
+   nombre:String
+   contrasena:String
+   partida:ListaLEPA<Partidas>
+   +Usuario(nombre:String,contrasena:String)
+   +getNombre():String
+   +setNombre(nombre:String)
+   +getContrasena():String
+   +getPartidas():ListaLEPA<Partidas>
+   +setPartidas(partidas:ListaLEPA<Partidas>)
+   +setPartida(partida:Partida)
+   +guardar()
+   +anadirPartidasJson()
+
+   }
+   }
+   folder CargarPartida{
+   folder EstructurasCargar{
+   class ElementoLEPA<TipoDelDato>{
+   -siguiente:ElementoLEPA
+   -Partida:datos
+   -ElementoLEPA(siguiente:ElementoLEPA,datos:Partida)
+   -insertarmeEn(el:ElementoLEPA)
+   -getSiguiente():ElementoLEPA
+   +getData():Partida
+   +setData(datos:Partida)
+   }
+   class ListaLEPA<TipoDelDato>{
+   -primero:ElementoLEPA<TipoDelDato>
+
+                                               +isVacia():boolean
+                                               +vaciar()
+                                               -add(el:ElementoMov)
+                                               +esta(usuario:String,partida:String):boolean
+                                               +add(el:ElementoLEPA)
+                                               +add(obj:Partida)
+                                               +insert(dato:Partida,posicion:int)
+                                               +del(posicion:int):int
+                                               +getNumeroElementos():int
+                                               +getPosicion(el:ElementoMov):int
+                                               +getPrimero():ElementoMov
+                                               +getUltimo():ElementoMov
+                                               +getSiguiente(el:ElementoMov):ElementoLEUs
+                                               +getElemento(posicion:int):ElementoLEUs
+                                               }
+                                               ListaLEPA --> ElementoLEPA:primero
+                                               ElementoLEPA--> ElementoLEPA:siguiente
+
+
+   }
+
+   class Borrar_Partida{
+   +Borrar_Partida(u:Usuario,width:int,length:int)
+   }
+   class StackPane{
+   //Clase de Java
+   }
+   class Pane{
+   //Clase de Java
+   }
+   class Botones extends StackPane{
+   -font:Font
+   -text
+   -selection
+   -shadow
+   +Botones(name:String,width:int)
+   +onSelect()
+   +onDeselected()
+   +setOnAction(action:Runnable)
+   }
+   class CajasBotones extends Pane{
+   -VBox:box
+   +CajasBotones(weidth:int,length:int)
+   +addItem(item:Botones)
+   +setOnAction(action:Runnable)
+   }
+   }
+   folder BucleControl{
+   class Bucle{
+   partida:Partida
+   +Bucle(partida:Partida)
+   +ejecutarMovimiento()
+   +ejecutarMoviemientoI()
+   +ejecutarMovimientoBasico(individuoGen:Individuo,partida:Partida)
+   +ejecutarMovimientoINormal(individuoGen:Individuo,partida:Partida)
+   +ejecutarMovimientoIAvanzado(individuoGen:Individuo,partida:Partida)
+   +evaluarNuevoR(partida:Partida)
+   +actualizarExistenciaI(individuos:ListaELementos)
+   +evaluarClonacion(individuos:ListaELementos)
+   +evaluarReproduccion(partida:Partida)
+   +evaluarMejorasIR(individuos:ListaELementos,recursos:ListaRecursos)
+   +actualizarExistenciaR(recuros:ListaRecursos)
+   +actualizarTvidaI(individuos:ListaElementos)
+   }
+   }
+
+
+
+
+    folder TableroDeJuego{
+    class Tablero{
+    +setTablero(filas:int,columnas:int):Parent
+    }
+    class Pane{
+    //Clase Java
+    }
+    class StackPane{
+    //Clase de Java
+    }
+    class Botones extends StackPane{
+    -font:Font
+    +Botones(width:int)
+    +setOnAction(action:Runnable)
+    }
+    class Box extends Pane{
+    -box:VBox
+    +Box(width:int,length:int,fondo: String}
+
+
+
+
+
+
+
+}
+
+
+@enduml
+
+
+
+
+
