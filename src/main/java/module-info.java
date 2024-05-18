@@ -33,5 +33,4 @@ module es.uah.trabajo.juegodelavida {
     exports es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion;
     opens es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion to javafx.fxml;
 
-
 }

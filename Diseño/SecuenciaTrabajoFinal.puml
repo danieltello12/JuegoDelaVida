@@ -1,0 +1,72 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor Usuario
+participant V0Portada
+participant V1TipoDePartida
+participant V2NuevaPartida
+participant V4Registrarse
+participant V3CargarPartida
+participant V4VentanaParámetrosGenerales
+participant V5VentanaParámetrosEspecíficos
+participant V6CrearIndividuo
+participant V7CrearRecurso
+participant V8TableroDeJuego
+participant V9Configuracion
+participant V10Pause
+participant V11Play
+participant V12InformacionCasilla
+
+
+Usuario-->V0Portada:play
+V0Portada-->V1TipoDePartida:click <IniciarJuego> setOnAction
+V1TipoDePartida-->V2NuevaPartida:click<NuevaPartida> setOnAction
+V1TipoDePartida-->V3CargarPartida:click <CargarPartida> setOnAction
+V2NuevaPartida-->V2NuevaPartida:Inicio de sesión, buscar usuario en archivo JSON
+V2NuevaPartida-->V4Registrarse:En el caso de no registrado
+V4Registrarse-->V4Registrarse:Guardar usuario en archivo JSON
+V4Registrarse-->V2NuevaPartida:Volvemos ya con usuario creado
+V3CargarPartida-->V3CargarPartida:Buscamos lista de Partidas guardadas en el JSON
+V3CargarPartida-->V3CargarPartida:click<BorrarPartida> setOnAction
+V3CargarPartida-->V8TableroDeJuego:click<PartidaX>setOnAction
+V3CargarPartida-->V8TableroDeJuego:Cargamos los datos de JSON y dibujamos tablero
+V2NuevaPartida-->V4VentanaParámetrosGenerales:onMiBotonJugarClick
+V4VentanaParámetrosGenerales-->V4VentanaParámetrosGenerales:Guardamos paramgen,dim,nombrepartida
+V4VentanaParámetrosGenerales-->V5VentanaParámetrosEspecíficos:anadirElementosClick
+V5VentanaParámetrosEspecíficos-->V6CrearIndividuo:onMiBotonCrearIndividuoClick
+V5VentanaParámetrosEspecíficos-->V7CrearRecurso:onMiBotonCrearRecursoClick
+V6CrearIndividuo-->V6CrearIndividuo:Elegimos tipo de Individuo
+V7CrearRecurso-->V7CrearRecurso:Elegimos tipo de recurso
+V6CrearIndividuo-->V5VentanaParámetrosEspecíficos:Si queremos crear más individuos
+V7CrearRecurso-->V5VentanaParámetrosEspecíficos:Si queremos crear más recursos
+V5VentanaParámetrosEspecíficos-->V5VentanaParámetrosEspecíficos:Guardamos paramespecífico en JSON
+V5VentanaParámetrosEspecíficos-->V8TableroDeJuego:onMiBotonIniciarJuegoClick
+V5VentanaParámetrosEspecíficos-->V8TableroDeJuego:Dibujamos nuestro tablero junto a indv y recur
+V8TableroDeJuego-->V9Configuracion:click<Configuracion> setOnAction
+V9Configuracion-->V9Configuracion:Elegir paramespecífico de indv o rec
+V9Configuracion-->V6CrearIndividuo:Poder añadir un individuo
+V9Configuracion-->V7CrearRecurso:Poder añadir un recurso
+V9Configuracion-->V8TableroDeJuego:onMiBotonIniciarJuegoClick
+V8TableroDeJuego-->V10Pause:click<Pause>setOnAction
+V10Pause-->V8TableroDeJuego:TableroPausado, se pueden realizar cambios
+V8TableroDeJuego-->V11Play:click<Play> setOnAction
+V11Play-->V8TableroDeJuego:Turno realizado,tablero muestra movimientos y cambios hechos
+V8TableroDeJuego-->V12InformacionCasilla:click<infoCasilla> setOnAction
+V12InformacionCasilla-->V12InformacionCasilla:Mostramos la info en la casilla seleccionada
+V12InformacionCasilla-->V8TableroDeJuego:click<Cerrar>setOnAction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@enduml

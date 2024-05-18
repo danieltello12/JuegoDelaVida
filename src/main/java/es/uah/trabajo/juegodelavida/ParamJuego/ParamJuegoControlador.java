@@ -76,10 +76,9 @@ public class ParamJuegoControlador implements Initializable {
             partida.setRecursos(l3);
             partida.setIndividuos(l2);
         ListaUsuarios usuarios= new ListaUsuarios();
-        usuarios.getusuario(usuario).setPartida(partida);
-
-
-
+        ListaLEPA partidas= usuarios.getusuario(usuario).getPartidas();
+        partidas.add(partida);
+        usuarios.getusuario(usuario).setPartidas(limpieza(partidas));
 
             this.scene.close();
             try {
@@ -124,6 +123,14 @@ public class ParamJuegoControlador implements Initializable {
         s.setScene(im);
         s.setTitle("Juego de La Vida de Conway");
         s.show();
+    }
+    public ListaLEPA limpieza(ListaLEPA p){
+        for(int i=0;i<p.getNumeroElementos();i++){
+            if(p.getElemento(i).getDatos().getFilas()==0  && p.getElemento(i).getDatos().getColumnas()==0){
+                p.del(i);
+            }
+        }
+        return p;
     }
     @FXML
     protected  void onMibotonCrearIndividuoClick() throws FileNotFoundException {

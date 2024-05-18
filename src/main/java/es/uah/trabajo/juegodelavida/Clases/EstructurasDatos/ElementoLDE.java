@@ -1,9 +1,9 @@
 package es.uah.trabajo.juegodelavida.Clases.EstructurasDatos;
 
 public class ElementoLDE<TipoDelDato> {
-    ElementoLDE anterior;
-    ElementoLDE siguiente;
-    TipoDelDato datos;
+   public ElementoLDE anterior;
+    public ElementoLDE siguiente;
+     public TipoDelDato datos;
 
 
     public ElementoLDE(TipoDelDato datos) {

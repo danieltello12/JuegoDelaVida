@@ -363,7 +363,7 @@ public class Bucle {
             int maximo = listarecLR.getNumeroElementos();
             Random r = new Random();
             int aleaPos = r.nextInt((maximo - minimo) + 1) + minimo;
-            Recursos recursoLR = listarecLR.getElemento(aleaPos).getDatos();
+            Recursos recursoLR = listarecLR.getElemento(aleaPos-1).getDatos();
             individuoGen.setX(recursoLR.getX());
             individuoGen.setY(recursoLR.getY());
             individuoGen.addMovimiento(new Movimiento(recursoLR.getX(),recursoLR.getY(),individuoGen.getId()));
@@ -412,5 +412,4 @@ public class Bucle {
             }
         }
     }
-
 }
