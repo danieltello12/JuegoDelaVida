@@ -1,11 +1,8 @@
 package es.uah.trabajo.juegodelavida.TableroDeJuego;
 
 import es.uah.trabajo.juegodelavida.BucleControl.Bucle;
-import es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar.ElementoLEPA;
-import es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar.ListaLEPA;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
-import es.uah.trabajo.juegodelavida.Clases.ListaUsuarios;
 import es.uah.trabajo.juegodelavida.Clases.Partida;
 import es.uah.trabajo.juegodelavida.ParamJuego.ParamJuegoControlador;
 import es.uah.trabajo.juegodelavida.Portada.Boton;
@@ -41,6 +38,7 @@ import java.net.URL;
 public class Tablero extends Pane {
     static GridPane tab;
     Pane root = new Pane();
+
    boolean elementosencelda;
     public Tablero() {}
         final Logger log = LogManager.getLogger(Tablero.class);
@@ -73,26 +71,14 @@ public class Tablero extends Pane {
             mainGrid.setPadding(new Insets(0, 0, 0, 0));
 
 
-            Box caja_info = new Box(400, 640, null);
+            Box caja_info = new Box(300, 640, null);
             caja_info.setTranslateX(960);
             caja_info.setTranslateY(100);
 
-            Rectangle r = new Rectangle(400, 640);
+            Rectangle r = new Rectangle(300, 640);
             r.setOpacity(5);
             r.setFill(Color.WHITE);
             r.setVisible(false);
-            Boton botonsalir = new Boton("Cerrar", 50);
-
-            FlowPane f = new FlowPane();
-            f.setBackground(Background.fill(Color.WHITE));
-            f.setAlignment(Pos.CENTER);
-            f.setTranslateX(250);
-            f.setTranslateY(50);
-
-            Box caja = new Box(640, 640, null);
-            caja.setTranslateX(230);
-            caja.setTranslateY(100);
-
 
 
             for (int i = 0; i < p.getFilas(); i++) {
@@ -138,54 +124,39 @@ public class Tablero extends Pane {
                     boton.setStyle("-fx-background-color: transparent;-fx-border-color: black");
                     int finalI = i;
                     int finalJ = j;
+                    Boton botonsalir = new Boton("Cerrar", 50);
                     boton.setOnAction(() -> {
                         ListaELementos individuos= new ListaELementos();
                         individuos=individuos.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
                         ListaELementos elementosencelda= new ListaELementos();
                         for(int pos=0; pos<individuos.getNumeroElementos();pos++){
-                            if(individuos.getElemento(pos).getDatos().getX()-1== finalJ && individuos.getElemento(pos).getDatos().getY()-1== finalI){
+                            if(individuos.getElemento(pos).getDatos().getX()== finalI && individuos.getElemento(pos).getDatos().getY()== finalJ){
                                 elementosencelda.add(individuos.getElemento(pos).getDatos());
                             }
                         }
-                        Labels l1= new Labels("Individuos: ");
-
-                        l1.setTranslateX(0);
-                        l1.setTranslateY(50);
-
+                        Label l1= new Label("Individuos: ");
+                        l1.setPrefWidth(20);
+                        l1.setPrefHeight(60);
                         caja_info.getChildren().addAll(l1);
                         if(elementosencelda.getNumeroElementos()==0){
-                            Labels l2= new Labels("No hay Individuos");
-                            l2.setTranslateX(60);
-                            l2.setTranslateY(100);
-
+                            Label l2= new Label("No hay Individuos");
                             caja_info.getChildren().addAll(l2);
                             this.elementosencelda=false;
-                            botonsalir.setOnAction(() -> {
-                                r.setVisible(false);
-                                caja_info.getChildren().removeAll(l2,l1,botonsalir);
-
-                            });
                         }
                         else{
                             for(int pos=0;pos<elementosencelda.getNumeroElementos();pos++){
-                                Labels l3= new Labels((pos+1)+"-");
-                                l3.setTranslateX(60);
-                                l3.setTranslateY(100+(200*pos));
+                                Label l3= new Label((pos+1)+"-");
 
-                                Labels tipo= new Labels("Tipo: "+ elementosencelda.getElemento(pos).getDatos().getTipo());
-                                tipo.setTranslateX(60);
-                                tipo.setTranslateY(150+(200*pos));
+                                Label tipo= new Label("Tipo: "+ elementosencelda.getElemento(pos).getDatos().getTipo());
 
-                                Labels TurnosDeVida= new Labels("Vidas: "+ elementosencelda.getElemento(pos).getDatos().getTurnosvida());
-                                TurnosDeVida.setTranslateY(200+(200*pos));
-                                TurnosDeVida.setTranslateX(60);
+                                Label TurnosDeVida= new Label("Vidas: "+ elementosencelda.getElemento(pos).getDatos().getTurnosvida());
                                 caja_info.getChildren().addAll(l3,tipo,TurnosDeVida);
-
                                 botonsalir.setOnAction(() -> {
                                     r.setVisible(false);
-                                    caja_info.getChildren().removeAll(l3,tipo,TurnosDeVida,l1,botonsalir);
+                                    caja_info.getChildren().removeAll(botonsalir);
 
                                 });
+                                this.elementosencelda=true;
                             }
                         }
                         r.setVisible(true);
@@ -327,6 +298,19 @@ public class Tablero extends Pane {
             caja_info.getChildren().add(r);
             this.tab = mainGrid;
 
+            FlowPane f = new FlowPane();
+            f.getChildren().addAll(mainGrid);
+            f.setBackground(Background.fill(Color.WHITE));
+            f.setAlignment(Pos.CENTER);
+            f.setTranslateX(250);
+            f.setTranslateY(50);
+
+            Box caja = new Box(640, 640, null);
+            caja.setTranslateX(230);
+            caja.setTranslateY(100);
+
+
+            caja.getChildren().add(f);
 
             Box b = new Box(100, 80, "src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Boton_Parar.png");
             b.setTranslateY(50);
@@ -368,13 +352,11 @@ public class Tablero extends Pane {
             b2.setTranslateY(50);
             b2.setTranslateX(525);
 
-            f.getChildren().addAll(mainGrid);
-            caja.getChildren().add(f);
-
             Botones bot1 = new Botones(70);
             bot1.setTranslateY(-20);
             bot1.setTranslateX(-10);
             bot1.setOnAction(() -> {
+                root.getChildren().removeAll(caja);
 
                 ListaELementos l2 = new ListaELementos();
                 l2 = l2.cargar("src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json");
@@ -396,41 +378,26 @@ public class Tablero extends Pane {
                     throw new RuntimeException(e);
                 }
                 fxmlLoader.setLocation(url);
-                root.getChildren().remove(caja);
-                caja.getChildren().remove(f);
-                f.getChildren().remove(mainGrid);
+
+
                 try {
                     Scene scene = new Scene(fxmlLoader.load(), 1006, 518);
                     stage.setTitle("Juego de La Vida de Conway");
                     stage.setScene(scene);
                     ConfiguracionController controlador2 = fxmlLoader.getController(); //dame el controlador
-                    controlador2.loadUserData(new ConfiguracionProperties(new ConfiguracionModel()),p,usuario,root,f,mainGrid,caja); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
+                    controlador2.loadUserData(new ConfiguracionProperties(new ConfiguracionModel()),p, root,usuario); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
                     controlador2.setStage(stage); //doy la ventana donde se va a trabajar
                     stage.show();
-
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            });
 
+            });
             b2.addItem(bot1);
 
             Box b3 = new Box(100, 80, "src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Botón_Play.png");
             b3.setTranslateY(50);
             b3.setTranslateX(725);
-            Box cajaGuardar= new Box(400, 100,"src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Boton.png");
-            cajaGuardar.setTranslateX(950);
-            cajaGuardar.setTranslateY(5);
-
-
-            es.uah.trabajo.juegodelavida.CargarPartida.Botones guardar= new es.uah.trabajo.juegodelavida.CargarPartida.Botones("Guardar Partida",150);
-
-            guardar.setTranslateY(25);
-            guardar.setTranslateX(55);
-            guardar.setOnAction(()->{
-                actualizarindyrecpart(p,usuario);
-            });
-            cajaGuardar.getChildren().add(guardar);
 
             Botones bot3 = new Botones(70);
             bot3.setTranslateY(-20);
@@ -440,7 +407,6 @@ public class Tablero extends Pane {
                 Bucle bucleC= new Bucle(p);
                 bucleC.ejecutarMovimiento();
                 try {
-                    actualizarindyrecpart(p,usuario);
                     actualizaTablero(p, usuario);
                 }catch(FileNotFoundException e){
                     try {
@@ -449,27 +415,44 @@ public class Tablero extends Pane {
                         throw new RuntimeException(ex);
                     }
                 }
+                /**
+                Stage stage = new Stage();
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                File fichero = new File("src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/ParamJuego.fxml");
+                URL url = null;
+                try {
+                    url = fichero.toURL();
+                } catch (MalformedURLException e) {
+                    throw new RuntimeException(e);
+                }
+                fxmlLoader.setLocation(url);
+
+                try {
+                    Scene scene = new Scene(fxmlLoader.load(), 1006, 518);
+                    stage.setTitle("Juego de La Vida de Conway");
+                    stage.setScene(scene);
+                    ParamJuegoControlador controlador3 = fxmlLoader.getController(); //dame el controlador
+                    //p.loadUserData(this.modeloParaGUICompartido); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
+                    controlador3.setStage(stage); //doy la ventana donde se va a trabajar
+                    stage.show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                **/
             });
             b3.addItem(bot3);
 
 
-            root.getChildren().addAll(imageView, b, b2, b3, caja, caja_info,cajaGuardar);
+            root.getChildren().addAll(imageView, b, b2, b3, caja, caja_info);
             //Se inicializa en el gestor del bucle la info de la partida
 
             return root;
 
         }
-        private  void actualizarindyrecpart(Partida p, String u){
-            p.getIndividuos().guardar(p.getIndividuos(),"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
-            p.getRecursos().guardar(p.getRecursos(),"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
-            ListaUsuarios usuarios= new ListaUsuarios();
-           ListaLEPA partidas= usuarios.getusuario(u).getPartidas();
-           partidas.del(usuarios.getusuario(u).getPartidas().getPosicion(new ElementoLEPA<>(p)));
-           partidas.add(p);
-           usuarios.getusuario(u).setPartidas(partidas);
-        }
-        public GridPane añadirelementos ( GridPane tab, ListaRecursos recursos, ListaELementos individuos) throws
+        public Box añadirelementos ( int filas, int columnas, ListaRecursos recursos, ListaELementos individuos) throws
         FileNotFoundException {
+
+
             int pos = 0;
             while (pos < recursos.getNumeroElementos()) {
                 int x = recursos.getElemento(pos).getDatos().getX() - 1;
@@ -649,7 +632,21 @@ public class Tablero extends Pane {
                 log.info("Individuo añadido");
                 pos++;
             }
-            return tab;
+            FlowPane f2 = new FlowPane();
+            f2.getChildren().addAll(tab);
+            f2.setBackground(Background.fill(Color.WHITE));
+            f2.setAlignment(Pos.CENTER);
+            f2.setTranslateX(250);
+            f2.setTranslateY(50);
+
+            Box caja = new Box(640, 640, null);
+            caja.setTranslateX(230);
+            caja.setTranslateY(100);
+
+
+            caja.getChildren().add(f2);
+
+            return caja;
         }
 
     }

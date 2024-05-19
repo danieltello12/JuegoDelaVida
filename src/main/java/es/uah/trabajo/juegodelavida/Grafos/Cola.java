@@ -1,6 +1,6 @@
-package es.uah.trabajo.juegodelavida.Clases.EstructurasDatos;
+package es.uah.trabajo.juegodelavida.Grafos;
 
-public class Cola<TipoDelDato> {
+public class Cola<T> {
     private ElementoLDE cabecera;
     private ElementoLDE cola;
     private int longitud;
@@ -11,38 +11,46 @@ public class Cola<TipoDelDato> {
     }
 
     public boolean esVacía(){
-        return (cabecera==null);
+        return cabecera==null;
     }
 
-    public ElementoLDE encolar(ElementoLDE ob){
+    public ElementoLDE encolar(ElementoLDE<T> ob){
         ElementoLDE n=new ElementoLDE(ob.getDatos());
         if (longitud==0){
             cola=cabecera=n; //Para que en el setSiguiente no de null
             longitud++;
         }else{
-            n.siguiente=cabecera;
-            cabecera=n;
+            n.siguiente=cola;
+            cola.anterior=n;
+            cola=n;
             longitud++;
         }
-        return cabecera;
-    }
-    public ElementoLDE desencolar(){
-        ElementoLDE auxiliar;
-        if (esVacía())
-            return null;
 
-        auxiliar=cabecera;//Utilizamos nueva variable para no perder el contenido de cabecera que se desencola
-        cabecera=cabecera.siguiente;
-        if (cabecera==null){
-            cola=null;
-        }else{
-            cabecera.anterior=null;
-        }
-        longitud--;
-        if (longitud==0)
-            cola=null;//Cuando no quedan más elementos la cola es nula
-        return auxiliar;
+        return cola;
     }
+    public ElementoLDE desencolar() {
+        ElementoLDE elementoDesencolado=null;
+        if (this.cabecera!=null) {
+            elementoDesencolado = cabecera;
+        }
+        if (longitud == 0) {
+            cabecera=cola=null;
+        }else if (longitud == 1) {
+            cabecera = cola = null;
+            longitud--;
+        } else {
+            cabecera = cabecera.anterior;
+            cabecera.siguiente = null;
+            longitud--;
+        }
+
+
+        return elementoDesencolado;
+    }
+
+
+
+
 
     public ElementoLDE getCabecera(){
 
@@ -56,7 +64,7 @@ public class Cola<TipoDelDato> {
 
     public ElementoLDE getElemento(int posicion){
         int pos = 0;
-        ElementoLDE obj = this.cabecera;
+        ElementoLDE obj = this.cola;
         while (pos<posicion) {
             obj = obj.siguiente;
             pos++;
@@ -72,6 +80,15 @@ public class Cola<TipoDelDato> {
             pos++;
         }
         obj.datos=elemento.datos;
+    }
+    public int getNumeroElem(){
+        int elem=0;
+        ElementoLDE el = this.cola;
+        while (el!=null){
+            el=el.siguiente;
+            elem++;
+        }
+        return elem;
     }
     public int getPOS(ElementoLDE el) {
         int contador = -1;
@@ -94,15 +111,6 @@ public class Cola<TipoDelDato> {
         if (encontrado != true)
             contador = -1;
         return contador;
-    }
-    public int getNumeroElem(){
-        int elem=0;
-        ElementoLDE el = this.cola;
-        while (el!=null){
-            el=el.siguiente;
-            elem++;
-        }
-        return elem;
     }
 
 

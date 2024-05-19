@@ -60,6 +60,7 @@ public class ConfiguracionController implements Initializable {
     FlowPane f;
     GridPane g;
     Box box;
+    Pane p;
 
 static  ListaELementos indyacreados= new ListaELementos().cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
 static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
@@ -519,16 +520,13 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
     /**
      * Este método recibe los datos del modelo y los establece
      **/
-    public void loadUserData(ConfiguracionProperties parametrosData, Partida p, String usuario, Pane root, FlowPane f, GridPane g,Box caja) {
+    public void loadUserData(ConfiguracionProperties parametrosData,Partida p, Pane root,String usuario) {
         this.usuario=usuario;
+        this.p=root;
         this.model = parametrosData;
         this.updateGUIwithModel();
         this.model.original.setPz(p.getPz());
         this.partida=p;
-        this.root=root;
-        this.f=f;
-        this.g=g;
-        this.box=caja;
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {

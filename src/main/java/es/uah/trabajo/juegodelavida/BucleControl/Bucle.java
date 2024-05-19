@@ -6,6 +6,7 @@ import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
 import es.uah.trabajo.juegodelavida.Clases.Movimiento;
 import es.uah.trabajo.juegodelavida.Clases.Partida;
+import es.uah.trabajo.juegodelavida.Grafos.*;
 
 import java.util.Random;
 
@@ -325,7 +326,7 @@ public class Bucle {
                         ejecutarMovimientoINormal(individuoGen, partida);
                         break;
                     case "Avanzado":
-                        ejecutarMovimientoIAvanzado();
+                        ejecutarMovimientoIAvanzado(individuoGen,partida);
                         break;
                     default:
                         ejecutarMovimientoIBasico(individuoGen, partida);
@@ -339,7 +340,67 @@ public class Bucle {
         }
     }
 
-    private void ejecutarMovimientoIAvanzado() {
+    private void ejecutarMovimientoIAvanzado(Invidiuos individuoGen, Partida partida) {
+        CargaGrafos cargaGrafos = new CargaGrafos();
+        ListaSimple<Grafos> listaG = cargaGrafos.dameGrafos(partida.getFilas(),partida.getColumnas());
+        //Buscamos el nodo correspondiente a la posicion del individuo
+        Grafos grafoDesc= (Grafos)listaG.getElemento(0).getDato();
+        Grafos grafoAsc= (Grafos)listaG.getElemento(0).getDato();
+        NodoGrafos nodoIndividuo = new NodoGrafos("f"+individuoGen.getX()+"c"+individuoGen.getY(), null, null);
+        if (grafoDesc.buscarNodo(nodoIndividuo))
+            nodoIndividuo = grafoDesc.dameNodo(nodoIndividuo);
+
+        Cola<Camino<String>> caminosDesc = grafoDesc.dijkstra(nodoIndividuo);
+
+
+        // Si queremos sacar el peso de un camino en concreto, podemos, ya que lo tenemos calculado de antes:
+        //Calculamos el coste de ir a cada recurso y nos vamos al de menor coste
+        double coste = Double.MAX_VALUE;
+        ListaRecursos listarec = partida.getRecursos();
+        int recursoElegido=-1;
+        for (int i=0; i< listarec.getNumeroElementos();i++) {
+            if (listarec.getElemento(i) != null) {
+                NodoGrafos nodoFinal = new NodoGrafos("f" + listarec.getElemento(i).getDatos().getX() + "c" + listarec.getElemento(i).getDatos().getY(), null, null);
+                if (grafoDesc.buscarNodo(nodoFinal))
+                    nodoFinal = grafoDesc.dameNodo(nodoFinal);
+                ElementoLDE<Camino<String>> caminoLDE = grafoDesc.dameCaminoA(nodoFinal, caminosDesc);
+                double costeRec = caminoLDE.getDatos().getCoste();
+                if (costeRec < coste && costeRec != 0) {
+                    coste = costeRec;
+                    recursoElegido = i;
+                }
+            }
+        }
+
+
+
+        if (grafoAsc.buscarNodo(nodoIndividuo))
+            nodoIndividuo = grafoDesc.dameNodo(nodoIndividuo);
+        Cola<Camino<String>> caminosAsc = grafoAsc.dijkstra(nodoIndividuo);
+        for (int i=0; i< listarec.getNumeroElementos();i++) {
+            if (listarec.getElemento(i) != null) {
+                NodoGrafos nodoFinal = new NodoGrafos("f" + listarec.getElemento(i).getDatos().getX() + "c" + listarec.getElemento(i).getDatos().getY(), null, null);
+                if (grafoAsc.buscarNodo(nodoFinal))
+                    nodoFinal = grafoAsc.dameNodo(nodoFinal);
+                ElementoLDE<Camino<String>> caminoLDE = grafoDesc.dameCaminoA(nodoFinal, caminosAsc);
+                double costeRec = caminoLDE.getDatos().getCoste();
+                if (costeRec < coste&& costeRec != 0) {
+                    coste = costeRec;
+                    recursoElegido = i;
+                }
+            }
+        }
+        if ( coste < Double.MAX_VALUE && recursoElegido >= 0){
+            individuoGen.setX(partida.getRecursos().getElemento(recursoElegido).getDatos().getX());
+            individuoGen.setY(partida.getRecursos().getElemento(recursoElegido).getDatos().getY());
+            individuoGen.addMovimiento(new Movimiento(partida.getRecursos().getElemento(recursoElegido).getDatos().getX(),
+                    partida.getRecursos().getElemento(recursoElegido).getDatos().getY(),individuoGen.getId()));
+            individuoGen.añadirmovimientosJSon();
+
+        }
+
+
+
     }
 
     private void ejecutarMovimientoINormal(Invidiuos individuoGen, Partida partida) {
