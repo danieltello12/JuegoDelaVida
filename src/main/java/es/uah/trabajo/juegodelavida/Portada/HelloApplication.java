@@ -1,6 +1,5 @@
 package es.uah.trabajo.juegodelavida.Portada;
 
-import es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication;
 import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.scene.Parent;
@@ -13,7 +12,6 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -59,7 +57,7 @@ public class HelloApplication extends Application {
 
         return root;
     }
-    private static final Logger log = LogManager.getLogger(MainGridApplication.class);
+    private static final Logger log = LogManager.getLogger(HelloApplication.class);
 
     @Override
     public void start(Stage primaryStage) throws Exception {

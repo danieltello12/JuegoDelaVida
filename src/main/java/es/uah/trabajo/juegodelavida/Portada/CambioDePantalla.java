@@ -7,7 +7,6 @@ import es.uah.trabajo.juegodelavida.InicioSesionCP.InicioSesionPropertiesCP;
 import es.uah.trabajo.juegodelavida.InicioSesionNP.InicioSesionControladorNP;
 import es.uah.trabajo.juegodelavida.InicioSesionNP.InicioSesionPropertiesNP;
 import es.uah.trabajo.juegodelavida.InicioSesionNP.IniciosesionModelNP;
-import es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -25,7 +24,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class CambioDePantalla extends Pane  {
-    private static final Logger log = LogManager.getLogger(MainGridApplication.class);
+    private static final Logger log = LogManager.getLogger(CambioDePantalla.class);
     public CambioDePantalla(int width, int height) throws FileNotFoundException {
         ImageView bg = new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/FondoPortada.png"))
         );

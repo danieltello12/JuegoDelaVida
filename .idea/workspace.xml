@@ -10,7 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="commit con diagrama de secuencias">
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Labels.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Json/movimientos.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/movimientos.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Json/usuarios.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/usuarios.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dani.partidas.json" beforeDir="false" afterPath="$PROJECT_DIR$/dani.partidas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/CambioDePantalla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/CambioDePantalla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/ConfiguracionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/ConfiguracionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/MainGridApplication.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/TableroDeJuegoControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/tab.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716114316397</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="commit con diagrama de secuencias">
+      <option name="closed" value="true" />
+      <created>1716115593472</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1716115593472</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,11 +302,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
-          <line>423</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/BucleControl/Bucle.java</url>
           <line>151</line>
           <option name="timeStamp" value="15" />
@@ -291,11 +310,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/BucleControl/Bucle.java</url>
           <line>165</line>
           <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/TableroDeJuegoControlador.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/BucleControl/Bucle.java</url>
@@ -307,11 +321,10 @@
           <line>162</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/ConfiguracionController.java</url>
-          <line>49</line>
-          <properties field="probabilidadClonacion" class="es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion.ConfiguracionController" />
-          <option name="timeStamp" value="14" />
+          <line>106</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

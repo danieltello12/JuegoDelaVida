@@ -1,1 +1,1 @@
-{}
+{"primero":{"datos":{"tiemposvida":1,"x":3,"y":3,"Probabilidad_Z":0.5,"Probabilida_V":0.25,"tipo":"B","cbAgua":"+Turnos vida","modAgua":5,"ckAgua":false,"cbComida":"+Turnos vida","modComida":4,"ckComida":false,"cbMontana":"-Turnos vida","modMontana":4,"ckMontana":false,"cbBiblio":"+Probab Clon ","modBiblio":2,"ckBiblio":false,"cbTesoro":"+Turnos vida","modTesoro":1,"ckTesoro":false,"cbPozo":"Muerte Inst","modPozo":0,"ckPozo":false}}}
