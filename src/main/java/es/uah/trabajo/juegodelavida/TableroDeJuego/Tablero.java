@@ -38,7 +38,7 @@ import java.net.URL;
 public class Tablero extends Pane {
     static GridPane tab;
     Pane root = new Pane();
-
+   boolean elementosencelda;
     public Tablero() {}
         final Logger log = LogManager.getLogger(Tablero.class);
 
@@ -80,11 +80,6 @@ public class Tablero extends Pane {
             r.setVisible(false);
 
 
-            Boton botonsalir = new Boton("Cerrar", 50);
-            botonsalir.setOnAction(() -> {
-                r.setVisible(false);
-                caja_info.getChildren().removeAll(botonsalir);
-            });
             for (int i = 0; i < p.getFilas(); i++) {
                 for (int j = 0; j < p.getColumnas(); j++) {
 
@@ -126,7 +121,43 @@ public class Tablero extends Pane {
                     mainGrid.add(secondaryGrid, i, j);
                     Botones boton = new Botones(64);
                     boton.setStyle("-fx-background-color: transparent;-fx-border-color: black");
+                    int finalI = i;
+                    int finalJ = j;
+                    Boton botonsalir = new Boton("Cerrar", 50);
                     boton.setOnAction(() -> {
+                        ListaELementos individuos= new ListaELementos();
+                        individuos=individuos.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
+                        ListaELementos elementosencelda= new ListaELementos();
+                        for(int pos=0; pos<individuos.getNumeroElementos();pos++){
+                            if(individuos.getElemento(pos).getDatos().getX()== finalI && individuos.getElemento(pos).getDatos().getY()== finalJ){
+                                elementosencelda.add(individuos.getElemento(pos).getDatos());
+                            }
+                        }
+                        Label l1= new Label("Individuos: ");
+                        l1.setPrefWidth(20);
+                        l1.setPrefHeight(60);
+                        caja_info.getChildren().addAll(l1);
+                        if(elementosencelda.getNumeroElementos()==0){
+                            Label l2= new Label("No hay Individuos");
+                            caja_info.getChildren().addAll(l2);
+                            this.elementosencelda=false;
+                        }
+                        else{
+                            for(int pos=0;pos<elementosencelda.getNumeroElementos();pos++){
+                                Label l3= new Label((pos+1)+"-");
+
+                                Label tipo= new Label("Tipo: "+ elementosencelda.getElemento(pos).getDatos().getTipo());
+
+                                Label TurnosDeVida= new Label("Vidas: "+ elementosencelda.getElemento(pos).getDatos().getTurnosvida());
+                                caja_info.getChildren().addAll(l3,tipo,TurnosDeVida);
+                                botonsalir.setOnAction(() -> {
+                                    r.setVisible(false);
+                                    caja_info.getChildren().removeAll(botonsalir);
+
+                                });
+                                this.elementosencelda=true;
+                            }
+                        }
                         r.setVisible(true);
                         caja_info.getChildren().add(botonsalir);
                     });
