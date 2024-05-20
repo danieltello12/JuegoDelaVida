@@ -18,7 +18,7 @@ public class ListaLEPA<TipoDelDato> extends gson {
     public void vaciar(){
         this.primero=null;
     }
-
+//ea
     public boolean esta(String usuario, String partida) {
         ListaLEPA partidas= new ListaLEPA();
         partidas = partidas.cargar(usuario);
