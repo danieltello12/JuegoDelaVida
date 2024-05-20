@@ -11,6 +11,7 @@ import es.uah.trabajo.juegodelavida.Clases.Partida;
 import es.uah.trabajo.juegodelavida.ParamJuego.TipoDeInviduoControlador;
 import es.uah.trabajo.juegodelavida.ParamJuego.TipoDeRecursoControler;
 import es.uah.trabajo.juegodelavida.TableroDeJuego.Box;
+import es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -38,7 +39,9 @@ import java.util.ResourceBundle;
 
 public class ConfiguracionController implements Initializable {
     private String usuario;
-    private Stage scene;
+    private Stage thisstage;
+
+    private Stage stagePadre;
     @FXML
     private TextField filaIndv;
     @FXML
@@ -68,7 +71,7 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
     private ConfiguracionProperties model;
     @FXML
     protected void onMiBotonIniciarJuegoClick() {
-        this.scene.close();
+        //this.scene.close();
         ListaELementos l2 = new ListaELementos();
         l2 = l2.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
 
@@ -76,20 +79,42 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
         l3 = l3.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
         actualizar(l2,l3);
 
-        this.root.getChildren().remove(box);
-        this.box.getChildren().remove(f);
-        this.f.getChildren().remove(g);
+        //this.root.getChildren().remove(box);
+        //this.box.getChildren().remove(f);
+        //this.f.getChildren().remove(g);
 
-        ListaELementos individuos= new ListaELementos();
-        individuos = individuos.cargar("src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json");
+        //ListaELementos individuos= new ListaELementos();
+        //individuos = individuos.cargar("src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json");
 
-        ListaRecursos recursos= new ListaRecursos();
-        recursos= recursos.cargar("src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+        //ListaRecursos recursos= new ListaRecursos();
+        //recursos= recursos.cargar("src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
 
 
-        this.f.getChildren().add(añadir(recursos,individuos,g));
-        this.box.getChildren().add(f);
-        this.root.getChildren().add(box);
+        //this.f.getChildren().add(añadir(recursos,individuos,g));
+        //this.box.getChildren().add(f);
+        //this.root.getChildren().add(box);
+
+
+        this.stagePadre.close();
+        try {
+
+            /*Scene im= new Scene(root);
+            Stage stageroot= new Stage();
+            stageroot.setScene(im);
+            stageroot.setTitle("Juego de La Vida de Conway");
+            stageroot.show();*/
+
+
+            Stage newStage= new Stage();
+            thisstage.setTitle("!!!!Juego de La Vida de Conway");
+            Scene scene = new Scene(new Tablero().Tablero(partida, usuario,thisstage), 1400, 800);
+            thisstage.setScene(scene);
+            thisstage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
 
     }
@@ -288,7 +313,8 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
     @FXML
     protected  void onMibotonCrearIndividuoClick() throws FileNotFoundException {
         model.commit();
-        actualizarpartida();
+        //actualizarpartida();
+
         if(this.partida.getFilas()<(Integer.parseInt(model.original.getFilaIndv())-1)){
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
@@ -346,8 +372,8 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
             s.setTitle("Juego de La Vida de Conway");
             s.show();
         } else {
-            int x = Integer.parseInt(model.original.getColumnaIvd());
-            int y = Integer.parseInt(model.original.getFilaIndv());
+            int x = Integer.parseInt(model.original.getFilaIndv());
+            int y = Integer.parseInt(model.original.getColumnaIvd());
             int id = Integer.parseInt(model.original.getIdentificador());
             float clon = model.original.getPclonacion();
             float rep = model.original.getPreproduccion();
@@ -424,7 +450,7 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
     @FXML
     public void onMiBotonCrearRecursoClick() throws FileNotFoundException {
         model.commit();
-        actualizarpartida();
+        //actualizarpartida();
         if(this.partida.getFilas()<(Integer.parseInt(model.original.getFilarec())-1)){
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
@@ -523,6 +549,7 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
     public void loadUserData(ConfiguracionProperties parametrosData,Partida p, Pane root,String usuario) {
         this.usuario=usuario;
         this.p=root;
+        this.root=root;
         this.model = parametrosData;
         this.updateGUIwithModel();
         this.model.original.setPz(p.getPz());
@@ -535,7 +562,10 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
         }
     }
 
-    public void setStage(Stage stage) {
-        this.scene=stage;
+    public void setThisstage(Stage thisstage) {
+        this.thisstage = thisstage;
+    }
+    public void setStagePadre(Stage stagePadre) {
+        this.stagePadre = stagePadre;
     }
 }

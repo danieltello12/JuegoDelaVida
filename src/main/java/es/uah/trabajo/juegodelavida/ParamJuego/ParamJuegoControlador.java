@@ -29,7 +29,7 @@ import java.util.ResourceBundle;
 
 public class ParamJuegoControlador implements Initializable {
     private String usuario;
-    private Stage scene;
+    private Stage thisstage;
     @FXML
     private TextField filaIndv;
     @FXML
@@ -51,7 +51,7 @@ public class ParamJuegoControlador implements Initializable {
 
     private ParamJuegoProperties model;
     public void setStage(Stage s){
-        this.scene = s;
+        this.thisstage = s;
     }
 
     public void setUsuario(String usuario){
@@ -80,10 +80,11 @@ public class ParamJuegoControlador implements Initializable {
         partidas.add(partida);
         usuarios.getusuario(usuario).setPartidas(limpieza(partidas));
 
-            this.scene.close();
+            this.thisstage.close();
             try {
-                Scene scene = new Scene(new Tablero().Tablero(partida, usuario), 1400, 800);
-                stage.setTitle("Juego de La Vida de Conway");
+                stage.setTitle("!!!Juego de La Vida de Conway");
+                Scene scene = new Scene(new Tablero().Tablero(partida, usuario,stage), 1400, 800);
+
                 stage.setScene(scene);
                 stage.show();
             } catch (Exception e) {

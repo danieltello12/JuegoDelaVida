@@ -131,6 +131,8 @@ public class ListaRecursos extends gson {
             }
 
         }
+        if(!salir)
+            contador=-1;
         return contador;
     }
 

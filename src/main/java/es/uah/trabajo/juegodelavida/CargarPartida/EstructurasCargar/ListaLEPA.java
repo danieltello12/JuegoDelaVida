@@ -140,6 +140,8 @@ public class ListaLEPA<TipoDelDato> extends gson {
             }
 
         }
+        if (salir != true)
+            contador=-1;
         return contador;
     }
     public void guardar(String nombre) {

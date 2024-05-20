@@ -1,4 +1,4 @@
-package es.uah.trabajo.juegodelavida.Grafos;
+package es.uah.trabajo.juegodelavida.Clases.Grafos;
 
 /**
  * La clase camino guarda un camino desde un vértice a otro del grafo, junto su coste.

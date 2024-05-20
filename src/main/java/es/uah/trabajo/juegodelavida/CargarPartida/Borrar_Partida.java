@@ -51,19 +51,19 @@ public class Borrar_Partida extends Pane {
 
                 Image imagen = null;
                 try {
-                    imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Captura2.PNG"));
+                    imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Anadir.PNG"));
                 } catch (FileNotFoundException e) {
                     throw new RuntimeException(e);
                 }
                 ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-                imageView.setFitWidth(1280);
-                imageView.setFitHeight(720);
+                imageView.setFitWidth(400);
+                imageView.setFitHeight(75);
                 root.getChildren().addAll(imageView);
 
                 Scene im = new Scene(root);
                 Stage s2= new Stage();
                 s2.setScene(im);
-                s2.setTitle("Juego de La Vida de Conway");
+                s2.setTitle("Borrar Partida: Juego de La Vida de Conway");
                 s2.show();
                 this.getChildren().removeAll(inicio);
                 i.set(i.get() - 1);

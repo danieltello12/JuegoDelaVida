@@ -1,4 +1,4 @@
-package es.uah.trabajo.juegodelavida.Grafos;
+package es.uah.trabajo.juegodelavida.Clases.Grafos;
 
 public class Cola<T> {
     private ElementoLDE cabecera;

@@ -28,9 +28,8 @@ public class ListaELementos <TipoDelDato>extends gson {
         while (el != null) {
             if (Objects.equals((el.getDatos().getX()),x)&&Objects.equals((el.getDatos().getY()),y)) {
                 num +=1;
+                el=  el.getSiguiente();
             }
-
-
             else {
                 el =  el.getSiguiente();
             }
@@ -151,6 +150,8 @@ public class ListaELementos <TipoDelDato>extends gson {
             }
 
         }
+        if (!salir)
+            contador=-1;
         return contador;
     }
 

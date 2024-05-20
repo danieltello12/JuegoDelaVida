@@ -1,4 +1,4 @@
-package es.uah.trabajo.juegodelavida.Grafos;
+package es.uah.trabajo.juegodelavida.Clases.Grafos;
 
 public class CargaGrafos {
     //Montar grafos en base al tablero

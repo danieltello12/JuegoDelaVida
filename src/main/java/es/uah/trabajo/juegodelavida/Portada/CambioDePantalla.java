@@ -59,7 +59,7 @@ public class CambioDePantalla extends Pane  {
 
             try {
                 Scene scene = new Scene(fxmlLoader.load(), 450, 171);
-                stage.setTitle("Juego de La Vida de Conway");
+                stage.setTitle("InicioSesionNP:Juego de La Vida de Conway");
                 stage.setScene(scene);
                 InicioSesionControladorNP p = fxmlLoader.getController(); //dame el controlador
                 p.loadUserData(new InicioSesionPropertiesNP(new IniciosesionModelNP())); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
@@ -95,7 +95,7 @@ public class CambioDePantalla extends Pane  {
 
             try {
                 Scene scene = new Scene(fxmlLoader.load(), 450, 171);
-                stage.setTitle("Juego de La Vida de Conway");
+                stage.setTitle("IniciosesionCP: Juego de La Vida de Conway");
                 stage.setScene(scene);
                 InicioSesionControladorCP p = fxmlLoader.getController(); //dame el controlador
 

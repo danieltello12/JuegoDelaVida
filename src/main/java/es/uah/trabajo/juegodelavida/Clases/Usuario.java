@@ -74,7 +74,7 @@ partidas.guardar(this.nombre);
         }
         else {
             int pos = l.getPosicion(e);
-            l.del(pos-1);
+            l.del(pos);
             l.add(this);
         }
         l.guardar(l);

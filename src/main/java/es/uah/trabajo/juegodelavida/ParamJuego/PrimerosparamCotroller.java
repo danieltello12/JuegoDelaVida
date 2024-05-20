@@ -226,7 +226,7 @@ public class PrimerosparamCotroller implements Initializable {
             Scene im = new Scene(root);
             Stage s = new Stage();
             s.setScene(im);
-            s.setTitle("Juego de La Vida de Conway");
+            s.setTitle("Partidas.Juego de La Vida de Conway");
             s.show();
         }
         else if (nombrePartida.getText()=="") {
@@ -241,7 +241,7 @@ public class PrimerosparamCotroller implements Initializable {
             Scene im = new Scene(root);
             Stage s = new Stage();
             s.setScene(im);
-            s.setTitle("Juego de La Vida de Conway");
+            s.setTitle("Partidas: Juego de La Vida de Conway");
             s.show();
         }
         else if(l.esta(usuario,nombrePartida.getText())){
@@ -256,7 +256,7 @@ public class PrimerosparamCotroller implements Initializable {
             Scene im = new Scene(root);
             Stage s = new Stage();
             s.setScene(im);
-            s.setTitle("Juego de La Vida de Conway");
+            s.setTitle("Partidas::Juego de La Vida de Conway");
             s.show();
         }
         else if(Integer.parseInt(filas.getText())==0||Integer.parseInt(columnas.getText())==0){
@@ -271,7 +271,7 @@ public class PrimerosparamCotroller implements Initializable {
             Scene im= new Scene(root);
             Stage s= new Stage();
             s.setScene(im);
-            s.setTitle("Juego de La Vida de Conway");
+            s.setTitle("Partidas:::Juego de La Vida de Conway");
             s.show();
         }
         else{
@@ -335,7 +335,7 @@ public class PrimerosparamCotroller implements Initializable {
 
             try {
                 Scene scene = new Scene(fxmlLoader.load(), 1234, 636);
-                stage.setTitle("Juego de La Vida de Conway");
+                stage.setTitle("Parametros: Juego de La Vida de Conway");
                 stage.setScene(scene);
                 ParamJuegoControlador controlador = fxmlLoader.getController(); //dame el controlador
                 controlador.setUsuario(usuario);

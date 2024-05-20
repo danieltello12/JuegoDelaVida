@@ -60,7 +60,7 @@ public class InicioSesionControladorNP implements Initializable {
 
         try {
             Scene scene = new Scene(fxmlLoader.load(), 450, 150);
-            stage.setTitle("Juego de La Vida de Conway");
+            stage.setTitle("Registrarse :: Juego de La Vida de Conway");
             stage.setScene(scene);
             RegistrarseControlador p = fxmlLoader.getController(); //dame el controlador
 
@@ -98,7 +98,7 @@ public class InicioSesionControladorNP implements Initializable {
 
             try {
                 Scene scene = new Scene(fxmlLoader.load(), 762, 402);
-                stage.setTitle("Juego de La Vida de Conway");
+                stage.setTitle("PrimerosParam: Juego de La Vida de Conway");
                 stage.setScene(scene);
                 PrimerosparamCotroller p = fxmlLoader.getController(); //dame el controlador
 

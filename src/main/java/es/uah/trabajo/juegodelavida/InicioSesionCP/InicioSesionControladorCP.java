@@ -61,7 +61,7 @@ public class InicioSesionControladorCP implements Initializable {
 
         try {
             Scene scene = new Scene(fxmlLoader.load(), 450, 150);
-            stage.setTitle("Juego de La Vida de Conway");
+            stage.setTitle("Registrarse: Juego de La Vida de Conway");
             stage.setScene(scene);
             RegistrarseControlador p = fxmlLoader.getController(); //dame el controlador
 
@@ -107,7 +107,7 @@ public class InicioSesionControladorCP implements Initializable {
                 Scene im= new Scene(root);
                 Stage s= new Stage();
                 s.setScene(im);
-                s.setTitle("Juego de La Vida de Conway");
+                s.setTitle("-->Juego de La Vida de Conway");
                 s.show();
             } else if (l.esta(model.original.getUsuario(),model.original.getContraseña())==0) {
 

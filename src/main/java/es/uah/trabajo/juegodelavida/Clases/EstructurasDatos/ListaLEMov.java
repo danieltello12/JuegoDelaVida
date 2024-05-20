@@ -122,6 +122,8 @@ public class ListaLEMov<TipoDelDato> extends gson {
             }
 
         }
+        if (!salir)
+            contador=-1;
         return contador;
     }
 

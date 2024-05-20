@@ -1,893 +1,708 @@
-2024-05-19 15:55:56.748 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 15:55:57.000 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 15:56:04.779 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
-2024-05-19 15:58:11.822 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 15:58:44.885 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 15:58:49.140 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:04:16.458 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 16:04:16.680 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 16:04:23.948 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 16:04:39.385 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:04:41.032 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:04:42.664 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:05:45.511 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:05:45.511 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:05:45.512 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:05:59.900 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 16:06:00.108 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 16:06:08.224 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 16:06:21.881 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:06:23.361 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:06:25.030 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:10:15.975 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 16:10:16.193 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 16:10:22.959 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
-2024-05-19 16:10:35.744 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 16:10:50.926 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:10:52.203 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:10:53.523 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:11:18.239 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:11:19.868 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:11:21.339 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:12:12.880 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:12:12.881 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:12:12.882 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:12:20.118 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 16:12:20.313 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 16:12:27.890 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
-2024-05-19 16:12:39.027 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 16:13:02.255 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:13:04.107 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:13:06.126 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:19:58.757 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 16:19:58.972 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 16:20:08.423 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 16:20:24.280 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:20:25.746 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:20:27.285 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:25:24.323 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 16:25:24.538 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 16:25:32.092 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 16:25:47.244 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:25:48.541 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:25:50.401 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:28:12.048 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:28:12.049 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:28:12.050 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:28:50.476 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 16:28:50.678 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 16:28:58.198 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 16:29:14.804 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:29:19.400 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:29:24.075 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:33:26.886 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 16:33:27.106 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 16:33:34.561 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
-2024-05-19 16:33:41.585 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 16:33:53.743 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:33:53.743 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:33:53.744 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:38:48.754 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:38:48.755 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:38:48.756 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:48:26.981 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 16:48:27.189 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 16:48:34.421 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 16:48:43.304 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:48:43.305 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:48:43.305 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:55:33.763 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:55:33.764 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:55:33.764 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:55:44.741 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 16:55:44.956 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 16:55:55.731 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 16:56:04.764 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:56:04.764 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:56:04.765 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 16:57:20.637 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 16:57:20.842 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 16:57:28.849 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 16:57:43.409 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:57:43.409 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 16:57:43.410 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 17:03:38.694 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:03:38.695 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:03:38.696 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 17:03:46.664 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 17:03:46.885 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 17:03:53.990 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 17:04:02.770 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:04:02.770 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:04:02.771 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 17:08:12.485 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 17:08:12.702 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 17:08:20.516 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 17:08:29.390 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:08:29.391 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:08:29.391 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 17:19:25.834 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 17:19:26.036 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 17:19:33.176 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 17:19:41.849 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:19:41.849 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:19:41.850 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 17:26:12.326 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 17:26:12.538 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 17:26:19.392 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 17:26:28.634 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:26:28.634 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:26:28.635 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 17:28:19.111 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 17:28:19.319 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 17:28:26.703 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 17:28:37.188 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:28:37.189 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:28:37.190 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 17:33:36.786 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 17:33:36.999 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 17:33:43.927 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 17:33:53.661 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:33:53.661 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:33:53.662 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 17:40:10.892 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 17:40:11.097 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 17:40:18.055 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 17:40:30.525 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:40:30.525 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:40:30.525 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 18:05:01.521 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 18:05:01.729 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 18:05:08.756 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 18:05:18.293 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:05:18.294 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:05:18.294 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 18:12:36.183 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 18:12:36.392 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 18:12:43.282 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 18:12:51.659 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:12:51.659 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:12:51.660 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 18:13:34.481 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 18:13:34.691 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 18:13:42.289 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 18:13:51.205 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:13:51.206 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:13:51.207 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 18:21:23.369 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 18:21:24.136 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 18:21:41.259 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 18:21:52.607 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:21:52.607 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:21:52.608 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 18:22:54.594 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 18:22:54.790 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 18:23:02.270 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 18:23:12.532 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:23:12.533 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:23:12.533 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 18:27:52.267 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 18:27:52.474 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 18:28:00.503 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 18:28:09.315 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:28:09.316 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:28:09.316 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 18:29:40.069 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 18:29:40.281 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 18:29:55.405 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 18:30:05.758 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:30:05.759 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:30:05.759 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 18:32:35.542 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 18:32:35.723 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 18:32:42.602 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 18:32:56.670 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:32:56.670 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:32:56.670 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 18:37:53.022 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 18:37:53.202 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 18:38:02.595 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 18:38:13.530 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:38:13.530 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:38:13.531 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 18:39:31.837 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 18:39:32.027 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 18:39:39.620 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 18:39:49.418 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:39:49.419 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:39:49.419 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 18:43:25.150 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 18:43:25.334 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 18:43:32.352 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 18:43:42.267 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:43:42.267 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:43:42.267 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 18:49:41.328 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 18:49:41.513 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 18:49:48.044 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 18:49:59.443 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:49:59.443 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:49:59.444 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 18:55:59.785 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 18:55:59.889 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 18:56:06.746 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 18:56:14.914 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:56:14.915 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 18:56:14.915 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:28:41.108 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 19:28:41.211 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 19:28:47.507 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 19:28:58.246 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:28:58.246 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:28:58.247 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:29:20.622 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:29:20.623 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:29:20.623 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:29:46.860 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:29:46.860 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:29:46.861 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:39:09.998 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 19:39:10.179 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 19:39:16.545 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 19:39:24.371 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:39:24.372 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:39:24.372 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:41:22.866 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:41:22.866 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:41:22.867 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:47:25.834 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 19:47:25.936 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 19:47:32.592 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 19:47:46.213 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:47:46.214 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:47:46.214 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:52:08.955 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 19:52:09.062 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 19:52:16.227 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 19:52:25.336 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:52:25.336 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:52:25.336 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:52:47.330 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:52:47.330 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:52:47.330 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:53:59.818 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 19:53:59.921 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 19:54:06.242 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 19:54:08.338 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
-2024-05-19 19:54:12.850 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 19:54:20.263 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:54:20.263 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:54:20.263 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:54:44.075 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:54:44.076 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:54:44.076 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:55:00.596 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:55:00.596 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:55:00.596 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:55:44.179 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 19:55:44.278 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 19:55:50.801 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 19:55:59.743 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:55:59.743 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:55:59.744 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:56:04.580 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:56:04.580 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:56:04.580 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:56:05.742 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:56:05.743 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:56:07.777 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:56:07.777 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:56:12.680 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:56:12.680 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:56:32.385 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
-2024-05-19 19:58:45.333 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:58:45.333 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:58:45.333 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:58:45.334 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:58:51.645 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:58:51.645 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:58:51.645 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:58:51.646 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:59:08.495 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:59:08.496 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:59:08.496 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:59:08.496 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 19:59:12.293 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:59:12.293 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:59:12.293 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 19:59:33.328 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
-2024-05-19 20:01:54.327 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:01:54.327 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:01:54.328 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:01:54.328 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:01:54.328 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:02:04.783 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:02:04.784 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:02:04.784 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:02:04.784 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:02:04.784 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:02:10.667 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:02:10.667 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:02:10.668 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:02:10.668 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:02:10.668 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:02:15.601 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:02:15.602 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:02:15.602 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:02:15.602 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:02:15.602 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:02:16.081 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:02:22.800 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 20:02:33.433 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:02:33.433 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:02:33.433 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:02:33.434 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:02:33.434 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:02:43.247 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 20:02:43.353 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 20:02:51.006 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 20:03:04.384 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:03:04.384 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:03:04.384 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:03:04.385 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:03:04.385 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:03:24.811 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:03:24.812 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:03:24.812 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:03:24.812 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:03:24.812 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:06:36.650 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 20:06:36.818 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 20:06:44.585 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
-2024-05-19 20:09:14.908 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:14.909 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:14.909 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:14.909 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:14.909 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:14.910 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:09:35.643 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:35.643 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:35.644 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:35.644 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:35.644 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:35.644 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:09:37.353 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:37.354 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:37.354 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:37.354 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:37.354 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:37.355 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:09:38.872 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:38.872 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:38.873 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:38.873 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:38.873 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:38.873 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:09:59.062 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:59.062 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:59.062 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:59.062 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:09:59.062 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:23:44.761 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 20:23:44.864 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 20:23:51.557 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
-2024-05-19 20:25:15.046 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:25:15.047 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:25:57.241 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:30:13.103 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 20:30:13.204 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 20:30:19.491 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 20:30:33.402 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:30:33.406 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:30:33.406 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:30:33.407 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:30:33.407 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 20:30:33.407 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:32:32.566 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:32:32.568 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:35:41.470 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:35:41.473 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 20:35:41.476 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 22:08:16.191 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 22:08:16.405 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 22:08:22.845 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
-2024-05-19 22:08:33.228 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 22:08:42.263 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 22:09:21.969 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 22:09:22.162 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 22:09:28.576 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 22:09:39.978 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 22:09:39.979 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 22:09:39.980 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 22:09:39.980 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 22:09:39.980 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 22:09:52.592 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 22:10:10.725 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 22:15:12.207 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 22:15:12.444 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 22:15:20.480 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 22:15:30.388 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 22:15:30.389 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 22:15:30.389 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 22:15:30.390 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 22:15:30.390 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 22:15:30.390 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 22:15:30.391 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 22:15:30.391 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 12:54:01.812 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 12:54:01.916 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 12:54:08.064 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
-2024-05-19 12:54:10.320 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 12:54:16.883 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 12:54:16.884 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 12:54:16.884 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 12:56:19.519 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 12:56:19.626 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 12:56:23.735 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Nueva Partida
-2024-05-19 12:56:31.623 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 12:56:38.459 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 12:56:38.459 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 12:56:38.459 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 12:58:35.950 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 12:58:36.053 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 12:58:40.450 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 12:58:46.754 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 12:58:46.754 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 12:58:46.754 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 12:59:15.296 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio del juego
-2024-05-19 12:59:15.397 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Inicio de Aplicación
-2024-05-19 12:59:20.420 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.MainGridApplication - Cargar Partida
-2024-05-19 12:59:26.709 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 12:59:26.709 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 12:59:26.709 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 12:59:41.244 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 12:59:41.245 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 13:31:45.304 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 13:31:45.407 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 13:31:55.492 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 13:32:01.788 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:32:01.788 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 13:32:01.788 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 13:33:10.423 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 13:33:10.525 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 13:33:15.555 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 13:33:23.280 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:33:23.281 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 13:33:23.281 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 13:42:26.839 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 13:42:26.943 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 13:42:34.514 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 13:42:42.384 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:42:42.385 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:42:42.385 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 13:42:42.385 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 13:44:31.312 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 13:44:31.417 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 13:44:35.928 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 13:44:42.853 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:44:42.854 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:44:42.854 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:44:42.854 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 13:44:42.854 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 13:46:05.987 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 13:46:06.099 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 13:46:10.445 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 13:46:17.055 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:46:17.055 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:46:17.055 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:46:17.055 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 13:46:17.055 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 13:47:23.900 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 13:47:24.004 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 13:47:30.899 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
-2024-05-19 13:47:41.668 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 13:47:49.510 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:47:49.511 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:47:49.511 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:47:49.511 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 13:47:49.511 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 13:48:04.155 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:48:04.155 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:48:04.155 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:48:04.155 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 13:48:04.155 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 13:56:16.120 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 13:56:16.221 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 13:56:25.923 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 13:56:33.129 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:56:33.130 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:56:33.130 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 13:56:33.130 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 13:56:33.130 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:09:09.543 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 14:09:09.644 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 14:10:07.022 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 14:10:13.283 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:10:13.283 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:10:13.284 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:10:13.284 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:10:13.284 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:10:13.284 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:10:13.285 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:11:13.110 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:11:13.111 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:11:13.111 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:11:13.111 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:11:13.111 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:11:13.111 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:11:13.111 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:11:22.045 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 14:11:31.643 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:11:31.643 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:11:31.643 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:11:31.643 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:11:31.644 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:11:31.644 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:11:31.644 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:11:31.644 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:11:31.644 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:12:20.436 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 14:12:20.540 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 14:12:25.329 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 14:12:34.008 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:12:34.008 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:12:34.008 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:12:34.009 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:12:34.009 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:12:34.009 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:12:34.009 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:12:34.009 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:12:34.010 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:13:32.572 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 14:13:32.672 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 14:13:50.073 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 14:13:57.086 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:13:57.086 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:13:57.086 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:13:57.086 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:13:57.087 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:13:57.087 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:13:57.087 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:13:57.087 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:13:57.088 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:13:57.088 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:13:57.088 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:15:32.011 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 14:15:32.111 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 14:15:40.840 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 14:15:51.252 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:15:51.252 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:15:51.252 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:15:51.253 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:15:51.253 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:15:51.253 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:15:51.254 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:15:51.254 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:15:51.254 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:15:51.255 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:15:51.255 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:16:42.559 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 14:16:42.666 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 14:16:47.750 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 14:16:55.297 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:16:55.298 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:16:55.298 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:16:55.298 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:16:55.299 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:16:55.299 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:16:55.299 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:16:55.299 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:16:55.300 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:16:55.300 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:16:55.300 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:17:23.293 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 14:17:23.395 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 14:17:33.023 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 14:17:49.654 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:17:49.654 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:17:49.654 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:17:49.654 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:17:49.655 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:17:49.655 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:17:49.655 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:17:49.656 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:17:49.656 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:17:49.656 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:17:49.656 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:20:33.295 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 14:20:33.405 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 14:20:42.894 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 14:20:53.949 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:20:53.949 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:20:53.949 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:20:53.950 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:20:53.950 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:20:53.950 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:20:53.950 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:20:53.950 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:20:53.951 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:20:53.951 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:20:53.951 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:24:34.296 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 14:24:34.397 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 14:24:43.614 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 14:24:49.838 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:24:49.839 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:24:49.839 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:24:49.839 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:24:49.839 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:24:49.839 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:24:49.840 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:24:49.840 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:24:49.840 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:24:49.840 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:24:49.841 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:24:49.841 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:35:23.559 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 14:35:23.658 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 14:35:29.464 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
-2024-05-19 14:35:37.560 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 14:35:43.926 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:35:43.927 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:35:43.927 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:35:43.927 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:35:43.927 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:35:43.927 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:35:43.927 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:35:43.928 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:35:43.928 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:35:43.928 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:35:43.928 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:35:43.928 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:35:43.929 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:36:02.473 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:02.473 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:02.473 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:02.473 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:02.473 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:02.473 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:02.473 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:02.474 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:02.474 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:02.474 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:02.474 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:02.474 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:36:35.789 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 14:36:35.895 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 14:36:41.037 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 14:36:47.497 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:47.498 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:47.498 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:47.498 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:47.498 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:47.498 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:47.499 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:47.499 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:47.499 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:47.499 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:47.500 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:36:47.500 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:39:26.613 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 14:39:26.720 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 14:39:30.889 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 14:40:28.998 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 14:40:29.101 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 14:40:38.760 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 14:40:45.538 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:40:45.538 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:40:45.538 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:40:45.539 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:40:45.539 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:40:45.539 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:40:45.539 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:40:45.540 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:40:45.540 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:40:45.540 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:40:45.540 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:40:45.541 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:40:45.541 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:40:45.541 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:40:48.621 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:40:48.621 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 14:41:07.161 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 14:41:07.268 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 14:41:12.503 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 14:41:53.189 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 14:41:53.293 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 14:41:57.939 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 14:42:36.387 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 14:42:36.490 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 14:42:44.160 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 14:42:52.435 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:42:52.435 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:42:52.435 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:42:53.719 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:42:53.719 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:42:53.720 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 14:46:36.683 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 14:46:36.788 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 14:46:44.018 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:17:02.896 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:17:03.188 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:17:26.433 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:17:41.271 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:20:30.610 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:20:30.829 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:20:39.864 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:20:50.784 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:20:50.785 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:22:21.901 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:22:22.125 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:22:28.711 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:22:37.794 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:22:37.795 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:22:37.795 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:22:38.142 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:22:38.143 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:22:38.144 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:31:38.574 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:31:38.808 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:31:45.338 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:31:53.400 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:31:53.400 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:31:53.401 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:31:53.401 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:32:25.566 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:32:25.792 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:32:33.050 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:32:40.766 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:32:40.767 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:32:40.767 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:32:40.768 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:35:19.890 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:35:20.092 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:35:26.098 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:35:35.138 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:35:35.138 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:35:35.138 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:35:35.139 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:36:33.754 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:36:33.967 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:36:41.432 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
-2024-05-19 17:36:48.425 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:37:01.967 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:37:01.968 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:37:01.968 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:37:01.968 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:39:10.269 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:39:10.454 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:39:18.559 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:39:18.994 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:39:19.455 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:39:26.903 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:39:26.903 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:39:26.904 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:39:26.904 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:41:17.303 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:41:17.550 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:41:24.495 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:41:33.745 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:41:33.745 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:41:33.745 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:41:33.746 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:42:22.261 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:42:22.449 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:42:33.173 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:42:42.675 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:42:42.676 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:42:42.676 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:42:42.676 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:43:31.043 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:43:31.244 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:43:36.828 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:43:46.908 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:43:46.908 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:43:46.909 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:43:46.909 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:44:30.018 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:44:30.192 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:44:36.880 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:44:37.081 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:44:43.512 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:44:53.482 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:44:53.483 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:44:53.484 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:44:53.484 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:44:53.793 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:44:53.794 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:44:53.794 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:44:53.795 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:45:30.121 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:45:30.302 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:45:38.818 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:45:50.798 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:45:50.799 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:45:50.799 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:45:50.799 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:46:38.184 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:46:38.381 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:46:45.107 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:46:59.070 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:46:59.071 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:46:59.071 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:46:59.072 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:46:59.390 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:46:59.391 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:46:59.391 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:46:59.391 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:47:51.655 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:47:51.838 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:47:57.767 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:48:06.536 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:48:06.537 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:48:06.537 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:48:06.537 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:48:55.771 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:48:55.966 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:49:04.792 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:49:17.301 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:49:17.302 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:49:17.302 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:49:17.303 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:50:31.643 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:50:31.840 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:50:38.110 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:50:49.626 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:50:49.626 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:50:49.627 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:50:49.627 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:52:26.519 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:52:26.735 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:52:34.485 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:52:36.278 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:52:49.860 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:52:49.860 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:52:49.860 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:52:49.861 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:53:35.376 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 17:53:35.566 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 17:53:42.631 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 17:53:50.688 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:53:50.688 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:53:50.689 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 17:53:50.689 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 23:04:02.876 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 23:04:03.065 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 23:04:09.866 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
-2024-05-19 23:05:25.239 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 23:05:25.240 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 23:05:51.025 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 23:05:51.212 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 23:05:57.758 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
-2024-05-19 23:06:12.142 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
-2024-05-19 23:07:09.365 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 23:07:09.366 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 23:07:11.930 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 23:07:11.931 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 23:07:13.221 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 23:07:13.222 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 23:07:13.543 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 23:07:13.543 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 23:07:14.389 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 23:07:14.635 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 23:08:41.495 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 23:08:41.692 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 23:08:48.620 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
-2024-05-19 23:10:09.420 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 23:10:09.421 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 23:10:13.351 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 23:10:13.352 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 23:10:14.275 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 23:10:14.275 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 23:10:15.491 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 23:10:16.926 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 23:10:17.612 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 23:28:52.200 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
-2024-05-19 23:28:52.391 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
-2024-05-19 23:28:58.680 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
-2024-05-19 23:30:14.893 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 23:30:14.893 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 23:30:14.894 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
-2024-05-19 23:30:17.875 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 23:30:17.875 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
-2024-05-19 23:30:17.875 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:25:47.472 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 15:25:47.772 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 15:25:54.169 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 15:29:41.473 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:29:41.473 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:29:41.474 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:29:41.474 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:29:41.475 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:29:41.475 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:36:52.395 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 15:36:52.597 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 15:36:58.370 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 15:37:10.208 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:37:10.208 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:37:10.209 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:38:11.643 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 15:38:11.856 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 15:38:19.406 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 15:38:39.790 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 15:38:47.851 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:38:47.851 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:38:47.852 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:38:47.853 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:38:47.853 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:38:47.854 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:38:47.854 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:42:03.934 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 15:42:04.143 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 15:42:11.139 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 15:42:21.038 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:42:21.039 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:42:21.040 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:42:21.040 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:42:21.040 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:42:21.041 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:42:21.041 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:49:40.399 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 15:49:40.612 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 15:49:47.776 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 15:50:01.018 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:50:01.018 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:50:01.019 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:50:01.019 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:50:01.019 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:50:01.020 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:50:01.020 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:50:01.020 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:51:25.746 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:51:25.748 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:51:25.751 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:51:25.753 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:51:25.754 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:51:25.755 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:51:25.757 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:51:25.758 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:51:25.759 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:53:39.221 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 15:53:39.432 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 15:53:46.268 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 15:53:57.952 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:53:57.953 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:53:57.954 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:53:57.954 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:53:57.954 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:53:57.955 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:53:57.955 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:53:57.955 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:53:57.955 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:55:14.963 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:55:14.965 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:55:14.967 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:55:14.969 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:55:14.970 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 15:55:14.971 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:55:14.972 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:55:14.974 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:55:14.975 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 15:55:14.976 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 16:00:34.666 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 16:00:34.869 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 16:00:41.700 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 16:05:19.186 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 16:05:19.419 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 16:05:26.304 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 16:05:36.361 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 16:05:36.362 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 16:05:36.362 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 16:05:36.363 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 16:05:36.363 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 16:05:36.363 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 16:05:36.364 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 16:05:36.364 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 16:05:36.365 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 16:05:36.365 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 16:05:36.366 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 16:18:42.487 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 16:18:42.717 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 16:18:56.983 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 16:19:49.655 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 16:20:11.082 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 16:20:11.285 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 16:20:17.717 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 16:21:12.692 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 16:21:31.525 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 16:22:57.504 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 16:22:57.504 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 16:38:24.431 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 16:38:24.618 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 16:38:31.403 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 16:38:41.290 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 16:38:41.290 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 16:38:41.291 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 16:58:53.831 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 16:58:54.077 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 16:59:01.104 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 16:59:11.162 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 16:59:11.163 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 16:59:11.163 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:05:28.974 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 17:05:29.184 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 17:05:37.051 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 17:05:49.713 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:05:49.714 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:05:49.715 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:05:49.715 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:13:01.198 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 17:13:01.403 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 17:13:08.505 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 17:13:19.693 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:13:19.694 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:13:19.695 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:13:19.695 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:14:59.023 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:14:59.025 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:14:59.027 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:14:59.028 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:14:59.030 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:32:51.802 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 17:32:52.009 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 17:32:58.421 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 17:33:12.843 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:33:12.844 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:33:12.845 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:33:12.845 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:33:12.845 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:34:21.750 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:34:21.752 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:34:21.754 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:34:21.755 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:34:21.757 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:34:21.758 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:36:58.048 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 17:36:58.246 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 17:37:04.275 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 17:37:17.441 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:37:17.442 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:37:17.442 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:37:17.443 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:37:17.443 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:37:17.444 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:38:19.008 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:38:19.010 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:38:19.013 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:38:19.014 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:38:19.016 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:38:19.017 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:38:19.018 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:39:41.991 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:39:41.993 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:39:41.995 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:39:41.997 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:39:41.999 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:39:42.001 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:39:42.002 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:39:42.004 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:40:43.938 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:40:43.939 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:40:43.940 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:40:43.943 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:40:43.945 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:40:43.947 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:40:43.948 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:40:43.950 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:40:43.951 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:47:07.317 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 17:47:07.524 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 17:47:14.760 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 17:47:24.478 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:47:24.479 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:47:24.480 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:47:24.480 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:47:24.481 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:47:24.481 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:47:24.482 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:47:24.483 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:47:24.483 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:53:30.600 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 17:53:30.808 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 17:53:36.689 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 17:53:45.531 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:53:45.532 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:53:45.533 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:53:45.533 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:53:45.533 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:53:45.534 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:53:45.534 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:53:45.535 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:53:45.535 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:53:45.535 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:56:03.050 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 17:56:03.251 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 17:56:09.635 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 17:56:17.474 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:56:17.475 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:56:17.475 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:56:17.476 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:56:17.476 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:56:17.477 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:56:17.477 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:56:17.477 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:56:17.477 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:56:17.478 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:56:17.478 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:59:41.062 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 17:59:41.266 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 17:59:47.219 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 17:59:56.358 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:59:56.359 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:59:56.359 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 17:59:56.360 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:59:56.361 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:59:56.362 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:59:56.362 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:59:56.363 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:59:56.363 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:59:56.364 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 17:59:56.364 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:09:16.610 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 18:09:16.830 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 18:09:23.467 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 18:09:31.477 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:09:31.477 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:09:31.478 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:09:31.479 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:09:31.479 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:09:31.480 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:09:31.481 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:09:31.481 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:09:31.481 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:09:31.482 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:09:31.482 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:10:40.324 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:10:40.326 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:10:40.327 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:10:40.329 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:10:40.331 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:10:40.333 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:10:40.335 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:10:40.338 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:10:40.340 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:10:40.341 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:10:40.343 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:10:40.344 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:23.184 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 18:12:23.365 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 18:12:29.987 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 18:12:38.436 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:12:38.437 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:12:38.438 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:12:38.438 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:38.439 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:38.439 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:38.440 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:38.440 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:38.440 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:38.441 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:38.441 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:38.442 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:57.366 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:12:57.367 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:12:57.367 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:12:57.367 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:57.368 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:57.368 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:57.368 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:57.368 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:57.368 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:57.369 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:57.369 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:57.369 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:12:57.369 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:29.668 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:13:29.669 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:13:29.669 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:13:29.669 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:29.670 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:29.670 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:29.671 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:29.671 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:29.671 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:29.672 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:29.672 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:29.672 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:29.673 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:29.673 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:45.377 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:13:45.378 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:13:45.378 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:13:45.379 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:13:45.379 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:45.379 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:45.380 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:45.380 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:45.381 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:45.381 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:45.381 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:45.382 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:45.382 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:45.382 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:13:45.383 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:14:46.123 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 18:14:46.314 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 18:14:52.035 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 18:15:42.094 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:15:42.095 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:16:00.456 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:16:00.456 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:16:00.457 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:16:00.457 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:17:21.072 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 18:17:21.259 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 18:17:27.462 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 18:18:09.842 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:18:09.843 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:18:28.028 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:18:28.028 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:18:28.028 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:18:28.028 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:20:03.253 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 18:20:03.446 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 18:20:09.284 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 18:20:49.987 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:20:49.987 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:21:09.691 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:21:09.691 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:21:09.692 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:21:09.692 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:25:41.547 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 18:25:41.742 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 18:25:47.503 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 18:26:25.234 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:26:25.235 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:27:06.312 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:06.313 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:06.313 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:06.313 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:06.314 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:06.314 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:06.314 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:27:06.314 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:27:21.540 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:21.541 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:21.541 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:21.541 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:21.542 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:21.542 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:21.543 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:21.543 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:27:21.543 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:27:25.423 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:25.424 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:25.424 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:25.425 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:25.425 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:25.425 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:25.425 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:25.426 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:27:25.426 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:27:27.668 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:27.669 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:27.669 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:27.669 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:27.669 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:27.670 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:27.670 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:27.670 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:27:27.670 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:27:29.305 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:29.305 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:29.306 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:29.306 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:29.306 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:29.307 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:29.307 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:29.307 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:27:29.307 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:27:30.307 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:30.307 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:30.308 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:30.308 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:30.308 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:30.308 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:30.309 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:30.309 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:27:30.309 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:27:31.194 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:31.194 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:31.194 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:31.195 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:31.195 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:31.196 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:31.196 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:27:31.196 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:27:31.197 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:29:00.949 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 18:29:01.161 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 18:29:07.568 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 18:29:16.152 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:29:16.152 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:29:16.153 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:29:16.153 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:29:16.154 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:29:16.155 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:29:16.155 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:29:16.155 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:29:16.156 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:32:09.419 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 18:32:09.607 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 18:32:16.252 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 18:32:25.019 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:32:25.020 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:32:25.020 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:32:25.020 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:32:25.021 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:32:25.021 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:32:25.022 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:44:15.142 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 18:44:15.259 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 18:44:21.059 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 18:44:24.388 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 18:44:31.508 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:44:31.508 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:44:31.509 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:44:31.509 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:44:31.509 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:44:31.509 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:44:31.510 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:49:58.601 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 18:49:58.716 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 18:50:06.562 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 18:50:34.450 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 18:50:43.842 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 18:50:51.667 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:50:51.667 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:50:51.668 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:50:51.668 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:50:51.668 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:50:51.669 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:50:51.669 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:52:34.279 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 18:52:34.465 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 18:52:40.512 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 18:52:48.187 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:52:48.187 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:52:48.188 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:52:48.188 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:52:48.189 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:52:48.189 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:52:48.189 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:55:48.122 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:55:48.123 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:55:48.124 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:55:48.126 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:55:48.127 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:55:48.129 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:55:48.130 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:55:48.132 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 18:57:44.900 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 18:57:45.004 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 18:57:50.860 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 18:58:19.016 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 18:59:11.402 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 18:59:11.508 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 18:59:17.250 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 19:00:29.642 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 19:06:12.623 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 19:06:12.802 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 19:06:18.828 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 19:06:54.869 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 19:15:49.383 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 19:15:49.486 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 19:15:55.295 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 19:16:36.944 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 19:18:17.705 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 19:18:17.813 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 19:18:23.009 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 19:21:01.824 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 19:24:40.360 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 19:24:40.542 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 19:24:46.544 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 19:25:01.792 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 19:25:40.505 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 19:27:02.977 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 19:27:03.154 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 19:27:15.681 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 19:27:54.969 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 19:31:20.515 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 19:31:20.614 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 19:31:26.197 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 19:32:06.011 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 19:35:58.392 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 19:35:58.498 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 19:36:05.000 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 19:37:35.993 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 19:40:35.554 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 19:40:35.555 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 19:41:39.731 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 19:41:39.827 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 19:41:45.944 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 19:41:55.160 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 19:42:05.777 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 19:42:05.778 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 19:42:08.730 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 19:42:08.730 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 19:42:12.278 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 19:42:12.278 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 19:42:17.629 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 19:42:17.629 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 19:42:18.338 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 19:42:18.338 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 19:42:19.247 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 19:42:19.247 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:01:17.019 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 20:01:17.202 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 20:02:40.412 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 20:04:36.460 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 20:04:36.569 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 20:05:10.537 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Nueva Partida
+2024-05-20 20:06:11.670 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:06:11.670 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:06:43.749 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:06:43.750 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:10:26.709 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:10:26.710 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:10:26.710 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:10:26.711 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:10:26.711 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:12:07.447 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 20:12:07.550 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 20:12:33.054 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 20:12:44.872 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:12:44.872 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:12:44.872 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:12:44.873 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:12:44.873 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:14:14.884 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 20:14:14.984 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 20:14:21.203 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 20:14:36.083 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:14:36.083 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:14:36.083 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:14:36.083 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:14:36.083 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:15:53.229 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 20:15:53.332 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 20:15:58.866 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 20:16:11.644 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:16:11.644 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:16:11.644 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:16:11.644 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:16:11.644 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:17:34.626 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 20:17:34.804 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 20:17:41.114 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 20:17:55.412 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:17:55.413 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:17:55.413 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:17:55.413 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:17:55.414 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:20:09.482 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 20:20:09.590 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 20:20:16.411 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 20:20:38.698 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:20:38.699 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:20:38.699 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:20:38.699 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:20:38.699 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:24:57.631 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:24:57.631 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:24:57.632 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:24:57.632 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:26:09.639 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:26:09.640 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:26:09.640 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:26:09.641 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:26:09.641 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:26:09.642 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:26:09.643 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:27:23.720 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:27:23.721 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:27:23.723 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:27:23.724 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:27:23.725 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:27:23.726 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:29:22.926 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:29:22.927 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:29:22.929 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:29:22.930 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:29:22.931 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:29:22.932 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:30:34.201 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:30:34.201 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:30:34.202 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:30:34.203 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:30:34.203 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:30:34.204 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:30:34.204 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:30:34.205 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:33:30.069 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 20:33:30.250 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 20:33:37.536 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 20:34:07.458 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:34:07.459 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:34:07.459 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:34:07.459 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:34:07.460 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:34:07.460 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:34:07.460 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:34:07.460 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:34:53.937 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:34:53.938 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:34:53.939 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:34:53.939 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:34:53.940 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:34:53.940 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:34:53.941 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:34:53.941 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:35:10.195 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:35:10.195 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:35:10.196 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:35:10.197 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:35:10.197 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:35:10.198 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:39:08.029 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 20:39:08.130 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 20:39:14.752 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 20:39:27.556 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:39:27.557 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:39:27.557 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:39:27.557 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:39:27.557 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:39:27.557 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:39:27.557 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:39:27.558 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:40:59.996 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:40:59.997 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:40:59.998 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:41:00.000 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:41:00.001 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:41:00.002 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:41:00.003 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:41:00.004 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:41:00.006 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:42:22.647 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:42:22.648 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:42:22.650 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:42:22.651 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:42:22.652 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:42:22.654 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:42:22.655 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:42:22.656 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:42:22.657 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:42:22.659 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:50:19.832 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:50:19.834 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:50:19.835 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:50:19.836 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:50:19.837 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:50:19.839 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:50:58.601 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:50:58.602 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:50:58.603 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:50:58.604 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:50:58.606 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:50:58.607 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:50:58.608 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:50:58.610 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:50:58.611 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:50:58.612 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:54:20.325 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio del juego
+2024-05-20 20:54:20.508 - INFO  - es.uah.trabajo.juegodelavida.Portada.HelloApplication - Inicio de Aplicación
+2024-05-20 20:54:26.910 - INFO  - es.uah.trabajo.juegodelavida.Portada.CambioDePantalla - Cargar Partida
+2024-05-20 20:54:43.830 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:54:43.831 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:54:43.831 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:54:43.832 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:54:43.832 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:54:43.832 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:54:43.833 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:54:43.833 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:54:43.833 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:54:43.833 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:54:55.944 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Recurso añadido
+2024-05-20 20:54:55.944 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:54:55.944 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:54:55.944 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:54:55.945 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido
+2024-05-20 20:54:55.945 - INFO  - es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero - Individuo añadido

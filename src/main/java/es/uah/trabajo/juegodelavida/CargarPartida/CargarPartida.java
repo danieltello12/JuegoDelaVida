@@ -17,7 +17,9 @@ import java.io.FileNotFoundException;
 
 
 public class CargarPartida extends Pane {
+    Stage stagePadre;
     public CargarPartida(Usuario u,int width,int height,Stage s) throws FileNotFoundException {
+        stagePadre=s;
         ListaLEPA l = new ListaLEPA();
         l = l.cargar(u.getNombre());
         u.setPartidas(l);
@@ -69,8 +71,9 @@ public class CargarPartida extends Pane {
                     lrec.guardar(lrec,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
 
                     try {
-                        Scene scene = new Scene(new Tablero().Tablero(p,u.getNombre()), 1400, 800);
-                        stage.setTitle("Juego de La Vida de Conway");
+
+                        stage.setTitle("!!Juego de La Vida de Conway");
+                        Scene scene = new Scene(new Tablero().Tablero(p,u.getNombre(),stage), 1400, 800);
                         stage.setScene(scene);
                         stage.show();
                     } catch (Exception e) {

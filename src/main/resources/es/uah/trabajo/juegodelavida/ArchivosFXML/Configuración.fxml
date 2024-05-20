@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Slider?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="518.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion.ConfiguracionController">
+<AnchorPane prefHeight="518.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion.ConfiguracionController">
     <children>
         <ImageView fitHeight="518.0" fitWidth="1006.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -31,9 +24,8 @@
                 </AnchorPane>
                 <AnchorPane minHeight="257.0" minWidth="400.0" prefHeight="300.0" prefWidth="441.0">
                     <children>
-                        <Label layoutX="46.0" layoutY="53.0" text="Turnos de vida:" />
-                        <Label layoutX="52.0" layoutY="17.0" text="Identificador:" />
-                        <TextField fx:id="Identificador" layoutX="201.0" layoutY="4.0" prefHeight="26.0" prefWidth="140.0" />
+                        <Label layoutX="52.0" layoutY="43.0" text="Identificador:" />
+                        <TextField fx:id="Identificador" layoutX="201.0" layoutY="41.0" prefHeight="26.0" prefWidth="140.0" />
                         <!--<TextField fx:id="TurnosDeVida" layoutX="200.0" layoutY="40.0" prefHeight="26.0" prefWidth="140.0" />-->
                         <Label layoutX="5.0" layoutY="168.0" prefHeight="44.0" prefWidth="186.0" text="Probabilidad de Reproducción:" />
                         <Label layoutX="12.0" layoutY="222.0" text="Probabilidad de Clonación:" />

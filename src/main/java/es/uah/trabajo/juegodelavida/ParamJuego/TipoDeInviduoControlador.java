@@ -52,7 +52,7 @@ public class TipoDeInviduoControlador implements Initializable {
         ElementoLEUs e= new ElementoLEUs<>(u);
         Partida p= new Partida(nombrepar);
         ElementoLEPA e2= new ElementoLEPA(p);
-         int posus=lista.getPosicion(e)-1;
+         int posus=lista.getPosicion(e);
         if(lista.getElemento(posus).getDatos().getPartidas().esta(nombreus,p.getNombre())) {
             int pospar = lista.getElemento(posus).getDatos().getPartidas().getPosicion(e2);
             lista.getElemento(posus).getDatos().getPartidas().getElemento(pospar).getDatos().setIndividuos(l);
@@ -73,16 +73,16 @@ public class TipoDeInviduoControlador implements Initializable {
 
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Añadido.PNG"));
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Anadir.PNG"));
             ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-            imageView.setFitWidth(1280);
-            imageView.setFitHeight(720);
+            imageView.setFitWidth(400);
+            imageView.setFitHeight(75);
 
             root.getChildren().addAll(imageView);
             Scene im = new Scene(root);
             Stage s = new Stage();
             s.setScene(im);
-            s.setTitle("Juego de La Vida de Conway");
+            s.setTitle("Parametrizar::Juego de La Vida de Conway");
             s.show();
         this.scene.close();
     }
@@ -105,7 +105,7 @@ public class TipoDeInviduoControlador implements Initializable {
         ElementoLEUs e= new ElementoLEUs<>(u);
         Partida p= new Partida(nombrepar);
         ElementoLEPA e2= new ElementoLEPA(p);
-        int posus=lista.getPosicion(e)-1;
+        int posus=lista.getPosicion(e);
         if(lista.getElemento(posus).getDatos().getPartidas().esta(nombreus,p.getNombre())) {
             int pospar = lista.getElemento(posus).getDatos().getPartidas().getPosicion(e2);
             lista.getElemento(posus).getDatos().getPartidas().getElemento(pospar).getDatos().setIndividuos(l);
@@ -126,17 +126,17 @@ public class TipoDeInviduoControlador implements Initializable {
 
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Añadido.PNG"));
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Anadir.PNG"));
             ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-            imageView.setFitWidth(1280);
-            imageView.setFitHeight(720);
+            imageView.setFitWidth(400);
+            imageView.setFitHeight(75);
 
 
             root.getChildren().addAll(imageView);
             Scene im = new Scene(root);
             Stage s = new Stage();
             s.setScene(im);
-            s.setTitle("Juego de La Vida de Conway");
+            s.setTitle("Parametrizar:::Juego de La Vida de Conway");
             s.show();
         this.scene.close();
 
@@ -162,7 +162,7 @@ public class TipoDeInviduoControlador implements Initializable {
         ElementoLEUs e= new ElementoLEUs<>(u);
         Partida p= new Partida(nombrepar);
         ElementoLEPA e2= new ElementoLEPA(p);
-        int posus=lista.getPosicion(e)-1;
+        int posus=lista.getPosicion(e);
         if(lista.getElemento(posus).getDatos().getPartidas().esta(nombreus,p.getNombre())) {
             int pospar = lista.getElemento(posus).getDatos().getPartidas().getPosicion(e2);
             lista.getElemento(posus).getDatos().getPartidas().getElemento(pospar).getDatos().setIndividuos(l);
@@ -183,17 +183,17 @@ public class TipoDeInviduoControlador implements Initializable {
 
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Añadido.PNG"));
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Anadir.PNG"));
             ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-            imageView.setFitWidth(1280);
-            imageView.setFitHeight(720);
+            imageView.setFitWidth(400);
+            imageView.setFitHeight(75);
 
 
             root.getChildren().addAll(imageView);
             Scene im = new Scene(root);
             Stage s = new Stage();
             s.setScene(im);
-            s.setTitle("Juego de La Vida de Conway");
+            s.setTitle("Parametrizar::::Juego de La Vida de Conway");
             s.show();
 
 

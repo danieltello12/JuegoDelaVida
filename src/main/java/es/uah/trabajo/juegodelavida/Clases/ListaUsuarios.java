@@ -21,7 +21,7 @@ public class ListaUsuarios extends gson {
       l=l.cargar();
       ElementoLEUs e= new ElementoLEUs(new Usuario(usuario,""));
       int pos=l.getPosicion(e);
-      l.del(pos-1);
+      l.del(pos);
       guardar(l);
    }
 

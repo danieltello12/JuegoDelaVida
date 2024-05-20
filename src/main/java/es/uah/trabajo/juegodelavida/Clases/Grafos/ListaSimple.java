@@ -1,4 +1,4 @@
-package es.uah.trabajo.juegodelavida.Grafos;
+package es.uah.trabajo.juegodelavida.Clases.Grafos;
 
 public class ListaSimple<TipoDelDato> {
     ElementoLS<TipoDelDato>[] lista;
@@ -135,12 +135,16 @@ public class ListaSimple<TipoDelDato> {
 
     public int getPosicion(ElementoLS el) {
         int pos = 0;
+        boolean encontrado=false;
         while (pos < maximo) {
             if (this.lista[pos].getDato() == el.getDato()) {
+                encontrado=true;
                 break;
             }
             pos++;
         }
+        if (!encontrado)
+            pos=-1;
         return pos;
     }
 

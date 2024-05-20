@@ -62,7 +62,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Scene scene = new Scene(createContent());
-        primaryStage.setTitle("Juego de La Vida de Conway");
+        primaryStage.setTitle("Inicio:Juego de La Vida de Conway");
         primaryStage.setScene(scene);
         primaryStage.show();
         log.info("Inicio de Aplicación");
