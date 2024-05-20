@@ -1,1 +1,1 @@
-{"primero":{"datos":{"id":12,"turnosvida":4,"probrep":0.0,"probclon":0.0,"tipo":"Normal","movimientos":{"primero":{"datos":{"idIndividuo":12,"idMovimiento":0,"x":1,"y":2}}},"x":1,"y":2}}}
+{"primero":{"siguiente":{"datos":{"id":2,"turnosvida":5,"probrep":0.6,"probclon":0.35,"tipo":"Avanzado","movimientos":{"primero":{"datos":{"idIndividuo":2,"idMovimiento":0,"x":2,"y":2}}},"x":2,"y":2}},"datos":{"id":2,"turnosvida":7,"probrep":0.25,"probclon":0.7,"tipo":"Avanzado","movimientos":{"primero":{"datos":{"idIndividuo":2,"idMovimiento":0,"x":2,"y":2}}},"x":2,"y":2}}}

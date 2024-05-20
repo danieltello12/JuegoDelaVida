@@ -38,21 +38,18 @@ import java.net.URL;
 public class Tablero extends Pane {
     static GridPane tab;
     Pane root = new Pane();
-    Stage stagePadre;
 
    boolean elementosencelda;
     public Tablero() {}
         final Logger log = LogManager.getLogger(Tablero.class);
 
 
-        public Parent Tablero ( Partida p,  String usuario, Stage stagePadre) throws
+        public Parent Tablero ( Partida p,  String usuario) throws
         FileNotFoundException {
-            this.stagePadre=stagePadre;
-            return actualizaTablero(p, usuario,stagePadre);
+            return actualizaTablero(p, usuario);
         }
-        public Parent actualizaTablero( Partida p, String usuario, Stage stagePadre) throws
+        public Parent actualizaTablero( Partida p, String usuario) throws
                 FileNotFoundException{
-            this.stagePadre=stagePadre;
             //Limpiamos todo el tablero por si venimos de actualizarlo tras un movimiento
             if (root.getChildren() != null)
                 root.getChildren().removeAll();
@@ -337,7 +334,7 @@ public class Tablero extends Pane {
 
                 try {
                     Scene scene = new Scene(fxmlLoader.load(), 1006, 518);
-                    stage.setTitle("Parametrizar: Juego de La Vida de Conway");
+                    stage.setTitle("Juego de La Vida de Conway");
                     stage.setScene(scene);
                     ParamJuegoControlador controlador = fxmlLoader.getController(); //dame el controlador
                     //p.loadUserData(this.modeloParaGUICompartido); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
@@ -384,15 +381,12 @@ public class Tablero extends Pane {
 
 
                 try {
-
-
                     Scene scene = new Scene(fxmlLoader.load(), 1006, 518);
-                    stage.setTitle("Reconfigurar Juego de La Vida de Conway");
+                    stage.setTitle("Juego de La Vida de Conway");
                     stage.setScene(scene);
                     ConfiguracionController controlador2 = fxmlLoader.getController(); //dame el controlador
                     controlador2.loadUserData(new ConfiguracionProperties(new ConfiguracionModel()),p, root,usuario); //Carga los datos del modelo en el gui, todas las ventanas comparten el mismo en este caso
-                    controlador2.setThisstage(stage); //doy la ventana donde se va a trabajar
-                    controlador2.setStagePadre(this.stagePadre);
+                    controlador2.setStage(stage); //doy la ventana donde se va a trabajar
                     stage.show();
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -413,7 +407,7 @@ public class Tablero extends Pane {
                 Bucle bucleC= new Bucle(p);
                 bucleC.ejecutarMovimiento();
                 try {
-                    actualizaTablero(p, usuario,stagePadre);
+                    actualizaTablero(p, usuario);
                 }catch(FileNotFoundException e){
                     try {
                         throw e;
