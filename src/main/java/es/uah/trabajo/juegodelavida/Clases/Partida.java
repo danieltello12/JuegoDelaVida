@@ -5,6 +5,7 @@ import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
 
 public class Partida {
     String nombre;
+    float mejora;
     int filas;
     int columnas;
     float pvA;
@@ -51,6 +52,14 @@ public class Partida {
     int modPozo;
 
     boolean ckPozo;
+
+    public float getMejora() {
+        return mejora;
+    }
+
+    public void setMejora(float mejora) {
+        this.mejora = mejora;
+    }
 
     public String getCbAgua() {
         return cbAgua;

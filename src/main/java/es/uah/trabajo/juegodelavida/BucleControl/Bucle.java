@@ -490,6 +490,51 @@ public class Bucle {
         individuoGen.addMovimiento(new Movimiento(aleaX,aleaY,individuoGen.getId()));
         individuoGen.añadirmovimientosJSon();
     }
+    private void verClon(){
+        ListaELementos individuos= new ListaELementos().cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
+        for(int i=0; i<individuos.getNumeroElementos();i++){
+            Invidiuos actual= individuos.getElemento(i).getDatos();
+            int n= (int) (Math.random()*100);
+            if(n<actual.getProbclon()){
+                Invidiuos copia= actual;
+                individuos.add(copia);
+            }
+        }
+        individuos.guardar(individuos,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
+    }
+    private void verreproduccion(){
+        ListaELementos individuos= new ListaELementos().cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
+        for(int i=0; i<individuos.getNumeroElementos();i++){
+            for (int j=0; j<individuos.getNumeroElementos();j++){
+              if(individuos.getElemento(i).getDatos().getX()==individuos.getElemento(j).getDatos().getX()
+                            && individuos.getElemento(i).getDatos().getY()==individuos.getElemento(j).getDatos().getY()
+                                && individuos.getElemento(i).getDatos().getId()!=individuos.getElemento(j).getDatos().getId()) {
+                  Invidiuos padre1 = individuos.getElemento(i).getDatos();
+                  Invidiuos padre2 = individuos.getElemento(j).getDatos();
+                  if (padre1.getProbrep() + padre2.getProbrep() >= 1) {
+                      if (padre2.getTipo() == "Avanzado" || padre1.getTipo() == "Avanzado") {
+                          int turnos = 0;
+                          if (padre2.getTurnosvida() < padre1.getTurnosvida()) {
+                              turnos += padre1.getTurnosvida();
+                          }
+                          if (padre2.getTurnosvida() > padre1.getTurnosvida()) {
+                              turnos += padre2.getTurnosvida();
+                          }
+                          float probclon = 0;
+                          if (padre2.getProbclon() < padre1.getProbclon()) {
+                              probclon += padre1.getProbclon();
+                          }
+                          if (padre2.getProbclon() > padre1.getProbclon()) {
+                              probclon+= padre2.getProbclon();
+                          }
+                          Invidiuos hijo = new Invidiuos(padre1.getX(), padre1.getY(),padre1.getId()+padre2.getId(),turnos,probclon,partida.getMejora());
+                          individuos.add(hijo);
+                      }
+                  }
+              }
+            }
+        }
+    }
 
     private void actualizarExistenciaR(ListaRecursos recursos) {
 
