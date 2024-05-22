@@ -531,6 +531,7 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
             }
         }
     }
+    //
     protected void updateGUIwithModel() {
         Identificador.textProperty().bindBidirectional(model.numeroIndividuosNormalesProperty());
         //TurnosDeVida.textProperty().bindBidirectional(model.numeroIndividuosAvanzadosProperty());
