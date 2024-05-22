@@ -445,6 +445,7 @@ public class Bucle {
 
 
     }
+    //
 
     private void ejecutarMovimientoINormal(Invidiuos individuoGen, Partida partida) {
 
