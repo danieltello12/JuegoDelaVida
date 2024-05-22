@@ -1,1 +1,60 @@
-{"primero":{"datos":{"id":2,"turnosvida":5,"probrep":0.6,"probclon":0.35,"tipo":"Avanzado","movimientos":{"primero":{"datos":{"idIndividuo":2,"idMovimiento":0,"x":2,"y":2}}},"x":2,"y":2}}}
+{
+  "primero": {
+    "siguiente": {
+      "datos": {
+        "id": 123,
+        "turnosvida": 2,
+        "probrep": 0.45,
+        "probclon": 0.25,
+        "tipo": "Normal",
+        "movimientos": {
+          "primero": {
+            "siguiente": {
+              "datos": {
+                "idIndividuo": 123,
+                "idMovimiento": 0,
+                "x": 2,
+                "y": 2
+              }
+            },
+            "datos": {
+              "idIndividuo": 123,
+              "idMovimiento": 1,
+              "x": 1,
+              "y": 2
+            }
+          }
+        },
+        "x": 1,
+        "y": 2
+      }
+    },
+    "datos": {
+      "id": 32,
+      "turnosvida": 2,
+      "probrep": 0.35,
+      "probclon": 0.2,
+      "tipo": "Básico",
+      "movimientos": {
+        "primero": {
+          "siguiente": {
+            "datos": {
+              "idIndividuo": 32,
+              "idMovimiento": 0,
+              "x": 1,
+              "y": 1
+            }
+          },
+          "datos": {
+            "idIndividuo": 32,
+            "idMovimiento": 1,
+            "x": 3,
+            "y": 3
+          }
+        }
+      },
+      "x": 3,
+      "y": 3
+    }
+  }
+}

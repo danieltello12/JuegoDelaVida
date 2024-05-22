@@ -322,7 +322,7 @@ public class Tablero extends Pane {
                     if (GridPane.getColumnIndex(child) != null && GridPane.getRowIndex(child) == 1
                             && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == 1) {
                         Label miCelda = (Label) child;
-                        if (miCelda.getText().equals("") || Integer.parseInt(miCelda.getText())<3) {
+                        if (miCelda.getText().isEmpty() || Integer.parseInt(miCelda.getText())<3) {
                             // remover el nodo del GridPane
                             hijoABorrar = child;
                             filaABorrar = 1;
@@ -335,7 +335,7 @@ public class Tablero extends Pane {
                 }
                 if (hijoABorrar != null) {
                     int totalIndividuosCelda=1;
-                    if (!((Label)hijoABorrar).getText().equals("") )
+                    if (!((Label) hijoABorrar).getText().isEmpty())
                         totalIndividuosCelda+=Integer.parseInt(((Label)hijoABorrar).getText());
                     nodo.getChildren().remove(hijoABorrar);
                     individuo.setText(String.valueOf(totalIndividuosCelda));
