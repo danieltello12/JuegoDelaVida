@@ -18,20 +18,20 @@ import java.io.FileNotFoundException;
 
 public class CargarPartida extends Pane {
     Stage stagePadre;
-    public CargarPartida(Usuario u,int width,int height,Stage s) throws FileNotFoundException {
-        stagePadre=s;
+
+    public CargarPartida(Usuario u, int width, int height, Stage s) throws FileNotFoundException {
+        stagePadre = s;
         ListaLEPA l = new ListaLEPA();
         l = l.cargar(u.getNombre());
         u.setPartidas(l);
-        if(u.getPartidas().isVacia()){
+        if (u.getPartidas().isVacia()) {
             ImageView bg = new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Nopartidas.PNG"))
             );
             bg.setFitWidth(width);
             bg.setFitHeight(height);
             getChildren().addAll(bg);
 
-        }
-        else {
+        } else {
             ImageView bg = new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/FondoPortada.png"))
             );
 
@@ -40,10 +40,11 @@ public class CargarPartida extends Pane {
             getChildren().addAll(bg);
 
             ListaLEPA l2;
-            l2=u.getPartidas();
-            if(l2.getNumeroElementos()>6){
-                while (l2.getNumeroElementos()>6){
-                    l2.del(0);
+            l2 = u.getPartidas();
+            if (l2.getNumeroElementos() > 5) {
+                while (l2.getNumeroElementos() > 5) {
+                    int i = l2.getNumeroElementos();
+                    l2.del(i - 1);
                 }
             }
 
@@ -56,24 +57,24 @@ public class CargarPartida extends Pane {
                 itemNew.setTranslateX(95); //Posicion X respecto el cuadro donde se encuentra en la vbox letras
                 itemNew.setTranslateY(0);//Posicion Y respecto el cuadro donde se encuentra en la vbox letras
                 int finalI = i;
-                itemNew.setOnAction(()->{
+                itemNew.setOnAction(() -> {
                     Stage stage = new Stage();
-                    Partida p= u.getPartidas().getElemento(finalI).getDatos();
+                    Partida p = u.getPartidas().getElemento(finalI).getDatos();
 
-                    ListaELementos L= new ListaELementos().cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
+                    ListaELementos L = new ListaELementos().cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
                     L.vaciar();
-                    L=p.getIndividuos();
-                    L.guardar(L,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
+                    L = p.getIndividuos();
+                    L.guardar(L, "src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
 
-                    ListaRecursos lrec= new ListaRecursos().cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+                    ListaRecursos lrec = new ListaRecursos().cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
                     lrec.vaciar();
-                    lrec=p.getRecursos();
-                    lrec.guardar(lrec,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+                    lrec = p.getRecursos();
+                    lrec.guardar(lrec, "src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
 
                     try {
 
                         stage.setTitle("!!Juego de La Vida de Conway");
-                        Scene scene = new Scene(new Tablero().Tablero(p,u.getNombre(),stage), 1400, 800);
+                        Scene scene = new Scene(new Tablero().Tablero(p, u.getNombre(),s), 1400, 800);
                         stage.setScene(scene);
                         stage.show();
                     } catch (Exception e) {
@@ -87,11 +88,11 @@ public class CargarPartida extends Pane {
                 Botones itemBorrar = new Botones("Borrar", 70);
                 itemBorrar.setTranslateX(0); //Posicion X respecto el cuadro donde se encuentra en la vbox letras
                 itemBorrar.setTranslateY(-17);//Posicion Y respecto el cuadro donde se encuentra en la vbox letras
-                itemBorrar.setOnAction(()->{
+                itemBorrar.setOnAction(() -> {
                     s.close();
                     Stage stage = new Stage();
                     try {
-                        Scene scene = new Scene(new Borrar_Partida(u,width,height), width, height);
+                        Scene scene = new Scene(new Borrar_Partida(u, width, height), width, height);
                         stage.setTitle("Juego de La Vida de Conway");
                         stage.setScene(scene);
                         stage.show();
@@ -103,7 +104,7 @@ public class CargarPartida extends Pane {
 
 
                 inicio.addItem(itemNew);
-                getChildren().addAll(inicio,caja);
+                getChildren().addAll(inicio, caja);
 
 
             }

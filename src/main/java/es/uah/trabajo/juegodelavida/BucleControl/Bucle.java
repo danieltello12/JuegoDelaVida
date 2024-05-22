@@ -4,10 +4,11 @@ import es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.Invidiuos;
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Recursos.Recursos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
+import es.uah.trabajo.juegodelavida.Clases.Grafos.*;
 import es.uah.trabajo.juegodelavida.Clases.Movimiento;
 import es.uah.trabajo.juegodelavida.Clases.Partida;
-import es.uah.trabajo.juegodelavida.Clases.Grafos.*;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class Bucle {
@@ -54,18 +55,20 @@ public class Bucle {
         evaluarMejorasIR(partida.getIndividuos(), partida.getRecursos());
 
         /*5. Para cada posición, evaluará si existe reproducción o no.*/
-        evaluarReproduccion(partida);
-
+        verreproduccion(partida);
         /*6. Para cada individuo, evaluará si existe clonación o no.*/
-        evaluarClonacion(partida.getIndividuos());
+        verClon(partida);
 
+
+        nuevosrecursos(partida);
         /*7. Para cada posición del tablero en la que existan varios individuos, se evaluará si deben
         desaparecer algunos.*/
         actualizarExistenciaI(partida.getIndividuos());
 
         /*8. Para cada posición del tablero, se evaluará si deben aparecer nuevos recursos
          */
-        evaluarNuevoR(partida);
+        nuevosrecursos(partida);
+        //evaluarNuevoR(partida);
 
     }
 
@@ -82,7 +85,7 @@ public class Bucle {
                 int contador =0;
                 for (int i = 0; i < partida.getIndividuos().getNumeroElementos(); i++) {
                     if (partida.getIndividuos().getElemento(i).getDatos() != null &&
-                           c == partida.getIndividuos().getElemento(i).getDatos().getY() &&
+                            c == partida.getIndividuos().getElemento(i).getDatos().getY() &&
                             f == partida.getIndividuos().getElemento(i).getDatos().getX()) {
                         contador++;
 
@@ -114,12 +117,6 @@ public class Bucle {
             }
         }
 
-    }
-
-    private void evaluarClonacion(ListaELementos individuos) {
-    }
-
-    private void evaluarReproduccion(Partida partida) {
     }
 
     private void evaluarMejorasIR(ListaELementos individuos, ListaRecursos recursos) {
@@ -350,17 +347,17 @@ public class Bucle {
                     }
 
 
+                }
             }
         }
     }
-}
     private void ejecutarMovimientoI(Partida partida) {
         for (int i=0; i< partida.getIndividuos().getNumeroElementos();i++) {
             if (partida.getIndividuos().getElemento(i) != null ) {
                 Invidiuos individuoGen = (partida.getIndividuos().getElemento(i).getDatos());
-                
+
                 switch (individuoGen.getTipo()){
-                    case "Básico": 
+                    case "Básico":
                         ejecutarMovimientoIBasico(individuoGen, partida);
                         break;
                     case "Normal":
@@ -371,13 +368,13 @@ public class Bucle {
                         break;
                     default:
                         ejecutarMovimientoIBasico(individuoGen, partida);
-                        
+
                 }
-                
-                        
-                
+
+
+
             }
-            
+
         }
     }
 
@@ -405,10 +402,12 @@ public class Bucle {
                 if (grafoDesc.buscarNodo(nodoFinal))
                     nodoFinal = grafoDesc.dameNodo(nodoFinal);
                 ElementoLDE<Camino<String>> caminoLDE = grafoDesc.dameCaminoA(nodoFinal, caminosDesc);
-                double costeRec = caminoLDE.getDatos().getCoste();
-                if (costeRec < coste && costeRec != 0) {
-                    coste = costeRec;
-                    recursoElegido = i;
+                if (caminoLDE != null && caminoLDE.getDatos() != null) {
+                    double costeRec = caminoLDE.getDatos().getCoste();
+                    if (costeRec < coste && costeRec != 0) {
+                        coste = costeRec;
+                        recursoElegido = i;
+                    }
                 }
             }
         }
@@ -424,10 +423,13 @@ public class Bucle {
                 if (grafoAsc.buscarNodo(nodoFinal))
                     nodoFinal = grafoAsc.dameNodo(nodoFinal);
                 ElementoLDE<Camino<String>> caminoLDE = grafoDesc.dameCaminoA(nodoFinal, caminosAsc);
-                double costeRec = caminoLDE.getDatos().getCoste();
-                if (costeRec < coste&& costeRec != 0) {
-                    coste = costeRec;
-                    recursoElegido = i;
+                if (caminoLDE != null && caminoLDE.getDatos() != null) {
+
+                    double costeRec = caminoLDE.getDatos().getCoste();
+                    if (costeRec < coste && costeRec != 0) {
+                        coste = costeRec;
+                        recursoElegido = i;
+                    }
                 }
             }
         }
@@ -454,9 +456,9 @@ public class Bucle {
                 if ( (listarec.getElemento(i).getDatos().getY() == individuoGen.getY() ||
                         listarec.getElemento(i).getDatos().getX() == individuoGen.getX())&&
                         !(listarec.getElemento(i).getDatos().getY() == individuoGen.getY() &&
-                        listarec.getElemento(i).getDatos().getX() == individuoGen.getX())) {
+                                listarec.getElemento(i).getDatos().getX() == individuoGen.getX())) {
 
-                        listarecLR.add(listarec.getElemento(i).getDatos());
+                    listarecLR.add(listarec.getElemento(i).getDatos());
                 }
         }
 
@@ -490,50 +492,204 @@ public class Bucle {
         individuoGen.addMovimiento(new Movimiento(aleaX,aleaY,individuoGen.getId()));
         individuoGen.añadirmovimientosJSon();
     }
-    private void verClon(){
-        ListaELementos individuos= new ListaELementos().cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
+    private void verClon(Partida p){
+        ListaELementos individuos= p.getIndividuos();
         for(int i=0; i<individuos.getNumeroElementos();i++){
             Invidiuos actual= individuos.getElemento(i).getDatos();
             int n= (int) (Math.random()*100);
             if(n<actual.getProbclon()){
                 Invidiuos copia= actual;
-                individuos.add(copia);
+                p.getIndividuos().add(copia);
             }
         }
-        individuos.guardar(individuos,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
     }
-    private void verreproduccion(){
-        ListaELementos individuos= new ListaELementos().cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
+    private void verreproduccion(Partida p){
+        ListaELementos individuos=p.getIndividuos();
         for(int i=0; i<individuos.getNumeroElementos();i++){
             for (int j=0; j<individuos.getNumeroElementos();j++){
-              if(individuos.getElemento(i).getDatos().getX()==individuos.getElemento(j).getDatos().getX()
-                            && individuos.getElemento(i).getDatos().getY()==individuos.getElemento(j).getDatos().getY()
-                                && individuos.getElemento(i).getDatos().getId()!=individuos.getElemento(j).getDatos().getId()) {
-                  Invidiuos padre1 = individuos.getElemento(i).getDatos();
-                  Invidiuos padre2 = individuos.getElemento(j).getDatos();
-                  if (padre1.getProbrep() + padre2.getProbrep() >= 1) {
-                      if (padre2.getTipo() == "Avanzado" || padre1.getTipo() == "Avanzado") {
-                          int turnos = 0;
-                          if (padre2.getTurnosvida() < padre1.getTurnosvida()) {
-                              turnos += padre1.getTurnosvida();
-                          }
-                          if (padre2.getTurnosvida() > padre1.getTurnosvida()) {
-                              turnos += padre2.getTurnosvida();
-                          }
-                          float probclon = 0;
-                          if (padre2.getProbclon() < padre1.getProbclon()) {
-                              probclon += padre1.getProbclon();
-                          }
-                          if (padre2.getProbclon() > padre1.getProbclon()) {
-                              probclon+= padre2.getProbclon();
-                          }
-                          Invidiuos hijo = new Invidiuos(padre1.getX(), padre1.getY(),padre1.getId()+padre2.getId(),turnos,probclon,partida.getMejora());
-                          individuos.add(hijo);
-                      }
-                  }
-              }
+                if(individuos.getElemento(i).getDatos().getX()==individuos.getElemento(j).getDatos().getX()
+                        && individuos.getElemento(i).getDatos().getY()==individuos.getElemento(j).getDatos().getY()
+                        && individuos.getElemento(i).getDatos().getId()!=individuos.getElemento(j).getDatos().getId()) {
+                    Invidiuos padre1 = individuos.getElemento(i).getDatos();
+                    Invidiuos padre2 = individuos.getElemento(j).getDatos();
+                    if (padre1.getProbrep() + padre2.getProbrep() >= 1) {
+
+                        int turnos = 0;
+                        if (padre2.getTurnosvida() < padre1.getTurnosvida()) {
+                            turnos += padre1.getTurnosvida();
+                        }
+                        if (padre2.getTurnosvida() > padre1.getTurnosvida()) {
+                            turnos += padre2.getTurnosvida();
+                        }
+                        float probclon = 0;
+                        if (padre2.getProbclon() < padre1.getProbclon()) {
+                            probclon += padre1.getProbclon();
+                        }
+                        if (padre2.getProbclon() > padre1.getProbclon()) {
+                            probclon+= padre2.getProbclon();
+                        }
+                        Invidiuos hijo = new Invidiuos(padre1.getX(), padre1.getY(),padre1.getId()+padre2.getId(),turnos,probclon,partida.getMejora());
+                        if(Objects.equals(padre2.getTipo(), "Avanzado") || Objects.equals(padre1.getTipo(), "Avanzado")){
+                            hijo.setTipo("Avanzado");
+                        }
+                        else if(Objects.equals(padre2.getTipo(), "Básico") || Objects.equals(padre1.getTipo(), "Básico")){
+                            hijo.setTipo("Básico");
+                        }
+                        else if(Objects.equals(padre2.getTipo(), "Normal") || Objects.equals(padre1.getTipo(), "Normal")){
+                            hijo.setTipo("Normal");
+                        }
+                        p.getIndividuos().add(hijo);
+                    }
+                }
             }
         }
+    }
+    private  void nuevosrecursos(Partida p){
+        for(int i=0;i<p.getColumnas();i++){
+            for(int j=0; j<p.getFilas();j++){
+                int pos= (int) (Math.random()*100);
+                if(pos<p.getPz()*100){
+                    ListaSimple<Integer> pv= getPvs(p);
+                    if(Math.random()*100<(int)pv.getElemento(0).getDato()){
+                        Recursos r= new Recursos(i,j,p.getPz(),p.getPvA(),p.getTiemposvida()
+                                ,p.getCbAgua(),p.getModAgua(),p.isCkAgua()
+                                ,p.getCbComida(),p.getModComida(),p.isCkComida()
+                                ,p.getCbMontana(),p.getModMontana(),p.isCkMontana()
+                                ,p.getCbTesoro(),p.getModTesoro(),p.isCkTesoro()
+                                ,p.getCbBiblio(),p.getModBiblio(),p.isCkBiblio()
+                                ,p.getCbPozo(),p.getModPozo(),p.isCkPozo());
+                        r.setTipo(rec((int)pv.getElemento(0).getDato(),p));
+                        p.getRecursos().add(r);
+                    }
+                    else  if(Math.random()*100<(int)pv.getElemento(1).getDato()){
+                        Recursos r= new Recursos(i,j,p.getPz(),p.getPvA(),p.getTiemposvida()
+                                ,p.getCbAgua(),p.getModAgua(),p.isCkAgua()
+                                ,p.getCbComida(),p.getModComida(),p.isCkComida()
+                                ,p.getCbMontana(),p.getModMontana(),p.isCkMontana()
+                                ,p.getCbTesoro(),p.getModTesoro(),p.isCkTesoro()
+                                ,p.getCbBiblio(),p.getModBiblio(),p.isCkBiblio()
+                                ,p.getCbPozo(),p.getModPozo(),p.isCkPozo());
+                        r.setTipo(rec((int)pv.getElemento(1).getDato(),p));
+                        p.getRecursos().add(r);
+                    }
+                    else if(Math.random()*100<(int)pv.getElemento(2).getDato()){
+                        Recursos r= new Recursos(i,j,p.getPz(),p.getPvA(),p.getTiemposvida()
+                                ,p.getCbAgua(),p.getModAgua(),p.isCkAgua()
+                                ,p.getCbComida(),p.getModComida(),p.isCkComida()
+                                ,p.getCbMontana(),p.getModMontana(),p.isCkMontana()
+                                ,p.getCbTesoro(),p.getModTesoro(),p.isCkTesoro()
+                                ,p.getCbBiblio(),p.getModBiblio(),p.isCkBiblio()
+                                ,p.getCbPozo(),p.getModPozo(),p.isCkPozo());
+                        r.setTipo(rec((int)pv.getElemento(2).getDato(),p));
+                        p.getRecursos().add(r);
+                    }
+                    else if(Math.random()*100<(int)pv.getElemento(3).getDato()){
+                        Recursos r= new Recursos(i,j,p.getPz(),p.getPvA(),p.getTiemposvida()
+                                ,p.getCbAgua(),p.getModAgua(),p.isCkAgua()
+                                ,p.getCbComida(),p.getModComida(),p.isCkComida()
+                                ,p.getCbMontana(),p.getModMontana(),p.isCkMontana()
+                                ,p.getCbTesoro(),p.getModTesoro(),p.isCkTesoro()
+                                ,p.getCbBiblio(),p.getModBiblio(),p.isCkBiblio()
+                                ,p.getCbPozo(),p.getModPozo(),p.isCkPozo());
+                        r.setTipo(rec((int)pv.getElemento(3).getDato(),p));
+                        p.getRecursos().add(r);
+                    }
+                    else  if(Math.random()*100<(int)pv.getElemento(4).getDato()){
+                        Recursos r= new Recursos(i,j,p.getPz(),p.getPvA(),p.getTiemposvida()
+                                ,p.getCbAgua(),p.getModAgua(),p.isCkAgua()
+                                ,p.getCbComida(),p.getModComida(),p.isCkComida()
+                                ,p.getCbMontana(),p.getModMontana(),p.isCkMontana()
+                                ,p.getCbTesoro(),p.getModTesoro(),p.isCkTesoro()
+                                ,p.getCbBiblio(),p.getModBiblio(),p.isCkBiblio()
+                                ,p.getCbPozo(),p.getModPozo(),p.isCkPozo());
+                        r.setTipo(rec((int)pv.getElemento(4).getDato(),p));
+                        p.getRecursos().add(r);
+                    }
+                    else if(Math.random()*100<(int)pv.getElemento(5).getDato()){
+                        Recursos r= new Recursos(i,j,p.getPz(),p.getPvA(),p.getTiemposvida()
+                                ,p.getCbAgua(),p.getModAgua(),p.isCkAgua()
+                                ,p.getCbComida(),p.getModComida(),p.isCkComida()
+                                ,p.getCbMontana(),p.getModMontana(),p.isCkMontana()
+                                ,p.getCbTesoro(),p.getModTesoro(),p.isCkTesoro()
+                                ,p.getCbBiblio(),p.getModBiblio(),p.isCkBiblio()
+                                ,p.getCbPozo(),p.getModPozo(),p.isCkPozo());
+                        r.setTipo(rec((int)pv.getElemento(5).getDato(),p));
+                        p.getRecursos().add(r);
+                    }
+                    else{
+                        Recursos r= new Recursos(i,j,p.getPz(),p.getPvA(),p.getTiemposvida()
+                                ,p.getCbAgua(),p.getModAgua(),p.isCkAgua()
+                                ,p.getCbComida(),p.getModComida(),p.isCkComida()
+                                ,p.getCbMontana(),p.getModMontana(),p.isCkMontana()
+                                ,p.getCbTesoro(),p.getModTesoro(),p.isCkTesoro()
+                                ,p.getCbBiblio(),p.getModBiblio(),p.isCkBiblio()
+                                ,p.getCbPozo(),p.getModPozo(),p.isCkPozo());
+                        r.setTipo(rec((int)pv.getElemento(0).getDato(),p));
+                        p.getRecursos().add(r);
+                    }
+                }
+            }
+        }
+    }
+    private ListaSimple<Integer> getPvs(Partida p){
+        ListaSimple<Integer> l= new ListaSimple<Integer>();
+
+        l.add((int)(p.getPvA()*100));
+        l.add((int)(p.getPvC()*100));
+        l.add((int)(p.getPvB()*100));
+        l.add((int)(p.getPvM()*100));
+        l.add((int)(p.getPvP()*100));
+        l.add((int)(p.getPvT()*100));
+        return ordenar(l);
+    }
+    private String rec(int pv, Partida p){
+        String tipo = null;
+        if(pv== (int) p.getPvA()){
+            tipo= "A";
+        }
+        else if(pv== (int) p.getPvC()){
+            tipo= "C";
+        }
+        else if(pv== (int) p.getPvB()){
+            tipo= "B";
+        }
+        else if(pv== (int) p.getPvM()){
+            tipo= "M";
+        }
+        else if(pv== (int) p.getPvP()){
+            tipo= "P";
+
+        }else if(pv== (int) p.getPvT()){
+            tipo="T";
+        }
+
+        return tipo;
+    }
+    public ListaSimple<Integer> ordenar(ListaSimple<Integer> l){
+        ListaSimple<Integer> l2= l;
+        ListaSimple<Integer> listafinal = new ListaSimple<Integer>();
+        for(int i=0; i<l.getNumeroElementos();i++){
+            int mayor = (int) l.getElemento(i).getDato();
+            for(int j=0; j<l2.getNumeroElementos();j++){
+                if(mayor<(int)l2.getElemento(j).getDato()){
+                    mayor=(int)l2.getElemento(j).getDato();
+                }
+            }
+
+            l2.del(0);
+            listafinal.add(mayor);
+        }
+        return listafinal;
+    }
+
+    private ListaELementos elementosceldas(int x, int y, ListaELementos ind) {
+        ListaELementos indcelda = new ListaELementos();
+        for(int i=0; i<ind.getNumeroElementos();i++){
+            if(ind.getElemento(i).getDatos().getX()-1==x && ind.getElemento(i).getDatos().getY()-1==y){
+                indcelda.add(ind.getElemento(i).getDatos());
+            }
+        }
+        return indcelda;
     }
 
     private void actualizarExistenciaR(ListaRecursos recursos) {

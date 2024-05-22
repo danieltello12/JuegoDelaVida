@@ -107,7 +107,7 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
 
             Stage newStage= new Stage();
             thisstage.setTitle("!!!!Juego de La Vida de Conway");
-            Scene scene = new Scene(new Tablero().Tablero(partida, usuario,thisstage), 1400, 800);
+            Scene scene = new Scene(new Tablero().Tablero(partida, usuario,stagePadre), 1400, 800);
             thisstage.setScene(scene);
             thisstage.show();
 
@@ -393,7 +393,7 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
             fxmlLoader.setLocation(url);
 
             try {
-                Scene scene = new Scene(fxmlLoader.load(), 1006, 518);
+                Scene scene = new Scene(fxmlLoader.load(), 841, 481);
                 stage.setTitle("Juego de La Vida de Conway");
                 stage.setScene(scene);
                 TipoDeInviduoControlador p = fxmlLoader.getController();

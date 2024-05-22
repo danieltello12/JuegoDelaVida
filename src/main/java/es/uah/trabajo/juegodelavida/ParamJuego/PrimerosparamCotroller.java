@@ -51,6 +51,8 @@ public class PrimerosparamCotroller implements Initializable {
     private TextField  turnos;
     @FXML
     private TextField  tiempos;
+    @FXML
+    private TextField mejora;
 
     public String getCbAgua() {
         return (String)cbAgua.getValue();
@@ -59,7 +61,12 @@ public class PrimerosparamCotroller implements Initializable {
     public void setCbAgua(String cbAgua) {
         this.cbAgua.setValue(cbAgua);
     }
-
+ public float getMejora(){
+        return Float.parseFloat(mejora.getText());
+ }
+ public void setMejora(float mejora){
+        this.mejora.setText(String.valueOf(mejora));
+ }
     @FXML
     private ComboBox cbAgua;
 
@@ -285,6 +292,7 @@ public class PrimerosparamCotroller implements Initializable {
             p.setPvM((float) probVM.getValue());
             p.setPvT((float) probVT.getValue());
             p.setPvP((float) probVP.getValue());
+            p.setMejora(Float.parseFloat(mejora.getText()));
             p.setTurnosvida(Integer.parseInt(turnos.getText()));
             p.setTiemposvida(Integer.parseInt(tiempos.getText()));
             p.setCbAgua((String)cbAgua.getValue());
