@@ -147,7 +147,7 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
     }
     return etiquetas;
 }
-    public Parent Tablero ( Partida p,  String usuario, Stage stagePadre) throws
+    public Parent Tablero (Partida p, String usuario, Stage stagePadre) throws
             FileNotFoundException {
         this.stagePadre=stagePadre;
         pasos=0;
@@ -558,6 +558,7 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
                     //ImageView im= new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/FondoPortada.png")));
                     //im.setFitHeight(800);
                     //im.setFitWidth(600);
+                    p.getAcciones().guardar(p.getAcciones());
 
                     CargaGrafos cargaGrafos = new CargaGrafos();
                     Grafos grafoArbol = cargaGrafos.dameArbolGen(p);
@@ -673,7 +674,7 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         usuarios.getusuario(u).setPartidas(partidas);
     }
     private boolean finpartida(Partida p,Stage s) throws FileNotFoundException {
-        if(p.getIndividuos().getNumeroElementos()<=1){
+        if(p.getIndividuos().getNumeroElementos()==0 || p.getIndividuos().getElemento(0).getDatos().getTurnosvida()==1){
             return true;
         }
         else{

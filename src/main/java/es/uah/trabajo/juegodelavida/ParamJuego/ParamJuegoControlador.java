@@ -2,6 +2,7 @@ package es.uah.trabajo.juegodelavida.ParamJuego;
 
 
 import es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar.ListaLEPA;
+import es.uah.trabajo.juegodelavida.Clases.ColaAcciones.Cola;
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.Invidiuos;
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Recursos.Recursos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
@@ -78,6 +79,11 @@ public class ParamJuegoControlador implements Initializable {
         ListaUsuarios usuarios= new ListaUsuarios();
         ListaLEPA partidas= usuarios.getusuario(usuario).getPartidas();
         partidas.add(partida);
+        Cola Acciones= new Cola<>().cargar();
+        Acciones.vaciar();
+        Acciones.guardar(Acciones);
+        Cola<String> accionesPartida= new Cola<String>();
+        partida.setAcciones(accionesPartida);
         usuarios.getusuario(usuario).setPartidas(limpieza(partidas));
 
             this.thisstage.close();

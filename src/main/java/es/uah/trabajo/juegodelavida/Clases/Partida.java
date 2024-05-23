@@ -1,5 +1,6 @@
 package es.uah.trabajo.juegodelavida.Clases;
 
+import es.uah.trabajo.juegodelavida.Clases.ColaAcciones.Cola;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
 
@@ -50,8 +51,17 @@ public class Partida {
     String cbPozo;
 
     int modPozo;
+    Cola acciones;
 
     boolean ckPozo;
+
+    public Cola getAcciones() {
+        return acciones;
+    }
+
+    public void setAcciones(Cola acciones) {
+        this.acciones = acciones;
+    }
 
     public float getMejora() {
         return mejora;

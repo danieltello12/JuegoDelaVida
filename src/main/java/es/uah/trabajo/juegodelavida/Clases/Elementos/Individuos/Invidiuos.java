@@ -30,6 +30,12 @@ public class Invidiuos extends Elementos {
     public ListaLERepr<Reproduccion> getReproducciones(){
         return reproducciones;
     }
+    public Invidiuos copiar(Invidiuos i){
+        Invidiuos nuevo= new Invidiuos(i.getX(),i.getY(),i.getId(),i.turnosvida,i.probrep,i.getProbclon());
+        nuevo.setTipo(i.getTipo());
+        return  nuevo;
+    }
+
 
     public Invidiuos(int x, int y, int id, int turnosvida, float probrep, float probclon) {
        super(x,y);

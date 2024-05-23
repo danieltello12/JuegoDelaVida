@@ -1,6 +1,7 @@
 package es.uah.trabajo.juegodelavida.CargarPartida;
 
 import es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar.ListaLEPA;
+import es.uah.trabajo.juegodelavida.Clases.ColaAcciones.Cola;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaLEMov;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaLERepr;
@@ -78,6 +79,10 @@ public class CargarPartida extends Pane {
                     ListaLEMov<Movimiento> movimientos = new ListaLEMov<Movimiento>();
                     movimientos.vaciar();
                     movimientos.guardar(movimientos);
+
+                    Cola Acciones= new Cola<>().cargar();
+                    Acciones.vaciar();
+                    Acciones.guardar(Acciones);
 
                     ListaLERepr<Reproduccion> reproducciones = new ListaLERepr<Reproduccion>();
                     reproducciones.vaciar();

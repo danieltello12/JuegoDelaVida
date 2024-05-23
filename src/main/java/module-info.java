@@ -32,5 +32,7 @@ module es.uah.trabajo.juegodelavida {
     exports es.uah.trabajo.juegodelavida.Clases.Elementos.Recursos;
     exports es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion;
     opens es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion to javafx.fxml;
+    opens es.uah.trabajo.juegodelavida.Clases.ColaAcciones to com.google.gson;
+    exports es.uah.trabajo.juegodelavida.Clases.ColaAcciones;
 
 }
