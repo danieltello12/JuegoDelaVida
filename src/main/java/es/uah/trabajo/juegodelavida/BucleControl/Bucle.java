@@ -3,11 +3,12 @@ package es.uah.trabajo.juegodelavida.BucleControl;
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.Invidiuos;
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Recursos.Recursos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.*;
-import es.uah.trabajo.juegodelavida.Clases.Grafos.*;
 import es.uah.trabajo.juegodelavida.Clases.Grafos.Cola;
 import es.uah.trabajo.juegodelavida.Clases.Grafos.ElementoLDE;
+import es.uah.trabajo.juegodelavida.Clases.Grafos.*;
 import es.uah.trabajo.juegodelavida.Clases.Movimiento;
 import es.uah.trabajo.juegodelavida.Clases.Partida;
+import es.uah.trabajo.juegodelavida.Clases.Reproduccion;
 
 import java.util.Objects;
 import java.util.Random;
@@ -40,8 +41,62 @@ public Bucle (){
         }
         return newLista;
     }
+    public int dameMaxIdIndividuo(Partida partida, Invidiuos padre1){
+            int maxId=0;
+            int maxIdRepr=0;
+            if ((maxIdRepr=dameMaxIdHijo(padre1)) == 0) {
 
-    public void ejecutarMovimiento(){
+                for (int i=0; i< partida.getIndividuos().getNumeroElementos();i++) {
+                    if (partida.getIndividuos().getElemento(i) != null) {
+                        Invidiuos individuoGen = (partida.getIndividuos().getElemento(i).getDatos());
+                        if (individuoGen.getId() > maxId) {
+                            maxId = individuoGen.getId();
+                        }
+                    }
+                }
+            }else {
+                maxId=maxIdRepr;
+            }
+            return maxId;
+
+    }
+    public int dameMaxIdHijo(Invidiuos padre1){
+        ListaLERepr<Reproduccion> listaRep= new ListaLERepr<Reproduccion>();
+        listaRep= padre1.getReproducciones().cargar();
+        int maxId=0;
+        for (int i=0; i< listaRep.getNumeroElementos();i++) {
+            if (listaRep.getElemento(i) != null && listaRep.getElemento(i).getDatos() != null) {
+                if (listaRep.getElemento(i).getDatos().getIdIndividuoHijo() > maxId) {
+                    maxId = listaRep.getElemento(i).getDatos().getIdIndividuoHijo();
+                }
+            }
+        }
+        return maxId;
+    }
+    public boolean existeHijo(Invidiuos padre1, Invidiuos padre2, int paso){
+        boolean existe=false;
+        for (int i=0; i< partida.getIndividuos().getNumeroElementos();i++) {
+            if (partida.getIndividuos().getElemento(i) != null) {
+                if (partida.getIndividuos().getElemento(i).getDatos().getReproducciones()!=null ) {
+                    ListaLERepr<Reproduccion> reproducciones = partida.getIndividuos().getElemento(i).getDatos().getReproducciones();
+                    for (int j = 0; j < reproducciones.getNumeroElementos(); j++){
+                        if (reproducciones.getElemento(j) != null && reproducciones.getElemento(j).getDatos()!=null){
+                            if (reproducciones.getElemento(j).getDatos().getIdIndividuoPadre1() == padre1.getId()&&
+                                    reproducciones.getElemento(j).getDatos().getIdIndividuoPadre2() == padre2.getId() &&
+                                    reproducciones.getElemento(j).getDatos().getPaso() == paso){
+                                existe=true;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+        return existe;
+
+    }
+    public void ejecutarMovimiento(int paso){
         /*
         1. Para cada individuo, se actualiza su tiempo de vida, y en su caso se elimina si ha muerto.
         */
@@ -58,7 +113,7 @@ public Bucle (){
         evaluarMejorasIR(partida.getIndividuos(), partida.getRecursos());
 
         /*5. Para cada posición, evaluará si existe reproducción o no.*/
-        verreproduccion(partida);
+        verreproduccion(partida,paso);
         /*6. Para cada individuo, evaluará si existe clonación o no.*/
         verClon(partida);
 
@@ -73,16 +128,15 @@ public Bucle (){
 
     }
 
-    private void evaluarNuevoR(Partida partida) {
-    }
+
 
     private void actualizarExistenciaI(ListaELementos individuos) {
 
         boolean continuar=true;
         int numTurnos=Integer.MAX_VALUE;
 
-        for(int f=0; f < partida.getFilas();f++) {
-            for(int c=0; c < partida.getColumnas();c++){
+        for(int f=1; f <= partida.getFilas();f++) {
+            for(int c=1; c <= partida.getColumnas();c++){
                 int contador =0;
                 for (int i = 0; i < partida.getIndividuos().getNumeroElementos(); i++) {
                     if (partida.getIndividuos().getElemento(i).getDatos() != null &&
@@ -437,8 +491,7 @@ public Bucle (){
         if ( coste < Double.MAX_VALUE && recursoElegido >= 0){
             individuoGen.setX(partida.getRecursos().getElemento(recursoElegido).getDatos().getX());
             individuoGen.setY(partida.getRecursos().getElemento(recursoElegido).getDatos().getY());
-            individuoGen.addMovimiento(new Movimiento(partida.getRecursos().getElemento(recursoElegido).getDatos().getX(),
-                    partida.getRecursos().getElemento(recursoElegido).getDatos().getY(),individuoGen.getId()));
+            individuoGen.addMovimiento(new Movimiento(partida.getRecursos().getElemento(recursoElegido).getDatos().getX(), partida.getRecursos().getElemento(recursoElegido).getDatos().getY(),individuoGen.getId()));
             individuoGen.añadirmovimientosJSon();
 
         }
@@ -495,29 +548,44 @@ public Bucle (){
         individuoGen.añadirmovimientosJSon();
     }
     private void verClon(Partida p){
-        ListaELementos individuos= p.getIndividuos();
-        for(int i=0; i<individuos.getNumeroElementos();i++){
+
+        ListaELementos individuosPartida=p.getIndividuos();
+        ListaELementos individuos= duplicaIndividuos(individuosPartida);
+
+        int numElementosIniciales=individuos.getNumeroElementos();
+        for(int i=0; i<numElementosIniciales;i++){
             Invidiuos actual= individuos.getElemento(i).getDatos();
             int n= (int) (Math.random()*100);
             if(n<actual.getProbclon()){
                 Invidiuos copia= actual;
+                copia.setId(dameMaxIdIndividuo(p,actual)+1);
                 p.getIndividuos().add(copia);
             }
         }
     }
-    private void verreproduccion(Partida p){
-        ListaELementos individuos=p.getIndividuos();
-        for(int i=0; i<individuos.getNumeroElementos();i++){
-            for (int j=0; j<individuos.getNumeroElementos();j++){
+    private void verreproduccion(Partida p, int paso){
+        ListaELementos individuosPartida=p.getIndividuos();
+        ListaELementos individuos= duplicaIndividuos(individuosPartida);
+        int numElementosIniciales=individuos.getNumeroElementos();
+        for(int i=0; i<numElementosIniciales;i++){
+            for (int j=0; j<numElementosIniciales;j++){
                 if(individuos.getElemento(i).getDatos().getX()==individuos.getElemento(j).getDatos().getX()
                         && individuos.getElemento(i).getDatos().getY()==individuos.getElemento(j).getDatos().getY()
                         && individuos.getElemento(i).getDatos().getId()!=individuos.getElemento(j).getDatos().getId()) {
-                    Invidiuos padre1 = individuos.getElemento(i).getDatos();
-                    Invidiuos padre2 = individuos.getElemento(j).getDatos();
+                    Invidiuos padre1 ;
+                    Invidiuos padre2;
+                    if((individuos.getElemento(i).getDatos().getId()) < (individuos.getElemento(j).getDatos().getId()) ) {
+                        padre1 = individuos.getElemento(i).getDatos();
+                        padre2 = individuos.getElemento(j).getDatos();
+                    }else{
+                        padre1 = individuos.getElemento(j).getDatos();
+                        padre2 = individuos.getElemento(i).getDatos();
+                    }
+
                     if (padre1.getProbrep() + padre2.getProbrep() >= 1) {
 
                         int turnos = 0;
-                        if (padre2.getTurnosvida() < padre1.getTurnosvida()) {
+                        if (padre2.getTurnosvida() <= padre1.getTurnosvida()) {
                             turnos += padre1.getTurnosvida();
                         }
                         if (padre2.getTurnosvida() > padre1.getTurnosvida()) {
@@ -530,25 +598,29 @@ public Bucle (){
                         if (padre2.getProbclon() > padre1.getProbclon()) {
                             probclon+= padre2.getProbclon();
                         }
-                        Invidiuos hijo = new Invidiuos(padre1.getX(), padre1.getY(),padre1.getId()+padre2.getId(),turnos,probclon,partida.getMejora());
-                        if(Objects.equals(padre2.getTipo(), "Avanzado") || Objects.equals(padre1.getTipo(), "Avanzado")){
-                            hijo.setTipo("Avanzado");
+                        if (!existeHijo(padre1, padre2,paso)) {
+                            Invidiuos hijo = new Invidiuos(padre1.getX(), padre1.getY(), dameMaxIdIndividuo(partida,padre1) + 1, turnos, probclon, partida.getMejora());
+                            if (Objects.equals(padre2.getTipo(), "Avanzado") || Objects.equals(padre1.getTipo(), "Avanzado")) {
+                                hijo.setTipo("Avanzado");
+                            } else if (Objects.equals(padre2.getTipo(), "Básico") || Objects.equals(padre1.getTipo(), "Básico")) {
+                                hijo.setTipo("Básico");
+                            } else if (Objects.equals(padre2.getTipo(), "Normal") || Objects.equals(padre1.getTipo(), "Normal")) {
+                                hijo.setTipo("Normal");
+                            }
+                            p.getIndividuos().add(hijo);
+                            Reproduccion reproduccion = new Reproduccion(padre1.getId(), padre2.getId(), hijo.getId(),paso);
+                            hijo.addReproduccion(reproduccion);
+                            hijo.añadirReproduccionJSon();
                         }
-                        else if(Objects.equals(padre2.getTipo(), "Básico") || Objects.equals(padre1.getTipo(), "Básico")){
-                            hijo.setTipo("Básico");
-                        }
-                        else if(Objects.equals(padre2.getTipo(), "Normal") || Objects.equals(padre1.getTipo(), "Normal")){
-                            hijo.setTipo("Normal");
-                        }
-                        p.getIndividuos().add(hijo);
+
                     }
                 }
             }
         }
     }
     public  void nuevosrecursos(Partida p){
-        for(int i=0;i<p.getColumnas();i++){
-            for(int j=0; j<p.getFilas();j++){
+        for(int i=1;i<=p.getColumnas();i++){
+            for(int j=1; j<=p.getFilas();j++){
                 int pos= (int) (Math.random()*100);
                 if(pos<p.getPz()*100){
                     ListaLEINT pv= getPvs(p);
@@ -683,8 +755,8 @@ public Bucle (){
     return ordenada;
     }
     private void limpiarRec(Partida p){
-    for(int i=0; i<p.getFilas();i++){
-        for(int j=0;j<p.getColumnas();j++){
+    for(int i=1; i<=p.getFilas();i++){
+        for(int j=1;j<=p.getColumnas();j++){
            while (reccelda(i,j,p.getRecursos()).getNumeroElementos()>3){
              borrar(reccelda(i,j,p.getRecursos()),p);
             }
@@ -712,7 +784,7 @@ public Bucle (){
     private ListaRecursos reccelda(int x, int y, ListaRecursos ind) {
         ListaRecursos indcelda = new ListaRecursos();
         for(int i=0; i<ind.getNumeroElementos();i++){
-            if(ind.getElemento(i).getDatos().getX()-1==x && ind.getElemento(i).getDatos().getY()-1==y){
+            if(ind.getElemento(i).getDatos().getX()==x && ind.getElemento(i).getDatos().getY()==y){
                 indcelda.add(ind.getElemento(i).getDatos());
             }
         }

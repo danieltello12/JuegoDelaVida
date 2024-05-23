@@ -9,10 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ElementoLEINT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaLEINT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="committt">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_05_2024_15_20_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_05_2024_15_20__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Json/reproduccion.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05/app-05-22-2024-1.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ElementoLERepr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaLERepr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Reproduccion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/LabelsP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2024_20_02__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_05_2024_10_05__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_05_2024_10_05__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2024_10_16__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2024_10_16__Changes_.xml" afterDir="false" />
@@ -26,15 +31,22 @@
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_05_2024_16_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_05_2024_16_52__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_05_2024_22_37__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_05_2024_22_37__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Diseño/SecuenciaTrabajoFinal.puml" beforeDir="false" afterPath="$PROJECT_DIR$/Diseño/SecuenciaTrabajoFinal.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Json/movimientos.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/movimientos.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Json/usuarios.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/usuarios.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dani.partidas.json" beforeDir="false" afterPath="$PROJECT_DIR$/dani.partidas.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/BucleControl/Bucle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/BucleControl/Bucle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/CargarPartida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/CargarPartida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Invidiuos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Invidiuos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaLEMov.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaLEMov.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Grafos/Camino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Grafos/Camino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Grafos/CargaGrafos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Grafos/CargaGrafos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/PrimerosparamCotroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/PrimerosparamCotroller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/ConfiguracionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/ConfiguracionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,23 +101,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3954023&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultPlantUmlFileTemplate": "UML Class",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3954023",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\UAH\IdeaProjects\Juego-De-La-Vida-L-D\src\main\resources\es\uah\trabajo\juegodelavida\Imagenes" />
@@ -115,7 +128,9 @@
       <recent name="C:\Users\UAH\IdeaProjects\JuegoDeLaVida\src\main\resources\es\uah\trabajo\juegodelavida\Imagenes" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="es.uah.trabajo.juegodelavida.TableroDeJuego" />
       <recent name="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos" />
+      <recent name="es.uah.trabajo.juegodelavida.Clases" />
       <recent name="es.uah.trabajo.juegodelavida.CargarPartida" />
     </key>
   </component>
@@ -348,47 +363,112 @@
     <MESSAGE value="commit2" />
     <MESSAGE value="commit con diagrama de secuencias" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="committt" />
+    <option name="LAST_COMMIT_MESSAGE" value="committt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/BucleControl/Bucle.java</url>
-          <line>647</line>
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
+          <line>676</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/BucleControl/Bucle.java</url>
-          <line>354</line>
-          <properties class="es.uah.trabajo.juegodelavida.BucleControl.Bucle" method="ejecutarMovimientoI">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
+          <line>556</line>
           <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
+          <line>568</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Grafos/Camino.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Grafos/Camino.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
+          <line>583</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/ConfiguracionController.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
+          <line>531</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Grafos/CargaGrafos.java</url>
+          <line>198</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Grafos/CargaGrafos.java</url>
+          <line>255</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/PrimerosparamCotroller.java</url>
+          <line>326</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/PrimerosparamCotroller.java</url>
+          <line>219</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="72" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
-        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLE" memberName="siguiente" />
         <PinnedItemInfo parentTag="com.google.gson.internal.LinkedTreeMap$Node" memberName="key" />
-        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos" memberName="primero" />
-        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.BucleControl.Bucle" memberName="partida" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Grafos.Cola" memberName="cola" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLEMov" memberName="datos" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Grafos.ElementoLS" memberName="dato" />
         <PinnedItemInfo parentTag="java.lang.String" memberName="hashIsZero" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLEMov" memberName="siguiente" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Partida" memberName="individuos" />
         <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Usuario" memberName="contraseña" />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="GridPane.getColumnIndex(child)" language="JAVA" />
-        <watch expression="GridPane.getRowIndex(child)" language="JAVA" />
-        <watch expression="child" language="JAVA" />
-        <watch expression="chid.getId()" language="JAVA" />
-        <watch expression="recursos.getElemento(pos).getDatos()" language="JAVA" />
-        <watch expression="l" />
-        <watch expression="this" />
-        <watch expression="this" />
+        <watch expression="mainGrid.getRowCount()" language="JAVA" />
+        <watch expression="mainGrid.getColumnCount()" language="JAVA" />
+        <watch expression="partida.getIndividuos().getElemento(i).getDatos()" language="JAVA" />
+        <watch expression="reccelda()eccelda(i,j,p.getRecursos()).getNumeroElementos()" language="JAVA" />
+        <watch expression="numTurnos" language="JAVA" />
+        <watch expression="pos" language="JAVA" />
+        <watch expression="partida.getIndividuos().getElemento(pos).getDatos().getId()" language="JAVA" />
+        <watch expression="partida.getIndividuos().getElemento(pos).getDatos().getX()" language="JAVA" />
+        <watch expression="partida.getIndividuos().getElemento(pos).getDatos().getY()" language="JAVA" />
+        <watch expression="reccelda(i,j,p.getRecursos())" language="JAVA" />
+        <watch expression="i" language="JAVA" />
+        <watch expression="j" language="JAVA" />
+        <watch expression="reccelda(i,j,p.getRecursos()).getNumeroElementos()" language="JAVA" />
+        <watch expression="ind.getElemento(i).getDatos()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

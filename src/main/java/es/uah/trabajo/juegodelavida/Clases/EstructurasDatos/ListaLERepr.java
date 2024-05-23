@@ -1,23 +1,16 @@
 package es.uah.trabajo.juegodelavida.Clases.EstructurasDatos;
 
 import es.uah.trabajo.juegodelavida.Clases.Json.gson;
-import es.uah.trabajo.juegodelavida.Clases.Movimiento;
+import es.uah.trabajo.juegodelavida.Clases.Reproduccion;
 
 
-public class ListaLEMov<TipoDelDato> extends gson {
-    protected ElementoLEMov<TipoDelDato> primero;
-    public void añadirMovimiento(Movimiento nuevo) {
-        ListaLEMov l= new ListaLEMov();
+
+public class ListaLERepr<TipoDelDato> extends gson {
+    protected ElementoLERepr<TipoDelDato> primero;
+    public void añadirReproduccion(Reproduccion nuevo) {
+        ListaLERepr l= new ListaLERepr();
         l=l.cargar();
-        int idmovimiento=0;
-        //Se obtiene el ultimo idMovimiento para ese individuo
-        for (int i=0; l != null&& i < l.getNumeroElementos();i++) {
-            if (l.getElemento(i).getDatos().getIdIndividuo() == nuevo.getIdIndividuo()) {
-               if(l.getElemento(i).getDatos().getIdMovimiento() >= idmovimiento)
-                idmovimiento=(l.getElemento(i).getDatos().getIdMovimiento())+1;
-            }
-        }
-        l.add(nuevo,idmovimiento);
+        l.add(nuevo);
         guardar(l);
     }
     public boolean isVacia() {
@@ -28,11 +21,11 @@ public class ListaLEMov<TipoDelDato> extends gson {
         return vacio;
     }
 
-    public void guardar(ListaLEMov<TipoDelDato> l){
-        guardarObjetoEnArchivo("Json/movimientos.json",l);
+    public void guardar(ListaLERepr<TipoDelDato> l){
+        guardarObjetoEnArchivo("Json/reproduccion.json",l);
     }
-    public ListaLEMov<Movimiento> cargar(){
-        return cargarObjetoDesdeArchivo("Json/movimientos.json", ListaLEMov.class);
+    public ListaLERepr<Reproduccion> cargar(){
+        return cargarObjetoDesdeArchivo("Json/reproduccion.json", ListaLERepr.class);
 
     }
     public void vaciar() {
@@ -45,12 +38,12 @@ public class ListaLEMov<TipoDelDato> extends gson {
         this.add(nuevoprimero);
 
     }**/
-   private void add(ElementoLEMov<TipoDelDato> el) {
+   private void add(ElementoLERepr<TipoDelDato> el) {
        if (isVacia()) {
            this.primero = el;
 
        } else {
-           ElementoLEMov<TipoDelDato> nuevoprimero = new ElementoLEMov(this.primero, el.getDatos());
+           ElementoLERepr<TipoDelDato> nuevoprimero = new ElementoLERepr(this.primero, el.getDatos());
            this.primero = nuevoprimero;
 
 
@@ -58,19 +51,15 @@ public class ListaLEMov<TipoDelDato> extends gson {
 
 
    }
-      public void add(Movimiento obj) {
-       obj.setIdMovimiento(this.getNumeroElementos());
-          //obj.setIdMovimiento(idmovimiento);
+      public void add(Reproduccion obj) {
 
-        ElementoLEMov<TipoDelDato> nuevoprimero = new ElementoLEMov(this.primero, obj);
+        ElementoLERepr<TipoDelDato> nuevoprimero = new ElementoLERepr(this.primero, obj);
         this.add(nuevoprimero);
 
     }
-    public void add(Movimiento obj,int idmovimiento) {
+    public void add(Reproduccion obj,int idmovimiento) {
 
-        obj.setIdMovimiento(idmovimiento);
-
-        ElementoLEMov<TipoDelDato> nuevoprimero = new ElementoLEMov(this.primero, obj);
+        ElementoLERepr<TipoDelDato> nuevoprimero = new ElementoLERepr(this.primero, obj);
         this.add(nuevoprimero);
 
     }
@@ -86,18 +75,18 @@ public class ListaLEMov<TipoDelDato> extends gson {
 
     }**/
 
-    public void insert(Movimiento dato, int posicion,int kk) {
-        ElementoLEMov<TipoDelDato> el = this.primero;
+    public void insert(Reproduccion dato, int posicion) {
+        ElementoLERepr<TipoDelDato> el = this.primero;
         if (posicion == 0) {
             this.add(dato,0);
         } else {
-            ElementoLEMov<TipoDelDato> e= new ElementoLEMov(this.getElemento(posicion),dato);
+            ElementoLERepr<TipoDelDato> e= new ElementoLERepr(this.getElemento(posicion),dato);
             this.getElemento(posicion-1).siguiente=e;
         }
     }
 
     public int del(int posicion) {
-        ElementoLEMov<TipoDelDato> el = this.primero;
+        ElementoLERepr<TipoDelDato> el = this.primero;
         if (posicion == 0) {
             this.primero = el.getSiguiente();
         } else {
@@ -109,7 +98,7 @@ public class ListaLEMov<TipoDelDato> extends gson {
 
 
             if (el != null && el.getSiguiente() != null) {
-                ElementoLEMov<TipoDelDato> el2 = el.getSiguiente();
+                ElementoLERepr<TipoDelDato> el2 = el.getSiguiente();
                 el.siguiente = el2.getSiguiente();
             }
 
@@ -121,7 +110,7 @@ public class ListaLEMov<TipoDelDato> extends gson {
 
     public int getNumeroElementos() {
         int contador = 0;
-        ElementoLEMov<TipoDelDato> el = this.primero;
+        ElementoLERepr<TipoDelDato> el = this.primero;
         while (el != null) {
             contador++;
             el=el.getSiguiente();
@@ -130,13 +119,14 @@ public class ListaLEMov<TipoDelDato> extends gson {
         return contador;
     }
 
-    public int getPosicion(ElementoLEMov<TipoDelDato> el2) {
+    public int getPosicion(ElementoLERepr<TipoDelDato> el2) {
         int contador = 0;
         boolean salir = false;
-        ElementoLEMov<TipoDelDato> el = this.primero;
+        ElementoLERepr<TipoDelDato> el = this.primero;
         while (el != null && salir == false) {
-            if (el.getDatos().getIdIndividuo() == el2.getDatos().getIdIndividuo() &&
-                    el.getDatos().getIdMovimiento() == el2.getDatos().getIdMovimiento()) {
+            if (el.getDatos().getIdIndividuoPadre1() == el2.getDatos().getIdIndividuoPadre1() &&
+                    el.getDatos().getIdIndividuoPadre2() == el2.getDatos().getIdIndividuoPadre2() &&
+                    el.getDatos().getIdIndividuoHijo() == el2.getDatos().getIdIndividuoHijo()) {
                 salir = true;
             } else {
                 el = el.getSiguiente();
@@ -149,14 +139,14 @@ public class ListaLEMov<TipoDelDato> extends gson {
         return contador;
     }
 
-    public ElementoLEMov<TipoDelDato> getPrimero() {
+    public ElementoLERepr<TipoDelDato> getPrimero() {
         return this.primero;
 
     }
 
-    public ElementoLEMov<TipoDelDato> getUltimo() {
-        ElementoLEMov<TipoDelDato> el = this.primero;
-        ElementoLEMov<TipoDelDato> elanterior = null;
+    public ElementoLERepr<TipoDelDato> getUltimo() {
+        ElementoLERepr<TipoDelDato> el = this.primero;
+        ElementoLERepr<TipoDelDato> elanterior = null;
         while (el != null) {
             elanterior = el;
             el = el.getSiguiente();
@@ -165,10 +155,10 @@ public class ListaLEMov<TipoDelDato> extends gson {
 
     }
 
-    public ElementoLEMov<TipoDelDato> getSiguiente(ElementoLEMov<TipoDelDato> el2) {
+    public ElementoLERepr<TipoDelDato> getSiguiente(ElementoLERepr<TipoDelDato> el2) {
         int contador = 0;
         boolean salir = false;
-        ElementoLEMov<TipoDelDato> el = this.primero;
+        ElementoLERepr<TipoDelDato> el = this.primero;
         while (el != null && salir == false) {
             if (el.getDatos() == el2.getDatos()) {
                 salir = true;
@@ -183,8 +173,8 @@ public class ListaLEMov<TipoDelDato> extends gson {
 
     }
 
-    public ElementoLEMov<TipoDelDato> getElemento(int posicion) {
-        ElementoLEMov<TipoDelDato> el = this.primero;
+    public ElementoLERepr<TipoDelDato> getElemento(int posicion) {
+        ElementoLERepr<TipoDelDato> el = this.primero;
         if (posicion != 0) {
             int contador = 0;
             while (el != null && contador != posicion) {

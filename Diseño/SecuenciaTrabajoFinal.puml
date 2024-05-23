@@ -17,6 +17,8 @@ participant V9Configuracion
 participant V10Pause
 participant V11Play
 participant V12InformacionCasilla
+participant V13GuardarPartida
+participant V14FinDePartida
 
 
 Usuario-->V0Portada:play
@@ -55,6 +57,9 @@ V11Play-->V8TableroDeJuego:Turno realizado,tablero muestra movimientos y cambios
 V8TableroDeJuego-->V12InformacionCasilla:click<infoCasilla> setOnAction
 V12InformacionCasilla-->V12InformacionCasilla:Mostramos la info en la casilla seleccionada
 V12InformacionCasilla-->V8TableroDeJuego:click<Cerrar>setOnAction
+V8TableroDeJuego-->V13GuardarPartida:click<GuardarPartida>:almacenamos los datos de nuestra partida en un JSON
+V8TableroDeJuego-->V14FinDePartida:En el caso que quede un individuo se acaba la partida
+
 
 
 

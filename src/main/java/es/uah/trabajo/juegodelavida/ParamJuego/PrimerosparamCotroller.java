@@ -2,8 +2,12 @@ package es.uah.trabajo.juegodelavida.ParamJuego;
 
 import es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar.ListaLEPA;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
+import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaLEMov;
+import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaLERepr;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
+import es.uah.trabajo.juegodelavida.Clases.Movimiento;
 import es.uah.trabajo.juegodelavida.Clases.Partida;
+import es.uah.trabajo.juegodelavida.Clases.Reproduccion;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -328,6 +332,14 @@ public class PrimerosparamCotroller implements Initializable {
             l3=l3.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
             l3.vaciar();
             l3.guardar(l3,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+
+            ListaLEMov<Movimiento> movimientos = new ListaLEMov<Movimiento>();
+            movimientos.vaciar();
+            movimientos.guardar(movimientos);
+
+            ListaLERepr<Reproduccion> reproducciones = new ListaLERepr<Reproduccion>();
+            reproducciones.vaciar();
+            reproducciones.guardar(reproducciones);
 
             Stage stage = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader();

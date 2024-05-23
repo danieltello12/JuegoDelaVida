@@ -2,8 +2,12 @@ package es.uah.trabajo.juegodelavida.CargarPartida;
 
 import es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar.ListaLEPA;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
+import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaLEMov;
+import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaLERepr;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
+import es.uah.trabajo.juegodelavida.Clases.Movimiento;
 import es.uah.trabajo.juegodelavida.Clases.Partida;
+import es.uah.trabajo.juegodelavida.Clases.Reproduccion;
 import es.uah.trabajo.juegodelavida.Clases.Usuario;
 import es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero;
 import javafx.scene.Scene;
@@ -71,6 +75,13 @@ public class CargarPartida extends Pane {
                     lrec = p.getRecursos();
                     lrec.guardar(lrec, "src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
 
+                    ListaLEMov<Movimiento> movimientos = new ListaLEMov<Movimiento>();
+                    movimientos.vaciar();
+                    movimientos.guardar(movimientos);
+
+                    ListaLERepr<Reproduccion> reproducciones = new ListaLERepr<Reproduccion>();
+                    reproducciones.vaciar();
+                    reproducciones.guardar(reproducciones);
                     try {
 
                         stage.setTitle("!!Juego de La Vida de Conway");

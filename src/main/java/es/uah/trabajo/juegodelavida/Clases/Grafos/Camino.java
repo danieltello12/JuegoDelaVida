@@ -42,4 +42,38 @@ public class Camino<T> {
 
         return salida.toString();
     }
+
+    public String formatearArbol() {
+        StringBuffer salida = new StringBuffer();
+        NodoGrafos<String> nodoPadre =  (NodoGrafos<String>)getCamino().getPrimero().getDato();
+        NodoGrafos<String> nodoHijo =  (NodoGrafos<String>)getCamino().getUltimo().getDato();
+        salida.append("\nARBOL GENEALÓGICO DE VENCEDOR NODO ID(");
+        salida.append(nodoHijo.datos);
+        salida.append(")\n");
+        salida.append("Tablero\n");
+        for(int i =0; this.getCamino() != null && i <this.getCamino().getNumeroElementos();i++){
+
+            if(i == 0)
+                continue;
+            else if (this.getCamino().getElemento(i) != null){
+
+                int j=0;
+                while(j<i) {
+                    salida.append("\t");
+                    j++;
+                }
+                salida.append("|");
+                salida.append("--");
+                salida.append("ES PADRE DE");
+                salida.append("-->NODO ID(");
+                NodoGrafos<String> nodoActual=(NodoGrafos<String>)this.getCamino().getElemento(i).getDato();
+                salida.append(nodoActual.datos);
+                salida.append(")\n");
+            }
+
+
+        }
+
+        return salida.toString();
+    }
 }

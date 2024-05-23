@@ -5,6 +5,7 @@ import es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar.ElementoLEPA
 import es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar.ListaLEPA;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
+import es.uah.trabajo.juegodelavida.Clases.Grafos.*;
 import es.uah.trabajo.juegodelavida.Clases.ListaUsuarios;
 import es.uah.trabajo.juegodelavida.Clases.Partida;
 import es.uah.trabajo.juegodelavida.Portada.Boton;
@@ -14,17 +15,16 @@ import es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion.ConfiguracionPr
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
@@ -46,11 +46,115 @@ public class Tablero extends Pane {
     public Tablero() {}
     final Logger log = LogManager.getLogger(Tablero.class);
 
+    int pasos=0;
+    public static boolean isNumeric(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch(NumberFormatException e){
+            return false;
+        }
+    }
+public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int finalI, int finalJ){
 
+    actualizarindyrecpart(partida,usuario);
+    ListaELementos individuos= new ListaELementos();
+    individuos=individuos.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
+    ListaELementos elementosencelda= new ListaELementos();
+    for(int pos=0; pos<individuos.getNumeroElementos();pos++){
+        if(individuos.getElemento(pos).getDatos().getX()-1== finalI && individuos.getElemento(pos).getDatos().getY()-1== finalJ){
+            elementosencelda.add(individuos.getElemento(pos).getDatos());
+        }
+    }
+    ListaRecursos recursos= new ListaRecursos().cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+    ListaRecursos recursosencelda= new ListaRecursos();
+    for (int pos=0; pos<recursos.getNumeroElementos();pos++){
+        if(recursos.getElemento(pos).getDatos().getX()-1== finalI && recursos.getElemento(pos).getDatos().getY()-1== finalJ){
+            recursosencelda.add(recursos.getElemento(pos).getDatos());
+        }
+    }
+    ListaSimple<Label> etiquetas = new ListaSimple<Label>();
+    LabelsP l1= new LabelsP("Celda["+finalI+"-"+finalJ+"] Individuos <"+elementosencelda.getNumeroElementos()+">: ");
+    l1.setTranslateX(0);
+    l1.setTranslateY(50);
+    etiquetas.add(l1);
+    //caja_info.getChildren().addAll(l1);
+    int pos=0;
+    if(elementosencelda.getNumeroElementos()==0){
+        LabelsP l2= new LabelsP("No hay Individuos");
+        l2.setTranslateX(60);
+        l2.setTranslateY(90);
+
+        //caja_info.getChildren().addAll(l2);
+        etiquetas.add(l2);
+        this.elementosencelda=false;
+    }
+    else {
+        for (pos=0; pos < elementosencelda.getNumeroElementos(); pos++) {
+            LabelsP l3= new LabelsP((pos + 1) + "-");
+            l3.setTranslateY(90 + (70 * pos));
+
+            LabelsP tipo = new LabelsP("ID: " +elementosencelda.getElemento(pos).getDatos().getId() + " Tipo: " + elementosencelda.getElemento(pos).getDatos().getTipo());
+            tipo.setStyle("-fx-text-alignment: center; -fx-font-size: 16px;-fx-font-weight: bold");
+            tipo.setTranslateX(60);
+            tipo.setTranslateY(90 + (70 * pos));
+
+            LabelsP TurnosDeVida = new LabelsP("Vidas: " + elementosencelda.getElemento(pos).getDatos().getTurnosvida());
+            TurnosDeVida.setTranslateY(130 + (70 * pos));
+            TurnosDeVida.setTranslateX(60);
+            etiquetas.add(l3);
+            etiquetas.add(tipo);
+            etiquetas.add(TurnosDeVida);
+            //caja_info.getChildren().addAll(l3, tipo, TurnosDeVida);
+        }
+    }
+    int ultimo;
+    if(pos==0) {
+        ultimo = (90);
+    }
+    else{
+        ultimo=(90*(pos)+40);
+    }
+    LabelsP labrecursos= new LabelsP("Celda["+finalI+"-"+finalJ+"] Recursos:<"+recursosencelda.getNumeroElementos()+"> ");
+    labrecursos.setTranslateX(0);
+    labrecursos.setTranslateY(ultimo+10);
+    etiquetas.add(labrecursos);
+    //caja_info.getChildren().addAll(labrecursos);
+    if(recursosencelda.getNumeroElementos()==0){
+        LabelsP l2rec= new LabelsP("No hay Recursos");
+        l2rec.setTranslateX(60);
+        l2rec.setTranslateY(ultimo+50);
+        etiquetas.add(l2rec);
+        //caja_info.getChildren().addAll(l2rec);
+    }
+    else{
+        for( pos=0;pos<recursosencelda.getNumeroElementos();pos++){
+            LabelsP l3= new LabelsP((pos+1)+"-");
+            l3.setTranslateY(ultimo+25+(130*pos));
+
+            LabelsP tipo= new LabelsP("Tipo: "+ recursosencelda.getElemento(pos).getDatos().getTipo());
+            tipo.setTranslateX(60);
+            tipo.setTranslateY(ultimo+50+(130*pos));
+
+            LabelsP TurnosDeVida= new LabelsP("Vidas: "+ recursosencelda.getElemento(pos).getDatos().getTiemposvida());
+            TurnosDeVida.setTranslateY(ultimo+90+(130*pos));
+            TurnosDeVida.setTranslateX(60);
+            etiquetas.add(l3);
+            etiquetas.add(tipo);
+            etiquetas.add(TurnosDeVida);
+            //caja_info.getChildren().addAll(l3,tipo,TurnosDeVida);
+        }
+    }
+    return etiquetas;
+}
     public Parent Tablero ( Partida p,  String usuario, Stage stagePadre) throws
             FileNotFoundException {
         this.stagePadre=stagePadre;
+        pasos=0;
         return actualizaTablero(p, usuario,stagePadre);
+    }
+    public void incrementaPasos(){
+        pasos++;
     }
     public Parent actualizaTablero( Partida p, String usuario, Stage stagePadre) throws
             FileNotFoundException{
@@ -124,14 +228,27 @@ public class Tablero extends Pane {
                 secondaryGrid.add(iIndividuo, 1, 1);
 
                 //mainGrid.add(addVBox(), i, j);
-                mainGrid.add(secondaryGrid, i, j);
+                mainGrid.add(secondaryGrid, j,i);
                 Botones boton = new Botones(64);
                 boton.setStyle("-fx-background-color: transparent;-fx-border-color: black");
                 int finalI = i;
                 int finalJ = j;
+
+
+
                 Boton botonsalir = new Boton("Cerrar", 50);
                 boton.setOnAction(() -> {
+
+                    ListaSimple<Label> etiquetasContenido=new ListaSimple<Label>();
+                    etiquetasContenido=contenidoCasilla(p,usuario,finalI,finalJ);
                     caja_info.getChildren().add(r);
+                    for (int et=0; etiquetasContenido != null && et <etiquetasContenido.getNumeroElementos();et++){
+                        if(etiquetasContenido.getElemento(et)!= null){
+                            LabelsP etiqueta = (LabelsP)etiquetasContenido.getElemento(et).getDato();
+                            caja_info.getChildren().addAll(etiqueta);
+                        }
+                    }
+                    /*
                     actualizarindyrecpart(p,usuario);
                     ListaELementos individuos= new ListaELementos();
                     individuos=individuos.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
@@ -209,6 +326,8 @@ public class Tablero extends Pane {
                             caja_info.getChildren().addAll(l3,tipo,TurnosDeVida);
                         }
                     }
+
+                     */
                     botonsalir.setOnAction(()->{
                         caja_info.getChildren().clear();
                         root.getChildren().remove(caja_info);
@@ -216,11 +335,13 @@ public class Tablero extends Pane {
                     r.setVisible(true);
                     caja_info.getChildren().add(botonsalir);
                     root.getChildren().add(caja_info);
+
+
                 });
 
 
 
-                mainGrid.add(boton, i, j);
+                mainGrid.add(boton, j,i);
 
             }
         }
@@ -322,7 +443,7 @@ public class Tablero extends Pane {
                     if (GridPane.getColumnIndex(child) != null && GridPane.getRowIndex(child) == 1
                             && GridPane.getColumnIndex(child) != null && GridPane.getColumnIndex(child) == 1) {
                         Label miCelda = (Label) child;
-                        if (miCelda.getText().isEmpty() || Integer.parseInt(miCelda.getText())<3) {
+                        if (miCelda.getText().isEmpty() || (isNumeric(miCelda.getText()) && Integer.parseInt(miCelda.getText())<3) ){
                             // remover el nodo del GridPane
                             hijoABorrar = child;
                             filaABorrar = 1;
@@ -427,19 +548,68 @@ public class Tablero extends Pane {
         bot3.setTranslateY(-20);
         bot3.setTranslateX(-10);
         bot3.setOnAction(() -> {
+                    incrementaPasos();
                     //Cuando se pulsa el play, se lanza un ciclo del bucle de control
                     Bucle bucleC = new Bucle(p);
-                    bucleC.ejecutarMovimiento();
+                    bucleC.ejecutarMovimiento(pasos);
             try {
                 if(finpartida(p,stagePadre)){
-                    Pane root= new Pane();
-                    ImageView im= new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/FondoPortada.png")));
-                    im.setFitHeight(600);
-                    im.setFitWidth(600);
+                    Pane resultado= new Pane();
+                    //ImageView im= new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/FondoPortada.png")));
+                    //im.setFitHeight(800);
+                    //im.setFitWidth(600);
 
-                    root.getChildren().add(im);
+                    CargaGrafos cargaGrafos = new CargaGrafos();
+                    Grafos grafoArbol = cargaGrafos.dameArbolGen(p);
+
+                    NodoGrafos nodoTablero = new NodoGrafos("-1", null, null);
+                    if (grafoArbol.buscarNodo(nodoTablero))
+                        nodoTablero = grafoArbol.dameNodo(nodoTablero);
+
+                    Cola<Camino<String>> caminosArbol = grafoArbol.dijkstra(nodoTablero);
+                    String cadenaArbol="\nARBOL GENEALÓGICO DE VENCEDORES:\n";
+
+                    for(int i = caminosArbol.getNumeroElem() -1 ; i >= 0 ;i--){
+                        ElementoLDE<Camino<String>> todoscaminos = caminosArbol.getElemento(i);
+                        ListaSimple<NodoGrafos<String>> camino = todoscaminos.getDatos().getCamino();
+                        NodoGrafos<String> nodoUltimo = (NodoGrafos<String>)camino.getUltimo().getDato();
+
+                        if(camino!=null && camino.getUltimo() != null && !(nodoUltimo.getDatos().equals("-1"))){
+                            cadenaArbol += todoscaminos.getDatos().formatearArbol();
+                        }
+
+
+                    }
+
+                    //resultado.getChildren().add(im);
+
+                    javafx.scene.layout.FlowPane paneRes= new FlowPane();
+                    Label lArbol = new Label();
+                    lArbol.setStyle("-fx-text-alignment: center; -fx-font-size: 16px;-fx-font-weight: bold");
+                    lArbol.setText(cadenaArbol);
+
+                   /* paneRes.setCenter(lArbol);
+                    paneRes.setTop(new Label());
+                    paneRes.setLeft(new Label());
+                    paneRes.setBottom(new Label());
+                    paneRes.setRight(new Label());*/
+                    //resultado.getChildren().add(paneRes);
                     stagePadre.close();
-                    stagePadre.setScene(new Scene(root));
+                    //Scrollbar
+                    ScrollBar sB = new ScrollBar();
+                    sB.setLayoutX(715);
+                    sB.setLayoutY(80);
+                    sB.setMin(0);
+                    sB.setOrientation(Orientation.VERTICAL);
+                    sB.setPrefHeight(500);
+                    sB.setMax(360);
+                    sB.setUnitIncrement(30);
+                    sB.setBlockIncrement(35);
+                    paneRes.getChildren().add(lArbol);
+                    resultado.getChildren().add(paneRes);
+                    Scene sceneRes = new Scene(resultado,900,600);
+                    sceneRes.setFill(Color.WHITE);
+                    stagePadre.setScene(sceneRes);
                     stagePadre.show();
                 }
                 else{
@@ -503,7 +673,7 @@ public class Tablero extends Pane {
         usuarios.getusuario(u).setPartidas(partidas);
     }
     private boolean finpartida(Partida p,Stage s) throws FileNotFoundException {
-        if(p.getIndividuos().getNumeroElementos()==0){
+        if(p.getIndividuos().getNumeroElementos()<=2){
             return true;
         }
         else{
