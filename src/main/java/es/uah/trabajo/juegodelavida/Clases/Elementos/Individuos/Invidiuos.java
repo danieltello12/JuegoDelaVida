@@ -15,6 +15,18 @@ public class Invidiuos extends Elementos {
     String tipo;
     ListaLEMov<Movimiento> movimientos;
     ListaLERepr<Reproduccion> reproducciones;
+
+    int paso=0;
+    int numAguas=0;
+    int numComida=0;
+    int numTesoro=0;
+    int numBiblioteca=0;
+    int numPozo=0;
+    int numMontaña=0;
+
+    int numClonado=0;
+    int numReproducido=0;
+
     public ListaLERepr<Reproduccion> getReproducciones(){
         return reproducciones;
     }

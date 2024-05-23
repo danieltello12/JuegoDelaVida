@@ -110,10 +110,10 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
     }
     int ultimo;
     if(pos==0) {
-        ultimo = (90);
+        ultimo = (120);
     }
     else{
-        ultimo=(90*(pos)+40);
+        ultimo=(90*(pos)+60);
     }
     LabelsP labrecursos= new LabelsP("Celda["+finalI+"-"+finalJ+"] Recursos:<"+recursosencelda.getNumeroElementos()+"> ");
     labrecursos.setTranslateX(0);
@@ -130,14 +130,14 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
     else{
         for( pos=0;pos<recursosencelda.getNumeroElementos();pos++){
             LabelsP l3= new LabelsP((pos+1)+"-");
-            l3.setTranslateY(ultimo+25+(130*pos));
+            l3.setTranslateY(ultimo+90+(90*pos));
 
             LabelsP tipo= new LabelsP("Tipo: "+ recursosencelda.getElemento(pos).getDatos().getTipo());
             tipo.setTranslateX(60);
-            tipo.setTranslateY(ultimo+50+(130*pos));
+            tipo.setTranslateY(ultimo+130+(90*pos));
 
             LabelsP TurnosDeVida= new LabelsP("Vidas: "+ recursosencelda.getElemento(pos).getDatos().getTiemposvida());
-            TurnosDeVida.setTranslateY(ultimo+90+(130*pos));
+            TurnosDeVida.setTranslateY(ultimo+100+(90*pos));
             TurnosDeVida.setTranslateX(60);
             etiquetas.add(l3);
             etiquetas.add(tipo);
@@ -673,7 +673,7 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         usuarios.getusuario(u).setPartidas(partidas);
     }
     private boolean finpartida(Partida p,Stage s) throws FileNotFoundException {
-        if(p.getIndividuos().getNumeroElementos()<=2){
+        if(p.getIndividuos().getNumeroElementos()<=1){
             return true;
         }
         else{

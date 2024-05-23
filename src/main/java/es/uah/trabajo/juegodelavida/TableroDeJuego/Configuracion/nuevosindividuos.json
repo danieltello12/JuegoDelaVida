@@ -1,1 +1,1 @@
-{}
+{"primero":{"siguiente":{"datos":{"id":4,"turnosvida":4,"probrep":0.0,"probclon":1.0,"tipo":"Avanzado","movimientos":{"primero":{"datos":{"idIndividuo":4,"idMovimiento":0,"x":2,"y":2}}},"reproducciones":{},"x":2,"y":2}},"datos":{"id":5,"turnosvida":4,"probrep":0.0,"probclon":1.0,"tipo":"Avanzado","movimientos":{"primero":{"datos":{"idIndividuo":5,"idMovimiento":0,"x":5,"y":5}}},"reproducciones":{},"x":5,"y":5}}}
