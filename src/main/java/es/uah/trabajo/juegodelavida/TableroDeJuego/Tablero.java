@@ -22,10 +22,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollBar;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
@@ -74,7 +76,7 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         }
     }
     ListaSimple<Label> etiquetas = new ListaSimple<Label>();
-    LabelsP l1= new LabelsP("Celda["+finalI+"-"+finalJ+"] Individuos <"+elementosencelda.getNumeroElementos()+">: ");
+    LabelsP l1= new LabelsP("Celda["+(finalI+1)+"-"+(finalJ+1)+"] Individuos <"+elementosencelda.getNumeroElementos()+">: ");
     l1.setTranslateX(0);
     l1.setTranslateY(50);
     etiquetas.add(l1);
@@ -110,12 +112,12 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
     }
     int ultimo;
     if(pos==0) {
-        ultimo = (120);
+        ultimo = (140);
     }
     else{
-        ultimo=(90*(pos)+60);
+        ultimo=(90*(pos)+70);
     }
-    LabelsP labrecursos= new LabelsP("Celda["+finalI+"-"+finalJ+"] Recursos:<"+recursosencelda.getNumeroElementos()+"> ");
+    LabelsP labrecursos= new LabelsP("Celda["+(finalI+1)+"-"+(finalJ+1)+"] Recursos:<"+recursosencelda.getNumeroElementos()+"> ");
     labrecursos.setTranslateX(0);
     labrecursos.setTranslateY(ultimo+10);
     etiquetas.add(labrecursos);
@@ -130,14 +132,14 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
     else{
         for( pos=0;pos<recursosencelda.getNumeroElementos();pos++){
             LabelsP l3= new LabelsP((pos+1)+"-");
-            l3.setTranslateY(ultimo+90+(90*pos));
+            l3.setTranslateY(ultimo+50+(70*pos));
 
             LabelsP tipo= new LabelsP("Tipo: "+ recursosencelda.getElemento(pos).getDatos().getTipo());
             tipo.setTranslateX(60);
-            tipo.setTranslateY(ultimo+130+(90*pos));
+            tipo.setTranslateY(ultimo+50+(70*pos));
 
             LabelsP TurnosDeVida= new LabelsP("Vidas: "+ recursosencelda.getElemento(pos).getDatos().getTiemposvida());
-            TurnosDeVida.setTranslateY(ultimo+100+(90*pos));
+            TurnosDeVida.setTranslateY(ultimo+90+(70*pos));
             TurnosDeVida.setTranslateX(60);
             etiquetas.add(l3);
             etiquetas.add(tipo);
@@ -554,11 +556,11 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
                     bucleC.ejecutarMovimiento(pasos);
             try {
                 if(finpartida(p,stagePadre)){
-                    Pane resultado= new Pane();
+
                     //ImageView im= new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/FondoPortada.png")));
                     //im.setFitHeight(800);
                     //im.setFitWidth(600);
-                    p.getAcciones().guardar(p.getAcciones());
+                   p.getAcciones().guardar(p.getAcciones());
 
                     CargaGrafos cargaGrafos = new CargaGrafos();
                     Grafos grafoArbol = cargaGrafos.dameArbolGen(p);
@@ -582,32 +584,25 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
 
                     }
 
-                    //resultado.getChildren().add(im);
-
-                    javafx.scene.layout.FlowPane paneRes= new FlowPane();
-                    Label lArbol = new Label();
-                    lArbol.setStyle("-fx-text-alignment: center; -fx-font-size: 16px;-fx-font-weight: bold");
-                    lArbol.setText(cadenaArbol);
-
-                   /* paneRes.setCenter(lArbol);
-                    paneRes.setTop(new Label());
-                    paneRes.setLeft(new Label());
-                    paneRes.setBottom(new Label());
-                    paneRes.setRight(new Label());*/
-                    //resultado.getChildren().add(paneRes);
                     stagePadre.close();
-                    //Scrollbar
-                    ScrollBar sB = new ScrollBar();
-                    sB.setLayoutX(715);
-                    sB.setLayoutY(80);
-                    sB.setMin(0);
-                    sB.setOrientation(Orientation.VERTICAL);
-                    sB.setPrefHeight(500);
-                    sB.setMax(360);
-                    sB.setUnitIncrement(30);
-                    sB.setBlockIncrement(35);
-                    paneRes.getChildren().add(lArbol);
-                    resultado.getChildren().add(paneRes);
+
+                    BorderPane resultado = new BorderPane();
+                    HBox hbox = addHBox();
+
+                    resultado.setTop(hbox);
+                    resultado.setLeft(addVBox());
+                    addStackPane(hbox);         // Add stack to HBox in top region
+
+                    resultado.setCenter(addPane(cadenaArbol));
+                    resultado.setRight(addFlowPane());
+                    ((Boton)((HBox)resultado.getChildren().get(0)).getChildren().get(0)).setOnAction(() -> {
+                    });
+                    ((Boton)((HBox)resultado.getChildren().get(0)).getChildren().get(1)).setOnAction(() -> {
+                    });
+                    ((Boton)((HBox)resultado.getChildren().get(0)).getChildren().get(2)).setOnAction(() -> {
+                    });
+
+
                     Scene sceneRes = new Scene(resultado,900,600);
                     sceneRes.setFill(Color.WHITE);
                     stagePadre.setScene(sceneRes);
@@ -664,6 +659,123 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         return root;
 
     }
+    public FlowPane addFlowPane() {
+        FlowPane flow = new FlowPane();
+        flow.setPadding(new Insets(5, 0, 5, 0));
+        flow.setVgap(1);
+        flow.setHgap(1);
+        flow.setPrefWrapLength(10); // preferred width allows for two columns
+        flow.setStyle("-fx-background-color: DAE6F3;");
+
+        return flow;
+    }
+    public VBox addPane(String cadenaArbol) {
+        Pane paneText = new Pane();
+        paneText.setPadding(new Insets(5, 0, 5, 0));
+        Pane pane = new Pane();
+        Line line = new Line(100, 100, 1000, 1000);
+        paneText.setMinSize(900,600); // preferred width allows for two columns
+        pane.getChildren().add(line);
+
+        ScrollPane scrollPane = new ScrollPane();
+        scrollPane.setContent(paneText);
+
+        ScrollBar vScrollBar = new ScrollBar();
+        vScrollBar.setOrientation(Orientation.VERTICAL);
+        vScrollBar.minProperty().bind(scrollPane.vminProperty());
+        vScrollBar.maxProperty().bind(scrollPane.vmaxProperty());
+        vScrollBar.visibleAmountProperty().bind(scrollPane.heightProperty().divide(pane.heightProperty()));
+        scrollPane.vvalueProperty().bindBidirectional(vScrollBar.valueProperty());
+
+        ScrollBar hScrollBar = new ScrollBar();
+        hScrollBar.setOrientation(Orientation.HORIZONTAL);
+        hScrollBar.minProperty().bind(scrollPane.hminProperty());
+        hScrollBar.maxProperty().bind(scrollPane.hmaxProperty());
+        hScrollBar.visibleAmountProperty().bind(scrollPane.widthProperty().divide(pane.heightProperty()));
+        scrollPane.hvalueProperty().bindBidirectional(hScrollBar.valueProperty());
+
+        HBox hBox = new HBox();
+        HBox.setHgrow(scrollPane, Priority.ALWAYS);
+        hBox.getChildren().addAll(vScrollBar, scrollPane);
+        hBox.setStyle("-fx-background-color: DAE6F3;");
+
+
+
+        VBox vBox = new VBox();
+        VBox.setVgrow(hBox, Priority.ALWAYS);
+        vBox.getChildren().addAll(hScrollBar, hBox);
+        vBox.setStyle("-fx-background-color: DAE6F3;");
+
+       /* HBox hBoxTot  = new HBox();
+        hBoxTot.setHgrow(scrollPane, Priority.ALWAYS);
+        hBoxTot.getChildren().addAll(vBox,hBox);*/
+
+        vScrollBar.requestLayout();
+        hScrollBar.requestLayout();
+
+
+        paneText.setStyle("-fx-background-color: DAE6F3;");
+        Label lArbol = new Label();
+        lArbol.setStyle("-fx-text-alignment: center; -fx-font-size: 10px;-fx-font-weight: bold");
+        lArbol.setText(cadenaArbol);
+        paneText.getChildren().addAll(lArbol);
+        return vBox;
+    }
+    public HBox addHBox() {
+        HBox hbox = new HBox();
+        hbox.setPadding(new Insets(15, 12, 15, 12));
+        hbox.setSpacing(10);
+        hbox.setStyle("-fx-background-color: #336699;");
+
+        Boton botonArbol = new Boton("Árbol", 50);
+
+        Boton botonFlujo = new Boton("Flujo", 50);
+
+        Boton botonIndividuos = new Boton("Individuos", 50);/*
+        botonArbol.setOnAction(() -> {
+        });
+        botonFlujo.setOnAction(() -> {
+        });
+        botonIndividuos.setOnAction(() -> {
+        });*/
+        hbox.getChildren().addAll(botonArbol, botonFlujo, botonIndividuos);
+
+            return hbox;
+    }
+    public VBox addVBox()
+    {
+        VBox vbox = new VBox();
+        vbox.setPadding(new Insets(10));
+        vbox.setSpacing(8);
+        vbox.setStyle("-fx-background-color: DAE6F3;");
+
+       return vbox;
+    }
+    public void addStackPane(HBox hb) {
+        StackPane stack = new StackPane();
+        Rectangle helpIcon = new Rectangle(30.0, 25.0);
+        /*helpIcon.setFill(new LinearGradient(0,0,0,1, true, CycleMethod.NO_CYCLE,
+                new Stop[]{
+                        new Stop(0,Color.web("#4977A3")),
+                        new Stop(0.5, Color.web("#B0C6DA")),
+                        new Stop(1,Color.web("#9CB6CF")),}));
+        helpIcon.setStroke(Color.web("#D0E6FA"));
+        helpIcon.setArcHeight(3.5);
+        helpIcon.setArcWidth(3.5);
+
+        Text helpText = new Text("?");
+        helpText.setFont(Font.font("Verdana", FontWeight.BOLD, 18));
+        helpText.setFill(Color.WHITE);
+        helpText.setStroke(Color.web("#7080A0"));
+
+        stack.getChildren().addAll(helpIcon, helpText);*/
+        stack.setAlignment(Pos.CENTER_RIGHT);     // Right-justify nodes in stack
+        /*StackPane.setMargin(helpText, new Insets(0, 10, 0, 0)); // Center "?"*/
+
+        hb.getChildren().add(stack);            // Add to HBox from Example 1-2
+        HBox.setHgrow(stack, Priority.ALWAYS);    // Give stack any extra space
+    }
+
     private  void actualizarindyrecpart(Partida p, String u){
         p.getIndividuos().guardar(p.getIndividuos(),"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
         p.getRecursos().guardar(p.getRecursos(),"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
@@ -674,7 +786,7 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         usuarios.getusuario(u).setPartidas(partidas);
     }
     private boolean finpartida(Partida p,Stage s) throws FileNotFoundException {
-        if(p.getIndividuos().getNumeroElementos()==0 || p.getIndividuos().getElemento(0).getDatos().getTurnosvida()==1){
+        if(p.getIndividuos().getNumeroElementos()<=1 || p.getIndividuos().getElemento(0).getDatos().getTurnosvida()==1){
             return true;
         }
         else{

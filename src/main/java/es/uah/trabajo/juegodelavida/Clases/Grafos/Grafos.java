@@ -87,9 +87,12 @@ public class Grafos<T> {
             int r=listaristas.getPosicion(arcodatos);
             int s=n1.listaSalidaArcos.getPosicion(arcodatos);
             int m=n2.listaLlegadaArcos.getPosicion(arcodatos);
-            listaristas.del(r);
-            n1.listaSalidaArcos.del(s);
-            n2.listaLlegadaArcos.del(m);
+            if(r>=0)
+                listaristas.del(r);
+            if(s>=0)
+                n1.listaSalidaArcos.del(s);
+            if(m>=0)
+                n2.listaLlegadaArcos.del(m);
         }
 
     }

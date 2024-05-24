@@ -196,7 +196,7 @@ public class CargaGrafos {
                                 Reproduccion reproduccion = reproducciones.getElemento(i).getDatos();
                                 if (reproduccion != null && reproduccion.getIdIndividuoHijo() ==individuo.getId()) {
                                     encontrado=true;
-                                    cargaNodosdeId(grafoArbolGen,reproduccion, individuo.getId());
+                                    grafoArbolGen=cargaNodosdeId(grafoArbolGen,reproduccion, individuo.getId());
                                 }
 
 
@@ -214,6 +214,7 @@ public class CargaGrafos {
                         else
                             nodoHijoDeTablero = grafoArbolGen.dameNodo(nodoHijoDeTablero);
                     }
+
                 }
 
 
@@ -231,12 +232,21 @@ public class CargaGrafos {
             if(nodo.listaLlegadaArcos == null || nodo.listaLlegadaArcos.getNumeroElementos()==0){
                 Arcos arco1 = new Arcos("RAR" + nodoTablero.getDatos() + "_" + nodo.getDatos(), nodoTablero, nodo, 1, "Es_padre_De");
                 grafoArbolGen.añadirArco(arco1);
+            }else{
+                for (int j=0; j <nodo.listaLlegadaArcos.getNumeroElementos();j++ ){
+                    Arcos arco = (Arcos)nodo.listaLlegadaArcos.getElemento(j).dato;
+                    grafoArbolGen.BorrarArco(arco);
+                    grafoArbolGen.añadirArco(arco);
+
+
+
+                }
             }
         }
         return grafoArbolGen;
 
     }
-        public void cargaNodosdeId(Grafos grafoArbolGen, Reproduccion reproduccion, int id){
+        public Grafos cargaNodosdeId(Grafos grafoArbolGen, Reproduccion reproduccion, int id){
         if (reproduccion != null && reproduccion.getIdIndividuoHijo() == id) {
             NodoGrafos nodoIndividuoHijo = new NodoGrafos(String.valueOf(reproduccion.getIdIndividuoHijo()), new ListaSimple<Arcos>(), new ListaSimple<Arcos>());
 
@@ -247,15 +257,25 @@ public class CargaGrafos {
                 nodoIndividuoHijo = grafoArbolGen.dameNodo(nodoIndividuoHijo);
             NodoGrafos nodoIndividuoPadre1 = new NodoGrafos(String.valueOf(reproduccion.getIdIndividuoPadre1()), new ListaSimple<Arcos>(), new ListaSimple<Arcos>());
             NodoGrafos nodoIndividuoPadre2 = new NodoGrafos(String.valueOf(reproduccion.getIdIndividuoPadre2()), new ListaSimple<Arcos>(), new ListaSimple<Arcos>());
+
+
+            grafoArbolGen=cargaNodosdeId(grafoArbolGen, reproduccion, Integer.parseInt(nodoIndividuoPadre1.getDatos().toString()));
+            grafoArbolGen=cargaNodosdeId(grafoArbolGen, reproduccion, Integer.parseInt(nodoIndividuoPadre2.getDatos().toString()));
             Arcos arco1 = new Arcos("AR" + nodoIndividuoPadre1.getDatos() + "_" + nodoIndividuoHijo.getDatos(), nodoIndividuoPadre1, nodoIndividuoHijo, 1, "Es_padre_De");
             Arcos arco2 = new Arcos("AR" + nodoIndividuoPadre2.getDatos() + "_" + nodoIndividuoHijo.getDatos(), nodoIndividuoPadre1, nodoIndividuoHijo, 1, "Es_padre_De");
 
             grafoArbolGen.añadirArco(arco1);
             grafoArbolGen.añadirArco(arco2);
+        }else{
+            NodoGrafos nodoHijoDeTablero = new NodoGrafos(String.valueOf(id), new ListaSimple<Arcos>(), new ListaSimple<Arcos>());
 
-            cargaNodosdeId(grafoArbolGen, reproduccion, Integer.parseInt(nodoIndividuoPadre1.getDatos().toString()));
-            cargaNodosdeId(grafoArbolGen, reproduccion, Integer.parseInt(nodoIndividuoPadre2.getDatos().toString()));
+
+            if (!grafoArbolGen.buscarNodo(nodoHijoDeTablero))
+                grafoArbolGen.añadirNodo(nodoHijoDeTablero);
+            else
+                nodoHijoDeTablero = grafoArbolGen.dameNodo(nodoHijoDeTablero);
         }
+        return grafoArbolGen;
     }
 }
 
