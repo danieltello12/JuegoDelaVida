@@ -99,38 +99,7 @@ public class ParamJuegoControlador implements Initializable {
 
     }
 
-    @FXML
-    protected void onMibotonAyudaIndvClick() throws FileNotFoundException {
-        Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-        Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/infoindv.PNG"));
-        ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-        imageView.setFitWidth(1280);
-        imageView.setFitHeight(720);
-
-        root.getChildren().addAll(imageView);
-        Scene im= new Scene(root);
-        Stage s= new Stage();
-        s.setScene(im);
-        s.setTitle("Juego de La Vida de Conway");
-        s.show();
-    }
-    @FXML
-    protected void onMiBotonAyudarec() throws FileNotFoundException {
-        Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
-
-        Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/inforec.PNG"));
-        ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-        imageView.setFitWidth(1280);
-        imageView.setFitHeight(720);
-
-        root.getChildren().addAll(imageView);
-        Scene im= new Scene(root);
-        Stage s= new Stage();
-        s.setScene(im);
-        s.setTitle("Juego de La Vida de Conway");
-        s.show();
-    }
     public ListaLEPA limpieza(ListaLEPA p){
         for(int i=0;i<p.getNumeroElementos();i++){
             if(p.getElemento(i).getDatos().getFilas()==0  && p.getElemento(i).getDatos().getColumnas()==0){

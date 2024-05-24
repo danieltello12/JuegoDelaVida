@@ -10,44 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/Json/ColaAcciones.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/ColaAcciones/Cola.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/ColaAcciones/ElementoLDE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_05_2024_15_20__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_05_2024_15_20__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Json/ColaAcciones.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/ColaAcciones.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Json/movimientos.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/movimientos.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Json/reproduccion.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/reproduccion.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Json/usuarios.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/usuarios.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dani.partidas.json" beforeDir="false" afterPath="$PROJECT_DIR$/dani.partidas.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-07-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-08-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-09-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-09-2024-2.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-11-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-13-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-13-2024-2.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-14-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-14-2024-2.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-15-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-16-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-16-2024-2.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-17-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-18-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-19-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-20-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-21-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-22-2024-1.log.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/BucleControl/Bucle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/BucleControl/Bucle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/CargarPartida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/CargarPartida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Invidiuos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Invidiuos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Partida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/PrimerosparamCotroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/PrimerosparamCotroller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/ParamJuego.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/ParamJuego.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/primerosParam.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/primerosParam.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usu1.partidas.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716369230063</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="commit">
+      <option name="closed" value="true" />
+      <created>1716506139132</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1716506139133</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -363,9 +349,9 @@
     <MESSAGE value="inicio 22" />
     <MESSAGE value="commit2" />
     <MESSAGE value="commit con diagrama de secuencias" />
-    <MESSAGE value="commit" />
     <MESSAGE value="committt" />
-    <option name="LAST_COMMIT_MESSAGE" value="committt" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -402,12 +388,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/PrimerosparamCotroller.java</url>
-          <line>326</line>
+          <line>357</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/PrimerosparamCotroller.java</url>
-          <line>219</line>
+          <line>250</line>
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
