@@ -16,14 +16,6 @@ public class ListaUsuarios extends gson {
       l.add(nuevo);
       guardar(l);
    }
-   public void eliminar(String usuario){
-      ListaLE<Usuario> l = new ListaLE();
-      l=l.cargar();
-      ElementoLEUs e= new ElementoLEUs(new Usuario(usuario,""));
-      int pos=l.getPosicion(e);
-      l.del(pos);
-      guardar(l);
-   }
 
    public int esta(String usuario, String cotraseña) {
       ListaLE<Usuario> usuarios = new ListaLE<Usuario>();

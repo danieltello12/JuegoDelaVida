@@ -44,7 +44,8 @@ public class Tablero extends Pane {
     static GridPane tab;
     Pane root = new Pane();
     Stage stagePadre;
-
+    Stage stageAnterior;
+    static int contadorTurnos=0;
     boolean elementosencelda;
     public Tablero() {}
     final Logger log = LogManager.getLogger(Tablero.class);
@@ -57,6 +58,10 @@ public class Tablero extends Pane {
         } catch(NumberFormatException e){
             return false;
         }
+
+    }
+    public void setStageA(Stage stage){
+        this.stageAnterior=stage;
     }
 public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int finalI, int finalJ){
 
@@ -175,7 +180,6 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         //Añadir Contador de turnos
 
         GridPane mainGrid = new GridPane();
-        // mainGrid.setStyle("-fx-border-color: red;");
         mainGrid.setHgap(0);
         mainGrid.setVgap(0);
         mainGrid.setGridLinesVisible(true);
@@ -196,7 +200,6 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         for (int i = 0; i < p.getFilas(); i++) {
             for (int j = 0; j < p.getColumnas(); j++) {
 
-                // Aquí podrías instanciar tu clase de celda, más compleja
                 GridPane secondaryGrid = new GridPane();
                 secondaryGrid.setId("rejilla");
                 Label rRecursoVacio = new Label();
@@ -230,7 +233,6 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
                 secondaryGrid.add(rPozo, 1, 0);
                 secondaryGrid.add(iIndividuo, 1, 1);
 
-                //mainGrid.add(addVBox(), i, j);
                 mainGrid.add(secondaryGrid, j,i);
                 Botones boton = new Botones(64);
                 boton.setStyle("-fx-background-color: transparent;-fx-border-color: black");
@@ -251,86 +253,6 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
                             caja_info.getChildren().addAll(etiqueta);
                         }
                     }
-                    /*
-                    actualizarindyrecpart(p,usuario);
-                    ListaELementos individuos= new ListaELementos();
-                    individuos=individuos.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
-                    ListaELementos elementosencelda= new ListaELementos();
-                    for(int pos=0; pos<individuos.getNumeroElementos();pos++){
-                        if(individuos.getElemento(pos).getDatos().getX()-1== finalI && individuos.getElemento(pos).getDatos().getY()-1== finalJ){
-                            elementosencelda.add(individuos.getElemento(pos).getDatos());
-                        }
-                    }
-                    ListaRecursos recursos= new ListaRecursos().cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
-                    ListaRecursos recursosencelda= new ListaRecursos();
-                    for (int pos=0; pos<recursos.getNumeroElementos();pos++){
-                        if(recursos.getElemento(pos).getDatos().getX()-1== finalI && recursos.getElemento(pos).getDatos().getY()-1== finalJ){
-                            recursosencelda.add(recursos.getElemento(pos).getDatos());
-                        }
-                    }
-                    Labels l1= new Labels("Individuos: ");
-                    l1.setTranslateX(0);
-                    l1.setTranslateY(50);
-                    caja_info.getChildren().addAll(l1);
-                    int pos=0;
-                    if(elementosencelda.getNumeroElementos()==0){
-                        Labels l2= new Labels("No hay Individuos");
-                        l2.setTranslateX(60);
-                        l2.setTranslateY(90);
-
-                        caja_info.getChildren().addAll(l2);
-                        this.elementosencelda=false;
-                    }
-                    else {
-                        for (pos=0; pos < elementosencelda.getNumeroElementos(); pos++) {
-                            Labels l3= new Labels((pos + 1) + "-");
-                            l3.setTranslateY(90 + (130 * pos));
-
-                            Labels tipo = new Labels("Tipo: " + elementosencelda.getElemento(pos).getDatos().getTipo());
-                            tipo.setTranslateX(60);
-                            tipo.setTranslateY(90 + (130 * pos));
-
-                            Labels TurnosDeVida = new Labels("Vidas: " + elementosencelda.getElemento(pos).getDatos().getTurnosvida());
-                            TurnosDeVida.setTranslateY(130 + (130 * pos));
-                            TurnosDeVida.setTranslateX(60);
-                            caja_info.getChildren().addAll(l3, tipo, TurnosDeVida);
-                        }
-                    }
-                    int ultimo;
-                    if(pos==0) {
-                        ultimo = (130);
-                    }
-                    else{
-                        ultimo=(130*(pos)+40);
-                    }
-                    Labels labrecursos= new Labels("Reursos: ");
-                    labrecursos.setTranslateX(0);
-                    labrecursos.setTranslateY(ultimo+10);
-                    caja_info.getChildren().addAll(labrecursos);
-                    if(recursosencelda.getNumeroElementos()==0){
-                        Labels l2rec= new Labels("No hay Recursos");
-                        l2rec.setTranslateX(60);
-                        l2rec.setTranslateY(ultimo+50);
-
-                        caja_info.getChildren().addAll(l2rec);
-                    }
-                    else{
-                        for( pos=0;pos<recursosencelda.getNumeroElementos();pos++){
-                            Labels l3= new Labels((pos+1)+"-");
-                            l3.setTranslateY(ultimo+50+(130*pos));
-
-                            Labels tipo= new Labels("Tipo: "+ recursosencelda.getElemento(pos).getDatos().getTipo());
-                            tipo.setTranslateX(60);
-                            tipo.setTranslateY(ultimo+50+(130*pos));
-
-                            Labels TurnosDeVida= new Labels("Vidas: "+ recursosencelda.getElemento(pos).getDatos().getTiemposvida());
-                            TurnosDeVida.setTranslateY(ultimo+90+(130*pos));
-                            TurnosDeVida.setTranslateX(60);
-                            caja_info.getChildren().addAll(l3,tipo,TurnosDeVida);
-                        }
-                    }
-
-                     */
                     botonsalir.setOnAction(()->{
                         caja_info.getChildren().clear();
                         root.getChildren().remove(caja_info);
@@ -527,7 +449,7 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
 
             try {
 
-
+            this.stageAnterior.close();
                 Scene scene = new Scene(fxmlLoader.load(), 1006, 518);
                 stage.setTitle("Reconfigurar Juego de La Vida de Conway");
                 stage.setScene(scene);
@@ -543,6 +465,35 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         });
         b2.addItem(bot1);
 
+        Box b = new Box(100, 80, "src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Boton_Parar.png");
+        b.setTranslateY(50);
+        b.setTranslateX(625);
+
+        Box cajaGuardar= new Box(400, 100,"src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Boton.png");
+        cajaGuardar.setTranslateX(950);
+        cajaGuardar.setTranslateY(5);
+
+
+        es.uah.trabajo.juegodelavida.CargarPartida.Botones guardar= new es.uah.trabajo.juegodelavida.CargarPartida.Botones("Guardar Partida",150);
+
+        guardar.setTranslateY(25);
+        guardar.setTranslateX(55);
+        guardar.setOnAction(()->{
+            actualizarindyrecpart(p,usuario);
+
+        });
+        cajaGuardar.getChildren().add(guardar);
+        Box cajaCerrar= new Box(400, 100,"src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Boton.png");
+        cajaCerrar.setTranslateX(20);
+        cajaCerrar.setTranslateY(5);
+
+        es.uah.trabajo.juegodelavida.CargarPartida.Botones Turnos= new es.uah.trabajo.juegodelavida.CargarPartida.Botones("Turnos: ");
+        Turnos.setTranslateX(600);
+        Turnos.setTranslateY(5);
+
+        es.uah.trabajo.juegodelavida.CargarPartida.Botones nTurnos= new es.uah.trabajo.juegodelavida.CargarPartida.Botones(String.valueOf(contadorTurnos));
+        nTurnos.setTranslateX(730);
+        nTurnos.setTranslateY(5);
         Box b3 = new Box(100, 80, "src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Botón_Play.png");
         b3.setTranslateY(50);
         b3.setTranslateX(725);
@@ -551,17 +502,19 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         bot3.setTranslateY(-20);
         bot3.setTranslateX(-10);
         bot3.setOnAction(() -> {
-                    incrementaPasos();
-                    //Cuando se pulsa el play, se lanza un ciclo del bucle de control
-                    Bucle bucleC = new Bucle(p);
-                    bucleC.ejecutarMovimiento(pasos);
+            incrementaPasos();
+            //Cuando se pulsa el play, se lanza un ciclo del bucle de control
+            Bucle bucleC = new Bucle(p);
+            contadorTurnos+=1;
+            bucleC.ejecutarMovimiento(pasos);
+            getChildren().removeAll(nTurnos);
+            es.uah.trabajo.juegodelavida.CargarPartida.Botones n2Turnos= new es.uah.trabajo.juegodelavida.CargarPartida.Botones(String.valueOf(contadorTurnos));
+            nTurnos.setTranslateX(730);
+            nTurnos.setTranslateY(5);
             try {
                 if(finpartida(p,stagePadre)){
 
-                    //ImageView im= new ImageView(new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/FondoPortada.png")));
-                    //im.setFitHeight(800);
-                    //im.setFitWidth(600);
-                   p.getAcciones().guardar(p.getAcciones());
+                    p.getAcciones().guardar(p.getAcciones());
 
                     CargaGrafos cargaGrafos = new CargaGrafos();
                     Grafos grafoArbol = cargaGrafos.dameArbolGen(p);
@@ -571,7 +524,7 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
                         nodoTablero = grafoArbol.dameNodo(nodoTablero);
 
                     Cola<Camino<String>> caminosArbol = grafoArbol.dijkstra(nodoTablero);
-                    String cadenaArbol="\nARBOL GENEALOGICAL DE VENCEDORES:\n";
+                    String cadenaArbol="\nARBOL GENEALÓGICO DE VENCEDORES:\n";
 
                     for(int i = caminosArbol.getNumeroElem() -1 ; i >= 0 ;i--){
                         ElementoLDE<Camino<String>> todoscaminos = caminosArbol.getElemento(i);
@@ -593,28 +546,20 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
                     resultado.setTop(hbox);
                     resultado.setLeft(addVBox());
                     addStackPane(hbox);         // Add stack to HBox in top region
-                    /*Si  utilizamos el mostrarTrees descomentar esto*/
-                    resultado.setCenter(addPane(""));
 
-
-                    /*Si no utilizamos el mostrarTrees descomentar esto
-                    / resultado.setCenter(addPane(cadenaArbol));
-
-                     */
+                    resultado.setCenter(addPane(cadenaArbol));
                     resultado.setRight(addFlowPane());
                     HBox hbb1=(HBox)(((VBox)resultado.getChildren().get(2)).getChildren().get(1));
                     ScrollPane scp1=(ScrollPane)hbb1.getChildren().get(1);
                     Pane pp1=(Pane)(scp1.getContent());
 
                     String finalCadenaArbol = cadenaArbol;
-                    mostrarTrees(pp1,caminosArbol,p);
 
 
                     ((Boton)((HBox)resultado.getChildren().get(0)).getChildren().get(0)).setOnAction(() -> {
                         limpiarPanel(pp1);
                         Label miTexto= (Label)pp1.getChildren().get(0);
                         miTexto.setText( finalCadenaArbol);
-                        mostrarTrees(pp1,caminosArbol,p);
                     });
                     ((Boton)((HBox)resultado.getChildren().get(0)).getChildren().get(1)).setOnAction(() -> {
                         limpiarPanel(pp1);
@@ -634,9 +579,6 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
                         miTexto.setText( dameCadenaMaximos());
 
                     });
-
-
-
 
 
                     Scene sceneRes = new Scene(resultado,900,600);
@@ -660,25 +602,17 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
             }
         });
         b3.addItem(bot3);
-        Box b = new Box(100, 80, "src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Boton_Parar.png");
-        b.setTranslateY(50);
-        b.setTranslateX(625);
 
 
-        Box cajaGuardar= new Box(400, 100,"src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Boton.png");
-        cajaGuardar.setTranslateX(950);
-        cajaGuardar.setTranslateY(5);
+        es.uah.trabajo.juegodelavida.CargarPartida.Botones Cerrar= new es.uah.trabajo.juegodelavida.CargarPartida.Botones("Cerrar Juego",150);
 
-
-        es.uah.trabajo.juegodelavida.CargarPartida.Botones guardar= new es.uah.trabajo.juegodelavida.CargarPartida.Botones("Guardar Partida",150);
-
-        guardar.setTranslateY(25);
-        guardar.setTranslateX(55);
-        guardar.setOnAction(()->{
-            actualizarindyrecpart(p,usuario);
-
+        Cerrar.setTranslateY(25);
+        Cerrar.setTranslateX(65);
+        Cerrar.setOnAction(()->{
+            this.root.getChildren().removeAll(imageView, b,b3, caja,cajaGuardar,cajaCerrar);
+            this.stageAnterior.close();
         });
-        cajaGuardar.getChildren().add(guardar);
+        cajaCerrar.getChildren().add(Cerrar);
 
         Botones bot = new Botones(70);
         bot.setTranslateY(-20);
@@ -690,7 +624,7 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         b.addItem(bot);
 
 
-        root.getChildren().addAll(imageView, b,b3, caja,cajaGuardar);
+        root.getChildren().addAll(imageView, b,b3, caja,cajaGuardar,cajaCerrar,Turnos,nTurnos);
         //Se inicializa en el gestor del bucle la info de la partida
 
         return root;
@@ -701,7 +635,7 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         flow.setPadding(new Insets(5, 0, 5, 0));
         flow.setVgap(1);
         flow.setHgap(1);
-        flow.setPrefWrapLength(10); // preferred width allows for two columns
+        flow.setPrefWrapLength(10);
         flow.setStyle("-fx-background-color: DAE6F3;");
 
         return flow;
@@ -711,7 +645,7 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         paneText.setPadding(new Insets(5, 0, 5, 0));
         Pane pane = new Pane();
         Line line = new Line(100, 100, 1000, 1000);
-        paneText.setMinSize(900,600); // preferred width allows for two columns
+        paneText.setMinSize(900,600);
         pane.getChildren().add(line);
 
         ScrollPane scrollPane = new ScrollPane();
@@ -743,9 +677,6 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         vBox.getChildren().addAll(hScrollBar, hBox);
         vBox.setStyle("-fx-background-color: DAE6F3;");
 
-       /* HBox hBoxTot  = new HBox();
-        hBoxTot.setHgrow(scrollPane, Priority.ALWAYS);
-        hBoxTot.getChildren().addAll(vBox,hBox);*/
 
         vScrollBar.requestLayout();
         hScrollBar.requestLayout();
@@ -777,14 +708,7 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
 
         Boton botonIndividuos = new Boton("Individuos", 50);
 
-        Boton botonMaximos = new Boton("Máximos", 50);/*
-        /*
-        botonArbol.setOnAction(() -> {
-        });
-        botonFlujo.setOnAction(() -> {
-        });
-        botonIndividuos.setOnAction(() -> {
-        });*/
+        Boton botonMaximos = new Boton("Máximos", 50);
         hbox.getChildren().addAll(botonArbol, botonFlujo, botonIndividuos,botonMaximos);
 
             return hbox;
@@ -800,27 +724,10 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
     }
     public void addStackPane(HBox hb) {
         StackPane stack = new StackPane();
-        Rectangle helpIcon = new Rectangle(30.0, 25.0);
-        /*helpIcon.setFill(new LinearGradient(0,0,0,1, true, CycleMethod.NO_CYCLE,
-                new Stop[]{
-                        new Stop(0,Color.web("#4977A3")),
-                        new Stop(0.5, Color.web("#B0C6DA")),
-                        new Stop(1,Color.web("#9CB6CF")),}));
-        helpIcon.setStroke(Color.web("#D0E6FA"));
-        helpIcon.setArcHeight(3.5);
-        helpIcon.setArcWidth(3.5);
+        stack.setAlignment(Pos.CENTER_RIGHT);
 
-        Text helpText = new Text("?");
-        helpText.setFont(Font.font("Verdana", FontWeight.BOLD, 18));
-        helpText.setFill(Color.WHITE);
-        helpText.setStroke(Color.web("#7080A0"));
-
-        stack.getChildren().addAll(helpIcon, helpText);*/
-        stack.setAlignment(Pos.CENTER_RIGHT);     // Right-justify nodes in stack
-        /*StackPane.setMargin(helpText, new Insets(0, 10, 0, 0)); // Center "?"*/
-
-        hb.getChildren().add(stack);            // Add to HBox from Example 1-2
-        HBox.setHgrow(stack, Priority.ALWAYS);    // Give stack any extra space
+        hb.getChildren().add(stack);
+        HBox.setHgrow(stack, Priority.ALWAYS);
     }
     public void limpiarPanel(Pane panel){
         int tamVbHistorico=panel.getChildren().size();
@@ -1128,12 +1035,10 @@ public String dameCadenaFlujo(Partida partida){
         usuarios.getusuario(u).setPartidas(partidas);
     }
     private boolean finpartida(Partida p,Stage s) throws FileNotFoundException {
-        //Descomentar para probar
-        if(p.getIndividuos().getNumeroElementos()<=1 || p.getIndividuos().getElemento(0).getDatos().getTurnosvida()==1){
-        //Descomentar para final
-           // if(p.getIndividuos().getNumeroElementos()<=1){
-            return true;
-        }
+
+          if(p.getIndividuos().getNumeroElementos()<=1) {
+              return true;
+          }
         else{
             return false;
         }

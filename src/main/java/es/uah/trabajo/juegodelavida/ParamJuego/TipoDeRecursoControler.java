@@ -21,9 +21,9 @@ public class TipoDeRecursoControler implements Initializable {
     private Stage scene;
 
     private Recursos DatosIndv;
- boolean conf;
+    boolean conf;
     String nombreus;
-  Partida p;
+    Partida p;
 
 
     @FXML
@@ -41,7 +41,7 @@ public class TipoDeRecursoControler implements Initializable {
                 ,this.DatosIndv.getCbPozo(),this.DatosIndv.getModPozo(),this.DatosIndv.isCkPozo());
         b.setTipo("M");
 
-            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+        l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
 
         if(conf==true) {
             l.añadirindividuo(b, "src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
@@ -76,10 +76,10 @@ public class TipoDeRecursoControler implements Initializable {
                 ,this.DatosIndv.getCbBiblio(),this.DatosIndv.getModBiblio(),this.DatosIndv.isCkBiblio()
                 ,this.DatosIndv.getCbPozo(),this.DatosIndv.getModPozo(),this.DatosIndv.isCkPozo());
         b.setTipo("A");
-            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
-            if(conf==true) {
-                l.añadirindividuo(b, "src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
-            }
+        l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+        if(conf==true) {
+            l.añadirindividuo(b, "src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
+        }
 
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
@@ -110,7 +110,7 @@ public class TipoDeRecursoControler implements Initializable {
                 ,this.DatosIndv.getCbPozo(),this.DatosIndv.getModPozo(),this.DatosIndv.isCkPozo());
         b.setTipo("C");
 
-            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+        l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
 
         if(conf==true) {
             l.añadirindividuo(b, "src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
@@ -146,7 +146,7 @@ public class TipoDeRecursoControler implements Initializable {
                 ,this.DatosIndv.getCbPozo(),this.DatosIndv.getModPozo(),this.DatosIndv.isCkPozo());
         b.setTipo("T");
 
-            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+        l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
         if(conf==true) {
             l.añadirindividuo(b, "src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
         }
@@ -182,7 +182,7 @@ public class TipoDeRecursoControler implements Initializable {
                 ,this.DatosIndv.getCbPozo(),this.DatosIndv.getModPozo(),this.DatosIndv.isCkPozo());
         b.setTipo("B");
 
-            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+        l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
 
         if(conf==true) {
             l.añadirindividuo(b, "src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
@@ -220,7 +220,7 @@ public class TipoDeRecursoControler implements Initializable {
                 ,p.getCbPozo(),p.getModPozo(),p.isCkPozo());
         b.setTipo("P");
 
-            l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+        l.añadirindividuo(b,"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
 
         if(conf==true) {
             l.añadirindividuo(b, "src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
@@ -262,4 +262,3 @@ public class TipoDeRecursoControler implements Initializable {
         this.scene=stage;
     }
 }
-

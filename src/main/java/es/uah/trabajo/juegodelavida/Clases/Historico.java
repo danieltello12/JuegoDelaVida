@@ -33,12 +33,15 @@ public class Historico extends gson {
         }
     public boolean existeEnHistorico(Invidiuos individuo){
             boolean existe=false;
-            for (int i=0;!existe&& i < this.individuos.getNumeroElementos(); i++){
-                if(this.individuos.getElemento(i) != null){
-                    if(this.individuos.getElemento(i).getDatos() != null &&
-                            ( this.individuos.getElemento(i).getDatos().getId())==(individuo.getId())){
-                            existe=true;
+            if(this.individuos!=null) {
+
+                for (int i = 0; !existe && i < this.individuos.getNumeroElementos(); i++) {
+                    if (this.individuos.getElemento(i) != null) {
+                        if (this.individuos.getElemento(i).getDatos() != null &&
+                                (this.individuos.getElemento(i).getDatos().getId()) == (individuo.getId())) {
+                            existe = true;
                             break;
+                        }
                     }
                 }
             }
@@ -73,7 +76,11 @@ public class Historico extends gson {
                     }
 
 
-                }else{
+                }else if(historicoF.individuos!=null){
+                    historicoF.individuos.add(individuo);
+                }
+                else {
+                    historicoF.setIndividuos(new ListaELementos<>());
                     historicoF.individuos.add(individuo);
                 }
 

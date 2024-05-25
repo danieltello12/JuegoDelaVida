@@ -21,21 +21,18 @@ public class Reproduccion extends gson {
         return idIndividuoHijo;
     }
 
-    public void setIdIndividuoHijo(int idIndividuo) {
-        this.idIndividuoHijo = idIndividuoHijo;
-    }
 
     int idIndividuoPadre1;
     int idIndividuoPadre2;
     int idIndividuoHijo;
+    public void setIdIndividuoHijo(int idIndividuo) {
+this.idIndividuoHijo=idIndividuo;
+    }
 
     public int getPaso() {
         return paso;
     }
 
-    public void setPaso(int paso) {
-        this.paso = paso;
-    }
 
     int paso;
         public Reproduccion(int idIndividuoPadre1, int idIndividuoPadre2, int idIndividuoHijo, int paso) {

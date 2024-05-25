@@ -91,8 +91,10 @@ public class CargarPartida extends Pane {
                     try {
 
                         stage.setTitle("!!Juego de La Vida de Conway");
-                        Scene scene = new Scene(new Tablero().Tablero(p, u.getNombre(),s), 1400, 800);
+                        Tablero t= new Tablero();
+                        Scene scene = new Scene(t.Tablero(p, u.getNombre(),s), 1400, 800);
                         stage.setScene(scene);
+                        t.setStageA(stage);
                         stage.show();
                     } catch (Exception e) {
                         e.printStackTrace();

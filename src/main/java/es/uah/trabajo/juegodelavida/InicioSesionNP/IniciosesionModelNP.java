@@ -4,13 +4,11 @@ public class IniciosesionModelNP {
     private String Usuario="";
     private String Contraseña="";
 
-    public IniciosesionModelNP( String nombre, String contra) {
-        this.Contraseña=contra;
-        this.Usuario=nombre;
-    }
-    public IniciosesionModelNP(){
+
+    public IniciosesionModelNP() {
 
     }
+
 
     public String getUsuario() {
         return Usuario;

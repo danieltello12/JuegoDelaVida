@@ -75,15 +75,6 @@ public class ListaRecursos extends gson {
     }
 
 
-    public void insert(Recursos dato, int posicion) {
-        ElementoRe el = this.primero;
-        if (posicion == 0) {
-            this.add(dato);
-        } else {
-            ElementoRe e= new ElementoRe(this.getElemento(posicion),dato);
-            this.getElemento(posicion-1).siguiente=e;
-        }
-    }
 
     public int del(int posicion) {
         ElementoRe el = this.primero;

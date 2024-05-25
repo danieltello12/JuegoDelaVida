@@ -56,28 +56,7 @@ public class Grafos<T> {
         }
         return ret;
     }
-    public boolean buscarArco(Arcos arco){
-        boolean ret=false;
-        for (int i=0;listaristas!=null && i<listaristas.getNumeroElementos();i++){
-            Arcos arcoBusq= (Arcos) listavertices.getElemento(i).dato;
-            if( arcoBusq.nombre.equals(arco.nombre)){
 
-                ret=true;
-            }
-        }
-        return ret;
-    }
-
-    public void BorrarNodoEstricto(NodoGrafos nodo){
-        ElementoLS nododatos=new ElementoLS(nodo);
-        if(nodo.listaLlegadaArcos.isVacia()&&nodo.listaSalidaArcos.isVacia()){
-            int r=listavertices.getPosicion(nododatos);
-            listavertices.del(r);
-
-        }
-        
-
-    }
 
     public void BorrarArco(Arcos arco){
         NodoGrafos n2=arco.destino;
@@ -192,44 +171,9 @@ public class Grafos<T> {
      *
      *
      */
-   /* protected Cola<Camino<T>> dijkstra_procesaResultados( Cola<Double> distancias , Cola<NodoGrafos<T>> verticesAnteriores){
-        Cola<Camino<T>> caminos = new Cola<Camino<T>>();
 
-        //for (NodoGrafos<T> verticeDestino : verticesAnteriores.keySet()) {
-        for(int i = 0; i < verticesAnteriores.getNumeroElem();i++){    //de todos los vértices calculados
-            ListaSimple<NodoGrafos<T>> caminoCalculado = new ListaSimple<NodoGrafos<T>>();
-            NodoGrafos<T> verticeDestino = (NodoGrafos<T>)verticesAnteriores.getElemento(i).datos;
-            // prepara un camino para cada uno
-            NodoGrafos<T> v = verticeDestino;                                          // y en un bucle recorre el camino
-            while (v != null) {                                                     // hacia atrás.
-                caminoCalculado.add(v);
-                v =  (NodoGrafos<T>)verticesAnteriores.getElemento(verticesAnteriores.getPOS(new ElementoLDE(v))).siguiente.datos;
-               //El bucle es sobre v, o sea, los vértices: actualizo hasta que no tenga un origen (primero)
-            }
-            //Collections.reverse(caminoCalculado);  //Le damos la vuelta, para que el camino empiece en el origen, no en el último.
-            ElementoLDE<Double> nuevaDist = distancias.getElemento(i);
-            Camino<T> camino = new Camino<T>(caminoCalculado, nuevaDist.datos);
-            ElementoLDE<Camino<T>> elementoCamino= new ElementoLDE<Camino<T>>(camino);
-            caminos.machacar( elementoCamino,i);
-        }
-        return caminos;
-    }*/
     protected Cola<Camino<T>> dijkstra_procesaResultados( Cola<Double> distancias , Cola<NodoGrafos<T>> verticesAnteriores,NodoGrafos<T> origen) {
         Cola<Camino<T>> caminos = new Cola<Camino<T>>();
-        /*int posOrig = listavertices.getPosicion(new ElementoLS(origen));
-
-        ListaSimple<NodoGrafos<T>> caminoPost = new ListaSimple<NodoGrafos<T>>();
-        for (int i = posOrig; i < verticesAnteriores.getNumeroElem(); i++) {
-
-            caminoPost.add(verticesAnteriores.getElemento(i));
-
-        }
-        if (posOrig != 0){
-            for (int i = 0; i < posOrig; i++) {
-                caminoPost.add(verticesAnteriores.getElemento(i));
-            }
-        }*/
-        //for (NodoGrafos<T> verticeDestino : verticesAnteriores.keySet()) {
         for(int i = 0; i < verticesAnteriores.getNumeroElem();i++){    //de todos los vértices calculados
             ListaSimple<NodoGrafos<T>> caminoCalculado = new ListaSimple<NodoGrafos<T>>();
             NodoGrafos<T> verticeDestino = (NodoGrafos<T>)listavertices.getElemento(i).dato;

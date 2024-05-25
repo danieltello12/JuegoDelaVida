@@ -28,6 +28,17 @@ public class Botones extends StackPane {
     private Text text;
     private Rectangle selection;
     private DropShadow shadow;
+    public Botones(String name){
+        setAlignment(Pos.CENTER);
+
+        text = new Text(name);
+        text.setTranslateX(5);
+        text.setFont(font);
+        text.setFill(Color.WHITE);
+        text.setStroke(Color.BLACK);
+        getChildren().addAll(text);
+    }
+
 
     public Botones(String name, int width) {
         setAlignment(Pos.CENTER);

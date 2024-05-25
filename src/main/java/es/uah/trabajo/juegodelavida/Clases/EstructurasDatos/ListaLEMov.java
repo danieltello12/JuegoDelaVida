@@ -39,12 +39,6 @@ public class ListaLEMov<TipoDelDato> extends gson {
         this.primero = null;
     }
 
-
-   /** public void add(String st) {
-        ElementoLE<TipoDelDato> nuevoprimero = new ElementoLE(this.primero, st);
-        this.add(nuevoprimero);
-
-    }**/
    private void add(ElementoLEMov<TipoDelDato> el) {
        if (isVacia()) {
            this.primero = el;
@@ -74,17 +68,6 @@ public class ListaLEMov<TipoDelDato> extends gson {
         this.add(nuevoprimero);
 
     }
-   /** public void insert(String s, int posicion) {
-        ElementoLE<TipoDelDato> el = this.primero;
-        if (posicion == 0) {
-            this.add(s);
-        } else {
-            ElementoLE<TipoDelDato> e = new ElementoLE(this.getElemento(posicion), s);
-            this.getElemento(posicion - 1).siguiente = e;
-        }
-
-
-    }**/
 
     public void insert(Movimiento dato, int posicion,int kk) {
         ElementoLEMov<TipoDelDato> el = this.primero;

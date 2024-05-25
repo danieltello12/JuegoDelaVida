@@ -99,10 +99,10 @@ public class InicioSesionControladorCP implements Initializable {
             if (l.esta(model.original.getUsuario(),model.original.getContraseña())==1){
                 Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-                Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Captura.PNG"));
+                Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/UsuarioContraseñaErroneo.pngG"));
                 ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-                imageView.setFitWidth(1280);
-                imageView.setFitHeight(720);
+                imageView.setFitWidth(900);
+                imageView.setFitHeight(400);
                 root.getChildren().addAll(imageView);
                 Scene im= new Scene(root);
                 Stage s= new Stage();
@@ -114,10 +114,10 @@ public class InicioSesionControladorCP implements Initializable {
 
                 Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-                Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Registro.PNG"));
+                Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/UsuarioNoRegistrado.png"));
                 ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-                imageView.setFitWidth(1280);
-                imageView.setFitHeight(720);
+                imageView.setFitWidth(900);
+                imageView.setFitHeight(400);
                 root.getChildren().addAll(imageView);
                 Scene im = new Scene(root);
                 Stage s = new Stage();

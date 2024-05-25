@@ -27,10 +27,6 @@ public class LabelsP extends StackPane {
         text = new Text(name);
         text.setTranslateX(5);
         text.setStyle("-fx-text-alignment: center; -fx-font-size: 16px;-fx-font-weight: bold");
-        //text.setFont(font);
-        //text.setFill(Color.WHITE);
-        //text.setStroke(Color.BLACK);
-
 
 
         getChildren().addAll( text);

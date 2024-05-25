@@ -140,7 +140,7 @@ public class Partida {
     }
 
     public void setCkMontana(boolean ckMontana) {
-        this.ckAgua = ckMontana;
+        this.ckMontana = ckMontana;
     }
 
     public String getCbTesoro() {
@@ -212,7 +212,7 @@ public class Partida {
     }
 
     public void setCkPozo(boolean ckPozo) {
-        this.ckAgua = ckPozo;
+        this.ckPozo = ckPozo;
     }
 
 

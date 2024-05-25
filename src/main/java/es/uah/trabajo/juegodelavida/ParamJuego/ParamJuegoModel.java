@@ -33,15 +33,6 @@ public class ParamJuegoModel {
     }
 
 
-
-    /*public String getTurnosDeVida() {
-        return TurnosDeVida;
-    }
-
-    public void setTurnosDeVida(String turnosDeVida) {
-        TurnosDeVida = turnosDeVida;
-    }*/
-
     public String getIdentificador() {
         return Identificador;
     }
@@ -75,8 +66,6 @@ public class ParamJuegoModel {
     }
 
 
-
-
     public String getNumeroIndividuosAvanzados() {
         return "0";
     }
@@ -93,10 +82,6 @@ public class ParamJuegoModel {
         return preproduccion;
     }
 
-
-    public void setNumeroIndividuosAvanzados(String numeroIndividuosAvanzados) {
-       // this.TurnosDeVida = numeroIndividuosAvanzados;
-    }
 
     public void setNumeroIndividuosNormales(String numeroIndividuosNormales) {
         this.Identificador = numeroIndividuosNormales;

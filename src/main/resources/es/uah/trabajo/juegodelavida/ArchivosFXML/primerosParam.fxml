@@ -179,7 +179,7 @@
    <Button layoutX="640.0" layoutY="353.0" mnemonicParsing="false" onAction="#añadirelementosclick" text="Añadir Elementos" />
    <Label layoutX="223.0" layoutY="14.0" text="Nombre Partida:" />
    <TextField fx:id="nombrePartida" layoutX="313.0" layoutY="10.0" />
-   <Button layoutX="100.0" layoutY="366.0" mnemonicParsing="false" text="Ayuda Ind" />
-   <Button layoutX="267.0" layoutY="366.0" mnemonicParsing="false" text="Ayuda Rec" />
+   <Button layoutX="100.0" layoutY="366.0" mnemonicParsing="false" onAction="#onMibotonAyudaIndvClick" text="Ayuda Ind" />
+   <Button layoutX="267.0" layoutY="366.0" mnemonicParsing="false" onAction="#onMiBotonAyudarec" text="Ayuda Rec" />
 
 </AnchorPane>

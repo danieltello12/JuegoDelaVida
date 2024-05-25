@@ -60,7 +60,7 @@ public class RegistrarseControlador implements Initializable {
 
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/YaCreado.PNG"));
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/UsuarioYaCreado.png+"));
             ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
             imageView.setFitWidth(1280);
             imageView.setFitHeight(720);

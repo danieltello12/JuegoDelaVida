@@ -38,7 +38,6 @@ public class ListaSimple<TipoDelDato> {
             if (this.lista[pos] == null) {
                 this.lista[pos] = o;
                 añadido = true;
-                //System.out.println("Elemento añadido");
                 break;
             }
             pos++;
@@ -59,47 +58,6 @@ public class ListaSimple<TipoDelDato> {
         ElementoLS el = new ElementoLS(dato);
         add(el);
 
-    }
-
-    public void insert(String s, int posicion) {
-        ElementoLS el = new ElementoLS(s);
-        int i = posicion;
-        ListaSimple ancla = new ListaSimple();
-        if (posicion < this.maximo) {
-            if (this.getNumeroElementos() + 1 <= maximo) {
-
-
-                for (int j = 0; j < lista.length; j++) {
-                    ancla.lista[j] = this.lista[j];
-                }
-                for (; i < lista.length - 2; ) {
-                    this.lista[i + 1] = ancla.lista[i];
-                    i++;
-
-                }
-                this.lista[posicion] = el;
-                this.add(this.lista[i]);
-            }
-        }
-    }
-
-    public void insert(Object dato, int posicion) {
-        ElementoLS el = new ElementoLS(dato);
-        int i = posicion;
-        ListaSimple ancla = new ListaSimple();
-        if (posicion < this.maximo) {
-            if (lista.length + 1 <= maximo) {
-
-                System.arraycopy(this.lista, 0, ancla.lista, 0, lista.length);
-                for (; i < lista.length - 2; ) {
-                    this.lista[i + 1] = ancla.lista[i];
-                    i++;
-
-                }
-                this.lista[posicion] = el;
-                this.add(this.lista[i]);
-            }
-        }
     }
 
     public int del(int pos) {
@@ -155,14 +113,6 @@ public class ListaSimple<TipoDelDato> {
 
     public ElementoLS getUltimo() {
         return this.lista[this.getNumeroElementos() - 1];
-
-    }
-
-    private ElementoLS getSiguiente(ElementoLS el) {
-        int pos = this.getPosicion(el);
-
-        return this.lista[pos + 1];
-
 
     }
 

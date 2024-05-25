@@ -30,10 +30,4 @@ public class ElementoLEPA<TipoDelDato>{
 
         this.datos = datos;
     }
-    protected void insertarmeEN(ElementoLEPA el){
-        if (el!=null)
-            el.siguiente = this.siguiente;
-        this.siguiente = el;
-
-    }
 }

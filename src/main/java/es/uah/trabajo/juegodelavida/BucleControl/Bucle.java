@@ -29,6 +29,9 @@ public Bucle (){
         listaRecursos = duplicaRecursos(partida.getRecursos());
         listaIndividuos= duplicaIndividuos(partida.getIndividuos());
     }
+    public void setPartida(Partida partida){
+    this.partida=partida;
+    }
 
     public void ejecutarMovimiento(int paso){
         this.paso=paso;
@@ -41,6 +44,8 @@ public Bucle (){
         1. Para cada individuo, se actualiza su tiempo de vida, y en su caso se elimina si ha muerto.
         */
         actualizarTvidaI(partida.getIndividuos());
+        //Se evaluaran los individuos para ver si alguno debe morir po rla probabilidad de muerte.
+        muertes(partida);
 
         /*2. Para cada recurso, evaluará si sigue activo o debe eliminarse (por su tiempo de aparición).*/
         actualizarExistenciaR(partida.getRecursos());
@@ -71,7 +76,16 @@ public Bucle (){
     }
 
 
+    public void muertes(Partida p){
+        for(int i=0; i<p.getIndividuos().getNumeroElementos();i++){
+            int x= (int) (Math.random()*100);
+            if(x<100-((p.getIndividuos().getElemento(i).getDatos().getProbrep())*100)){
+                p.getIndividuos().del(i);
+            }
+        }
 
+
+    }
     private void actualizarExistenciaI(ListaELementos individuos) {
 
         boolean continuar=true;
@@ -438,10 +452,7 @@ public Bucle (){
                 }
             }
         }
-            /*if(recursoElegido==-1){
 
-                recursoElegido=0;
-            }*/
         if ( coste < Double.MAX_VALUE && recursoElegido >= 0){
             individuoGen.setX(partida.getRecursos().getElemento(recursoElegido).getDatos().getX());
             individuoGen.setY(partida.getRecursos().getElemento(recursoElegido).getDatos().getY());
@@ -752,15 +763,6 @@ public Bucle (){
             if(p.getRecursos().getElemento(p.getRecursos().getPosicion(new ElementoRe(nodoaborrar))) != null)
                 partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Recurso: " + p.getRecursos().getElemento(p.getRecursos().getPosicion(new ElementoRe(nodoaborrar))).getDatos().getTipo() + " ha sido eliminado"));
         }
-    }
-    private ListaELementos elementosceldas(int x, int y, ListaELementos ind) {
-        ListaELementos indcelda = new ListaELementos();
-        for(int i=0; i<ind.getNumeroElementos();i++){
-            if(ind.getElemento(i).getDatos().getX()-1==x && ind.getElemento(i).getDatos().getY()-1==y){
-                indcelda.add(ind.getElemento(i).getDatos());
-            }
-        }
-        return indcelda;
     }
     private ListaRecursos reccelda(int x, int y, ListaRecursos ind) {
         ListaRecursos indcelda = new ListaRecursos();

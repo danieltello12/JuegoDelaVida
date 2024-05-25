@@ -4,10 +4,6 @@ public class InicioSesionModelCP {
     private String Usuario="";
     private String Contraseña="";
 
-    public InicioSesionModelCP( String nombre, String contra) {
-        this.Contraseña=contra;
-        this.Usuario=nombre;
-    }
     public InicioSesionModelCP(){
 
     }

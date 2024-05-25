@@ -1,5 +1,4 @@
 package es.uah.trabajo.juegodelavida.ParamJuego;
-
 import es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar.ListaLEPA;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaLEMov;
@@ -27,6 +26,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class PrimerosparamCotroller implements Initializable {
@@ -66,12 +66,12 @@ public class PrimerosparamCotroller implements Initializable {
     public void setCbAgua(String cbAgua) {
         this.cbAgua.setValue(cbAgua);
     }
- public float getMejora(){
+    public float getMejora(){
         return Float.parseFloat(mejora.getText());
- }
- public void setMejora(float mejora){
+    }
+    public void setMejora(float mejora){
         this.mejora.setText(String.valueOf(mejora));
- }
+    }
     @FXML
     private ComboBox cbAgua;
 
@@ -218,7 +218,7 @@ public class PrimerosparamCotroller implements Initializable {
     protected void onMibotonAyudaIndvClick() throws FileNotFoundException {
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-        Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/infoindv.PNG"));
+        Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/InformacionInd.png"));
         ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
         imageView.setFitWidth(1280);
         imageView.setFitHeight(720);
@@ -234,7 +234,7 @@ public class PrimerosparamCotroller implements Initializable {
     protected void onMiBotonAyudarec() throws FileNotFoundException {
         Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-        Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/inforec.PNG"));
+        Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/InfoRec.png"));
         ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
         imageView.setFitWidth(1280);
         imageView.setFitHeight(720);
@@ -260,10 +260,10 @@ public class PrimerosparamCotroller implements Initializable {
                 probVP.getValue() == 0) {
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/pzypv.PNG"));
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Prob.png"));
             ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-            imageView.setFitWidth(1280);
-            imageView.setFitHeight(720);
+            imageView.setFitWidth(900);
+            imageView.setFitHeight(400);
 
             root.getChildren().addAll(imageView);
             Scene im = new Scene(root);
@@ -272,13 +272,13 @@ public class PrimerosparamCotroller implements Initializable {
             s.setTitle("Partidas.Juego de La Vida de Conway");
             s.show();
         }
-        else if (nombrePartida.getText()=="") {
+        else if (Objects.equals(nombrePartida.getText(), "")) {
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
             Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/PartidaYaCreada.PNG"));
             ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-            imageView.setFitWidth(1280);
-            imageView.setFitHeight(720);
+            imageView.setFitWidth(900);
+            imageView.setFitHeight(400);
 
             root.getChildren().addAll(imageView);
             Scene im = new Scene(root);
@@ -290,10 +290,10 @@ public class PrimerosparamCotroller implements Initializable {
         else if(l.esta(usuario,nombrePartida.getText())){
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/PartidaYaCreada.PNG"));
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/PartidaYaConEseNombre.png"));
             ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-            imageView.setFitWidth(1280);
-            imageView.setFitHeight(720);
+            imageView.setFitWidth(900);
+            imageView.setFitHeight(400);
 
             root.getChildren().addAll(imageView);
             Scene im = new Scene(root);
@@ -302,13 +302,55 @@ public class PrimerosparamCotroller implements Initializable {
             s.setTitle("Partidas::Juego de La Vida de Conway");
             s.show();
         }
-        else if(Integer.parseInt(filas.getText())==0||Integer.parseInt(columnas.getText())==0){
+
+        else if(Objects.equals(filas.getText(), "") || Objects.equals(columnas.getText(), "")){
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Filas.PNG"));
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/FilasColumnas.jpeg"));
             ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-            imageView.setFitWidth(1280);
-            imageView.setFitHeight(720);
+            imageView.setFitWidth(900);
+            imageView.setFitHeight(400);
+            root.getChildren().addAll(imageView);
+            Scene im= new Scene(root);
+            Stage s= new Stage();
+            s.setScene(im);
+            s.setTitle("Partidas:::Juego de La Vida de Conway");
+            s.show();
+        } else if (Integer.parseInt(filas.getText())==0||Integer.parseInt(columnas.getText())==0) {
+            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/FilasColumnas.jpeg"));
+            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+            imageView.setFitWidth(900);
+            imageView.setFitHeight(400);
+            root.getChildren().addAll(imageView);
+            Scene im= new Scene(root);
+            Stage s= new Stage();
+            s.setScene(im);
+            s.setTitle("Partidas:::Juego de La Vida de Conway");
+            s.show();
+
+        } else if(Objects.equals(mejora.getText(), "")){
+            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/MejoraVacia.png"));
+            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+            imageView.setFitWidth(900);
+            imageView.setFitHeight(400);
+
+            root.getChildren().addAll(imageView);
+            Scene im= new Scene(root);
+            Stage s= new Stage();
+            s.setScene(im);
+            s.setTitle("Partidas:::Juego de La Vida de Conway");
+            s.show();
+
+        } else if (Objects.equals(turnos.getText(), "") || Objects.equals(tiempos.getText(), "")) {
+            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Vidas.jpeg"));
+            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+            imageView.setFitWidth(900);
+            imageView.setFitHeight(400);
 
             root.getChildren().addAll(imageView);
             Scene im= new Scene(root);

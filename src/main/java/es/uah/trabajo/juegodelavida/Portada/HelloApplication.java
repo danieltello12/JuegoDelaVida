@@ -26,9 +26,9 @@ public class HelloApplication extends Application {
         imageView.setFitWidth(1280);
         imageView.setFitHeight(720);
 
-        Rectangle masker = new Rectangle(1280, 720); //Creo un sub fondo inicialmente transparente que se vira cuando se haga la transición
-        masker.setOpacity(0);
-        masker.setMouseTransparent(true);
+        Rectangle rectangle = new Rectangle(1280, 720); //Creo un sub fondo inicialmente transparente que se vira cuando se haga la transición
+        rectangle.setOpacity(0);
+        rectangle.setMouseTransparent(true);
 
         Caja_Boton inicio = new Caja_Boton(500, 75); //Inicializo el Vbox q contiene la imagen del boton y añadire el boton
         inicio.setTranslateX(400);
@@ -39,7 +39,7 @@ public class HelloApplication extends Application {
         itemNew.setTranslateX(95); //Posicion X respecto el cuadro donde se encuentra en la vbox letras
         itemNew.setTranslateY(0);//Posicion Y respecto el cuadro donde se encuentra en la vbox letras
         itemNew.setOnAction(() -> { //Defino la ejecucion que se llevara acabo cuadno se pulse "Iniciar Juego"
-            FadeTransition ft = new FadeTransition(Duration.seconds(1.5), masker);
+            FadeTransition ft = new FadeTransition(Duration.seconds(1.5), rectangle);
             ft.setToValue(1);
 
             ft.setOnFinished(e -> {
@@ -53,7 +53,7 @@ public class HelloApplication extends Application {
             ft.play();
         });
         inicio.addItem(itemNew); //Añado el item al box
-        root.getChildren().addAll(imageView, inicio, masker); //Añado el fondo, el fondo de la transición y el box al pane
+        root.getChildren().addAll(imageView, inicio,rectangle); //Añado el fondo, el fondo de la transición y el box al pane
 
         return root;
     }

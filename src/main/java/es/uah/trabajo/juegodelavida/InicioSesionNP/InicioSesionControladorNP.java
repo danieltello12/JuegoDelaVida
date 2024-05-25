@@ -110,25 +110,25 @@ public class InicioSesionControladorNP implements Initializable {
             }
         }
 
-            else if (l.esta(model.original.getUsuario(),model.original.getContraseña())==0){
+        else if (l.esta(model.original.getUsuario(),model.original.getContraseña())==0){
             /** El usuario Debe registrarse
              *
              */
 
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-                Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Registro.PNG"));
-                ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-                imageView.setFitWidth(1280);
-                imageView.setFitHeight(720);
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/UsuarioNoRegistrado.png"));
+            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+            imageView.setFitWidth(900);
+            imageView.setFitHeight(400);
 
-                root.getChildren().addAll(imageView);
-                Scene im= new Scene(root);
-                Stage s= new Stage();
-                s.setScene(im);
-                s.setTitle("Juego de La Vida de Conway");
-                s.show();
-            } else if (l.esta(model.original.getUsuario(),model.original.getContraseña())==1) {
+            root.getChildren().addAll(imageView);
+            Scene im= new Scene(root);
+            Stage s= new Stage();
+            s.setScene(im);
+            s.setTitle("Juego de La Vida de Conway");
+            s.show();
+        } else if (l.esta(model.original.getUsuario(),model.original.getContraseña())==1) {
 
             /**El usuario o la contraseña que ha escrito es erronea, ya que alguna de las dos existe
              *
@@ -136,19 +136,19 @@ public class InicioSesionControladorNP implements Initializable {
 
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-                Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Captura.PNG"));
-                ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-                imageView.setFitWidth(1280);
-                imageView.setFitHeight(720);
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/UsuarioContraseñaErroneo.png"));
+            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+            imageView.setFitWidth(900);
+            imageView.setFitHeight(400);
 
-                root.getChildren().addAll(imageView);
-                Scene im = new Scene(root);
-                Stage s = new Stage();
-                s.setScene(im);
-                s.setTitle("Juego de La Vida de Conway");
-                s.show();
-            }
+            root.getChildren().addAll(imageView);
+            Scene im = new Scene(root);
+            Stage s = new Stage();
+            s.setScene(im);
+            s.setTitle("Juego de La Vida de Conway");
+            s.show();
         }
+    }
 
 
     /**

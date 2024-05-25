@@ -18,7 +18,6 @@ public class ListaLEPA<TipoDelDato> extends gson {
     public void vaciar(){
         this.primero=null;
     }
-//ea
     public boolean esta(String usuario, String partida) {
         ListaLEPA partidas= new ListaLEPA();
         partidas = partidas.cargar(usuario);
@@ -40,26 +39,6 @@ public class ListaLEPA<TipoDelDato> extends gson {
 
         return encontrado;
     }
-    /**
-    public Usuario getusuario(String nombre){
-        ListaLE<Usuario> usuarios = new ListaLE<Usuario>();
-        usuarios = usuarios.cargar();
-        boolean encontrado = false;
-        ElementoLEUs<Usuario> el = usuarios.getPrimero();
-        while (el != null && encontrado == false) {
-            if (Objects.equals((el.getDatos()).nombre,nombre)) {
-                encontrado = true;
-            }
-            else {
-                el = ((ElementoLEUs<Usuario>) el).getSiguiente();
-            }
-        }
-        return el.getDatos();
-    }
-    public void vaciar() {
-        this.primero = null;
-    }
-     **/
 
 
     private void add(ElementoLEPA<TipoDelDato> el) {
@@ -83,15 +62,6 @@ public class ListaLEPA<TipoDelDato> extends gson {
     }
 
 
-    public void insert(Partida dato, int posicion) {
-        ElementoLEPA<TipoDelDato> el = this.primero;
-        if (posicion == 0) {
-            this.add(dato);
-        } else {
-            ElementoLEPA<TipoDelDato> e= new ElementoLEPA(this.getElemento(posicion),dato);
-            this.getElemento(posicion-1).siguiente=e;
-        }
-    }
 
     public int del(int posicion) {
         ElementoLEPA<TipoDelDato> el = this.primero;

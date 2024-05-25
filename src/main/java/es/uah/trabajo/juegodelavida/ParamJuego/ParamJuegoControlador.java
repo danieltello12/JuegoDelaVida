@@ -1,6 +1,5 @@
 package es.uah.trabajo.juegodelavida.ParamJuego;
 
-
 import es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar.ListaLEPA;
 import es.uah.trabajo.juegodelavida.Clases.ColaAcciones.Cola;
 import es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.Invidiuos;
@@ -26,8 +25,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
-
 public class ParamJuegoControlador implements Initializable {
     private String usuario;
     private Stage thisstage;
@@ -51,6 +50,12 @@ public class ParamJuegoControlador implements Initializable {
 
 
     private ParamJuegoProperties model;
+    public ParamJuegoProperties getmodel(){
+        return this.model;
+    }
+    public void setModel(ParamJuegoProperties model){
+        this.model=model;
+    }
     public void setStage(Stage s){
         this.thisstage = s;
     }
@@ -68,14 +73,14 @@ public class ParamJuegoControlador implements Initializable {
     protected void onMiBotonIniciarJuegoClick() throws FileNotFoundException {
         model.commit();
 
-            ListaELementos l2 = new ListaELementos();
-            l2 = l2.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
+        ListaELementos l2 = new ListaELementos();
+        l2 = l2.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
 
-            ListaRecursos l3 = new ListaRecursos();
-            l3 = l3.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
-            Stage stage = new Stage();
-            partida.setRecursos(l3);
-            partida.setIndividuos(l2);
+        ListaRecursos l3 = new ListaRecursos();
+        l3 = l3.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+        Stage stage = new Stage();
+        partida.setRecursos(l3);
+        partida.setIndividuos(l2);
         ListaUsuarios usuarios= new ListaUsuarios();
         ListaLEPA partidas= usuarios.getusuario(usuario).getPartidas();
         partidas.add(partida);
@@ -88,16 +93,16 @@ public class ParamJuegoControlador implements Initializable {
         partida.setAcciones(accionesPartida);
         usuarios.getusuario(usuario).setPartidas(limpieza(partidas));
 
-            this.thisstage.close();
-            try {
-                stage.setTitle("!!!Juego de La Vida de Conway");
-                Scene scene = new Scene(new Tablero().Tablero(partida, usuario,stage), 1400, 800);
+        this.thisstage.close();
+        try {
+            stage.setTitle("!!!Juego de La Vida de Conway");
+            Scene scene = new Scene(new Tablero().Tablero(partida, usuario,stage), 1400, 800);
 
-                stage.setScene(scene);
-                stage.show();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -112,16 +117,15 @@ public class ParamJuegoControlador implements Initializable {
     }
     @FXML
     protected  void onMibotonCrearIndividuoClick() throws FileNotFoundException {
-        model.commit();
         ListaELementos l2 = new ListaELementos();
         l2 = l2.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
-        if(partida.getFilas()<(Integer.parseInt(model.original.getFilaIndv())-1)){
+         if (Objects.equals(Identificador.getText(), "") && Objects.equals(filaIndv.getText(), "") && Objects.equals(columnaIvd.getText(), "")) {
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Filas.PNG"));
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Ide.jpeg"));
             ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-            imageView.setFitWidth(1280);
-            imageView.setFitHeight(720);
+            imageView.setFitWidth(900);
+            imageView.setFitHeight(400);
 
             root.getChildren().addAll(imageView);
             Scene im= new Scene(root);
@@ -129,81 +133,99 @@ public class ParamJuegoControlador implements Initializable {
             s.setScene(im);
             s.setTitle("Juego de La Vida de Conway");
             s.show();
-        } else  if(partida.getColumnas()<(Integer.parseInt(model.original.getColumnaIvd())-1)){
-            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
-
-            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Columnas.PNG"));
-            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-            imageView.setFitWidth(1280);
-            imageView.setFitHeight(720);
-
-            root.getChildren().addAll(imageView);
-            Scene im= new Scene(root);
-            Stage s= new Stage();
-            s.setScene(im);
-            s.setTitle("Juego de La Vida de Conway");
-            s.show();
-        } else if(l2.elementoscelda(Integer.parseInt(model.original.getColumnaIvd()),Integer.parseInt(model.original.getFilaIndv()))==3)  {
-            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
-
-            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/CeldasIndiviudos.PNG"));
-            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-            imageView.setFitWidth(1280);
-            imageView.setFitHeight(720);
-
-            root.getChildren().addAll(imageView);
-            Scene im= new Scene(root);
-            Stage s= new Stage();
-            s.setScene(im);
-            s.setTitle("Juego de La Vida de Conway");
-            s.show();
-        } else if (l2.esta(Integer.parseInt(model.original.getIdentificador()),"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json")) {
-            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
-
-            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/CeldasIndiviudos.PNG"));
-            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-            imageView.setFitWidth(1280);
-            imageView.setFitHeight(720);
-
-            root.getChildren().addAll(imageView);
-            Scene im= new Scene(root);
-            Stage s= new Stage();
-            s.setScene(im);
-            s.setTitle("Juego de La Vida de Conway");
-            s.show();
-        } else {
-            int x = Integer.parseInt(model.original.getFilaIndv());
-            int y = Integer.parseInt(model.original.getColumnaIvd());
-            int id = Integer.parseInt(model.original.getIdentificador());
-            float clon = model.original.getPclonacion();
-            float rep = model.original.getPreproduccion();
-            int turnos = partida.getTurnosvida();
-            Invidiuos i = new Invidiuos(x, y, id, turnos, rep, clon);
-            restablecerind();
-            model.rollback();
-            Stage stage = new Stage();
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            File fichero = new File("src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/elegirIndividuo.fxml");
-            URL url = null;
-            try {
-                url = fichero.toURL();
-            } catch (MalformedURLException e) {
-                throw new RuntimeException(e);
-            }
-            fxmlLoader.setLocation(url);
-
-            try {
-                Scene scene = new Scene(fxmlLoader.load(), 1006, 518);
-                stage.setTitle("Juego de La Vida de Conway");
-                stage.setScene(scene);
-                TipoDeInviduoControlador p = fxmlLoader.getController();
-                p.loadDataIndividuo(i,false,usuario,partida.getNombre());//dame el controlador
-                p.setStage(stage); //doy la ventana donde se va a trabajar
-                stage.show();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
         }
+         else {
+             model.commit();
+             if (partida.getFilas() < (Integer.parseInt(model.original.getFilaIndv()) - 1)) {
+                 Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+
+                 Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/FILAS.png"));
+                 ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+                 imageView.setFitWidth(1280);
+                 imageView.setFitHeight(720);
+
+                 root.getChildren().addAll(imageView);
+                 Scene im = new Scene(root);
+                 Stage s = new Stage();
+                 s.setScene(im);
+                 s.setTitle("Juego de La Vida de Conway");
+                 s.show();
+             } else if (partida.getColumnas() < (Integer.parseInt(model.original.getColumnaIvd()) - 1)) {
+                 Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+
+                 Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Columna.png"));
+                 ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+                 imageView.setFitWidth(900);
+                 imageView.setFitHeight(400);
+
+                 root.getChildren().addAll(imageView);
+                 Scene im = new Scene(root);
+                 Stage s = new Stage();
+                 s.setScene(im);
+                 s.setTitle("Juego de La Vida de Conway");
+                 s.show();
+             } else if (l2.elementoscelda(Integer.parseInt(model.original.getColumnaIvd()), Integer.parseInt(model.original.getFilaIndv())) == 3) {
+                 Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+
+                 Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/NoMasIndividuosCelda.png"));
+                 ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+                 imageView.setFitWidth(900);
+                 imageView.setFitHeight(400);
+
+                 root.getChildren().addAll(imageView);
+                 Scene im = new Scene(root);
+                 Stage s = new Stage();
+                 s.setScene(im);
+                 s.setTitle("Juego de La Vida de Conway");
+                 s.show();
+             } else if (l2.esta(Integer.parseInt(model.original.getIdentificador()), "src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json")) {
+                 Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+
+                 Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/InddID.png"));
+                 ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+                 imageView.setFitWidth(900);
+                 imageView.setFitHeight(400);
+
+                 root.getChildren().addAll(imageView);
+                 Scene im = new Scene(root);
+                 Stage s = new Stage();
+                 s.setScene(im);
+                 s.setTitle("Juego de La Vida de Conway");
+                 s.show();
+             } else {
+                 int x = Integer.parseInt(model.original.getFilaIndv());
+                 int y = Integer.parseInt(model.original.getColumnaIvd());
+                 int id = Integer.parseInt(model.original.getIdentificador());
+                 float clon = model.original.getPclonacion();
+                 float rep = model.original.getPreproduccion();
+                 int turnos = partida.getTurnosvida();
+                 Invidiuos i = new Invidiuos(x, y, id, turnos, rep, clon);
+                 restablecerind();
+                 model.rollback();
+                 Stage stage = new Stage();
+                 FXMLLoader fxmlLoader = new FXMLLoader();
+                 File fichero = new File("src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/elegirIndividuo.fxml");
+                 URL url = null;
+                 try {
+                     url = fichero.toURL();
+                 } catch (MalformedURLException e) {
+                     throw new RuntimeException(e);
+                 }
+                 fxmlLoader.setLocation(url);
+
+                 try {
+                     Scene scene = new Scene(fxmlLoader.load(), 841, 481);
+                     stage.setTitle("Juego de La Vida de Conway");
+                     stage.setScene(scene);
+                     TipoDeInviduoControlador p = fxmlLoader.getController();
+                     p.loadDataIndividuo(i, false, usuario, partida.getNombre());//dame el controlador
+                     p.setStage(stage); //doy la ventana donde se va a trabajar
+                     stage.show();
+                 } catch (Exception e) {
+                     e.printStackTrace();
+                 }
+             }
+         }
     }
     public void restablecerind(){
         model.original.setFilaIndv("");
@@ -219,46 +241,13 @@ public class ParamJuegoControlador implements Initializable {
     }
     @FXML
     public void onMiBotonCrearRecursoClick() throws FileNotFoundException {
-        model.commit();
-        ListaRecursos l2 = new ListaRecursos();
-        l2 = l2.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
-        ListaLEPA l = new ListaLEPA();
-        l.cargar(usuario);
-        if(partida.getFilas()<(Integer.parseInt(model.original.getFilarec())-1)){
+        if (Objects.equals(columnaRec.getText(), "") && Objects.equals(filaRec.getText(), "")) {
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
-            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Filas.PNG"));
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Ide.jpeg"));
             ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-            imageView.setFitWidth(1280);
-            imageView.setFitHeight(720);
-
-            root.getChildren().addAll(imageView);
-            Scene im= new Scene(root);
-            Stage s= new Stage();
-            s.setScene(im);
-            s.setTitle("Juego de La Vida de Conway");
-            s.show();
-        } else  if(partida.getColumnas()<(Integer.parseInt(model.original.getColumnarec())-1)){
-            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
-
-            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Columnas.PNG"));
-            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-            imageView.setFitWidth(1280);
-            imageView.setFitHeight(720);
-
-            root.getChildren().addAll(imageView);
-            Scene im= new Scene(root);
-            Stage s= new Stage();
-            s.setScene(im);
-            s.setTitle("Juego de La Vida de Conway");
-            s.show();
-        } else if(l2.elementoscelda(Integer.parseInt(model.original.getColumnarec()),Integer.parseInt(model.original.getFilarec()),"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json")==3)  {
-            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
-
-            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/CeldasIndiviudos.PNG"));
-            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
-            imageView.setFitWidth(1280);
-            imageView.setFitHeight(720);
+            imageView.setFitWidth(900);
+            imageView.setFitHeight(400);
 
             root.getChildren().addAll(imageView);
             Scene im= new Scene(root);
@@ -267,18 +256,64 @@ public class ParamJuegoControlador implements Initializable {
             s.setTitle("Juego de La Vida de Conway");
             s.show();
         }
+        else {
+            model.commit();
+            ListaRecursos l2 = new ListaRecursos();
+            l2 = l2.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
+            ListaLEPA l = new ListaLEPA();
+            l.cargar(usuario);
+            if (partida.getFilas() < (Integer.parseInt(model.original.getFilarec()) - 1)) {
+                Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
 
+                Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/FILAS.png"));
+                ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+                imageView.setFitWidth(900);
+                imageView.setFitHeight(400);
 
-            else {
+                root.getChildren().addAll(imageView);
+                Scene im = new Scene(root);
+                Stage s = new Stage();
+                s.setScene(im);
+                s.setTitle("Juego de La Vida de Conway");
+                s.show();
+            } else if (partida.getColumnas() < (Integer.parseInt(model.original.getColumnarec()) - 1)) {
+                Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+
+                Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Columna.png"));
+                ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+                imageView.setFitWidth(900);
+                imageView.setFitHeight(400);
+
+                root.getChildren().addAll(imageView);
+                Scene im = new Scene(root);
+                Stage s = new Stage();
+                s.setScene(im);
+                s.setTitle("Juego de La Vida de Conway");
+                s.show();
+            } else if (l2.elementoscelda(Integer.parseInt(model.original.getColumnarec()), Integer.parseInt(model.original.getFilarec()), "src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json") == 3) {
+                Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+
+                Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/NoMasRec.png"));
+                ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+                imageView.setFitWidth(900);
+                imageView.setFitHeight(400);
+
+                root.getChildren().addAll(imageView);
+                Scene im = new Scene(root);
+                Stage s = new Stage();
+                s.setScene(im);
+                s.setTitle("Juego de La Vida de Conway");
+                s.show();
+            } else {
                 int x = Integer.parseInt(model.original.getFilarec());
                 int y = Integer.parseInt(model.original.getColumnarec());
-                Recursos i = new Recursos(x, y, partida.getPz(),0,partida.getTiemposvida()
-                                          ,partida.getCbAgua(),partida.getModAgua(),partida.isCkAgua()
-                        ,partida.getCbComida(),partida.getModComida(),partida.isCkComida()
-                        ,partida.getCbMontana(),partida.getModMontana(),partida.isCkMontana()
-                        ,partida.getCbTesoro(),partida.getModTesoro(),partida.isCkTesoro()
-                        ,partida.getCbBiblio(),partida.getModBiblio(),partida.isCkBiblio()
-                        ,partida.getCbPozo(),partida.getModPozo(),partida.isCkPozo() );
+                Recursos i = new Recursos(x, y, partida.getPz(), 0, partida.getTiemposvida()
+                        , partida.getCbAgua(), partida.getModAgua(), partida.isCkAgua()
+                        , partida.getCbComida(), partida.getModComida(), partida.isCkComida()
+                        , partida.getCbMontana(), partida.getModMontana(), partida.isCkMontana()
+                        , partida.getCbTesoro(), partida.getModTesoro(), partida.isCkTesoro()
+                        , partida.getCbBiblio(), partida.getModBiblio(), partida.isCkBiblio()
+                        , partida.getCbPozo(), partida.getModPozo(), partida.isCkPozo());
                 restablecerrec();
                 model.rollback();
                 Stage stage = new Stage();
@@ -297,7 +332,7 @@ public class ParamJuegoControlador implements Initializable {
                     stage.setTitle("Juego de La Vida de Conway");
                     stage.setScene(scene);
                     TipoDeRecursoControler p = fxmlLoader.getController();
-                    p.loadDataIndividuo(i, false, usuario,partida);//dame el controlador
+                    p.loadDataIndividuo(i, false, usuario, partida);//dame el controlador
                     p.setStage(stage); //doy la ventana donde se va a trabajar
                     stage.show();
                 } catch (Exception e) {
@@ -305,6 +340,7 @@ public class ParamJuegoControlador implements Initializable {
                 }
             }
         }
+    }
     protected void updateGUIwithModel() {
         Identificador.textProperty().bindBidirectional(model.numeroIndividuosNormalesProperty());
         //TurnosDeVida.textProperty().bindBidirectional(model.numeroIndividuosAvanzadosProperty());
