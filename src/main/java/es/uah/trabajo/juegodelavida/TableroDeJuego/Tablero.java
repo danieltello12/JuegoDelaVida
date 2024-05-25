@@ -1138,7 +1138,7 @@ public String dameCadenaFlujo(Partida partida){
             return false;
         }
     }
-    //Hhbnvjhlv
+    //
 
     public Box añadirelementos ( int filas, int columnas, ListaRecursos recursos, ListaELementos individuos) throws
             FileNotFoundException {
