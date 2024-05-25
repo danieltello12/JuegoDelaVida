@@ -9,24 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="committt">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Json/ColaAcciones.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/ColaAcciones.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Json/historico.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/historico.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Json/movimientos.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/movimientos.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Json/reproduccion.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/reproduccion.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Json/usuarios.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/usuarios.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dani.partidas.json" beforeDir="false" afterPath="$PROJECT_DIR$/dani.partidas.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/BucleControl/Bucle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/BucleControl/Bucle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaELementos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaELementos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Grafos/CargaGrafos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Grafos/CargaGrafos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Historico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Historico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" afterDir="false" />
-    </list>
+    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,31 +63,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3954023&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultPlantUmlFileTemplate": "UML Class",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "no",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3954023",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\UAH\IdeaProjects\JuegoDelaVida\Diseño" />
       <recent name="C:\Users\UAH\IdeaProjects\Juego-De-La-Vida-L-D\src\main\resources\es\uah\trabajo\juegodelavida\Imagenes" />
       <recent name="C:\Users\UAH\IdeaProjects\JuegoDeLaVida\Json\p" />
       <recent name="C:\Users\UAH\IdeaProjects\JuegoDeLaVida\src\main\resources\es\uah\trabajo\juegodelavida\ArchivosFXML" />
       <recent name="C:\Users\UAH\IdeaProjects\JuegoDeLaVida\src\main\resources\es\uah\trabajo\juegodelavida\Fuentes" />
-      <recent name="C:\Users\UAH\IdeaProjects\JuegoDeLaVida\src\main\resources\es\uah\trabajo\juegodelavida\Imagenes" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="es.uah.trabajo.juegodelavida.TableroDeJuego" />
@@ -316,15 +299,90 @@
       <option name="project" value="LOCAL" />
       <updated>1716637851302</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="commit">
+      <option name="closed" value="true" />
+      <created>1716653254332</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1716653254332</updated>
+    </task>
+    <task id="LOCAL-00022" summary="commit">
+      <option name="closed" value="true" />
+      <created>1716653382378</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1716653382378</updated>
+    </task>
+    <task id="LOCAL-00023" summary="commit">
+      <option name="closed" value="true" />
+      <created>1716653436781</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1716653436781</updated>
+    </task>
+    <task id="LOCAL-00024" summary="commit">
+      <option name="closed" value="true" />
+      <created>1716653492746</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1716653492746</updated>
+    </task>
+    <task id="LOCAL-00025" summary="commit">
+      <option name="closed" value="true" />
+      <created>1716653622212</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1716653622213</updated>
+    </task>
+    <task id="LOCAL-00026" summary="commit">
+      <option name="closed" value="true" />
+      <created>1716653718301</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1716653718301</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -337,9 +395,9 @@
     <MESSAGE value="inicio 22" />
     <MESSAGE value="commit2" />
     <MESSAGE value="commit con diagrama de secuencias" />
-    <MESSAGE value="commit" />
     <MESSAGE value="committt" />
-    <option name="LAST_COMMIT_MESSAGE" value="committt" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -415,16 +473,16 @@
       <pinned-members>
         <PinnedItemInfo parentTag="com.google.gson.internal.LinkedTreeMap$Node" memberName="key" />
         <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLE" memberName="siguiente" />
-        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Grafos.Arcos" memberName="destino" />
-        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLEMov" memberName="siguiente" />
-        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Partida" memberName="individuos" />
-        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Usuario" memberName="contraseña" />
         <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Grafos.NodoGrafos" memberName="listaLlegadaArcos" />
         <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Grafos.Cola" memberName="cola" />
         <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos" memberName="primero" />
         <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLEMov" memberName="datos" />
         <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.BucleControl.Bucle" memberName="partida" />
         <PinnedItemInfo parentTag="java.lang.String" memberName="hashIsZero" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Grafos.Arcos" memberName="destino" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLEMov" memberName="siguiente" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Partida" memberName="individuos" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Usuario" memberName="contraseña" />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>
