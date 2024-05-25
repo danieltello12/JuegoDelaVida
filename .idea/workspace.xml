@@ -9,45 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/Json/ColaAcciones.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/ColaAcciones/Cola.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/ColaAcciones/ElementoLDE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_05_2024_15_20__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_05_2024_15_20__Changes_.xml" afterDir="false" />
+    <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="committt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Json/ColaAcciones.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/ColaAcciones.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Json/historico.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/historico.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Json/movimientos.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/movimientos.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Json/reproduccion.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/reproduccion.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Json/usuarios.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/usuarios.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dani.partidas.json" beforeDir="false" afterPath="$PROJECT_DIR$/dani.partidas.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-07-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-08-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-09-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-09-2024-2.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-11-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-13-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-13-2024-2.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-14-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-14-2024-2.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-15-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-16-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-16-2024-2.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-17-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-18-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-19-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-20-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-21-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-22-2024-1.log.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/BucleControl/Bucle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/BucleControl/Bucle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/CargarPartida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/CargarPartida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Invidiuos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Elementos/Individuos/Invidiuos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaELementos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaELementos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Grafos/CargaGrafos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Grafos/CargaGrafos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Historico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Historico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716369230063</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="committt">
+      <option name="closed" value="true" />
+      <created>1716637851302</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1716637851302</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -338,19 +324,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin2/master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -381,11 +355,6 @@
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
-          <line>584</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/ConfiguracionController.java</url>
           <line>108</line>
           <option name="timeStamp" value="33" />
@@ -412,24 +381,50 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/BucleControl/Bucle.java</url>
-          <line>430</line>
+          <line>435</line>
           <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
+          <line>867</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
+          <line>616</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
+          <line>983</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
+          <line>970</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
+          <line>988</line>
+          <option name="timeStamp" value="114" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
-        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLE" memberName="siguiente" />
         <PinnedItemInfo parentTag="com.google.gson.internal.LinkedTreeMap$Node" memberName="key" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLE" memberName="siguiente" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Grafos.Arcos" memberName="destino" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLEMov" memberName="siguiente" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Partida" memberName="individuos" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Usuario" memberName="contraseña" />
+        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Grafos.NodoGrafos" memberName="listaLlegadaArcos" />
         <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Grafos.Cola" memberName="cola" />
         <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos" memberName="primero" />
         <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLEMov" memberName="datos" />
         <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.BucleControl.Bucle" memberName="partida" />
-        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Grafos.ElementoLS" memberName="dato" />
         <PinnedItemInfo parentTag="java.lang.String" memberName="hashIsZero" />
-        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ElementoLEMov" memberName="siguiente" />
-        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Partida" memberName="individuos" />
-        <PinnedItemInfo parentTag="es.uah.trabajo.juegodelavida.Clases.Usuario" memberName="contraseña" />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>
@@ -448,6 +443,38 @@
         <watch expression="j" language="JAVA" />
         <watch expression="reccelda(i,j,p.getRecursos()).getNumeroElementos()" language="JAVA" />
         <watch expression="ind.getElemento(i).getDatos()" language="JAVA" />
+        <watch expression="this" language="JAVA" />
+        <watch expression="this" language="JAVA" />
+        <watch expression="resultado.getChildren()" language="JAVA" />
+        <watch expression="resultado.getChildren()" language="JAVA" />
+        <watch expression="cadenaFlujo" language="JAVA" />
+        <watch expression="((String)cAcciones.getElemento(ca).getDatos()).indexOf(&quot;[Play&quot;)" language="JAVA" />
+        <watch expression="((String)cAcciones.getElemento(ca).getDatos())" language="JAVA" />
+        <watch expression="this.individuos.getElemento(i).getDatos() != null &amp;&amp;                             ( this.individuos.getElemento(i).getDatos().getId())==(individuo.getId())" language="JAVA" />
+        <watch expression="this.individuos.getElemento(i)" language="JAVA" />
+        <watch expression="this.individuos.getElemento(i).datos" />
+        <watch expression="i" language="JAVA" />
+        <watch expression="el2.getDatos().getId()" language="JAVA" />
+        <watch expression="el2.getDatos().getId()" language="JAVA" />
+        <watch expression="el.getDatos().getId()" language="JAVA" />
+        <watch expression="dameCadenaFlujo()ameDatosFinalesIndividuo(finalHistoricoF,newValue.toString())" language="JAVA" />
+        <watch expression="invidiuos.getNumReproducido()" language="JAVA" />
+        <watch expression="idMaxReproducciones" language="JAVA" />
+        <watch expression="invidiuos.getId()" language="JAVA" />
+        <watch expression="lTurno.text.text" language="JAVA" />
+        <watch expression="camino" language="JAVA" />
+        <watch expression="tree" language="JAVA" />
+        <watch expression="camino.getElemento(t).getDato()" language="JAVA" />
+        <watch expression="camino.getElemento(t).getDato()" language="JAVA" />
+        <watch expression="id" language="JAVA" />
+        <watch expression="camino.getElemento(t).getDato()" language="JAVA" />
+        <watch expression="rootItem.getChildren()" language="JAVA" />
+        <watch expression="rootItem.getChildren()" language="JAVA" />
+        <watch expression="camino.getElemento(i).getDato()" language="JAVA" />
+        <watch expression="camino.getElemento(i)" language="JAVA" />
+        <watch expression="camino.getElemento(t)" language="JAVA" />
+        <watch expression="camino.getElemento(t).getDato()" language="JAVA" />
+        <watch expression="camino.getElemento(t).getDato().datos" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

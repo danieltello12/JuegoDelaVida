@@ -170,6 +170,22 @@ public class ListaELementos <TipoDelDato>extends gson {
         if (!salir)
             contador=-1;
         return contador;
+    } public int getPosicionId(int id) {
+        int contador = 0;
+        boolean salir = false;
+        ElementoLE el = this.primero;
+        while (el != null && salir == false) {
+            if (el.getDatos().getId() == id) {
+                salir = true;
+            } else {
+                el = el.getSiguiente();
+                contador++;
+            }
+
+        }
+        if (!salir)
+            contador=-1;
+        return contador;
     }
 
 

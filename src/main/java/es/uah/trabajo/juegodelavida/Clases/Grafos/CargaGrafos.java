@@ -255,14 +255,24 @@ public class CargaGrafos {
                 grafoArbolGen.añadirNodo(nodoIndividuoHijo);
             else
                 nodoIndividuoHijo = grafoArbolGen.dameNodo(nodoIndividuoHijo);
+
+
             NodoGrafos nodoIndividuoPadre1 = new NodoGrafos(String.valueOf(reproduccion.getIdIndividuoPadre1()), new ListaSimple<Arcos>(), new ListaSimple<Arcos>());
             NodoGrafos nodoIndividuoPadre2 = new NodoGrafos(String.valueOf(reproduccion.getIdIndividuoPadre2()), new ListaSimple<Arcos>(), new ListaSimple<Arcos>());
 
+            if (grafoArbolGen.buscarNodo(nodoIndividuoPadre1))
+                nodoIndividuoPadre1 = grafoArbolGen.dameNodo(nodoIndividuoPadre1);
+
+            if (grafoArbolGen.buscarNodo(nodoIndividuoPadre2))
+                nodoIndividuoPadre2 = grafoArbolGen.dameNodo(nodoIndividuoPadre2);
 
             grafoArbolGen=cargaNodosdeId(grafoArbolGen, reproduccion, Integer.parseInt(nodoIndividuoPadre1.getDatos().toString()));
             grafoArbolGen=cargaNodosdeId(grafoArbolGen, reproduccion, Integer.parseInt(nodoIndividuoPadre2.getDatos().toString()));
+
+            nodoIndividuoPadre1 = grafoArbolGen.dameNodo(nodoIndividuoPadre1);
+            nodoIndividuoPadre2 = grafoArbolGen.dameNodo(nodoIndividuoPadre2);
             Arcos arco1 = new Arcos("AR" + nodoIndividuoPadre1.getDatos() + "_" + nodoIndividuoHijo.getDatos(), nodoIndividuoPadre1, nodoIndividuoHijo, 1, "Es_padre_De");
-            Arcos arco2 = new Arcos("AR" + nodoIndividuoPadre2.getDatos() + "_" + nodoIndividuoHijo.getDatos(), nodoIndividuoPadre1, nodoIndividuoHijo, 1, "Es_padre_De");
+            Arcos arco2 = new Arcos("AR" + nodoIndividuoPadre2.getDatos() + "_" + nodoIndividuoHijo.getDatos(), nodoIndividuoPadre2, nodoIndividuoHijo, 1, "Es_padre_De");
 
             grafoArbolGen.añadirArco(arco1);
             grafoArbolGen.añadirArco(arco2);

@@ -66,6 +66,7 @@ public class Historico extends gson {
                         historicoF.individuos.getElemento(posIndi).getDatos().setNumTesoro(individuo.getNumTesoro());
                         historicoF.individuos.getElemento(posIndi).getDatos().setNumPozo(individuo.getNumPozo());
                         historicoF.individuos.getElemento(posIndi).getDatos().setTurnosvida(individuo.getTurnosvida());
+                        historicoF.individuos.getElemento(posIndi).getDatos().setMaxNumTurnosVida(individuo.getMaxNumTurnosVida());
 
                     }else{
                         historicoF.individuos.add(individuo);
@@ -115,6 +116,7 @@ public class Historico extends gson {
                         historicoF.individuos.getElemento(posIndi).getDatos().setNumTesoro(individuo.getNumTesoro());
                         historicoF.individuos.getElemento(posIndi).getDatos().setNumPozo(individuo.getNumPozo());
                         historicoF.individuos.getElemento(posIndi).getDatos().setTurnosvida(individuo.getTurnosvida());
+                        historicoF.individuos.getElemento(posIndi).getDatos().setMaxNumTurnosVida(individuo.getMaxNumTurnosVida());
 
                     }else{
                         historicoF.individuos.add(individuo);

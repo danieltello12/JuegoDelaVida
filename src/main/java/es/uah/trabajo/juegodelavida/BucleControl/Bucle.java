@@ -357,7 +357,7 @@ public Bucle (){
                 Invidiuos individuoGen = (partida.getIndividuos().getElemento(i).getDatos());
                 individuoGen.setNumPasos(individuoGen.getNumPasos()+1);
                 if (individuoGen.getTurnosvida() > individuoGen.getMaxNumTurnosVida()){
-                    individuoGen.setMaxNumTurnosVida(individuoGen.getMaxNumTurnosVida());
+                    individuoGen.setMaxNumTurnosVida(individuoGen.getTurnosvida());
                 }
 
                 switch (individuoGen.getTipo()){
@@ -576,7 +576,7 @@ public Bucle (){
                                 Reproduccion reproduccion = new Reproduccion(padre1.getId(), padre2.getId(), hijo.getId(), paso);
                                 hijo.addReproduccion(reproduccion);
                                 padre1.setNumReproducido(padre1.getNumReproducido()+1);
-                                padre2.setNumReproducido(padre1.getNumReproducido()+1);
+                                padre2.setNumReproducido(padre2.getNumReproducido()+1);
                                 partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Individuo("+padre2.getTipo()+"): "+padre2.getId()+" y  Individuo("+padre1.getTipo()+"): "+padre1.getId()+" se han reproducido en Individuo( "+hijo.getId()+")"));
                                 hijo.añadirReproduccionJSon();
                             }
@@ -919,7 +919,9 @@ public Bucle (){
         for (int i=0; i< partida.getIndividuos().getNumeroElementos();i++) {
             if (partida.getIndividuos().getElemento(i) != null) {
                 Invidiuos individuo = partida.getIndividuos().getElemento(i).getDatos();
-
+                if (individuo.getTurnosvida() > individuo.getMaxNumTurnosVida()){
+                    individuo.setMaxNumTurnosVida(individuo.getTurnosvida());
+                }
                 comprobarCoincidenciaRecursos(individuo);
 
             }

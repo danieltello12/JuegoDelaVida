@@ -23,10 +23,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.ScrollBar;
-import javafx.scene.control.ScrollPane;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
@@ -574,7 +571,7 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
                         nodoTablero = grafoArbol.dameNodo(nodoTablero);
 
                     Cola<Camino<String>> caminosArbol = grafoArbol.dijkstra(nodoTablero);
-                    String cadenaArbol="\nARBOL GENEALÓGICO DE VENCEDORES:\n";
+                    String cadenaArbol="\nARBOL GENEALOGICAL DE VENCEDORES:\n";
 
                     for(int i = caminosArbol.getNumeroElem() -1 ; i >= 0 ;i--){
                         ElementoLDE<Camino<String>> todoscaminos = caminosArbol.getElemento(i);
@@ -596,20 +593,28 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
                     resultado.setTop(hbox);
                     resultado.setLeft(addVBox());
                     addStackPane(hbox);         // Add stack to HBox in top region
+                    /*Si  utilizamos el mostrarTrees descomentar esto*/
+                    resultado.setCenter(addPane(""));
 
-                    resultado.setCenter(addPane(cadenaArbol));
+
+                    /*Si no utilizamos el mostrarTrees descomentar esto
+                    / resultado.setCenter(addPane(cadenaArbol));
+
+                     */
                     resultado.setRight(addFlowPane());
                     HBox hbb1=(HBox)(((VBox)resultado.getChildren().get(2)).getChildren().get(1));
                     ScrollPane scp1=(ScrollPane)hbb1.getChildren().get(1);
                     Pane pp1=(Pane)(scp1.getContent());
 
                     String finalCadenaArbol = cadenaArbol;
+                    mostrarTrees(pp1,caminosArbol,p);
 
 
                     ((Boton)((HBox)resultado.getChildren().get(0)).getChildren().get(0)).setOnAction(() -> {
                         limpiarPanel(pp1);
                         Label miTexto= (Label)pp1.getChildren().get(0);
                         miTexto.setText( finalCadenaArbol);
+                        mostrarTrees(pp1,caminosArbol,p);
                     });
                     ((Boton)((HBox)resultado.getChildren().get(0)).getChildren().get(1)).setOnAction(() -> {
                         limpiarPanel(pp1);
@@ -658,6 +663,7 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         Box b = new Box(100, 80, "src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Boton_Parar.png");
         b.setTranslateY(50);
         b.setTranslateX(625);
+
 
         Box cajaGuardar= new Box(400, 100,"src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Boton.png");
         cajaGuardar.setTranslateX(950);
@@ -891,9 +897,9 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
                     idMaxNumTesoro = i;
                     maxNumTesoro = invidiuos.getNumTesoro();
                 }
-                if (invidiuos.getTurnosvida() > maxNumVidas) {
+                if (invidiuos.getMaxNumTurnosVida() > maxNumVidas) {
                     idMaxNumVidas = i;
-                    maxNumVidas = invidiuos.getTurnosvida();
+                    maxNumVidas = invidiuos.getMaxNumTurnosVida();
                 }
                 if (invidiuos.getNumPasos() > maxNumTurnos) {
                     idMaxNumTurnos = i;
@@ -912,7 +918,7 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         datosMaximos.append("\n\t Máximo nº de clonaciones:" +  maxClonaciones);
         if(idMaxClonaciones>=0)
             datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxClonaciones).getDatos().getId()+"]"  );
-        datosMaximos.append("\n\t Máximo tiempo de vida disponible:" +  maxNumVidas);
+        datosMaximos.append("\n\t Máximo tiempo de vida conseguido:" +  maxNumVidas);
         if(idMaxNumVidas>=0)
             datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumVidas).getDatos().getId()+"]"  );
         datosMaximos.append("\n\t Máximo nº de turnos jugados:" +  maxNumTurnos);
@@ -944,6 +950,76 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
 
         return datosMaximos.toString();
 
+    }
+    public void mostrarTrees(Pane panel,Cola<Camino<String>> caminosArbol,Partida partida){
+        //panel.getChildren().removeAll();
+        VBox vbTrees= addVBox();
+        Label lArbol = new Label();
+        lArbol.setStyle("-fx-text-alignment: left; -fx-font-size: 10px;-fx-font-weight: bold");
+
+        lArbol.setText("\nARBOL GENEALÓGICO DE VENCEDORES:\n");
+
+        vbTrees.getChildren().add(lArbol);
+
+
+        for(int i = caminosArbol.getNumeroElem() -1 ; i >= 0 ;i--){
+            ElementoLDE<Camino<String>> todoscaminos = caminosArbol.getElemento(i);
+            ListaSimple<NodoGrafos<String>> camino = todoscaminos.getDatos().getCamino();
+            NodoGrafos<String> nodoUltimo = (NodoGrafos<String>)camino.getUltimo().getDato();
+
+            if(camino!=null && camino.getUltimo() != null && !(nodoUltimo.getDatos().equals("-1"))){
+               TreeItem<String> rootItem = new TreeItem<String>("Tablero");
+                rootItem.setExpanded(true);
+                for(int t=0; t < camino.getNumeroElementos();t++ )
+                    if(camino.getElemento(t) != null && camino.getElemento(t).getDato() != null) {
+
+                        if(t==0){
+                            continue;
+                        }
+                        NodoGrafos<String> nodoActual=(NodoGrafos<String>)camino.getElemento(t).getDato();
+                        String id=nodoActual.getDatos();
+                        TreeItem<String> item = new TreeItem<String>("PADRE DE NODO [" + id + "]");
+                        item.setExpanded(true);
+
+                        if(rootItem.getChildren().size()==0) {
+
+                            rootItem.getChildren().add(item);
+                        }else{
+                            if (partida.getIndividuos() != null) {
+                                int posIndi = partida.getIndividuos().getPosicionId(Integer.parseInt(id));
+                                if (posIndi >=0) {
+                                    if( partida.getIndividuos().getElemento(posIndi) != null) {
+                                        if( partida.getIndividuos().getElemento(posIndi).getDatos()!= null) {
+                                            Invidiuos individuo = partida.getIndividuos().getElemento(posIndi).getDatos();
+                                            if(individuo.getReproducciones()!=null && individuo.getReproducciones().getNumeroElementos()>0)
+                                            {
+                                                if(individuo.getReproducciones().getElemento(0).getDatos() != null) {
+                                                    int idPadre1 = individuo.getReproducciones().getElemento(0).getDatos().getIdIndividuoPadre1();
+                                                    int idPadre2 = individuo.getReproducciones().getElemento(0).getDatos().getIdIndividuoPadre2();
+                                                    rootItem.getChildren().getLast().setValue("NODOS [" + idPadre1 + "-" + idPadre2 + "]");
+                                                    item.setValue("PADRES DE NODO [" + id + "]");
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            rootItem.getChildren().getLast().getChildren().add(item);
+                        }
+
+                    }
+                TreeView<String> tree = new TreeView<String> (rootItem);
+                tree.setPrefSize(300,100);
+                tree.setStyle("-fx-background-color: #336699;");
+
+                vbTrees.getChildren().add(tree);
+            }
+
+
+
+        }
+
+        panel.getChildren().add(vbTrees);
     }
     public void montaPanelHistorico(Pane panel,Label labelPanel){
         Historico historicoF=new Historico(new ListaELementos<Invidiuos>(),0);
@@ -1052,7 +1128,10 @@ public String dameCadenaFlujo(Partida partida){
         usuarios.getusuario(u).setPartidas(partidas);
     }
     private boolean finpartida(Partida p,Stage s) throws FileNotFoundException {
+        //Descomentar para probar
         if(p.getIndividuos().getNumeroElementos()<=1 || p.getIndividuos().getElemento(0).getDatos().getTurnosvida()==1){
+        //Descomentar para final
+           // if(p.getIndividuos().getNumeroElementos()<=1){
             return true;
         }
         else{
