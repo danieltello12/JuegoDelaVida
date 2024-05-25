@@ -32,6 +32,10 @@ public Bucle (){
 
     public void ejecutarMovimiento(int paso){
         this.paso=paso;
+        if (paso ==1){
+            comprobarCoincidenciaRecursos(partida);
+            guardaHistorico(paso);
+        }
         /*
         1. Para cada individuo, se actualiza su tiempo de vida, y en su caso se elimina si ha muerto.
         */
@@ -60,7 +64,9 @@ public Bucle (){
          */
         nuevosrecursos(partida);
         limpiarRec(partida);
+        comprobarCoincidenciaRecursos(partida);
 
+        guardaHistorico(paso);
     }
 
 
@@ -96,7 +102,9 @@ public Bucle (){
                         }
                     }
                     if(pos >= 0) {
-                        partida.getAcciones().encolar(new ElementoLDE<>("Individuoos: "+ partida.getIndividuos().getElemento(pos).getDatos().getId()+" ha sido eliminado"));
+                        partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Individuos: "+ partida.getIndividuos().getElemento(pos).getDatos().getId()+" ha sido eliminado"));
+                        comprobarCoincidenciaRecursos(partida.getIndividuos().getElemento(pos).getDatos());
+                        guardaHistorico(partida.getIndividuos().getElemento(pos).getDatos(),paso);
                         partida.getIndividuos().del(pos);
                         contador--;
                         numTurnos=Integer.MAX_VALUE;
@@ -346,7 +354,7 @@ public Bucle (){
         for (int i=0; i< partida.getIndividuos().getNumeroElementos();i++) {
             if (partida.getIndividuos().getElemento(i) != null ) {
                 Invidiuos individuoGen = (partida.getIndividuos().getElemento(i).getDatos());
-
+                individuoGen.setNumPasos(individuoGen.getNumPasos()+1);
                 switch (individuoGen.getTipo()){
                     case "Básico":
                         ejecutarMovimientoIBasico(individuoGen, partida);
@@ -433,7 +441,7 @@ public Bucle (){
             individuoGen.setX(partida.getRecursos().getElemento(recursoElegido).getDatos().getX());
             individuoGen.setY(partida.getRecursos().getElemento(recursoElegido).getDatos().getY());
             individuoGen.addMovimiento(new Movimiento(partida.getRecursos().getElemento(recursoElegido).getDatos().getX(), partida.getRecursos().getElemento(recursoElegido).getDatos().getY(),individuoGen.getId()));
-            partida.getAcciones().encolar(new ElementoLDE<String>("Individuo(A): "+individuoGen.getId()+", se ha movido a: x="+individuoGen.getX()+"" + ", y= "+individuoGen.getY()));
+            partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Individuo(A): "+individuoGen.getId()+", se ha movido a: x="+individuoGen.getX()+"" + ", y= "+individuoGen.getY()));
             individuoGen.añadirmovimientosJSon();
 
         }
@@ -470,7 +478,7 @@ public Bucle (){
             individuoGen.setX(recursoLR.getX());
             individuoGen.setY(recursoLR.getY());
             individuoGen.addMovimiento(new Movimiento(recursoLR.getX(),recursoLR.getY(),individuoGen.getId()));
-            partida.getAcciones().encolar(new ElementoLDE<String>("Individuo(N): "+individuoGen.getId()+", se ha movido a: x="+individuoGen.getX()+"" +", y= "+individuoGen.getY()));
+            partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Individuo(N): "+individuoGen.getId()+", se ha movido a: x="+individuoGen.getX()+"" +", y= "+individuoGen.getY()));
             individuoGen.añadirmovimientosJSon();
 
         }
@@ -488,7 +496,7 @@ public Bucle (){
         individuoGen.setX(aleaX);
         individuoGen.setY(aleaY);
         individuoGen.addMovimiento(new Movimiento(aleaX,aleaY,individuoGen.getId()));
-        partida.getAcciones().encolar(new ElementoLDE<String>("Individuo(B): "+individuoGen.getId()+", se ha movido a: x="+individuoGen.getX()+"" +", y= "+individuoGen.getY()));
+        partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Individuo(B): "+individuoGen.getId()+", se ha movido a: x="+individuoGen.getX()+"" +", y= "+individuoGen.getY()));
         individuoGen.añadirmovimientosJSon();
     }
     private void verClon(Partida p){
@@ -505,7 +513,9 @@ public Bucle (){
                 int nuevoID=dameMaxIdIndividuo(p,actual)+1;
                 copia.setId(nuevoID);
                 if(!existeIndividuo(p, copia)) {
-                    partida.getAcciones().encolar(new ElementoLDE<String>("Individuo("+copia.getTipo()+"): "+copia.getId()+"  Se ha clonado"));
+                    actual.setNumClonado(actual.getNumClonado()+1);
+
+                    partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Individuo("+copia.getTipo()+"): "+copia.getId()+"  Se ha clonado"));
                     p.getIndividuos().add(copia);
                 }
 
@@ -560,7 +570,9 @@ public Bucle (){
                                 p.getIndividuos().add(hijo);
                                 Reproduccion reproduccion = new Reproduccion(padre1.getId(), padre2.getId(), hijo.getId(), paso);
                                 hijo.addReproduccion(reproduccion);
-                                partida.getAcciones().encolar(new ElementoLDE<String>("Individuo("+padre2.getTipo()+"): "+padre2.getId()+" y  Individuo("+padre1.getTipo()+"): "+padre1.getId()+" se han reproducido= "+hijo.getId()));
+                                padre1.setNumReproducido(padre1.getNumReproducido()+1);
+                                padre2.setNumReproducido(padre1.getNumReproducido()+1);
+                                partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Individuo("+padre2.getTipo()+"): "+padre2.getId()+" y  Individuo("+padre1.getTipo()+"): "+padre1.getId()+" se han reproducido en Individuo( "+hijo.getId()+")"));
                                 hijo.añadirReproduccionJSon();
                             }
                         }
@@ -585,7 +597,7 @@ public Bucle (){
                                 ,p.getCbBiblio(),p.getModBiblio(),p.isCkBiblio()
                                 ,p.getCbPozo(),p.getModPozo(),p.isCkPozo());
                         r.setTipo(rec((int)pv.getElemento(pv.getNumeroElementos()-1).getDatos(),p));
-                        partida.getAcciones().encolar(new ElementoLDE<String>("Recurso("+rec((int)pv.getElemento(pv.getNumeroElementos()-1).getDatos(),p)+"" +") Se ha creado  en  x= "+r.getX()+"  y="+r.getY() ));
+                        partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Recurso("+rec((int)pv.getElemento(pv.getNumeroElementos()-1).getDatos(),p)+"" +") Se ha creado  en  x= "+r.getX()+"  y="+r.getY() ));
                         p.getRecursos().add(r);
                     }
                     else  if(Math.random()*100<(int)pv.getElemento(pv.getNumeroElementos()-2).getDatos()){
@@ -597,7 +609,7 @@ public Bucle (){
                                 ,p.getCbBiblio(),p.getModBiblio(),p.isCkBiblio()
                                 ,p.getCbPozo(),p.getModPozo(),p.isCkPozo());
                         r.setTipo(rec((int)pv.getElemento(pv.getNumeroElementos()-2).getDatos(),p));
-                        partida.getAcciones().encolar(new ElementoLDE<String>("Recurso("+rec((int)pv.getElemento(pv.getNumeroElementos()-2).getDatos(),p)+"" +") Se ha creado  en  x= "+r.getX()+"  y="+r.getY()));
+                        partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Recurso("+rec((int)pv.getElemento(pv.getNumeroElementos()-2).getDatos(),p)+"" +") Se ha creado  en  x= "+r.getX()+"  y="+r.getY()));
                         p.getRecursos().add(r);
                     }
                     else if(Math.random()*100<(int)pv.getElemento(pv.getNumeroElementos()-3).getDatos()){
@@ -609,7 +621,7 @@ public Bucle (){
                                 ,p.getCbBiblio(),p.getModBiblio(),p.isCkBiblio()
                                 ,p.getCbPozo(),p.getModPozo(),p.isCkPozo());
                         r.setTipo(rec((int)pv.getElemento(pv.getNumeroElementos()-3).getDatos(),p));
-                        partida.getAcciones().encolar(new ElementoLDE<String>("Recurso("+rec((int)pv.getElemento(pv.getNumeroElementos()-3).getDatos(),p)+"" + ") Se ha creado  en  x= "+r.getX()+"  y="+r.getY()  ));
+                        partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Recurso("+rec((int)pv.getElemento(pv.getNumeroElementos()-3).getDatos(),p)+"" + ") Se ha creado  en  x= "+r.getX()+"  y="+r.getY()  ));
                         p.getRecursos().add(r);
                     }
                     else if(Math.random()*100<(int)pv.getElemento(pv.getNumeroElementos()-4).getDatos()){
@@ -621,7 +633,7 @@ public Bucle (){
                                 ,p.getCbBiblio(),p.getModBiblio(),p.isCkBiblio()
                                 ,p.getCbPozo(),p.getModPozo(),p.isCkPozo());
                         r.setTipo(rec((int)pv.getElemento(pv.getNumeroElementos()-4).getDatos(),p));
-                        partida.getAcciones().encolar(new ElementoLDE<String>("Recurso("+rec((int)pv.getElemento(pv.getNumeroElementos()-4).getDatos(),p)+"" + ") Se ha creado  en  x= "+r.getX()+"  y="+r.getY() ));
+                        partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Recurso("+rec((int)pv.getElemento(pv.getNumeroElementos()-4).getDatos(),p)+"" + ") Se ha creado  en  x= "+r.getX()+"  y="+r.getY() ));
                         p.getRecursos().add(r);
                     }
                     else  if(Math.random()*100<(int)pv.getElemento(pv.getNumeroElementos()-5).getDatos()){
@@ -633,7 +645,7 @@ public Bucle (){
                                 ,p.getCbBiblio(),p.getModBiblio(),p.isCkBiblio()
                                 ,p.getCbPozo(),p.getModPozo(),p.isCkPozo());
                         r.setTipo(rec((int)pv.getElemento(pv.getNumeroElementos()-5).getDatos(),p));
-                        partida.getAcciones().encolar(new ElementoLDE<String>("Recurso("+rec((int)pv.getElemento(pv.getNumeroElementos()-5).getDatos(),p)+"" + ") Se ha creado  en  x= "+r.getX()+"  y="+r.getY() ));
+                        partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Recurso("+rec((int)pv.getElemento(pv.getNumeroElementos()-5).getDatos(),p)+"" + ") Se ha creado  en  x= "+r.getX()+"  y="+r.getY() ));
                         p.getRecursos().add(r);
                     }
                     else if(Math.random()*100<(int)pv.getElemento(0).getDatos()){
@@ -645,7 +657,7 @@ public Bucle (){
                                 ,p.getCbBiblio(),p.getModBiblio(),p.isCkBiblio()
                                 ,p.getCbPozo(),p.getModPozo(),p.isCkPozo());
                         r.setTipo(rec((int)pv.getElemento(0).getDatos(),p));
-                        partida.getAcciones().encolar(new ElementoLDE<String>("Recurso("+rec((int)pv.getElemento(0).getDatos(),p)+"" + ") Se ha creado  en  x= "+r.getX()+"  y="+r.getY()  ));
+                        partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Recurso("+rec((int)pv.getElemento(0).getDatos(),p)+"" + ") Se ha creado  en  x= "+r.getX()+"  y="+r.getY()  ));
                         p.getRecursos().add(r);
                     }
                     else{
@@ -657,7 +669,7 @@ public Bucle (){
                                 ,p.getCbBiblio(),p.getModBiblio(),p.isCkBiblio()
                                 ,p.getCbPozo(),p.getModPozo(),p.isCkPozo());
                         r.setTipo(rec((int)pv.getElemento(pv.getNumeroElementos()-1).getDatos(),p));
-                        partida.getAcciones().encolar(new ElementoLDE<String>("Recurso("+rec((int)pv.getElemento(pv.getNumeroElementos()-1).getDatos(),p)+"" +") Se ha creado  en  x= "+r.getX()+"  y="+r.getY() ));
+                        partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Recurso("+rec((int)pv.getElemento(pv.getNumeroElementos()-1).getDatos(),p)+"" +") Se ha creado  en  x= "+r.getX()+"  y="+r.getY() ));
                         p.getRecursos().add(r);
                     }
                 }
@@ -733,7 +745,7 @@ public Bucle (){
         if (posBorrar >= 0 ) {
             p.getRecursos().del(p.getRecursos().getPosicion(new ElementoRe(nodoaborrar)));
             if(p.getRecursos().getElemento(p.getRecursos().getPosicion(new ElementoRe(nodoaborrar))) != null)
-                partida.getAcciones().encolar(new ElementoLDE<>("Recurso: " + p.getRecursos().getElemento(p.getRecursos().getPosicion(new ElementoRe(nodoaborrar))).getDatos().getTipo() + " ha sido eliminado"));
+                partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Recurso: " + p.getRecursos().getElemento(p.getRecursos().getPosicion(new ElementoRe(nodoaborrar))).getDatos().getTipo() + " ha sido eliminado"));
         }
     }
     private ListaELementos elementosceldas(int x, int y, ListaELementos ind) {
@@ -762,7 +774,7 @@ public Bucle (){
                 if ( recursos.getElemento(i).getDatos().getTiemposvida()>0) {
                     recursos.getElemento(i).getDatos().setTiemposvida(recursos.getElemento(i).getDatos().getTiemposvida() - 1);
                 } else{
-                    partida.getAcciones().encolar(new ElementoLDE<>("Recurso: "+ recursos.getElemento(i).getDatos().getTipo()+" ha desaparecido"));
+                    partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Recurso: "+ recursos.getElemento(i).getDatos().getTipo()+" ha desaparecido"));
                     recursos.del(i);
                     i--;
                 }
@@ -775,7 +787,7 @@ public Bucle (){
                 if ( individuos.getElemento(i).getDatos().getTurnosvida()>0)
                     individuos.getElemento(i).getDatos().setTurnosvida(individuos.getElemento(i).getDatos().getTurnosvida() - 1);
                 else {
-                    partida.getAcciones().encolar(new ElementoLDE<>("Individuo: "+ individuos.getElemento(i).getDatos().getId()+" ha muerto"));
+                    partida.getAcciones().encolar(new ElementoLDE<String>("Play["+paso+"]==>"+"Individuo: "+ individuos.getElemento(i).getDatos().getId()+" ha muerto"));
                     individuos.del(i);
                     i--;
                 }
@@ -865,8 +877,58 @@ public Bucle (){
         return existe;
 
     }
-    private void guardaHistorico(Partida partida,  int paso){
-        Historico historico = new Historico(partida, paso);
+    private void comprobarCoincidenciaRecursos(Invidiuos individuo){
+        int posX = individuo.getX();
+        int posY = individuo.getY();
+        ListaRecursos listarecursos = reccelda(posX, posY, partida.getRecursos());
+        for (int j = 0; listarecursos != null && j < listarecursos.getNumeroElementos(); j++) {
+            Recursos recurso = listarecursos.getElemento(j).getDatos();
+            if (recurso != null) {
+                switch (recurso.getTipo()) {
+                    case "A":
+                        individuo.setNumAguas(individuo.getNumAguas() + 1);
+                        break;
+                    case "C":
+                        individuo.setNumComida(individuo.getNumComida() + 1);
+                        break;
+                    case "B":
+                        individuo.setNumBiblioteca(individuo.getNumBiblioteca() + 1);
+                        break;
+                    case "M":
+                        individuo.setNumMontaña(individuo.getNumMontaña() + 1);
+                        break;
+                    case "T":
+                        individuo.setNumTesoro(individuo.getNumTesoro() + 1);
+                        break;
+                    case "P":
+                        individuo.setNumPozo(individuo.getNumPozo() + 1);
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+        }
+    }
+    private void comprobarCoincidenciaRecursos(Partida partida){
+        for (int i=0; i< partida.getIndividuos().getNumeroElementos();i++) {
+            if (partida.getIndividuos().getElemento(i) != null) {
+                Invidiuos individuo = partida.getIndividuos().getElemento(i).getDatos();
+
+                comprobarCoincidenciaRecursos(individuo);
+
+            }
+        }
+    }
+    private void guardaHistorico( int paso){
+        Historico historico = new Historico(partida.getIndividuos(), paso);
+        historico.añadirHistorico(partida);
+
+    }
+    private void guardaHistorico(Invidiuos invidiuos,  int paso){
+        Historico historico = new Historico(partida.getIndividuos(), paso);
+        historico.añadirHistorico(invidiuos);
+
 
     }
 }

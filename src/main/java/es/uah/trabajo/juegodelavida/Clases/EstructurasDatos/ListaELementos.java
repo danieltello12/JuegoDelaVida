@@ -154,6 +154,24 @@ public class ListaELementos <TipoDelDato>extends gson {
             contador=-1;
         return contador;
     }
+    public int getPosicionId(ElementoLE el2) {
+        int contador = 0;
+        boolean salir = false;
+        ElementoLE el = this.primero;
+        while (el != null && salir == false) {
+            if (el.getDatos().getId() == el2.getDatos().getId()) {
+                salir = true;
+            } else {
+                el = el.getSiguiente();
+                contador++;
+            }
+
+        }
+        if (!salir)
+            contador=-1;
+        return contador;
+    }
+
 
     public ElementoLE getPrimero() {
         return this.primero;

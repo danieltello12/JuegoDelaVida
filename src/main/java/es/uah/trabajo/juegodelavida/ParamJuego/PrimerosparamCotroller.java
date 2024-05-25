@@ -5,6 +5,7 @@ import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaLEMov;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaLERepr;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
+import es.uah.trabajo.juegodelavida.Clases.Historico;
 import es.uah.trabajo.juegodelavida.Clases.Movimiento;
 import es.uah.trabajo.juegodelavida.Clases.Partida;
 import es.uah.trabajo.juegodelavida.Clases.Reproduccion;
@@ -340,6 +341,10 @@ public class PrimerosparamCotroller implements Initializable {
             ListaLERepr<Reproduccion> reproducciones = new ListaLERepr<Reproduccion>();
             reproducciones.vaciar();
             reproducciones.guardar(reproducciones);
+
+            Historico historico = new Historico(p.getIndividuos(),0);
+            historico.limpiar();
+
 
             Stage stage = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader();

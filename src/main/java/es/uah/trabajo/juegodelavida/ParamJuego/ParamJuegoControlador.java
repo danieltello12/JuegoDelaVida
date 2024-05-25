@@ -79,9 +79,11 @@ public class ParamJuegoControlador implements Initializable {
         ListaUsuarios usuarios= new ListaUsuarios();
         ListaLEPA partidas= usuarios.getusuario(usuario).getPartidas();
         partidas.add(partida);
+
         Cola Acciones= new Cola<>().cargar();
         Acciones.vaciar();
         Acciones.guardar(Acciones);
+
         Cola<String> accionesPartida= new Cola<String>();
         partida.setAcciones(accionesPartida);
         usuarios.getusuario(usuario).setPartidas(limpieza(partidas));

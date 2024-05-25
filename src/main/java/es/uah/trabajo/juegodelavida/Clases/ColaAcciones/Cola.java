@@ -121,6 +121,15 @@ public class Cola <TipoDelDato> {
         }
         return elem;
     }
+    public int getNumeroElemC(){
+        int elem=0;
+        ElementoLDE<String> el = this.cabecera;
+        while (el!=null){
+            el=el.siguiente;
+            elem++;
+        }
+        return elem;
+    }
 
 
 }

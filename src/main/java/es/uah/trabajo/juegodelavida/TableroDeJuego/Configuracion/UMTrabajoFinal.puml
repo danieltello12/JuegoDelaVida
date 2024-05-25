@@ -414,7 +414,7 @@
    +getY():int
    }
    class Partida{
-   //A RELLENAR
+
    nombre:String
    filas:int
    columnas:int
@@ -572,6 +572,237 @@
 
 
     folder TableroDeJuego{
+    folder Configuracion{
+    class CambiarProbabilidadesControler{
+    -probZ:Slider
+    -probVA:Slider
+    -probC:Slider
+    -probVM:Slider
+    -probVT:Slider
+    -probVB:Slider
+    -probVP:Slider
+     stage:Stage
+     partida:Partida
+     +loaduserdata( p:Partida, usuario:String )
+     +initialize(location:URL, resources:ResourceBundle )
+     +setStage(stage:Stage )
+     +onMybotonGuardar()
+
+     +cambiopV()
+
+     +cambiopz()
+     }
+      interface Initializable{
+                 //Interfaz de Java
+                 }
+      class ConfiguracionModel{
+      -filaIvd:String
+      -columnaIvd:String
+      -Identificador:String
+
+        -pclonacion =0;
+       - preproduccion =0;
+        -filarec="";
+        -columnarec="";
+         -pvA=0:float
+         -pVC=0:float
+         -pvM=0:float
+          -pvT=0:float
+          -pvB=0:float
+           -pvP=0:float
+           -pz=0:float
+          +getFilarec()
+
+          +setFilarec(filarec:String )
+
+          +getColumnarec()
+
+          + setColumnarec(String columnarec)
+
+          +getPvA() :float
+
+          + setPvA( pvA:float)
+
+          +getpVC() :float
+
+          + setpVC(float pVC)
+
+          +getPvM() :float
+
+          +setPvM(float pvM)
+
+          +getPvT():float
+
+          +setPvT(float pvT)
+
+          +getPvB() :float
+
+          +setPvB(float pvB)
+
+          + getPvP():float
+
+          +setPvP(float pvP)
+
+          +getPz():float
+
+          +setPz(float pz)
+
+          +getColumnaIvd():String
+
+
+
+
+
+          +getIdentificador() :String
+
+
+
+          +setIdentificador(String identificador)
+
+
+          +getPreproduccion() :float
+
+          +setPreproduccion(float preproduccion)
+
+
+          +setColumnaIvd(String columnaIvd)
+
+
+         +getFilaIndv() :String
+
+
+          +setFilaIndv(String filaIndv) {
+
+
+          +ConfiguracionModel()
+
+
+
+
+
+          + getNumeroIndividuosAvanzados():String
+
+
+          +getNumeroIndividuosNormales() :String
+
+
+
+          + getPclonacion() :float
+
+          +getProbabilidadreproduccion() :float
+
+
+
+
+
+          +setNumeroIndividuosNormales(String numeroIndividuosNormales)
+
+
+         +setPclonacion(float pclonacion)
+
+
+          +setProbabilidadreproduccion(int probabilidadreproduccion)
+
+
+
+          +setProbabilidadreproduccion(float v)
+          }
+          class ConfiguracionProperties{
+           -filaIvd:String
+                -columnaIvd:StringProperty
+                -Identificador:StringProperty
+
+                  -pclonacion:StringProperty
+                 - preproduccion :StringProperty
+                  -filarec:StringProperty
+                  -columnarec:StringProperty
+                   -pvA:FloatProperty
+                   -pVC:FloatProperty
+                   -pvM:FloatProperty
+                    -pvT:FloatProperty
+                    -pvB:FloatProperty
+                     -pvP:FloatProperty
+                     -pz:FloatProperty
+                     +ConfiguracionProperties(ConfiguracionModel original)
+                     +commit()
+                     +rollback()
+                     +setOriginal(ConfiguracionModel original)
+                     +numeroIndividuosNormalesProperty():Property<String>
+                     + filaIndvproperty():StringProperty
+                     +  probabilidadReproduccionProperty() :FloatProperty
+
+                     +getColumnaIvdproperty():StringProperty
+
+
+                     +probabilidadClonacionProperty(): FloatProperty
+
+
+
+                     +filasrecProperty():StringProperty
+                     +ColumnasrecProperty():StringProperty
+                     }
+
+
+
+      }
+
+     class ConfiguracionController implements Initializable{
+      -usuario:String
+         -thisstage:Stage
+
+         -stagePadre:Stage
+          -filaIndv:TextField
+          -columnaIvd:TextField
+        -Identificador:TextField
+
+       -probabilidadReproduccion:Slider
+        -probabilidadClonacion:Slider
+         -filaRec:TextField
+         -columnaRec:TextField
+         partida:Partida
+         root:Pane
+         f:FlowPane
+         g:GridPane
+         box:Box
+         p:Pane
+     indyacreados:ListaELementos
+     recyacreados  :ListaRecursos
+     - model:ConfiguracionProperties
+     + onMiBotonIniciarJuegoClick()
+     +actualizar(ind:ListaELementos , rec:ListaRecursos )
+
+     +añadir(recursos:ListaRecursos ,individuos:ListaELementos ,tab:GridPane )
+
+
+     +onMibotonCrearIndividuoClick()
+     +restablecerind()
+
+     +restablecerrec()
+
+     + actualizarpartida()
+
+     + cambiarProbabilidadesclick()
+
+
+     +onMiBotonCrearRecursoClick()
+
+     +updateGUIwithModel()
+
+     +loadUserData( parametrosData:ConfiguracionProperties,p:Partida ,root: Pane ,usuario:String )
+
+     +initialize(location:URL , resources:ResourceBundle )
+
+
+     +setThisstage(thisstage:Stage )
+
+     +setStagePadre(stagePadre:Stage )
+
+
+     }
+     }
+
+
+
     class Tablero{
     +setTablero(filas:int,columnas:int):Parent
     }

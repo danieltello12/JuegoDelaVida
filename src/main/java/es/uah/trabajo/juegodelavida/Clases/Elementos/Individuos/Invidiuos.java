@@ -16,7 +16,80 @@ public class Invidiuos extends Elementos {
     ListaLEMov<Movimiento> movimientos;
     ListaLERepr<Reproduccion> reproducciones;
 
-    int paso=0;
+    int numPasos=0;
+
+    public int getNumPasos() {
+        return numPasos;
+    }
+
+    public void setNumPasos(int numPasos) {
+        this.numPasos = numPasos;
+    }
+
+    public int getNumAguas() {
+        return numAguas;
+    }
+
+    public void setNumAguas(int numAguas) {
+        this.numAguas = numAguas;
+    }
+
+    public int getNumComida() {
+        return numComida;
+    }
+
+    public void setNumComida(int numComida) {
+        this.numComida = numComida;
+    }
+
+    public int getNumTesoro() {
+        return numTesoro;
+    }
+
+    public void setNumTesoro(int numTesoro) {
+        this.numTesoro = numTesoro;
+    }
+
+    public int getNumBiblioteca() {
+        return numBiblioteca;
+    }
+
+    public void setNumBiblioteca(int numBiblioteca) {
+        this.numBiblioteca = numBiblioteca;
+    }
+
+    public int getNumPozo() {
+        return numPozo;
+    }
+
+    public void setNumPozo(int numPozo) {
+        this.numPozo = numPozo;
+    }
+
+    public int getNumMontaña() {
+        return numMontaña;
+    }
+
+    public void setNumMontaña(int numMontaña) {
+        this.numMontaña = numMontaña;
+    }
+
+    public int getNumClonado() {
+        return numClonado;
+    }
+
+    public void setNumClonado(int numClonado) {
+        this.numClonado = numClonado;
+    }
+
+    public int getNumReproducido() {
+        return numReproducido;
+    }
+
+    public void setNumReproducido(int numReproducido) {
+        this.numReproducido = numReproducido;
+    }
+
     int numAguas=0;
     int numComida=0;
     int numTesoro=0;

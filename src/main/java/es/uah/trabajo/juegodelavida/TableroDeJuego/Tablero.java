@@ -3,15 +3,18 @@ package es.uah.trabajo.juegodelavida.TableroDeJuego;
 import es.uah.trabajo.juegodelavida.BucleControl.Bucle;
 import es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar.ElementoLEPA;
 import es.uah.trabajo.juegodelavida.CargarPartida.EstructurasCargar.ListaLEPA;
+import es.uah.trabajo.juegodelavida.Clases.Elementos.Individuos.Invidiuos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaELementos;
 import es.uah.trabajo.juegodelavida.Clases.EstructurasDatos.ListaRecursos;
 import es.uah.trabajo.juegodelavida.Clases.Grafos.*;
+import es.uah.trabajo.juegodelavida.Clases.Historico;
 import es.uah.trabajo.juegodelavida.Clases.ListaUsuarios;
 import es.uah.trabajo.juegodelavida.Clases.Partida;
 import es.uah.trabajo.juegodelavida.Portada.Boton;
 import es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion.ConfiguracionController;
 import es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion.ConfiguracionModel;
 import es.uah.trabajo.juegodelavida.TableroDeJuego.Configuracion.ConfiguracionProperties;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -20,6 +23,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
@@ -595,12 +599,39 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
 
                     resultado.setCenter(addPane(cadenaArbol));
                     resultado.setRight(addFlowPane());
+                    HBox hbb1=(HBox)(((VBox)resultado.getChildren().get(2)).getChildren().get(1));
+                    ScrollPane scp1=(ScrollPane)hbb1.getChildren().get(1);
+                    Pane pp1=(Pane)(scp1.getContent());
+
+                    String finalCadenaArbol = cadenaArbol;
+
+
                     ((Boton)((HBox)resultado.getChildren().get(0)).getChildren().get(0)).setOnAction(() -> {
+                        limpiarPanel(pp1);
+                        Label miTexto= (Label)pp1.getChildren().get(0);
+                        miTexto.setText( finalCadenaArbol);
                     });
                     ((Boton)((HBox)resultado.getChildren().get(0)).getChildren().get(1)).setOnAction(() -> {
+                        limpiarPanel(pp1);
+                        Label miTexto= (Label)pp1.getChildren().get(0);
+                        miTexto.setText( dameCadenaFlujo(p));
                     });
                     ((Boton)((HBox)resultado.getChildren().get(0)).getChildren().get(2)).setOnAction(() -> {
+                        Label miTexto= (Label)pp1.getChildren().get(0);
+                        miTexto.setText("");
+                        limpiarPanel(pp1);
+                        montaPanelHistorico(pp1,miTexto);
                     });
+                    ((Boton)((HBox)resultado.getChildren().get(0)).getChildren().get(3)).setOnAction(() -> {
+                        Label miTexto= (Label)pp1.getChildren().get(0);
+                        miTexto.setText("");
+                        limpiarPanel(pp1);
+                        miTexto.setText( dameCadenaMaximos());
+
+                    });
+
+
+
 
 
                     Scene sceneRes = new Scene(resultado,900,600);
@@ -716,10 +747,17 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
 
         paneText.setStyle("-fx-background-color: DAE6F3;");
         Label lArbol = new Label();
-        lArbol.setStyle("-fx-text-alignment: center; -fx-font-size: 10px;-fx-font-weight: bold");
+        lArbol.setStyle("-fx-text-alignment: left; -fx-font-size: 10px;-fx-font-weight: bold");
         lArbol.setText(cadenaArbol);
         paneText.getChildren().addAll(lArbol);
         return vBox;
+    }
+    public HBox addHBoxVacia() {
+        HBox hbox = new HBox();
+        hbox.setPadding(new Insets(15, 12, 15, 12));
+        hbox.setSpacing(10);
+        hbox.setStyle("-fx-background-color: #336699;");
+        return hbox;
     }
     public HBox addHBox() {
         HBox hbox = new HBox();
@@ -731,14 +769,17 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
 
         Boton botonFlujo = new Boton("Flujo", 50);
 
-        Boton botonIndividuos = new Boton("Individuos", 50);/*
+        Boton botonIndividuos = new Boton("Individuos", 50);
+
+        Boton botonMaximos = new Boton("Máximos", 50);/*
+        /*
         botonArbol.setOnAction(() -> {
         });
         botonFlujo.setOnAction(() -> {
         });
         botonIndividuos.setOnAction(() -> {
         });*/
-        hbox.getChildren().addAll(botonArbol, botonFlujo, botonIndividuos);
+        hbox.getChildren().addAll(botonArbol, botonFlujo, botonIndividuos,botonMaximos);
 
             return hbox;
     }
@@ -775,7 +816,232 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         hb.getChildren().add(stack);            // Add to HBox from Example 1-2
         HBox.setHgrow(stack, Priority.ALWAYS);    // Give stack any extra space
     }
+    public void limpiarPanel(Pane panel){
+        int tamVbHistorico=panel.getChildren().size();
+        int contador=tamVbHistorico-1;
+        while(tamVbHistorico>1){
+            Node nodoBorrar = panel.getChildren().get(contador);
+            panel.getChildren().remove(nodoBorrar);
+            tamVbHistorico=panel.getChildren().size();
 
+        }
+    }
+    public String dameCadenaMaximos(){
+        Historico historicoF=new Historico(new ListaELementos<Invidiuos>(),0);
+        historicoF=historicoF.cargar();
+        StringBuffer datosMaximos=new StringBuffer();
+        datosMaximos.append("Máximos valores al finalizar partida:\n");
+        int totalReproducciones=0;
+        int totalClonaciones=0;
+        int maxReproducciones=0;
+        int idMaxReproducciones=-1;
+        int maxClonaciones=0;
+        int idMaxClonaciones=-1;
+        int maxNumAguas=0;
+        int idMaxNumAguas=-1;
+        int maxNumBiblio=0;
+        int idMaxNumBiblio=-1;
+        int maxNumComida=0;
+        int idMaxNumComida=-1;
+        int maxNumMontaña=0;
+        int idMaxNumMontaña=-1;
+        int maxNumTesoro=0;
+        int idMaxNumTesoro=-1;
+        int maxNumPozo=0;
+        int idMaxNumPozo=-1;
+        int maxNumVidas=0;
+        int idMaxNumVidas=-1;
+        int maxNumTurnos=0;
+        int idMaxNumTurnos=-1;
+        for (int i =0; i <historicoF.getIndividuos().getNumeroElementos();i++){
+            if(historicoF.getIndividuos() != null && historicoF.getIndividuos().getElemento(i)!=null
+                    && historicoF.getIndividuos().getElemento(i).getDatos() != null) {
+                Invidiuos invidiuos = historicoF.getIndividuos().getElemento(i).getDatos();
+                totalReproducciones += invidiuos.getNumReproducido();
+                totalClonaciones += invidiuos.getNumClonado();
+                if (invidiuos.getNumReproducido() > maxReproducciones) {
+                    idMaxReproducciones = i;
+                    maxReproducciones = invidiuos.getNumReproducido();
+                }
+                if (invidiuos.getNumClonado() > maxClonaciones) {
+                    idMaxClonaciones = i;
+                    maxClonaciones = invidiuos.getNumClonado();
+                }
+                if (invidiuos.getNumAguas() > maxNumAguas) {
+                    idMaxNumAguas = i;
+                    maxNumAguas = invidiuos.getNumAguas();
+                }
+                if (invidiuos.getNumComida() > maxNumComida) {
+                    idMaxNumComida = i;
+                    maxNumComida = invidiuos.getNumComida();
+                }
+                if (invidiuos.getNumBiblioteca() > maxNumBiblio) {
+                    idMaxNumBiblio = i;
+                    maxNumBiblio = invidiuos.getNumBiblioteca();
+                }
+                if (invidiuos.getNumMontaña() > maxNumMontaña) {
+                    idMaxNumMontaña = i;
+                    maxNumMontaña = invidiuos.getNumMontaña();
+                }
+                if (invidiuos.getNumPozo() > maxNumPozo) {
+                    idMaxNumPozo = i;
+                    maxNumPozo = invidiuos.getNumPozo();
+                }
+                if (invidiuos.getNumComida() > maxNumTesoro) {
+                    idMaxNumTesoro = i;
+                    maxNumTesoro = invidiuos.getNumTesoro();
+                }
+                if (invidiuos.getTurnosvida() > maxNumVidas) {
+                    idMaxNumVidas = i;
+                    maxNumVidas = invidiuos.getTurnosvida();
+                }
+                if (invidiuos.getNumPasos() > maxNumTurnos) {
+                    idMaxNumTurnos = i;
+                    maxNumTurnos = invidiuos.getNumPasos();
+                }
+            }
+
+
+
+        }
+        datosMaximos.append("\n\t Total de reproducciones:" +  totalReproducciones);
+        datosMaximos.append("\n\t Total de clonaciones:" +  totalClonaciones);
+        datosMaximos.append("\n\t Máximo nº de reproducciones:" +  maxReproducciones);
+        if(idMaxReproducciones>=0)
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxReproducciones).getDatos().getId() );
+        datosMaximos.append("\n\t Máximo nº de clonaciones:" +  maxClonaciones);
+        if(idMaxClonaciones>=0)
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxClonaciones).getDatos().getId() );
+        datosMaximos.append("\n\t Máximo tiempo de vida disponible:" +  maxNumVidas);
+        if(idMaxNumVidas>=0)
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumVidas).getDatos().getId() );
+        datosMaximos.append("\n\t Máximo nº de turnos jugados:" +  maxNumTurnos);
+        if(idMaxNumTurnos>=0)
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumTurnos).getDatos().getId() );
+        if (idMaxNumVidas == idMaxNumTurnos)
+            datosMaximos.append("\n\t ***El individuo más longevo es el que más turnos ha jugado***");
+        else
+            datosMaximos.append("\n\t ***El individuo más longevo NO es el que más turnos ha jugado***");
+        datosMaximos.append("\n\t Máximo nº de recursos AGUAS conseguidas:" +  maxNumAguas);
+        if(idMaxNumAguas>=0)
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumAguas).getDatos().getId() );
+        datosMaximos.append("\n\t Máximo nº de recursos BIBLIOTECA conseguidas:" +  maxNumBiblio);
+        if(idMaxNumBiblio>=0)
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumBiblio).getDatos().getId() );
+        datosMaximos.append("\n\t Máximo nº de recursos COMIDA conseguidas:" +  maxNumComida);
+        if(idMaxNumComida>=0)
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumComida).getDatos().getId() );
+        datosMaximos.append("\n\t Máximo nº de recursos MONTAÑA conseguidas:" +  maxNumMontaña);
+        if(idMaxNumMontaña>=0)
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumMontaña).getDatos().getId() );
+        datosMaximos.append("\n\t Máximo nº de recursos TESORO conseguidas:" +  maxNumTesoro);
+        if(idMaxNumTesoro>=0)
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumTesoro).getDatos().getId() );
+        datosMaximos.append("\n\t Máximo nº de recursos POZO conseguidas:" +  maxNumPozo);
+        if(idMaxNumPozo>=0)
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumPozo).getDatos().getId() );
+
+
+        return datosMaximos.toString();
+
+    }
+    public void montaPanelHistorico(Pane panel,Label labelPanel){
+        Historico historicoF=new Historico(new ListaELementos<Invidiuos>(),0);
+        historicoF=historicoF.cargar();
+
+        VBox vbHistorico= addVBox();
+        if (historicoF != null && historicoF.getIndividuos() != null && historicoF.getIndividuos().getNumeroElementos()>0) {
+            labelPanel.setText("Si hay individuos para seleccionar");
+            String idIndividuos[] = new String[historicoF.getIndividuos().getNumeroElementos()];
+            for(int i = 0; historicoF.getIndividuos() != null && i<  historicoF.getIndividuos().getNumeroElementos();i++) {
+                if (historicoF.getIndividuos().getElemento(i) != null) {
+                    Invidiuos individuo =historicoF.getIndividuos().getElemento(i).getDatos();
+                    idIndividuos[i]=String.valueOf(individuo.getId());
+                }
+            }
+            HBox hbCombo = addHBoxVacia();
+            Label labelCombo = new Label();
+            labelCombo.setStyle("-fx-text-alignment: left; -fx-font-size: 10px;-fx-font-weight: bold");
+            labelCombo.setText("Individuos ID");
+
+
+            ComboBox cbbox = new ComboBox(FXCollections.observableArrayList(idIndividuos));
+            hbCombo.getChildren().addAll(labelCombo,cbbox);
+            vbHistorico.getChildren().addAll(hbCombo);
+            panel.getChildren().add(vbHistorico);
+
+            Historico finalHistoricoF = historicoF;
+            cbbox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
+                int tamVbHistorico=vbHistorico.getChildren().size();
+                int contador=tamVbHistorico-1;
+                while(tamVbHistorico>1){
+                    Node nodoBorrar = vbHistorico.getChildren().get(contador);
+                    vbHistorico.getChildren().remove(nodoBorrar);
+                    tamVbHistorico=vbHistorico.getChildren().size();
+
+                }
+                Label lbDatosIndividuo = new Label();
+                lbDatosIndividuo.setStyle("-fx-text-alignment: left; -fx-font-size: 10px;-fx-font-weight: bold");
+                lbDatosIndividuo.setText(dameDatosFinalesIndividuo(finalHistoricoF,newValue.toString()));
+
+                vbHistorico.getChildren().add(lbDatosIndividuo);
+            });
+
+
+        }else{
+            labelPanel.setText("No hay individuos para seleccionar");
+        }
+
+    }
+    public String dameDatosFinalesIndividuo(Historico historicoF, String id){
+        StringBuffer datosFinalesIndividuo=new StringBuffer();
+        datosFinalesIndividuo.append("Información de individuo [" + id + " al finalizar partida:\n");
+        for (int i =0; i <historicoF.getIndividuos().getNumeroElementos();i++){
+            if(historicoF.getIndividuos() != null && historicoF.getIndividuos().getElemento(i)!=null
+               && historicoF.getIndividuos().getElemento(i).getDatos() != null){
+                Invidiuos invidiuos = historicoF.getIndividuos().getElemento(i).getDatos();
+                if(invidiuos.getId() == Integer.parseInt(id)) {
+                    datosFinalesIndividuo.append("\t\nNúmero de Turnos en los que ha intervenido:" + invidiuos.getNumPasos());
+                    datosFinalesIndividuo.append("\t\nNúmero de veces que se ha reproducido:" + invidiuos.getNumReproducido());
+                    datosFinalesIndividuo.append("\t\nNúmero de veces que se ha clonado:" + invidiuos.getNumClonado());
+                    datosFinalesIndividuo.append("\t\nNúmero de recursos AGUA que ha tenido:" + invidiuos.getNumAguas());
+                    datosFinalesIndividuo.append("\t\nNúmero de recursos BIBLIOTECA que ha tenido:" + invidiuos.getNumBiblioteca());
+                    datosFinalesIndividuo.append("\t\nNúmero de recursos COMIDA que ha tenido:" + invidiuos.getNumComida());
+                    datosFinalesIndividuo.append("\t\nNúmero de recursos MONTAÑA que ha tenido:" + invidiuos.getNumMontaña());
+                    datosFinalesIndividuo.append("\t\nNúmero de recursos TESORO que ha tenido:" + invidiuos.getNumTesoro());
+                    datosFinalesIndividuo.append("\t\nNúmero de recursos POZO que ha tenido:" + invidiuos.getNumPozo());
+                    datosFinalesIndividuo.append("\t\nNúmero de vidas que le quedaban:" + invidiuos.getTurnosvida());
+                }
+            }
+        }
+        return datosFinalesIndividuo.toString();
+    }
+public String dameCadenaFlujo(Partida partida){
+    es.uah.trabajo.juegodelavida.Clases.ColaAcciones.Cola cAcciones = partida.getAcciones().cargar();
+    StringBuffer cadenaFlujo=new StringBuffer();
+    String paso = "";
+    for (int ca=cAcciones.getNumeroElemC()-1; ca >=0; ca --){
+        if(cAcciones.getElemento(ca)!=null){
+            if (((String)cAcciones.getElemento(ca).getDatos()) != null &&
+                    ((String)cAcciones.getElemento(ca).getDatos()).indexOf("Play[") >=0){
+                if (((String)cAcciones.getElemento(ca).getDatos()).indexOf("]") > 0) {
+                    String pasoNew = ((String) cAcciones.getElemento(ca).getDatos()).substring(((String) cAcciones.getElemento(ca).getDatos()).indexOf("Play["), ((String) cAcciones.getElemento(ca).getDatos()).indexOf("]")+1);
+                    if (!pasoNew.equals(paso)) {
+                        paso = pasoNew;
+                        cadenaFlujo.append(pasoNew+"\n");
+
+
+                    }
+                    String nuevaCadena="\t"+((String) cAcciones.getElemento(ca).getDatos()).substring(((String) cAcciones.getElemento(ca).getDatos()).indexOf("]")+1,((String) cAcciones.getElemento(ca).getDatos()).length());
+                    cAcciones.getElemento(ca).datos=nuevaCadena;
+                }
+            }
+            cadenaFlujo.append((String)cAcciones.getElemento(ca).getDatos());
+            cadenaFlujo.append("\n");
+        }
+    }
+    return cadenaFlujo.toString();
+}
     private  void actualizarindyrecpart(Partida p, String u){
         p.getIndividuos().guardar(p.getIndividuos(),"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
         p.getRecursos().guardar(p.getRecursos(),"src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
