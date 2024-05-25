@@ -100,6 +100,16 @@ public class Invidiuos extends Elementos {
     int numClonado=0;
     int numReproducido=0;
 
+    public int getMaxNumTurnosVida() {
+        return maxNumTurnosVida;
+    }
+
+    public void setMaxNumTurnosVida(int maxNumTurnosVida) {
+        this.maxNumTurnosVida = maxNumTurnosVida;
+    }
+
+    int maxNumTurnosVida=0;
+
     public ListaLERepr<Reproduccion> getReproducciones(){
         return reproducciones;
     }

@@ -908,38 +908,38 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         datosMaximos.append("\n\t Total de clonaciones:" +  totalClonaciones);
         datosMaximos.append("\n\t Máximo nº de reproducciones:" +  maxReproducciones);
         if(idMaxReproducciones>=0)
-            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxReproducciones).getDatos().getId() );
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxReproducciones).getDatos().getId()+"]" );
         datosMaximos.append("\n\t Máximo nº de clonaciones:" +  maxClonaciones);
         if(idMaxClonaciones>=0)
-            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxClonaciones).getDatos().getId() );
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxClonaciones).getDatos().getId()+"]"  );
         datosMaximos.append("\n\t Máximo tiempo de vida disponible:" +  maxNumVidas);
         if(idMaxNumVidas>=0)
-            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumVidas).getDatos().getId() );
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumVidas).getDatos().getId()+"]"  );
         datosMaximos.append("\n\t Máximo nº de turnos jugados:" +  maxNumTurnos);
         if(idMaxNumTurnos>=0)
-            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumTurnos).getDatos().getId() );
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumTurnos).getDatos().getId()+"]"  );
         if (idMaxNumVidas == idMaxNumTurnos)
             datosMaximos.append("\n\t ***El individuo más longevo es el que más turnos ha jugado***");
         else
             datosMaximos.append("\n\t ***El individuo más longevo NO es el que más turnos ha jugado***");
         datosMaximos.append("\n\t Máximo nº de recursos AGUAS conseguidas:" +  maxNumAguas);
         if(idMaxNumAguas>=0)
-            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumAguas).getDatos().getId() );
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumAguas).getDatos().getId() +"]" );
         datosMaximos.append("\n\t Máximo nº de recursos BIBLIOTECA conseguidas:" +  maxNumBiblio);
         if(idMaxNumBiblio>=0)
-            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumBiblio).getDatos().getId() );
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumBiblio).getDatos().getId() +"]" );
         datosMaximos.append("\n\t Máximo nº de recursos COMIDA conseguidas:" +  maxNumComida);
         if(idMaxNumComida>=0)
-            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumComida).getDatos().getId() );
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumComida).getDatos().getId() +"]" );
         datosMaximos.append("\n\t Máximo nº de recursos MONTAÑA conseguidas:" +  maxNumMontaña);
         if(idMaxNumMontaña>=0)
-            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumMontaña).getDatos().getId() );
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumMontaña).getDatos().getId()+"]"  );
         datosMaximos.append("\n\t Máximo nº de recursos TESORO conseguidas:" +  maxNumTesoro);
         if(idMaxNumTesoro>=0)
-            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumTesoro).getDatos().getId() );
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumTesoro).getDatos().getId() +"]" );
         datosMaximos.append("\n\t Máximo nº de recursos POZO conseguidas:" +  maxNumPozo);
         if(idMaxNumPozo>=0)
-            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumPozo).getDatos().getId() );
+            datosMaximos.append(" de ID[" + historicoF.getIndividuos().getElemento(idMaxNumPozo).getDatos().getId() +"]" );
 
 
         return datosMaximos.toString();

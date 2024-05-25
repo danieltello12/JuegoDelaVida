@@ -35,6 +35,7 @@ public Bucle (){
         if (paso ==1){
             comprobarCoincidenciaRecursos(partida);
             guardaHistorico(paso);
+
         }
         /*
         1. Para cada individuo, se actualiza su tiempo de vida, y en su caso se elimina si ha muerto.
@@ -355,6 +356,10 @@ public Bucle (){
             if (partida.getIndividuos().getElemento(i) != null ) {
                 Invidiuos individuoGen = (partida.getIndividuos().getElemento(i).getDatos());
                 individuoGen.setNumPasos(individuoGen.getNumPasos()+1);
+                if (individuoGen.getTurnosvida() > individuoGen.getMaxNumTurnosVida()){
+                    individuoGen.setMaxNumTurnosVida(individuoGen.getMaxNumTurnosVida());
+                }
+
                 switch (individuoGen.getTipo()){
                     case "Básico":
                         ejecutarMovimientoIBasico(individuoGen, partida);
