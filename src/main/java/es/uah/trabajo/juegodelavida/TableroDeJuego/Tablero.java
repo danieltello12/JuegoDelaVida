@@ -610,7 +610,13 @@ public ListaSimple<Label> contenidoCasilla(Partida partida, String usuario, int 
         Cerrar.setTranslateX(65);
         Cerrar.setOnAction(()->{
             this.root.getChildren().removeAll(imageView, b,b3, caja,cajaGuardar,cajaCerrar);
-            this.stageAnterior.close();
+            if(this.stagePadre!=null){
+                stagePadre.close();
+                if(stageAnterior!=null){
+                    this.stageAnterior.close();
+                }
+            }
+
         });
         cajaCerrar.getChildren().add(Cerrar);
 

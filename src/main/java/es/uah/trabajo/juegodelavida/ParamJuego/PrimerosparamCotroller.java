@@ -330,6 +330,20 @@ public class PrimerosparamCotroller implements Initializable {
             s.setTitle("Partidas:::Juego de La Vida de Conway");
             s.show();
 
+        } else if (Integer.parseInt(filas.getText())>8||Integer.parseInt(columnas.getText())>8) {
+            Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
+            Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/MaxDIm.jpeg"));
+            ImageView imageView = new ImageView(imagen); //Creo el fondo de la aplicacion.
+            imageView.setFitWidth(900);
+            imageView.setFitHeight(400);
+
+            root.getChildren().addAll(imageView);
+            Scene im= new Scene(root);
+            Stage s= new Stage();
+            s.setScene(im);
+            s.setTitle("Partidas:::Juego de La Vida de Conway");
+            s.show();
+            
         } else if(Objects.equals(mejora.getText(), "")){
             Pane root = new Pane(); //Creo un pane para ir añadiendo los distintos elementos
             Image imagen = new Image(new FileInputStream("src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/MejoraVacia.png"));

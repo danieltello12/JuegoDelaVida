@@ -10,93 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d975c334-6d3f-4aa2-9700-876b14b96e41" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Columna.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/FilasColumnas.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/InddID.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/InformacionInd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/MejoraVacia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/NoMasIndividuosCelda.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/NoMasRec.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/PartidaYaConEseNombre.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Prob.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/UsuarioContraseñaErroneo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/UsuarioNoRegistrado.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/UsuarioYaCreado.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Vidas.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/es/uah/trabajo/juegodelavida/BucleControl/BucleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/es/uah/trabajo/juegodelavida/Clases/HistoricoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/es/uah/trabajo/juegodelavida/Clases/ListaUsuariosTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/es/uah/trabajo/juegodelavida/Clases/MovimientoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/es/uah/trabajo/juegodelavida/Clases/PartidaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/es/uah/trabajo/juegodelavida/Clases/ReproduccionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/es/uah/trabajo/juegodelavida/Clases/UsuarioTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControladorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/es/uah/trabajo/juegodelavida/TableroDeJuego/TableroTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_05_2024_19_46_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_05_2024_19_46__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2024_16_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2024_16_03__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dani.partidas.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dani2.partidas.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/MaxDIm.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Diseño/UMTrabajoFinal.puml" beforeDir="false" afterPath="$PROJECT_DIR$/Diseño/UMTrabajoFinal.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Json/ColaAcciones.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/ColaAcciones.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Json/historico.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/historico.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Json/movimientos.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/movimientos.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Json/reproduccion.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/reproduccion.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Json/usuarios.json" beforeDir="false" afterPath="$PROJECT_DIR$/Json/usuarios.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dani.partidas.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-04-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-06-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-23-2024-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2024-05/app-05-24-2024-1.log.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/BucleControl/Bucle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/BucleControl/Bucle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/Botones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/Botones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/CargarPartida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/CargarPartida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/EstructurasCargar/ElementoLEPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/EstructurasCargar/ElementoLEPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/EstructurasCargar/ListaLEPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/CargarPartida/EstructurasCargar/ListaLEPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/ColaAcciones/Cola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/ColaAcciones/Cola.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/Cola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/Cola.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaLE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaLE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaLEMov.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaLEMov.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaLERepr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaLERepr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaRecursos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/EstructurasDatos/ListaRecursos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Grafos/Grafos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Grafos/Grafos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Grafos/ListaSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Grafos/ListaSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Historico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Historico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/ListaUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/ListaUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Reproduccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Clases/Reproduccion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionCP/InicioSesionControladorCP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionCP/InicioSesionControladorCP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionCP/InicioSesionModelCP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionCP/InicioSesionModelCP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/InicioSesionControladorNP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/IniciosesionModelNP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/InicioSesionNP/IniciosesionModelNP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/ParamJuegoModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/PrimerosparamCotroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/PrimerosparamCotroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/TipoDeInviduoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/TipoDeInviduoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/TipoDeRecursoControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/TipoDeRecursoControler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Portada/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Registrarse/RegistrarseControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/Registrarse/RegistrarseControlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/ConfiguracionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/ConfiguracionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/LabelsP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/LabelsP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/primerosParam.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/ArchivosFXML/primerosParam.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Captura.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Captura2.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/CeldasIndiviudos.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Columnas.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Filas.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Nopartidas.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/PartidaYaCreada.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/Registro.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/YaCreado.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/infoindv.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/inforec.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/es/uah/trabajo/juegodelavida/Imagenes/pzypv.PNG" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -444,7 +373,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716653718301</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="commit">
+      <option name="closed" value="true" />
+      <created>1716668392764</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1716668392764</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -501,32 +438,32 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/ConfiguracionController.java</url>
-          <line>98</line>
+          <line>75</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
-          <line>774</line>
+          <line>780</line>
           <option name="timeStamp" value="102" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
-          <line>890</line>
+          <line>896</line>
           <option name="timeStamp" value="112" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
-          <line>877</line>
+          <line>883</line>
           <option name="timeStamp" value="113" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
-          <line>895</line>
+          <line>901</line>
           <option name="timeStamp" value="114" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Tablero.java</url>
-          <line>931</line>
+          <line>937</line>
           <option name="timeStamp" value="118" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

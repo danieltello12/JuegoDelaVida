@@ -10,7 +10,6 @@ import es.uah.trabajo.juegodelavida.Clases.ListaUsuarios;
 import es.uah.trabajo.juegodelavida.Clases.Partida;
 import es.uah.trabajo.juegodelavida.ParamJuego.TipoDeInviduoControlador;
 import es.uah.trabajo.juegodelavida.ParamJuego.TipoDeRecursoControler;
-import es.uah.trabajo.juegodelavida.TableroDeJuego.Box;
 import es.uah.trabajo.juegodelavida.TableroDeJuego.Tablero;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,8 +19,6 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -45,8 +42,6 @@ public class ConfiguracionController implements Initializable {
     private TextField columnaIvd;
     @FXML
     private TextField Identificador;
- //   @FXML
-//    private TextField TurnosDeVida;
     @FXML
     private Slider probabilidadReproduccion;
     @FXML
@@ -57,9 +52,6 @@ public class ConfiguracionController implements Initializable {
     private  TextField columnaRec;
     Partida partida;
     Pane root;
-    FlowPane f;
-    GridPane g;
-    Box box;
     Pane p;
 
 static  ListaELementos indyacreados= new ListaELementos().cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
@@ -68,7 +60,6 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
     private ConfiguracionProperties model;
     @FXML
     protected void onMiBotonIniciarJuegoClick() {
-        //this.scene.close();
         ListaELementos l2 = new ListaELementos();
         l2 = l2.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/individuos.json");
 
@@ -76,20 +67,6 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
         l3 = l3.cargar("src/main/java/es/uah/trabajo/juegodelavida/ParamJuego/recursos.json");
         actualizar(l2,l3);
 
-        //this.root.getChildren().remove(box);
-        //this.box.getChildren().remove(f);
-        //this.f.getChildren().remove(g);
-
-        //ListaELementos individuos= new ListaELementos();
-        //individuos = individuos.cargar("src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosindividuos.json");
-
-        //ListaRecursos recursos= new ListaRecursos();
-        //recursos= recursos.cargar("src/main/java/es/uah/trabajo/juegodelavida/TableroDeJuego/Configuracion/nuevosrecursos.json");
-
-
-        //this.f.getChildren().add(añadir(recursos,individuos,g));
-        //this.box.getChildren().add(f);
-        //this.root.getChildren().add(box);
 
 
         this.stagePadre.close();
@@ -100,7 +77,7 @@ static ListaRecursos recyacreados= new ListaRecursos().cargar("src/main/java/es/
             Tablero t = new Tablero();
             Scene scene = new Scene(t  .Tablero(partida, usuario,thisstage), 1400, 800);
             thisstage.setScene(scene);
-            t.setStageA(thisstage);
+            t.setStageA(stagePadre);
             thisstage.show();
 
         } catch (Exception e) {
